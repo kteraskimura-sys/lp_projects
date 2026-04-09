@@ -810,3 +810,316 @@ ul {
         display: none; /* Hide on mobile to save space, user can tap to add friend */
     }
 }
+
+/* add =======================================================================*/
+/* ==========================================================================
+   Judicial Hero Section (safe names / no conflict)
+   ========================================================================== */
+
+:root {
+    --hero-judicial-navy: #05284a;
+    --hero-judicial-gold: #c8a45c;
+    --hero-judicial-gold-hover: #d3b06a;
+    --hero-judicial-note: #e5e7eb;
+    --hero-judicial-safe: #d1d5db;
+    --hero-judicial-cta-text: #0b1e2d;
+}
+
+.hero-judicial {
+    position: relative;
+    width: 100%;
+    height: 1250px;
+    overflow: hidden;
+    background: var(--hero-judicial-navy);
+}
+
+.hero-judicial-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background-image: url("./img/hero/hero-bg-pc-01a.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+}
+
+.hero-judicial-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    background:
+        radial-gradient(
+            ellipse at 30% 50%,
+            rgba(5, 40, 74, 0) 0%,
+            rgba(5, 40, 74, 0.18) 24%,
+            rgba(5, 40, 74, 0.52) 42%,
+            rgba(5, 40, 74, 0.82) 60%,
+            rgba(5, 40, 74, 0.95) 72%,
+            #05284a 100%
+        );
+}
+
+.hero-judicial-inner {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    max-width: 2120px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.hero-judicial-content {
+    position: relative;
+    z-index: 5;
+    width: 760px;
+    padding-top: 140px;
+    padding-left: 460px;
+    box-sizing: border-box;
+}
+
+.hero-judicial-logo {
+    display: block;
+    width: 460px;
+    height: auto;
+}
+
+.hero-judicial-copy {
+    margin: 72px 0 0;
+    font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+    font-size: 92px;
+    line-height: 125px;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.hero-judicial-subcopy {
+    margin: 32px 0 0;
+    font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", sans-serif;
+    font-size: 34px;
+    line-height: 56px;
+    letter-spacing: 0.01em;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.hero-judicial-note {
+    margin: 20px 0 0;
+    font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", sans-serif;
+    font-size: 28px;
+    line-height: 42px;
+    letter-spacing: 0.01em;
+    font-weight: 500;
+    color: var(--hero-judicial-note);
+}
+
+.hero-judicial-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+    min-width: 360px;
+    height: 84px;
+    padding: 0 48px;
+    border-radius: 8px;
+    background: var(--hero-judicial-gold);
+    color: var(--hero-judicial-cta-text);
+    font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", sans-serif;
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    font-weight: 700;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease;
+}
+
+.hero-judicial-cta:hover {
+    background: var(--hero-judicial-gold-hover);
+    color: var(--hero-judicial-cta-text);
+}
+
+.hero-judicial-cta-arrow {
+    margin-left: 10px;
+}
+
+.hero-judicial-safe {
+    margin: 14px 0 0;
+    font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.01em;
+    font-weight: 500;
+    color: var(--hero-judicial-safe);
+}
+
+.hero-judicial-person {
+    position: absolute;
+    z-index: 4;
+    right: 0;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+    max-width: none;
+    height: auto;
+}
+
+.hero-judicial-person-pc {
+    top: 145px;
+    width: 940px;
+}
+
+.hero-judicial-person-sp {
+    display: none;
+}
+
+/* Tablet */
+@media screen and (max-width: 1280px) {
+    .hero-judicial {
+        height: 1080px;
+    }
+
+    .hero-judicial-content {
+        width: 640px;
+        padding-top: 110px;
+        padding-left: 220px;
+    }
+
+    .hero-judicial-logo {
+        width: 360px;
+    }
+
+    .hero-judicial-copy {
+        font-size: 72px;
+        line-height: 100px;
+    }
+
+    .hero-judicial-subcopy {
+        font-size: 28px;
+        line-height: 48px;
+    }
+
+    .hero-judicial-note {
+        font-size: 22px;
+        line-height: 34px;
+    }
+
+    .hero-judicial-cta {
+        min-width: 300px;
+        height: 74px;
+        font-size: 24px;
+    }
+
+    .hero-judicial-safe {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .hero-judicial-person-pc {
+        width: 760px;
+        top: 170px;
+    }
+}
+
+/* SP */
+@media screen and (max-width: 768px) {
+    .hero-judicial {
+        min-height: 100svh;
+        height: auto;
+    }
+
+    .hero-judicial-bg {
+        background-image: url("./img/hero/hero-bg-sp-01a.avif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+    }
+
+    .hero-judicial-overlay {
+        background:
+            radial-gradient(
+                ellipse at 22% 78%,
+                rgba(5, 40, 74, 0.96) 0%,
+                rgba(5, 40, 74, 0.92) 24%,
+                rgba(5, 40, 74, 0.78) 40%,
+                rgba(5, 40, 74, 0.52) 58%,
+                rgba(5, 40, 74, 0.24) 72%,
+                rgba(5, 40, 74, 0.08) 84%,
+                rgba(5, 40, 74, 0) 100%
+            );
+    }
+
+    .hero-judicial-inner {
+        max-width: none;
+        min-height: 100svh;
+    }
+
+    .hero-judicial-content {
+        position: relative;
+        z-index: 5;
+        width: auto;
+        min-height: 100svh;
+        padding: 18px 24px 34px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        box-sizing: border-box;
+    }
+
+    .hero-judicial-logo {
+        width: 132px;
+        height: auto;
+    }
+
+    .hero-judicial-copy {
+        margin-top: auto;
+        font-size: 74px;
+        line-height: 92px;
+        letter-spacing: 0.02em;
+        font-weight: 800;
+    }
+
+    .hero-judicial-subcopy {
+        margin-top: 16px;
+        font-size: 29px;
+        line-height: 42px;
+        letter-spacing: 0.01em;
+        font-weight: 700;
+    }
+
+    .hero-judicial-note {
+        margin-top: 20px;
+        font-size: 23px;
+        line-height: 34px;
+        letter-spacing: 0.01em;
+        font-weight: 500;
+    }
+
+    .hero-judicial-cta {
+        margin-top: 18px;
+        width: 100%;
+        min-width: 0;
+        height: 90px;
+        padding: 0 24px;
+        border-radius: 10px;
+        font-size: 25px;
+    }
+
+    .hero-judicial-safe {
+        margin-top: 12px;
+        font-size: 21px;
+        line-height: 30px;
+        letter-spacing: 0.01em;
+    }
+
+    .hero-judicial-person-pc {
+        display: none;
+    }
+
+    .hero-judicial-person-sp {
+        display: block;
+        top: 86px;
+        width: 92%;
+        max-width: 700px;
+    }
+}
