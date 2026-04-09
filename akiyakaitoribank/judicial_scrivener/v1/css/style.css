@@ -837,7 +837,7 @@ ul {
     position: absolute;
     inset: 0;
     z-index: 2;
-    background-image: url("./img/hero/hero-bg-pc-01a.avif");
+    background-image: url("../img/hero/hero-bg-pc-01a.avif");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right center;
@@ -1029,7 +1029,7 @@ ul {
     }
 
     .hero-judicial-bg {
-        background-image: url("./img/hero/hero-bg-sp-01a.avif");
+        background-image: url("../img/hero/hero-bg-sp-01a.avif");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center top;
