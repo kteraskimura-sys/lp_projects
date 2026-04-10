@@ -1880,7 +1880,7 @@ ul {
     /*width: 94px;*/
 	  width: 51%;
 	  position: relative;
-	  margin: -15px 0px 0px -26px;
+	  margin: -15px 0px 0px -3px;
   }
 
   .hero-guided__brand-ja {
@@ -1902,7 +1902,7 @@ ul {
 	  font-size: 47px;
 	  line-height: 1.38;
 	  position: relative;
-	  margin: 27px 0px 0 -20px;
+	  margin: 27px 0px 0 0px;
   }
 
   .hero-guided__lead {
@@ -1912,7 +1912,7 @@ ul {
 	  font-size: 18px;
 	  line-height: 1.62;
 	  position: relative;
-	  margin: 0 0 0 -20px;
+	  margin: 0 0 0 0px;
 	  letter-spacing: -0.8px;
   }
 
@@ -1923,7 +1923,7 @@ ul {
 	  font-size: 15px;
 	  line-height: 1.5;
 	  position: relative;
-	  margin: 1px 0 0 -18px;
+	  margin: 1px 0 0 -2px;
 	  letter-spacing: -0.8px;
   }
 
@@ -1940,7 +1940,7 @@ ul {
 	  border-radius: 5px;
 	  font-size: 16px;
 	  position: relative;
-	  margin: 11px 0 0 -21px;
+	  margin: 11px 0 0 -1px;
 	  letter-spacing: -1.2px;
   }
 
@@ -1951,7 +1951,7 @@ ul {
 	  font-size: 13px;
 	  line-height: 1.5;
 	  position: relative;
-	  margin: 4px 0 0 -22px;
+	  margin: 4px 0 0 -2px;
   }
 }
 
