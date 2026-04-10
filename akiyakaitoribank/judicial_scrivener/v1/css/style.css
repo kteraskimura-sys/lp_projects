@@ -1843,7 +1843,8 @@ ul {
    ========================================================================== */
 @media screen and (min-width: 769px) {
   .hero-guided {
-    height: 1250px;
+    /*height: 1250px;*/
+	height: 650px;
   }
 
   .hero-guided__bg--pc {
@@ -1851,9 +1852,10 @@ ul {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    height: 1250px;
+    /*height: 1250px;*/
+	height: 650px;
     width: auto;
-    min-width: 2120px;
+    /*min-width: 2120px;*/
   }
 
   .hero-guided__bg--sp {
