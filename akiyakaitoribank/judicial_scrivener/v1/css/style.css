@@ -1663,3 +1663,422 @@ ul {
     line-height: 1.5;
   }
 }
+
+/* 2026.04.10 rk add =========================================================*/
+/* ==========================================================================
+   Hero Guided
+   背景は中央基準
+   文字はcontainer基準
+   ========================================================================== */
+
+.hero-guided {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #05284a;
+  color: #ffffff;
+}
+
+/* ----------------------------------------
+   背景画像
+---------------------------------------- */
+.hero-guided__media {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-guided__bg {
+  position: absolute;
+  display: block;
+  max-width: none;
+  user-select: none;
+}
+
+.hero-guided__bg--sp {
+  display: none;
+}
+
+/* ----------------------------------------
+   コンテンツ
+---------------------------------------- */
+.hero-guided__container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+
+.hero-guided__content {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.hero-guided__brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.hero-guided__brand-mark {
+  display: block;
+  flex: 0 0 auto;
+  height: auto;
+}
+
+.hero-guided__brand-text {
+  line-height: 1;
+}
+
+.hero-guided__brand-ja {
+  font-family:
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    "Meiryo",
+    sans-serif;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hero-guided__brand-r {
+  font-size: 0.7em;
+  vertical-align: top;
+  margin-left: 2px;
+}
+
+.hero-guided__brand-en {
+  font-family:
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    "Meiryo",
+    sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
+.hero-guided__title {
+  margin: 0;
+  font-family:
+    "Yu Mincho",
+    "YuMincho",
+    "Hiragino Mincho ProN",
+    serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.hero-guided__lead {
+  margin: 0;
+  font-family:
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    "Meiryo",
+    sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.hero-guided__note {
+  margin: 0;
+  font-family:
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    "Meiryo",
+    sans-serif;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero-guided__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  background: #c8a45c;
+  color: #0b1e2d;
+  font-family:
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    "Meiryo",
+    sans-serif;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.hero-guided__cta:hover {
+  background: #d3b06a;
+  color: #0b1e2d;
+}
+
+.hero-guided__cta-arrow {
+  margin-left: 0.45em;
+}
+
+.hero-guided__safe {
+  margin: 0;
+  font-family:
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    "Meiryo",
+    sans-serif;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* ==========================================================================
+   PC
+   ・背景画像の中央 = 画面中央
+   ・文字はcontainer幅に揃える
+   ・ロゴと文字サイズは固定
+   ========================================================================== */
+@media screen and (min-width: 769px) {
+  .hero-guided {
+    height: 1250px;
+  }
+
+  .hero-guided__bg--pc {
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1250px;
+    width: auto;
+    min-width: 2120px;
+  }
+
+  .hero-guided__bg--sp {
+    display: none;
+  }
+
+  .hero-guided__container {
+    height: 1250px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .hero-guided__content {
+    width: 100%;
+    max-width: 470px;
+    padding-top: 88px;
+  }
+
+  /* ロゴ・文字サイズ固定 */
+  .hero-guided__brand-mark {
+    width: 94px;
+  }
+
+  .hero-guided__brand-ja {
+    margin-top: 4px;
+    font-size: 27px;
+    line-height: 1.05;
+  }
+
+  .hero-guided__brand-en {
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1;
+  }
+
+  .hero-guided__title {
+    margin-top: 64px;
+    font-size: 86px;
+    line-height: 1.52;
+  }
+
+  .hero-guided__lead {
+    margin-top: 24px;
+    font-size: 35px;
+    line-height: 1.62;
+  }
+
+  .hero-guided__note {
+    margin-top: 12px;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  .hero-guided__cta {
+    margin-top: 22px;
+    min-width: 420px;
+    height: 84px;
+    padding: 0 42px;
+    border-radius: 8px;
+    font-size: 31px;
+  }
+
+  .hero-guided__safe {
+    margin-top: 16px;
+    font-size: 22px;
+    line-height: 1.5;
+  }
+}
+
+/* ==========================================================================
+   SP
+   ・768px以下でスマホ背景に切替
+   ・スマホも背景画像1枚
+   ・ロゴとWEBフォント比率固定
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  .hero-guided {
+    height: 1246px;
+  }
+
+  .hero-guided__bg--pc {
+    display: none;
+  }
+
+  .hero-guided__bg--sp {
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 768px;
+    height: 1246px;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .hero-guided__container {
+    height: 1246px;
+  }
+
+  .hero-guided__content {
+    width: 100%;
+    max-width: none;
+    padding-top: 48px;
+    padding-left: 46px;
+    padding-right: 46px;
+    box-sizing: border-box;
+  }
+
+  .hero-guided__brand-mark {
+    width: 66px;
+  }
+
+  .hero-guided__brand-ja {
+    margin-top: 2px;
+    font-size: 20px;
+    line-height: 1.05;
+  }
+
+  .hero-guided__brand-en {
+    margin-top: 7px;
+    font-size: 10px;
+    line-height: 1;
+  }
+
+  .hero-guided__title {
+    margin-top: 560px;
+    font-size: 78px;
+    line-height: 1.26;
+  }
+
+  .hero-guided__lead {
+    margin-top: 30px;
+    font-size: 29px;
+    line-height: 1.55;
+    font-weight: 700;
+  }
+
+  .hero-guided__note {
+    margin-top: 18px;
+    font-size: 23px;
+    line-height: 1.45;
+  }
+
+  .hero-guided__cta {
+    display: flex;
+    width: 100%;
+    margin-top: 24px;
+    height: 94px;
+    border-radius: 10px;
+    font-size: 28px;
+    padding: 0 20px;
+  }
+
+  .hero-guided__safe {
+    margin-top: 18px;
+    font-size: 21px;
+    line-height: 1.5;
+  }
+}
+
+/* ==========================================================================
+   小さいスマホ向け
+   以前の実機幅寄り
+   ========================================================================== */
+@media screen and (max-width: 430px) {
+  .hero-guided {
+    height: 1000px;
+  }
+
+  .hero-guided__bg--sp {
+    width: 430px;
+    height: 1000px;
+  }
+
+  .hero-guided__container {
+    height: 1000px;
+  }
+
+  .hero-guided__content {
+    padding-top: 24px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .hero-guided__brand-mark {
+    width: 38px;
+  }
+
+  .hero-guided__brand-ja {
+    font-size: 13px;
+  }
+
+  .hero-guided__brand-en {
+    margin-top: 4px;
+    font-size: 7px;
+  }
+
+  .hero-guided__title {
+    margin-top: 440px;
+    font-size: 34px;
+    line-height: 1.28;
+  }
+
+  .hero-guided__lead {
+    margin-top: 18px;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  .hero-guided__note {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .hero-guided__cta {
+    margin-top: 18px;
+    height: 60px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  .hero-guided__safe {
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
