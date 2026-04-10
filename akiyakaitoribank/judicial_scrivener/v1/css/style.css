@@ -1974,8 +1974,9 @@ ul {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 768px;
-    height: 1246px;
+    /*width: 768px;*/
+	  width: 100%;
+    /*height: 1246px;*/
     object-fit: cover;
     object-position: center top;
   }
@@ -2010,9 +2011,20 @@ ul {
   }
 
   .hero-guided__title {
-    margin-top: 560px;
-    font-size: 78px;
-    line-height: 1.26;
+    /*margin-top: 560px;*/
+    /*font-size: 78px;*/
+    /*line-height: 1.26;*/
+	  font-size: 10vw;
+	  line-height: 11.5vw;
+	  position: relative;
+	  margin: 82vw 0 0 -9vw;
+	  color: #ff0000;
+	  font-weight: bold;
+	  letter-spacing: -0.1vw;
+  }
+
+  .hero-guided__title span.letter-spacing-01a {
+	  letter-spacing: -0.1vw;
   }
 
   .hero-guided__lead {
@@ -2055,8 +2067,9 @@ ul {
   }
 
   .hero-guided__bg--sp {
-    width: 430px;
-    height: 1000px;
+    /*width: 430px;*/
+	  width: 100%;
+    /*height: 1000px;*/
   }
 
   .hero-guided__container {
