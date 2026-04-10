@@ -737,7 +737,8 @@ ul {
    ========================================================================== */
 @media screen and (max-width: 1024px) {
     .container {
-        padding: 0 30px;
+        /*padding: 0 30px;*/
+		padding: 0 5.9vw;
     }
     
     .about-container {
@@ -1937,7 +1938,7 @@ ul {
 	  height: 44px;
 	  padding: 0 5px;
 	  border-radius: 5px;
-	  font-size: 18px;
+	  font-size: 16px;
 	  position: relative;
 	  margin: 11px 0 0 -21px;
 	  letter-spacing: -1.2px;
@@ -1962,7 +1963,8 @@ ul {
    ========================================================================== */
 @media screen and (max-width: 768px) {
   .hero-guided {
-    height: 1246px;
+    /*height: 1246px;*/
+	  height: 169.2vw;
   }
 
   .hero-guided__bg--pc {
@@ -1988,14 +1990,15 @@ ul {
   .hero-guided__content {
     width: 100%;
     max-width: none;
-    padding-top: 48px;
-    padding-left: 46px;
-    padding-right: 46px;
+    padding-top: 2.7vw;
+    padding-left: 0px;
+    padding-right: 0px;
     box-sizing: border-box;
   }
 
   .hero-guided__brand-mark {
-    width: 66px;
+    /*width: 66px;*/
+	  width: 20.5%;
   }
 
   .hero-guided__brand-ja {
@@ -2015,9 +2018,9 @@ ul {
     /*font-size: 78px;*/
     /*line-height: 1.26;*/
 	  font-size: 10vw;
-	  line-height: 11.5vw;
+	  line-height: 11.7vw;
 	  position: relative;
-	  margin: 82vw 0 0 -9vw;
+	  margin: 87vw 0 0 0vw;
 	  color: #ff0000;
 	  font-weight: bold;
 	  letter-spacing: -0.1vw;
@@ -2028,31 +2031,45 @@ ul {
   }
 
   .hero-guided__lead {
-    margin-top: 30px;
-    font-size: 29px;
-    line-height: 1.55;
+    /*margin-top: 30px;*/
+	  margin-top: 0.5vw;
+    /*font-size: 29px;*/
+	  font-size: 4vw;
+    /*line-height: 1.55;*/
+	  line-height: 5.5vw;
     font-weight: 700;
   }
 
   .hero-guided__note {
-    margin-top: 18px;
-    font-size: 23px;
-    line-height: 1.45;
+    /*margin-top: 18px;*/
+    /*font-size: 23px;*/
+    /*line-height: 1.45;*/
+	  margin-top: 0.7vw;
+	  font-size: 3.2vw;
+	  line-height: 4.7vw;
   }
 
   .hero-guided__cta {
     display: flex;
-    width: 100%;
-    margin-top: 24px;
-    height: 94px;
-    border-radius: 10px;
-    font-size: 28px;
-    padding: 0 20px;
+    /*width: 100%;*/
+    /*margin-top: 24px;*/
+    /*height: 94px;*/
+    /*border-radius: 10px;*/
+    /*font-size: 28px;*/
+    /*padding: 0 20px;*/
+	  width: 68%;
+	  margin-top: 1.5vw;
+	  height: 12.5vw;
+	  border-radius: 5px;
+	  font-size: 3.7vw;
+	  padding: 0 5vw;
   }
 
   .hero-guided__safe {
-    margin-top: 18px;
-    font-size: 21px;
+    /*margin-top: 18px;*/
+	  margin-top: 1.0vw;
+    /*font-size: 21px;*/
+	  font-size: 3vw;
     line-height: 1.5;
   }
 }
@@ -2063,7 +2080,8 @@ ul {
    ========================================================================== */
 @media screen and (max-width: 430px) {
   .hero-guided {
-    height: 1000px;
+    /*height: 1000px;*/
+	  height: 169.2vw;
   }
 
   .hero-guided__bg--sp {
@@ -2077,9 +2095,9 @@ ul {
   }
 
   .hero-guided__content {
-    padding-top: 24px;
-    padding-left: 22px;
-    padding-right: 22px;
+    /*padding-top: 24px;*/
+    /*padding-left: 22px;*/
+    /*padding-right: 22px;*/
   }
 
   .hero-guided__brand-mark {
@@ -2096,33 +2114,50 @@ ul {
   }
 
   .hero-guided__title {
-    margin-top: 440px;
-    font-size: 34px;
-    line-height: 1.28;
+    /*margin-top: 440px;*/
+    /*font-size: 34px;*/
+    /*line-height: 1.28;*/
+	  margin-top: 86.5vw;
+	  font-size: 10vw;
+	  line-height: 12vw;
   }
 
   .hero-guided__lead {
-    margin-top: 18px;
-    font-size: 17px;
-    line-height: 1.55;
+    /*margin-top: 18px;*/
+    /*font-size: 17px;*/
+    /*line-height: 1.55;*/
+	  margin-top: 0.1vw;
+	  font-size: 4vw;
+	  line-height: 5.5vw;
   }
 
   .hero-guided__note {
-    margin-top: 12px;
-    font-size: 14px;
-    line-height: 1.45;
+    /*margin-top: 12px;*/
+    /*font-size: 14px;*/
+    /*line-height: 1.45;*/
+	  font-size: 3.4vw;
+	  line-height: 1.45;
+	  position: relative;
+	  margin: 0.5vw 0 0 0.3vw;
   }
 
   .hero-guided__cta {
-    margin-top: 18px;
-    height: 60px;
-    font-size: 16px;
-    border-radius: 8px;
+    /*margin-top: 18px;*/
+    /*height: 60px;*/
+    /*font-size: 16px;*/
+    /*border-radius: 8px;*/
+	  margin-top: 1vw;
+	  height: 13vw;
+	  font-size: 3.5vw;
+	  border-radius: 5px;
   }
 
   .hero-guided__safe {
-    margin-top: 12px;
-    font-size: 12px;
-    line-height: 1.5;
+    /*margin-top: 12px;*/
+    /*font-size: 12px;*/
+    /*line-height: 1.5;*/
+	  margin-top: 0.7vw;
+	  font-size: 3vw;
+	  line-height: 1.5;
   }
 }
