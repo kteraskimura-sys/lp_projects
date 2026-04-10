@@ -2107,7 +2107,8 @@ ul {
   }
 
   .hero-guided__brand-mark {
-    width: 38px;
+    /*width: 38px;*/
+	  width: 18.5vw;
   }
 
   .hero-guided__brand-ja {
@@ -2125,7 +2126,7 @@ ul {
     /*line-height: 1.28;*/
 	  margin-top: 86.5vw;
 	  font-size: 10vw;
-	  line-height: 12vw;
+	  line-height: 11.3vw;
   }
 
   .hero-guided__title span.letter-spacing-01a {
