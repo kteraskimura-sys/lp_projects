@@ -738,7 +738,7 @@ ul {
 @media screen and (max-width: 1024px) {
     .container {
         /*padding: 0 30px;*/
-		padding: 0 0 0 5.9vw;
+		padding: 0 5.9vw;
     }
     
     .about-container {
@@ -2020,7 +2020,7 @@ ul {
     /*font-size: 78px;*/
     /*line-height: 1.26;*/
 	  font-size: 10vw;
-	  line-height: 11.7vw;
+	  line-height: 11.0vw;
 	  position: relative;
 	  margin: 87vw 0 0 0vw;
 	  color: #ff0000;
