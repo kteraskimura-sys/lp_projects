@@ -2029,7 +2029,11 @@ ul {
   }
 
   .hero-guided__title span.letter-spacing-01a {
+	  font-size: 8vw;
 	  letter-spacing: -0.1vw;
+  }
+  .hero-guided__title span.letter-spacing-02a {
+	  letter-spacing: -0.2vw;
   }
 
   .hero-guided__lead {
@@ -2122,6 +2126,14 @@ ul {
 	  margin-top: 86.5vw;
 	  font-size: 10vw;
 	  line-height: 12vw;
+  }
+
+  .hero-guided__title span.letter-spacing-01a {
+	  font-size: 8vw;
+	  letter-spacing: -0.1vw;
+  }
+  .hero-guided__title span.letter-spacing-02a {
+	  letter-spacing: -0.2vw;
   }
 
   .hero-guided__lead {
