@@ -738,7 +738,7 @@ ul {
 @media screen and (max-width: 1024px) {
     .container {
         /*padding: 0 30px;*/
-		padding: 0 5.9vw;
+		padding: 0 0 0 5.9vw;
     }
     
     .about-container {
@@ -1677,7 +1677,7 @@ ul {
   width: 100%;
   overflow: hidden;
   background: #05284a;
-  color: #ffffff;
+  color: #fff;
 }
 
 /* ----------------------------------------
@@ -1781,7 +1781,7 @@ ul {
     "Meiryo",
     sans-serif;
   font-weight: 600;
-  color: #ffffff;
+  color: #fff;
 }
 
 .hero-guided__note {
@@ -1998,7 +1998,9 @@ ul {
 
   .hero-guided__brand-mark {
     /*width: 66px;*/
-	  width: 20.5%;
+	  width: 18.5vw;
+	  position: relative;
+	  margin: 0 0 0 -3.7vw;
   }
 
   .hero-guided__brand-ja {
