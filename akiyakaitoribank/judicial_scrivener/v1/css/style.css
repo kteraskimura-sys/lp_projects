@@ -215,6 +215,36 @@ ul {
     border: 1px solid var(--color-border);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+	/* 追加 */
+    position: relative;/*2026.04.13 rk add*/
+    padding-left: 60px;/*2026.04.13 rk add*/
+}
+/*2026.04.13 rk add*/
+.problem-item::before {
+    content: "";
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #c8a45c;
+}
+/*2026.04.13 rk add*/
+.problem-item::after {
+    content: "";
+    position: absolute;
+    left: 31px;
+    top: 50%;
+    transform: translateY(-55%) rotate(45deg);
+
+    width: 6px;
+    height: 10px;
+
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
 }
 
 .problem-icon {
