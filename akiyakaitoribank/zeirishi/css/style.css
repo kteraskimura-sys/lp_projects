@@ -1,0 +1,2239 @@
+/* ==========================================================================
+   Base Styles & Variables
+   ========================================================================== */
+:root {
+    /* Colors */
+    --color-navy: #0F1C2E;
+    --color-navy-light: #1A2E4C;
+    --color-gold: #B89C5D;
+    --color-text: #333333;
+    --color-text-light: #666666;
+    --color-bg-light: #F8F9FA;
+    --color-white: #FFFFFF;
+    --color-border: #E5E5E5;
+
+    /* Typography */
+    --font-sans: 'Noto Sans JP', sans-serif;
+    --font-serif: 'Noto Serif JP', serif;
+
+    /* Spacing */
+    --section-padding: 80px 0;
+    --section-padding-sp: 50px 0;
+    
+    /* Max Widths */
+    --container-width: 1100px;
+}
+
+/* Reset & Normalize */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    line-height: 1.6;
+    background-color: var(--color-white);
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==========================================================================
+   Layout & Utility Classes
+   ========================================================================== */
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.bg-light {
+    background-color: var(--color-bg-light);
+}
+
+.text-gold {
+    color: var(--color-gold);
+}
+
+.center {
+    text-align: center;
+}
+
+.section-title {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: var(--color-navy);
+    letter-spacing: 0.05em;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-width: 280px;
+}
+
+.btn-navy-outline {
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    background: transparent;
+}
+.btn-navy-outline:hover {
+    background: var(--color-white);
+    color: var(--color-navy);
+}
+
+.btn-arrow {
+    margin-left: 10px;
+}
+
+/* ==========================================================================
+   1. Hero Section
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    padding: 60px 0 0;
+    background-color: var(--color-navy);
+    overflow: hidden;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+/* Cityscape background overlay */
+.hero-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 1;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content {
+    color: var(--color-white);
+    width: 50%;
+    padding-bottom: 60px;
+}
+
+.hero-title-main {
+    font-family: var(--font-serif);
+    font-size: 48px;
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    letter-spacing: 0.05em;
+}
+
+.hero-image {
+    width: 45%;
+    display: flex;
+    align-items: flex-end;
+    align-self: flex-end;
+}
+
+.hero-person-img {
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    object-fit: cover;
+    /* Mask or mask image can be applied if it had a proper alpha, using unsplash photo for now */
+    border-radius: 8px 8px 0 0;
+}
+
+/* ==========================================================================
+   2. Problems Section
+   ========================================================================== */
+.problems-section {
+    padding: var(--section-padding);
+}
+
+.problems-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.problem-item {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+	/* 追加 */
+    position: relative;/*2026.04.13 rk add*/
+    padding-left: 60px;/*2026.04.13 rk add*/
+}
+/*2026.04.13 rk add*/
+.problem-item::before {
+    content: "";
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #c8a45c;
+}
+/*2026.04.13 rk add*/
+.problem-item::after {
+    content: "";
+    position: absolute;
+    left: 31px;
+    top: 50%;
+    transform: translateY(-55%) rotate(45deg);
+
+    width: 6px;
+    height: 10px;
+
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.problem-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+    opacity: 0.8;
+}
+
+.problem-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   3. Assurances Section
+   ========================================================================== */
+.assurances-section {
+    padding: var(--section-padding);
+}
+
+.assurances-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.assurance-card {
+    background: var(--color-white);
+    padding: 40px 24px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border-top: 4px solid var(--color-gold);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.assurance-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.assurance-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.assurance-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: var(--color-navy);
+}
+
+.assurance-desc {
+    font-size: 14px;
+    color: var(--color-text-light);
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   4. Difficult Properties Section
+   ========================================================================== */
+.difficult-properties-section {
+    padding: var(--section-padding);
+}
+
+.difficult-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.difficult-item {
+    display: flex;
+    align-items: center;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    padding: 20px 30px;
+    border-radius: 4px;
+    justify-content: flex-start;
+    transition: all 0.3s ease;
+	/* 追加 */
+    position: relative;/*2026.04.13 rk add*/
+    padding-left: 60px;/*2026.04.13 rk add*/
+}
+
+.difficult-item::before {
+    content: "";
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #c8a45c;
+}
+
+.difficult-item::after {
+    content: "";
+    position: absolute;
+    left: 31px;
+    top: 50%;
+    transform: translateY(-55%) rotate(45deg);
+
+    width: 6px;
+    height: 10px;
+
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.difficult-item:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transform: translateY(-2px);
+}
+
+.difficult-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 16px;
+    opacity: 0.7;
+}
+
+.difficult-item span {
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   5. Flow Section
+   ========================================================================== */
+.flow-section {
+    padding: var(--section-padding);
+    background-color: var(--color-navy-light);
+    background-image: url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+
+.flow-section .section-title.text-white {
+    color: var(--color-white);
+}
+
+.flow-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 15px;
+}
+
+.flow-step {
+    flex: 1;
+    background: var(--color-white);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.step-head {
+    background: var(--color-navy);
+    color: var(--color-white);
+    padding: 24px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-num {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-gold);
+    line-height: 1;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.step-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.step-body {
+    padding: 24px 20px;
+    flex: 1;
+}
+
+.step-body p {
+    font-size: 14px;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.flow-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    font-size: 24px;
+    width: 20px;
+}
+.flow-arrow::after {
+    content: "▶";
+    opacity: 0.5;
+}
+
+/* ==========================================================================
+   6. About Section
+   ========================================================================== */
+.about-section {
+    padding: var(--section-padding);
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.about-text-area {
+    flex: 1;
+}
+
+.about-main-title {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--color-navy);
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.title-line {
+    width: 40px;
+    height: 3px;
+    background-color: var(--color-gold);
+    margin-bottom: 30px;
+}
+
+.about-desc {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: var(--color-text);
+}
+
+.support-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-navy);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.support-list ul li {
+    font-size: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.support-list ul li span {
+    color: var(--color-gold);
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.about-company-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-image {
+    width: 100%;
+    margin-bottom: -40px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-image img {
+    border-radius: 4px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.company-card {
+    background: var(--color-white);
+    padding: 40px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    position: relative;
+    z-index: 2;
+    margin-left: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+}
+
+.company-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-navy);
+    margin-bottom: 20px;
+}
+
+.company-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.company-table th,
+.company-table td {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 14px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.company-table tr:last-child th,
+.company-table tr:last-child td {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.company-table th {
+    width: 100px;
+    font-weight: 500;
+    color: var(--color-text-light);
+}
+
+.company-table td {
+    color: var(--color-text);
+}
+
+/* ==========================================================================
+   7. Cases Section
+   ========================================================================== */
+.cases-section {
+    padding: var(--section-padding);
+}
+
+.cases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.case-card {
+    background: var(--color-white);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.case-image {
+    position: relative;
+    height: 200px;
+}
+
+.case-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.case-badge {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background: var(--color-navy);
+    color: var(--color-white);
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.case-body {
+    padding: 30px 20px;
+    flex: 1;
+}
+
+.case-info {
+    margin-bottom: 20px;
+}
+.case-info:last-child {
+    margin-bottom: 0;
+}
+
+.case-info h4 {
+    font-size: 14px;
+    color: var(--color-navy);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.case-info p {
+    font-size: 14px;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   8. Compliance Section
+   ========================================================================== */
+.compliance-section {
+    background: var(--color-navy);
+    padding: 60px 0;
+    color: var(--color-white);
+}
+
+.compliance-title {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+}
+
+.compliance-desc {
+    font-size: 15px;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   9. Contact Section
+   ========================================================================== */
+.contact-section {
+    padding: var(--section-padding);
+    background: #F0F4F8; /* Light blue-ish gray for separation */
+}
+
+.contact-lead {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contact-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-card:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+    border-color: var(--color-navy);
+}
+
+.contact-icon {
+    margin-right: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-label {
+    font-size: 13px;
+    color: var(--color-text-light);
+    margin-bottom: 8px;
+}
+
+.contact-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-navy);
+    font-family: 'Montserrat', sans-serif; /* fallback or if added later */
+}
+.contact-value.mail {
+    font-size: 18px;
+}
+.contact-value.line-text {
+    font-size: 16px;
+}
+
+.contact-note {
+    font-size: 12px;
+    color: var(--color-text-light);
+    margin-top: 5px;
+}
+
+.contact-line {
+    position: relative;
+    padding-right: 90px;
+}
+
+.qr-code {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background: #eee; /* placeholder background */
+}
+
+/* ==========================================================================
+   10. Footer
+   ========================================================================== */
+.footer {
+    background: var(--color-navy);
+    color: var(--color-white);
+    padding: 30px 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.copyright {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   Responsive (Media Queries)
+   ========================================================================== */
+@media screen and (max-width: 1024px) {
+    .container {
+        /*padding: 0 30px;*/
+		padding: 0 5.9vw;
+    }
+    
+    .about-container {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .problems-grid,
+    .difficult-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 40px;
+    }
+    
+    .hero-content {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    
+    .hero-title-main {
+        font-size: 32px;
+    }
+    
+    .hero-image {
+        width: 80%;
+        margin: 0 auto;
+        align-self: center;
+    }
+    
+    .assurances-grid,
+    .cases-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .flow-steps {
+        flex-direction: column;
+    }
+    
+    .flow-arrow {
+        transform: rotate(90deg);
+        margin: 10px auto;
+    }
+    
+    .about-container {
+        flex-direction: column;
+    }
+    
+    .company-card {
+        margin-left: 0;
+        margin-top: -30px;
+        padding: 24px;
+    }
+
+    .contact-line {
+        padding-right: 20px;
+    }
+    
+    .qr-code {
+        display: none; /* Hide on mobile to save space, user can tap to add friend */
+    }
+}
+
+/* 2026.04.09 rk add =========================================================*/
+/* ==========================================================================
+   Judicial Hero Section - final stable version
+   HTMLはそのまま使用
+   ========================================================================== */
+
+:root {
+  --hero-judicial-navy: #05284a;
+  --hero-judicial-gold: #c8a45c;
+  --hero-judicial-gold-hover: #d3b06a;
+  --hero-judicial-note: rgba(255, 255, 255, 0.92);
+  --hero-judicial-safe: rgba(255, 255, 255, 0.76);
+  --hero-judicial-cta-text: #0b1e2d;
+}
+
+.hero-judicial {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--hero-judicial-navy);
+  isolation: isolate;
+}
+
+.hero-judicial-bg,
+.hero-judicial-overlay,
+.hero-judicial-inner {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-judicial-bg {
+  z-index: 1;
+  background-repeat: no-repeat;
+}
+
+.hero-judicial-overlay {
+  z-index: 3;
+  pointer-events: none;
+}
+
+.hero-judicial-inner {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  max-width: 2048px;
+  margin: 0 auto;
+}
+
+.hero-judicial-content {
+  position: absolute;
+  z-index: 4;
+  box-sizing: border-box;
+}
+
+.hero-judicial-logo {
+  display: block;
+  height: auto;
+}
+
+.hero-judicial-copy {
+  margin: 0;
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.hero-judicial-subcopy {
+  margin: 0;
+  font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.01em;
+}
+
+.hero-judicial-note {
+  margin: 0;
+  font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-weight: 500;
+  color: var(--hero-judicial-note);
+  letter-spacing: 0.01em;
+}
+
+.hero-judicial-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+  background: var(--hero-judicial-gold);
+  color: var(--hero-judicial-cta-text);
+  font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hero-judicial-cta:hover {
+  background: var(--hero-judicial-gold-hover);
+  color: var(--hero-judicial-cta-text);
+}
+
+.hero-judicial-cta-arrow {
+  display: inline-block;
+  margin-left: 0.45em;
+}
+
+.hero-judicial-safe {
+  margin: 0;
+  font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-weight: 500;
+  color: var(--hero-judicial-safe);
+  letter-spacing: 0.01em;
+}
+
+.hero-judicial-person {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+  max-width: none;
+  height: auto;
+  width: auto;
+}
+
+.hero-judicial-person-sp {
+  display: none;
+}
+
+/* ==========================================================================
+   PC / Tablet
+   769px以上
+   ========================================================================== */
+@media screen and (min-width: 769px) {
+  .hero-judicial {
+    height: clamp(560px, 32.42vw, 664px);
+    min-height: 560px;
+    max-height: 664px;
+  }
+
+  .hero-judicial-bg {
+    background-image: url("../img/hero/hero-bg-pc-01a.avif");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .hero-judicial-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5, 40, 74, 0.98) 0%,
+        rgba(5, 40, 74, 0.98) 27%,
+        rgba(5, 40, 74, 0.92) 35%,
+        rgba(5, 40, 74, 0.74) 44%,
+        rgba(5, 40, 74, 0.42) 54%,
+        rgba(5, 40, 74, 0.14) 64%,
+        rgba(5, 40, 74, 0) 73%
+      ),
+      radial-gradient(
+        74% 120% at 35% 52%,
+        rgba(5, 40, 74, 0) 0%,
+        rgba(5, 40, 74, 0.06) 28%,
+        rgba(5, 40, 74, 0.28) 41%,
+        rgba(5, 40, 74, 0.66) 57%,
+        rgba(5, 40, 74, 0.92) 72%,
+        rgba(5, 40, 74, 0.98) 84%,
+        #05284a 100%
+      );
+  }
+
+  .hero-judicial-content {
+    left: clamp(46px, 8.9vw, 183px);
+    top: 50%;
+    transform: translateY(-43%);
+    width: clamp(300px, 25vw, 470px);
+  }
+
+  .hero-judicial-logo {
+    width: clamp(170px, 13.3vw, 272px);
+  }
+
+  .hero-judicial-copy {
+    margin-top: clamp(18px, 2.4vw, 36px);
+    font-size: clamp(40px, 4.1vw, 72px);
+    line-height: 1.48;
+  }
+
+  .hero-judicial-subcopy {
+    margin-top: clamp(10px, 1.3vw, 18px);
+    font-size: clamp(17px, 1.28vw, 23px);
+    line-height: 1.74;
+  }
+
+  .hero-judicial-note {
+    margin-top: clamp(8px, 0.8vw, 12px);
+    font-size: clamp(13px, 0.92vw, 16px);
+    line-height: 1.6;
+  }
+
+  .hero-judicial-cta {
+    margin-top: clamp(14px, 1.4vw, 20px);
+    min-width: clamp(220px, 17.4vw, 340px);
+    height: clamp(46px, 3.1vw, 58px);
+    padding: 0 clamp(22px, 2vw, 36px);
+    border-radius: 4px;
+    font-size: clamp(15px, 1.08vw, 22px);
+  }
+
+  .hero-judicial-safe {
+    margin-top: clamp(8px, 0.75vw, 12px);
+    font-size: clamp(12px, 0.86vw, 15px);
+    line-height: 1.5;
+  }
+
+  .hero-judicial-person-pc {
+    display: block;
+    right: clamp(34px, 6.2vw, 128px);
+    bottom: 0;
+    height: 88%;
+    width: auto;
+  }
+}
+
+/* ==========================================================================
+   Narrow PC
+   769〜1180px
+   ========================================================================== */
+@media screen and (min-width: 769px) and (max-width: 1180px) {
+  .hero-judicial {
+    height: clamp(560px, 47vw, 620px);
+  }
+
+  .hero-judicial-content {
+    left: 42px;
+    width: min(37vw, 360px);
+    transform: translateY(-42%);
+  }
+
+  .hero-judicial-copy {
+    font-size: clamp(38px, 4.7vw, 56px);
+    line-height: 1.42;
+  }
+
+  .hero-judicial-subcopy {
+    font-size: clamp(16px, 1.7vw, 18px);
+    line-height: 1.66;
+  }
+
+  .hero-judicial-note {
+    font-size: clamp(12px, 1.15vw, 14px);
+  }
+
+  .hero-judicial-cta {
+    min-width: 220px;
+    height: 48px;
+    font-size: 16px;
+  }
+
+  .hero-judicial-safe {
+    font-size: 12px;
+  }
+
+  .hero-judicial-person-pc {
+    right: clamp(0px, 1vw, 16px);
+    height: 92%;
+  }
+}
+
+/* ==========================================================================
+   SP
+   768px以下
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  .hero-judicial {
+    height: clamp(760px, 168vw, 1246px);
+    min-height: 760px;
+    max-height: 1246px;
+  }
+
+  .hero-judicial-bg {
+    background-image: url("../img/hero/hero-bg-sp-01a.avif");
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
+  .hero-judicial-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 40, 74, 0.03) 0%,
+        rgba(5, 40, 74, 0.06) 18%,
+        rgba(5, 40, 74, 0.12) 30%,
+        rgba(5, 40, 74, 0.30) 43%,
+        rgba(5, 40, 74, 0.58) 56%,
+        rgba(5, 40, 74, 0.82) 69%,
+        rgba(5, 40, 74, 0.95) 80%,
+        #05284a 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(5, 40, 74, 0.92) 0%,
+        rgba(5, 40, 74, 0.80) 11%,
+        rgba(5, 40, 74, 0.44) 25%,
+        rgba(5, 40, 74, 0.14) 40%,
+        rgba(5, 40, 74, 0) 56%
+      );
+  }
+
+  .hero-judicial-content {
+    position: absolute;
+    left: 6%;
+    right: 6%;
+    bottom: 7%;
+    width: auto;
+    transform: none;
+  }
+
+  .hero-judicial-logo {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 120px;
+    z-index: 6;
+  }
+
+  .hero-judicial-person-pc {
+    display: none;
+  }
+
+  .hero-judicial-person-sp {
+    display: block;
+    top: 8%;
+    right: -5%;
+    height: 57%;
+    width: auto;
+  }
+
+  .hero-judicial-copy {
+    margin-top: 0;
+    font-size: clamp(31px, 8.6vw, 48px);
+    line-height: 1.26;
+    font-weight: 500;
+  }
+
+  .hero-judicial-subcopy {
+    margin-top: 14px;
+    font-size: clamp(17px, 4.3vw, 22px);
+    line-height: 1.52;
+  }
+
+  .hero-judicial-note {
+    margin-top: 10px;
+    font-size: clamp(13px, 3.7vw, 16px);
+    line-height: 1.5;
+  }
+
+  .hero-judicial-cta {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    margin-top: 14px;
+    height: 58px;
+    padding: 0 18px;
+    border-radius: 8px;
+    font-size: clamp(14px, 4vw, 18px);
+  }
+
+  .hero-judicial-safe {
+    margin-top: 10px;
+    font-size: clamp(12px, 3.2vw, 14px);
+    line-height: 1.42;
+  }
+}
+
+/* ==========================================================================
+   SP narrow
+   390px以下
+   ========================================================================== */
+@media screen and (max-width: 390px) {
+  .hero-judicial {
+    height: clamp(760px, 182vw, 980px);
+  }
+
+  .hero-judicial-logo {
+    width: 110px;
+  }
+
+  .hero-judicial-person-sp {
+    top: 8%;
+    right: -7%;
+    height: 55%;
+  }
+
+  .hero-judicial-content {
+    left: 5.8%;
+    right: 5.8%;
+    bottom: 6.5%;
+  }
+
+  .hero-judicial-copy {
+    font-size: clamp(28px, 8.3vw, 40px);
+    line-height: 1.24;
+  }
+
+  .hero-judicial-subcopy {
+    font-size: clamp(16px, 4.2vw, 20px);
+    line-height: 1.48;
+  }
+
+  .hero-judicial-note {
+    font-size: clamp(12px, 3.6vw, 15px);
+  }
+
+  .hero-judicial-cta {
+    height: 56px;
+    font-size: clamp(14px, 3.9vw, 17px);
+  }
+
+  .hero-judicial-safe {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
+/* 2026.04.10 rk add =========================================================*/
+/* =========================================
+   Hero Fixed Visual
+========================================= */
+
+.hero-fixed {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #05284a;
+  color: #fff;
+}
+
+/* -----------------------------
+   背景ビジュアル
+----------------------------- */
+.hero-fixed__media {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-fixed__frame {
+  position: absolute;
+  overflow: hidden;
+}
+
+.hero-fixed__bg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* -----------------------------
+   コンテンツ
+----------------------------- */
+.hero-fixed__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-fixed__content {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.hero-fixed__brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.hero-fixed__brand-mark {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.hero-fixed__brand-text {
+  line-height: 1;
+}
+
+.hero-fixed__brand-ja {
+  font-family:
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    "Meiryo",
+    sans-serif;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hero-fixed__brand-r {
+  font-size: 0.7em;
+  vertical-align: top;
+  margin-left: 2px;
+}
+
+.hero-fixed__brand-en {
+  font-family:
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    "Meiryo",
+    sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.hero-fixed__title {
+  margin: 0;
+  font-family:
+    "Yu Mincho",
+    "YuMincho",
+    "Hiragino Mincho ProN",
+    serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.hero-fixed__lead {
+  margin: 0;
+  font-family:
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    "Meiryo",
+    sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.hero-fixed__note {
+  margin: 0;
+  font-family:
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    "Meiryo",
+    sans-serif;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero-fixed__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: #c8a45c;
+  color: #0b1e2d;
+  font-family:
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    "Meiryo",
+    sans-serif;
+  font-weight: 700;
+  white-space: nowrap;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+}
+
+.hero-fixed__cta:hover {
+  background: #d3b06a;
+  color: #0b1e2d;
+}
+
+.hero-fixed__cta-arrow {
+  margin-left: 0.45em;
+}
+
+.hero-fixed__safe {
+  margin: 0;
+  font-family:
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    "Meiryo",
+    sans-serif;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* =========================================
+   PC
+   条件：
+   ・黄色センターラインを常にセンター
+   ・赤枠 2120 x 1250 固定
+========================================= */
+@media screen and (min-width: 769px) {
+  .hero-fixed {
+    height: 1250px;
+    min-height: 1250px;
+  }
+
+  .hero-fixed__frame--pc {
+    display: block;
+    width: 2120px;
+    height: 1250px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero-fixed__frame--sp {
+    display: none;
+  }
+
+  .hero-fixed__bg--pc {
+    width: 2120px;
+    height: 1250px;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .hero-fixed__content {
+    width: 2120px;
+    height: 1250px;
+    margin: 0 auto;
+    padding-top: 88px;
+    padding-left: 460px;
+  }
+
+  /* ロゴ：固定サイズ */
+  .hero-fixed__brand-mark {
+    width: 94px;
+    height: auto;
+  }
+
+  .hero-fixed__brand-ja {
+    margin-top: 4px;
+    font-size: 27px;
+    line-height: 1.05;
+  }
+
+  .hero-fixed__brand-en {
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: 0.04em;
+  }
+
+  .hero-fixed__title {
+    margin-top: 64px;
+    font-size: 86px;
+    line-height: 1.52;
+  }
+
+  .hero-fixed__lead {
+    margin-top: 24px;
+    font-size: 35px;
+    line-height: 1.62;
+  }
+
+  .hero-fixed__note {
+    margin-top: 12px;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  .hero-fixed__cta {
+    margin-top: 22px;
+    min-width: 420px;
+    height: 84px;
+    padding: 0 42px;
+    border-radius: 8px;
+    font-size: 31px;
+  }
+
+  .hero-fixed__safe {
+    margin-top: 16px;
+    font-size: 22px;
+    line-height: 1.5;
+  }
+}
+
+/* =========================================
+   SP
+========================================= */
+@media screen and (max-width: 768px) {
+  .hero-fixed {
+    height: 1246px;
+    min-height: 1246px;
+  }
+
+  .hero-fixed__frame--pc {
+    display: none;
+  }
+
+  .hero-fixed__frame--sp {
+    display: block;
+    width: 768px;
+    height: 1246px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero-fixed__bg--sp {
+    width: 768px;
+    height: 1246px;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .hero-fixed__content {
+    width: 100%;
+    max-width: 768px;
+    height: 1246px;
+    margin: 0 auto;
+    padding-top: 48px;
+    padding-left: 46px;
+    padding-right: 46px;
+    box-sizing: border-box;
+  }
+
+  /* ロゴ：固定サイズ */
+  .hero-fixed__brand-mark {
+    width: 66px;
+    height: auto;
+  }
+
+  .hero-fixed__brand-ja {
+    margin-top: 2px;
+    font-size: 20px;
+    line-height: 1.05;
+  }
+
+  .hero-fixed__brand-en {
+    margin-top: 7px;
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 0.04em;
+  }
+
+  .hero-fixed__title {
+    margin-top: 560px;
+    font-size: 78px;
+    line-height: 1.26;
+  }
+
+  .hero-fixed__lead {
+    margin-top: 30px;
+    font-size: 29px;
+    line-height: 1.55;
+    font-weight: 700;
+  }
+
+  .hero-fixed__note {
+    margin-top: 18px;
+    font-size: 23px;
+    line-height: 1.45;
+  }
+
+  .hero-fixed__cta {
+    display: flex;
+    width: 100%;
+    margin-top: 24px;
+    height: 94px;
+    border-radius: 10px;
+    font-size: 28px;
+    padding: 0 20px;
+  }
+
+  .hero-fixed__safe {
+    margin-top: 18px;
+    font-size: 21px;
+    line-height: 1.5;
+  }
+}
+
+/* =========================================
+   画面幅がかなり小さいスマホ向け
+========================================= */
+@media screen and (max-width: 430px) {
+  .hero-fixed {
+    height: 1000px;
+    min-height: 1000px;
+  }
+
+  .hero-fixed__frame--sp {
+    width: 430px;
+    height: 1000px;
+  }
+
+  .hero-fixed__bg--sp {
+    width: 430px;
+    height: 1000px;
+  }
+
+  .hero-fixed__content {
+    height: 1000px;
+    padding-top: 24px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .hero-fixed__brand-mark {
+    width: 38px;
+  }
+
+  .hero-fixed__brand-ja {
+    font-size: 13px;
+  }
+
+  .hero-fixed__brand-en {
+    margin-top: 4px;
+    font-size: 7px;
+  }
+
+  .hero-fixed__title {
+    margin-top: 440px;
+    font-size: 34px;
+    line-height: 1.28;
+  }
+
+  .hero-fixed__lead {
+    margin-top: 18px;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  .hero-fixed__note {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .hero-fixed__cta {
+    margin-top: 18px;
+    height: 60px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  .hero-fixed__safe {
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+/* 2026.04.10 rk add =========================================================*/
+/* ==========================================================================
+   Hero Guided
+   背景は中央基準
+   文字はcontainer基準
+   ========================================================================== */
+
+.hero-guided {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #05284a;
+  color: #fff;
+}
+
+/* ----------------------------------------
+   背景画像
+---------------------------------------- */
+.hero-guided__media {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-guided__bg {
+  position: absolute;
+  display: block;
+  max-width: none;
+  user-select: none;
+}
+
+.hero-guided__bg--sp {
+  display: none;
+}
+
+/* ----------------------------------------
+   コンテンツ
+---------------------------------------- */
+.hero-guided__container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+
+.hero-guided__content {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.hero-guided__brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.hero-guided__brand-mark {
+  display: block;
+  flex: 0 0 auto;
+  height: auto;
+}
+
+.hero-guided__brand-text {
+  line-height: 1;
+}
+
+.hero-guided__brand-ja {
+  font-family:
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    "Meiryo",
+    sans-serif;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hero-guided__brand-r {
+  font-size: 0.7em;
+  vertical-align: top;
+  margin-left: 2px;
+}
+
+.hero-guided__brand-en {
+  font-family:
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    "Meiryo",
+    sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
+.hero-guided__title {
+  margin: 0;
+  font-family:
+    "Yu Mincho",
+    "YuMincho",
+    "Hiragino Mincho ProN",
+    serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.hero-guided__lead {
+  margin: 0;
+  font-family:
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    "Meiryo",
+    sans-serif;
+  font-weight: 600;
+  color: #fff;
+}
+
+.hero-guided__note {
+  margin: 0;
+  font-family:
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    "Meiryo",
+    sans-serif;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero-guided__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  background: #c8a45c;
+  color: #0b1e2d;
+  font-family:
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    "Meiryo",
+    sans-serif;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.hero-guided__cta:hover {
+  background: #d3b06a;
+  color: #0b1e2d;
+}
+
+.hero-guided__cta-arrow {
+  margin-left: 0.45em;
+}
+
+.hero-guided__safe {
+  margin: 0;
+  font-family:
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    "Meiryo",
+    sans-serif;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* ==========================================================================
+   PC
+   ・背景画像の中央 = 画面中央
+   ・文字はcontainer幅に揃える
+   ・ロゴと文字サイズは固定
+   ========================================================================== */
+@media screen and (min-width: 769px) {
+  .hero-guided {
+    /*height: 1250px;*/
+	height: 650px;
+  }
+
+  .hero-guided__bg--pc {
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /*height: 1250px;*/
+	height: 650px;
+    width: auto;
+    /*min-width: 2120px;*/
+  }
+
+  .hero-guided__bg--sp {
+    display: none;
+  }
+
+  .hero-guided__container {
+    height: 1250px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .hero-guided__content {
+    width: 100%;
+    max-width: 470px;
+    padding-top: 88px;
+  }
+
+  /* ロゴ・文字サイズ固定 */
+  .hero-guided__brand-mark {
+    /*width: 94px;*/
+	  width: 51%;
+	  position: relative;
+	  margin: -15px 0px 0px -3px;
+  }
+
+  .hero-guided__brand-ja {
+    margin-top: 4px;
+    font-size: 27px;
+    line-height: 1.05;
+  }
+
+  .hero-guided__brand-en {
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1;
+  }
+
+  .hero-guided__title {
+    /*margin-top: 64px;*/
+    /*font-size: 40px;*/
+    /*line-height: 1.52;*/
+	  font-size: 47px;
+	  line-height: 1.38;
+	  position: relative;
+	  margin: 27px 0px 0 0px;
+  }
+
+  .hero-guided__lead {
+    /*margin-top: 10px;*/
+    /*font-size: 20px;*/
+    /*line-height: 1.62;*/
+	  font-size: 18px;
+	  line-height: 1.62;
+	  position: relative;
+	  margin: 0 0 0 0px;
+	  letter-spacing: -0.8px;
+  }
+
+  .hero-guided__note {
+    /*margin-top: 8px;*/
+    /*font-size: 16px;*/
+    /*line-height: 1.5;*/
+	  font-size: 15px;
+	  line-height: 1.5;
+	  position: relative;
+	  margin: 1px 0 0 -2px;
+	  letter-spacing: -0.8px;
+  }
+
+  .hero-guided__cta {
+    /*margin-top: 18px;*/
+    /*min-width: 270px;*/
+    /*height: 55px;*/
+    /*padding: 0 10px;*/
+    /*border-radius: 5px;*/
+    /*font-size: 18px;*/
+	  min-width: 234px;
+	  height: 44px;
+	  padding: 0 5px;
+	  border-radius: 5px;
+	  font-size: 16px;
+	  position: relative;
+	  margin: 11px 0 0 -1px;
+	  letter-spacing: -1.2px;
+  }
+
+  .hero-guided__safe {
+    /*margin-top: 5px;*/
+    /*font-size: 16px;*/
+    /*line-height: 1.5;*/
+	  font-size: 13px;
+	  line-height: 1.5;
+	  position: relative;
+	  margin: 4px 0 0 -2px;
+  }
+}
+
+/* ==========================================================================
+   SP
+   ・768px以下でスマホ背景に切替
+   ・スマホも背景画像1枚
+   ・ロゴとWEBフォント比率固定
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  .hero-guided {
+    /*height: 1246px;*/
+	  height: 169.2vw;
+  }
+
+  .hero-guided__bg--pc {
+    display: none;
+  }
+
+  .hero-guided__bg--sp {
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /*width: 768px;*/
+	  width: 100%;
+    /*height: 1246px;*/
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .hero-guided__container {
+    height: 1246px;
+  }
+
+  .hero-guided__content {
+    width: 100%;
+    max-width: none;
+    padding-top: 2.7vw;
+    padding-left: 0px;
+    padding-right: 0px;
+    box-sizing: border-box;
+  }
+
+  .hero-guided__brand-mark {
+    /*width: 66px;*/
+	  width: 18.5vw;
+	  position: relative;
+	  margin: 0 0 0 -3.7vw;
+  }
+
+  .hero-guided__brand-ja {
+    margin-top: 2px;
+    font-size: 20px;
+    line-height: 1.05;
+  }
+
+  .hero-guided__brand-en {
+    margin-top: 7px;
+    font-size: 10px;
+    line-height: 1;
+  }
+
+  .hero-guided__title {
+    /*margin-top: 560px;*/
+    /*font-size: 78px;*/
+    /*line-height: 1.26;*/
+	  font-size: 10vw;
+	  line-height: 11.0vw;
+	  position: relative;
+	  margin: 87vw 0 0 0vw;
+	  font-weight: bold;
+	  letter-spacing: -0.1vw;
+  }
+
+  .hero-guided__title span.letter-spacing-01a {
+	  font-size: 8vw;
+	  letter-spacing: -0.1vw;
+  }
+  .hero-guided__title span.letter-spacing-02a {
+	  letter-spacing: -0.2vw;
+  }
+
+  .hero-guided__lead {
+    /*margin-top: 30px;*/
+	  margin-top: 0.5vw;
+    /*font-size: 29px;*/
+	  font-size: 4vw;
+    /*line-height: 1.55;*/
+	  line-height: 5.5vw;
+    font-weight: 700;
+  }
+
+  .hero-guided__note {
+    /*margin-top: 18px;*/
+    /*font-size: 23px;*/
+    /*line-height: 1.45;*/
+	  margin-top: 0.7vw;
+	  font-size: 3.2vw;
+	  line-height: 4.7vw;
+  }
+
+  .hero-guided__cta {
+    display: flex;
+    /*width: 100%;*/
+    /*margin-top: 24px;*/
+    /*height: 94px;*/
+    /*border-radius: 10px;*/
+    /*font-size: 28px;*/
+    /*padding: 0 20px;*/
+	  width: 68%;
+	  margin-top: 1.5vw;
+	  height: 12.5vw;
+	  border-radius: 5px;
+	  font-size: 3.7vw;
+	  padding: 0 5vw;
+  }
+
+  .hero-guided__safe {
+    /*margin-top: 18px;*/
+	  margin-top: 1.0vw;
+    /*font-size: 21px;*/
+	  font-size: 3vw;
+    line-height: 1.5;
+  }
+}
+
+/* ==========================================================================
+   小さいスマホ向け
+   以前の実機幅寄り
+   ========================================================================== */
+@media screen and (max-width: 430px) {
+  .hero-guided {
+    /*height: 1000px;*/
+	  height: 169.2vw;
+  }
+
+  .hero-guided__bg--sp {
+    /*width: 430px;*/
+	  width: 100%;
+    /*height: 1000px;*/
+  }
+
+  .hero-guided__container {
+    height: 1000px;
+  }
+
+  .hero-guided__content {
+    /*padding-top: 24px;*/
+    /*padding-left: 22px;*/
+    /*padding-right: 22px;*/
+  }
+
+  .hero-guided__brand-mark {
+    /*width: 38px;*/
+	  width: 18.5vw;
+  }
+
+  .hero-guided__brand-ja {
+    font-size: 13px;
+  }
+
+  .hero-guided__brand-en {
+    margin-top: 4px;
+    font-size: 7px;
+  }
+
+  .hero-guided__title {
+    /*margin-top: 440px;*/
+    /*font-size: 34px;*/
+    /*line-height: 1.28;*/
+	  margin-top: 86.5vw;
+	  font-size: 10vw;
+	  line-height: 11.3vw;
+  }
+
+  .hero-guided__title span.letter-spacing-01a {
+	  font-size: 8vw;
+	  letter-spacing: -0.1vw;
+  }
+  .hero-guided__title span.letter-spacing-02a {
+	  letter-spacing: -0.2vw;
+  }
+
+  .hero-guided__lead {
+    /*margin-top: 18px;*/
+    /*font-size: 17px;*/
+    /*line-height: 1.55;*/
+	  margin-top: 0.1vw;
+	  font-size: 4vw;
+	  line-height: 5.5vw;
+  }
+
+  .hero-guided__note {
+    /*margin-top: 12px;*/
+    /*font-size: 14px;*/
+    /*line-height: 1.45;*/
+	  font-size: 3.4vw;
+	  line-height: 1.45;
+	  position: relative;
+	  margin: 0.5vw 0 0 0.3vw;
+  }
+
+  .hero-guided__cta {
+    /*margin-top: 18px;*/
+    /*height: 60px;*/
+    /*font-size: 16px;*/
+    /*border-radius: 8px;*/
+	  margin-top: 1vw;
+	  height: 13vw;
+	  font-size: 3.5vw;
+	  border-radius: 5px;
+  }
+
+  .hero-guided__safe {
+    /*margin-top: 12px;*/
+    /*font-size: 12px;*/
+    /*line-height: 1.5;*/
+	  margin-top: 0.7vw;
+	  font-size: 3vw;
+	  line-height: 1.5;
+  }
+}
