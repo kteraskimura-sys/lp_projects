@@ -1834,6 +1834,14 @@ ul {
   color: #ffffff;
 }
 
+  .hero-guided__title span.letter-spacing-01a {
+	  font-size: 35px;
+	  letter-spacing: 1.38;
+  }
+  .hero-guided__title span.letter-spacing-02a {
+	  letter-spacing: 2.38;
+  }
+
 .hero-guided__lead {
   margin: 0;
   font-family:
