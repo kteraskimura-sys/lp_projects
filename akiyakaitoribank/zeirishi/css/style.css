@@ -673,9 +673,11 @@ ul {
    8. Compliance Section
    ========================================================================== */
 .compliance-section {
-    background: var(--color-navy);
+    /*background: var(--color-navy);*/
+	background: var(--color-white);
     padding: 60px 0;
-    color: var(--color-white);
+    /*color: var(--color-white);*/
+	color: var(--color-navy);
 }
 
 .compliance-title {
@@ -687,6 +689,7 @@ ul {
 }
 
 .compliance-desc {
+	color: var(--color-text);
     font-size: 15px;
     line-height: 1.8;
     opacity: 0.9;
