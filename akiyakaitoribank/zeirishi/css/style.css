@@ -2248,3 +2248,190 @@ ul {
 	  line-height: 1.5;
   }
 }
+
+/* =========================================
+   中盤CTA（税理士LP用）
+========================================= */
+.mid-cta-section {
+    background: var(--color-navy);
+    padding: 72px 0 78px;
+}
+
+.mid-cta-box {
+    text-align: center;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.mid-cta-lead {
+    margin: 0;
+    color: var(--color-white);
+    font-size: 32px;
+    line-height: 1.75;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    font-family:
+        "Yu Mincho",
+        "YuMincho",
+        "Hiragino Mincho ProN",
+        serif;
+}
+
+.mid-cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 360px;
+    margin-top: 34px;
+    padding: 20px 34px;
+    background: var(--color-gold);
+    color: var(--color-navy);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mid-cta-button:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+
+.mid-cta-arrow {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.mid-cta-note {
+    margin: 18px 0 0;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+.sp-only {
+    display: none;
+}
+
+/* =========================================
+   1024px以下
+========================================= */
+@media (max-width: 1024px) {
+    .mid-cta-section {
+        padding: 64px 0 70px;
+    }
+
+    .mid-cta-lead {
+        font-size: 28px;
+        line-height: 1.7;
+    }
+
+    .mid-cta-button {
+        min-width: 320px;
+        margin-top: 30px;
+        padding: 18px 30px;
+        font-size: 17px;
+    }
+
+    .mid-cta-note {
+        font-size: 14px;
+    }
+}
+
+/* =========================================
+   769px以上
+========================================= */
+@media (min-width: 769px) {
+    .mid-cta-box {
+        padding: 0 20px;
+    }
+}
+
+/* =========================================
+   768px以下
+========================================= */
+@media (max-width: 768px) {
+    .mid-cta-section {
+        padding: 58px 0 62px;
+    }
+
+    .mid-cta-box {
+        padding: 0 4px;
+    }
+
+    .mid-cta-lead {
+        font-size: 22px;
+        line-height: 1.75;
+        letter-spacing: 0.02em;
+    }
+
+    .mid-cta-button {
+        width: 100%;
+        min-width: 0;
+        margin-top: 26px;
+        padding: 17px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+
+    .mid-cta-note {
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .sp-only {
+        display: inline;
+    }
+}
+
+/* =========================================
+   430px以下
+========================================= */
+@media (max-width: 430px) {
+    .mid-cta-section {
+        padding: 52px 0 56px;
+    }
+
+    .mid-cta-lead {
+        font-size: 19px;
+        line-height: 1.7;
+    }
+
+    .mid-cta-button {
+        margin-top: 22px;
+        padding: 16px 18px;
+        font-size: 15px;
+    }
+
+    .mid-cta-arrow {
+        font-size: 16px;
+    }
+
+    .mid-cta-note {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+}
+
+/* =========================================
+   390px以下
+========================================= */
+@media (max-width: 390px) {
+    .mid-cta-lead {
+        font-size: 18px;
+    }
+
+    .mid-cta-button {
+        font-size: 14px;
+        padding: 15px 16px;
+    }
+
+    .mid-cta-note {
+        font-size: 12px;
+    }
+}
