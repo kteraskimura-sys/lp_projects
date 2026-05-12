@@ -637,7 +637,8 @@ ul {
   .dialogue-grid {
     /*height: 1250px;*/
 	/*height: 650px;*/
-	  height: 32vw;
+	/*height: 32vw;*/
+	  height: 50%;
   }
 
   .dialogue-grid__bg--pc {
@@ -648,8 +649,10 @@ ul {
     /*height: 1250px;*/
 	/*height: 650px;*/
     /*width: auto;*/
-	  width: 88vw;
+	/*width: 88vw;*/
+	  width: 100%;
     /*min-width: 2120px;*/
+	  position: relative;
   }
 
   .dialogue-grid__bg--sp {
