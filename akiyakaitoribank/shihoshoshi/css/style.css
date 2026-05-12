@@ -636,7 +636,8 @@ ul {
 @media screen and (min-width: 769px) {
   .dialogue-grid {
     /*height: 1250px;*/
-	height: 650px;
+	/*height: 650px;*/
+	  height: 32vw;
   }
 
   .dialogue-grid__bg--pc {
@@ -647,7 +648,7 @@ ul {
     /*height: 1250px;*/
 	/*height: 650px;*/
     /*width: auto;*/
-	  width: 68.5%;
+	  width: 86vw;
     /*min-width: 2120px;*/
   }
 
@@ -663,7 +664,7 @@ ul {
 @media screen and (max-width: 768px) {
   .dialogue-grid {
     /*height: 1246px;*/
-	  height: 169.2vw;
+	  height: 135.0vw;
   }
 
   .dialogue-grid__bg--pc {
