@@ -641,12 +641,13 @@ ul {
 
   .dialogue-grid__bg--pc {
     display: block;
-    top: 0;
+    /*top: 0;*/
     left: 50%;
     transform: translateX(-50%);
     /*height: 1250px;*/
-	height: 650px;
-    width: auto;
+	/*height: 650px;*/
+    /*width: auto;*/
+	  width: 68.5%;
     /*min-width: 2120px;*/
   }
 
@@ -671,7 +672,7 @@ ul {
 
   .dialogue-grid__bg--sp {
     display: block;
-    top: 0;
+    /*top: 0;*/
     left: 50%;
     transform: translateX(-50%);
     /*width: 768px;*/
