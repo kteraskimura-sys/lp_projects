@@ -11,6 +11,7 @@
     --color-bg-light: #f8f9fa;
     --color-white: #fff;
     --color-border: #e5e5e5;
+    --color-beige-light: #f8f6f1;
 
     /* Typography */
     --font-sans: 'Noto Sans JP', sans-serif;
@@ -608,9 +609,12 @@ ul {
     padding: var(--section-padding);
 }
 
+.dialogue-bg-color {
+    background-color: var(--color-beige-light);
+}
+
 .dialogue-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
