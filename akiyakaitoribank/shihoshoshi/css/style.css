@@ -629,7 +629,7 @@ ul {
 
 .dialogue-image {
     position: relative;
-    height: 200px;
+    /*height: 200px;*/
 }
 
 .dialogue-image img {
