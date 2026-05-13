@@ -346,6 +346,54 @@ ul {
     /*box-shadow: 0 10px 30px rgba(0,0,0,0.1);*/
 }
 
+.approach-container .approach-cta-card {
+    background: var(--color-white);
+    padding: 40px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    position: relative;
+    z-index: 2;
+    margin-left: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+}
+
+.approach-container .approach-cta-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-navy);
+    margin-bottom: 20px;
+}
+
+.approach-container .approach-cta-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.approach-container .approach-cta-table th,
+.approach-container .approach-cta-table td {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 14px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.approach-container .approach-cta-table tr:last-child th,
+.approach-container .approach-cta-table tr:last-child td {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.approach-container .approach-cta-table th {
+    width: 100px;
+    font-weight: 500;
+    color: var(--color-text-light);
+}
+
+.approach-container .approach-cta-table td {
+    color: var(--color-text);
+}
+
 /* ==========================================================================
    3. Assurances Section
    ========================================================================== */
