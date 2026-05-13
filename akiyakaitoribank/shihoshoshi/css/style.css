@@ -265,8 +265,8 @@ ul {
    2 - 3. About Section
    ========================================================================== */
 .approach-section {
-	background-color: var();
-    padding: var(--section-padding--color-beige-light);
+	background-color: var(--color-beige-light);
+    padding: var(--section-padding);
 }
 
 .approach-container {
