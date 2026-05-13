@@ -270,9 +270,13 @@ ul {
 }
 
 .approach-container {
-    display: flex;
+    /*display: flex;*/
     justify-content: space-between;
-    gap: 60px;
+    /*gap: 60px;*/
+	display: grid;
+	grid-template-columns: 55% 40%;
+	gap: 72px;
+	align-items: start;
 }
 
 .approach-text-area {
@@ -289,7 +293,8 @@ ul {
 }
 
 .approach-container .title-line {
-    width: 40px;
+    /*width: 40px;*/
+	width: 35vw;
     height: 3px;
     background-color: var(--color-gold);
     margin-bottom: 30px;
@@ -348,20 +353,24 @@ ul {
 
 .approach-container .approach-cta-card {
     background: var(--color-white);
-    padding: 40px;
+    /*padding: 40px;*/
+	padding: 1vw;
     border: 1px solid var(--color-border);
     border-radius: 4px;
     position: relative;
     z-index: 2;
-    margin-left: 20px;
+    /*margin-left: 20px;*/
     box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+	margin: 3vw auto 0;
+	width: 90%;
 }
 
 .approach-container .approach-cta-title {
     font-size: 18px;
     font-weight: 600;
     color: var(--color-navy);
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
+	text-align: center;
 }
 
 .approach-container .approach-cta-table {
@@ -631,7 +640,8 @@ ul {
 }
 
 .title-line {
-    width: 40px;
+    /*width: 40px;*/
+	width: 35vw;
     height: 3px;
     background-color: var(--color-gold);
     margin-bottom: 30px;
@@ -1085,7 +1095,7 @@ ul {
     }
     /* 2026.05.13 rk add ====================================================*/
 	.approach-container {
-        gap: 30px;
+        /*gap: 30px;*/
     }
 }
 
