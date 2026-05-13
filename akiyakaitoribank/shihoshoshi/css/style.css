@@ -329,6 +329,13 @@ ul {
     font-weight: bold;
 }
 
+.approach-note {
+    margin-top: 28px;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--color-text);
+}
+
 .approach-company-area {
     flex: 1;
     display: flex;
@@ -401,6 +408,18 @@ ul {
 
 .approach-container .approach-cta-table td {
     color: var(--color-text);
+}
+
+.approach-text-area,
+.approach-company-area {
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .approach-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 }
 
 /* ==========================================================================
@@ -1151,7 +1170,7 @@ ul {
     }
     /* 2026.05.13 rk add ====================================================*/
     .approach-container {
-        flex-direction: column;
+        /*flex-direction: column;*/
     }
 	
     .company-card {
