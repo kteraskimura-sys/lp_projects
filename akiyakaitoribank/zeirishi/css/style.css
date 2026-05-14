@@ -2185,6 +2185,8 @@ ul {
   .hero-guided__title span.letter-spacing-00a {
 	  font-size: 35px;
 	  letter-spacing: 1.38;
+	  position: relative;
+	  top: 1vw;
   }
   .hero-guided__title span.letter-spacing-00b {
 	  font-size: 35px;
@@ -2444,6 +2446,8 @@ ul {
   .hero-guided__title span.letter-spacing-00a {
 	  font-size: 8vw;
 	  letter-spacing: -0.1vw;
+	  position: relative;
+	  top: 2vw;
   }
   .hero-guided__title span.letter-spacing-00b {
 	  font-size: 8vw;
