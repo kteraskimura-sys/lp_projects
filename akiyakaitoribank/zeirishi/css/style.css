@@ -2182,7 +2182,19 @@ ul {
 	  margin: 27px 0px 0 0px;
   }
 
+  .hero-guided__title span.letter-spacing-00a {
+	  font-size: 35px;
+	  letter-spacing: 1.38;
+  }
+  .hero-guided__title span.letter-spacing-00b {
+	  font-size: 35px;
+	  letter-spacing: 1.38;
+  }
   .hero-guided__title span.letter-spacing-01a {
+	  font-size: 35px;
+	  letter-spacing: 1.38;
+  }
+  .hero-guided__title span.letter-spacing-01b {
 	  font-size: 35px;
 	  letter-spacing: 1.38;
   }
@@ -2313,7 +2325,19 @@ ul {
 	  letter-spacing: -0.1vw;
   }
 
+  .hero-guided__title span.letter-spacing-00a {
+	  font-size: 8vw;
+	  letter-spacing: -0.1vw;
+  }
+  .hero-guided__title span.letter-spacing-00b {
+	  font-size: 8vw;
+	  letter-spacing: -0.1vw;
+  }
   .hero-guided__title span.letter-spacing-01a {
+	  font-size: 8vw;
+	  letter-spacing: -0.1vw;
+  }
+  .hero-guided__title span.letter-spacing-01b {
 	  font-size: 8vw;
 	  letter-spacing: -0.1vw;
   }
@@ -2410,13 +2434,26 @@ ul {
     /*margin-top: 440px;*/
     /*font-size: 34px;*/
     /*line-height: 1.28;*/
-	  margin-top: 86.5vw;
+	/*margin-top: 86.5vw;*/
+	  margin-top: 76.0vw;
 	  /*font-size: 10vw;*/
 	  font-size: 9.5vw;
 	  line-height: 11.3vw;
   }
 
+  .hero-guided__title span.letter-spacing-00a {
+	  font-size: 8vw;
+	  letter-spacing: -0.1vw;
+  }
+  .hero-guided__title span.letter-spacing-00b {
+	  font-size: 8vw;
+	  letter-spacing: -0.1vw;
+  }
   .hero-guided__title span.letter-spacing-01a {
+	  font-size: 8vw;
+	  letter-spacing: -0.1vw;
+  }
+  .hero-guided__title span.letter-spacing-01b {
 	  font-size: 8vw;
 	  letter-spacing: -0.1vw;
   }
