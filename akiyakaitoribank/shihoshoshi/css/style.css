@@ -436,7 +436,8 @@ ul {
 
 .approach-pdf-note{
 	margin: 1.5vw auto 0;
-	font-size: 13px;
+	/*font-size: 13px;*/
+	font-size: 15px;
 }
 
 @media (max-width: 768px) {
