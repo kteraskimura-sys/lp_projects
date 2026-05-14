@@ -440,10 +440,26 @@ ul {
 }
 
 @media (max-width: 768px) {
-    .approach-container {
-        grid-template-columns: 1fr;
+	.approach-container {
+		grid-template-columns: 1fr;
         gap: 40px;
     }
+
+	.approach-container .approach-cta-card {
+		background: var(--color-white);
+		/*padding: 40px;*/
+		padding: 1vw;
+		border: 1px solid var(--color-border);
+		border-radius: 4px;
+		position: relative;
+		z-index: 2;
+		/*margin-left: 20px;*/
+		box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+		/*margin: 3vw auto 0;*/
+		margin: 24px auto 0;
+		width: 90%;
+		transition: 0.3s;
+}
 }
 
 .approach-text-area,
