@@ -348,7 +348,7 @@ ul {
     display: flex;
     flex-direction: column;
 	/*width: auto;*/
-	width: 30%;
+	width: 95%;
 }
 
 .approach-image {
@@ -423,6 +423,11 @@ ul {
     .approach-container {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+
+	.approach-text-area,
+	.approach-company-area {
+    width: auto;
     }
 }
 
