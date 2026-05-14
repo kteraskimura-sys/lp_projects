@@ -435,7 +435,7 @@ ul {
 }
 
 .approach-pdf-note{
-	margin: 5px auto 0;
+	margin: 1.5vw auto 0;
 	font-size: 13px;
 }
 
@@ -448,7 +448,7 @@ ul {
 	.approach-container .approach-cta-card {
 		background: var(--color-white);
 		/*padding: 40px;*/
-		padding: 1vw;
+		padding: 2.5vw;
 		border: 1px solid var(--color-border);
 		border-radius: 4px;
 		position: relative;
@@ -456,7 +456,8 @@ ul {
 		/*margin-left: 20px;*/
 		box-shadow: 0 5px 20px rgba(0,0,0,0.03);
 		/*margin: 3vw auto 0;*/
-		margin: 24px auto 0;
+		/*margin: 24px auto 0;*/
+		margin: 8vw auto 0;
 		width: 90%;
 		transition: 0.3s;
 }
