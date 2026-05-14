@@ -259,6 +259,215 @@ ul {
     font-weight: 500;
 }
 
+/* 2026.05.13 rk add =========================================================*/
+/* ==========================================================================
+   2 - 3. About Section
+   ========================================================================== */
+.approach-section {
+	background-color: var(--color-beige-light);
+    padding: var(--section-padding);
+}
+
+.approach-container {
+    /*display: flex;*/
+    justify-content: space-between;
+    /*gap: 60px;*/
+	display: grid;
+	grid-template-columns: 55% 40%;
+	/*gap: 72px;*/
+	/*gap: 4.80vw;*/
+	gap: 3.5vw;
+	align-items: start;
+	/*max-width: 1200px;*/
+}
+
+.approach-text-area {
+    flex: 1;
+	/*width: auto;*/
+	width: 60%;
+}
+
+.approach-main-title {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--color-navy);
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.approach-container .title-line {
+    /*width: 40px;*/
+	/*width: 35vw;*/
+	width: 300px;
+    height: 3px;
+    background-color: var(--color-gold);
+    margin-bottom: 30px;
+}
+
+.approach-desc {
+    font-size: 15px;
+    line-height: 1.8;
+    /*margin-bottom: 40px;*/
+	margin-bottom: 55px;
+	/*margin-bottom: 2.67vw;*/
+	/*margin-bottom: 3.75vw;*/
+    color: var(--color-text);
+}
+
+.approach-container .support-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-navy);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.approach-container .support-list ul li {
+    font-size: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.approach-container .support-list ul li span {
+    color: var(--color-gold);
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.approach-note {
+    margin-top: 28px;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--color-text);
+}
+
+.approach-company-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+	/*width: auto;*/
+	width: 95%;
+}
+
+.approach-image {
+    width: 100%;
+    /*margin-bottom: -40px;*/
+    position: relative;
+    z-index: 1;
+}
+
+.approach-image img {
+    /*border-radius: 4px;*/
+    /*width: 100%;*/
+	width: 100%;
+    /*height: 250px;*/
+    object-fit: cover;
+    /*box-shadow: 0 10px 30px rgba(0,0,0,0.1);*/
+}
+
+.approach-container .approach-cta-card {
+    background: var(--color-white);
+    /*padding: 40px;*/
+	padding: 1vw;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    position: relative;
+    z-index: 2;
+    /*margin-left: 20px;*/
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+	/*margin: 3vw auto 0;*/
+	margin: 24px auto 0;
+	width: 90%;
+	transition: 0.3s;
+}
+
+.approach-cta-card:hover {
+    opacity: 0.8;
+    transform: translateY(2px);
+}
+
+.approach-container .approach-cta-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-navy);
+    /*margin-bottom: 20px;*/
+	text-align: center;
+}
+
+.approach-container .approach-cta-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.approach-container .approach-cta-table th,
+.approach-container .approach-cta-table td {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 14px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.approach-container .approach-cta-table tr:last-child th,
+.approach-container .approach-cta-table tr:last-child td {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.approach-container .approach-cta-table th {
+    width: 100px;
+    font-weight: 500;
+    color: var(--color-text-light);
+}
+
+.approach-container .approach-cta-table td {
+    color: var(--color-text);
+}
+
+.approach-cta-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.approach-pdf-note{
+	margin: 1.5vw auto 0;
+	/*font-size: 13px;*/
+	font-size: 15px;
+}
+
+@media (max-width: 768px) {
+	.approach-container {
+		grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+	.approach-container .approach-cta-card {
+		background: var(--color-white);
+		/*padding: 40px;*/
+		padding: 2.5vw;
+		border: 1px solid var(--color-border);
+		border-radius: 4px;
+		position: relative;
+		z-index: 2;
+		/*margin-left: 20px;*/
+		box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+		/*margin: 3vw auto 0;*/
+		/*margin: 24px auto 0;*/
+		margin: 8vw auto 0;
+		width: 90%;
+		transition: 0.3s;
+}
+}
+
+.approach-text-area,
+.approach-company-area {
+	width: auto;
+}
+
 /* ==========================================================================
    3. Assurances Section
    ========================================================================== */
@@ -496,7 +705,9 @@ ul {
 }
 
 .title-line {
-    width: 40px;
+    /*width: 40px;*/
+	/*width: 35vw;*/
+	width: 300px;
     height: 3px;
     background-color: var(--color-gold);
     margin-bottom: 30px;
