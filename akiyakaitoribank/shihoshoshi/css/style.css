@@ -380,6 +380,12 @@ ul {
     box-shadow: 0 5px 20px rgba(0,0,0,0.03);
 	margin: 3vw auto 0;
 	width: 90%;
+	transition: 0.3s;
+}
+
+.approach-cta-card:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
 }
 
 .approach-container .approach-cta-title {
@@ -418,6 +424,17 @@ ul {
 
 .approach-container .approach-cta-table td {
     color: var(--color-text);
+}
+
+.approach-cta-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.approach-pdf-note{
+	margin: 0 auto;
+	/*font-size: ;*/
 }
 
 @media (max-width: 768px) {
