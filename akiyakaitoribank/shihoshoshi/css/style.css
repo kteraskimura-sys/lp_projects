@@ -1123,10 +1123,6 @@ ul {
     .about-container {
         gap: 30px;
     }
-    /* 2026.05.13 rk add ====================================================*/
-	.approach-container {
-        /*gap: 30px;*/
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1178,10 +1174,6 @@ ul {
     
     .about-container {
         flex-direction: column;
-    }
-    /* 2026.05.13 rk add ====================================================*/
-    .approach-container {
-        /*flex-direction: column;*/
     }
 	
     .company-card {
