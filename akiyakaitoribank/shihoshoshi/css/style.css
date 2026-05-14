@@ -279,7 +279,7 @@ ul {
 	/*gap: 4.80vw;*/
 	gap: 3.5vw;
 	align-items: start;
-	max-width: 1200px;
+	/*max-width: 1200px;*/
 }
 
 .approach-text-area {
@@ -424,11 +424,11 @@ ul {
         grid-template-columns: 1fr;
         gap: 40px;
     }
+}
 
-	.approach-text-area,
-	.approach-company-area {
-    width: auto;
-    }
+.approach-text-area,
+.approach-company-area {
+	width: auto;
 }
 
 /* ==========================================================================
