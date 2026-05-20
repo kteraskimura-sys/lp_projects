@@ -2234,13 +2234,13 @@ ul {
     /*border-radius: 5px;*/
     /*font-size: 18px;*/
 	  min-width: 234px;
-	  height: 44px;
-	  padding: 0 25px;
+	  height: 72px;
+	  padding: 0 45px;
 	  border-radius: 5px;
-	  font-size: 16px;
+	  font-size: 1.2rem;
 	  position: relative;
-	  margin: 11px 0 0 -1px;
-	  letter-spacing: -1.2px;
+	  margin: 15px 0 0 -1px;
+	  letter-spacing: -0.03em;
   }
 
   .hero-guided__safe {
