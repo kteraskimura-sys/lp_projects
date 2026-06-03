@@ -952,6 +952,7 @@ ul {
 .contact-info {
     display: flex;
     flex-direction: column;
+	min-width: 0;
 }
 
 .contact-label {
@@ -968,6 +969,8 @@ ul {
 }
 .contact-value.mail {
     font-size: 18px;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 .contact-value.line-text {
     font-size: 16px;
