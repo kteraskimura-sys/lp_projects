@@ -2599,13 +2599,14 @@ ul {
 .corp_link_a {
 	color: #013b77;
 	font-size: 16px;
-	margin: 55px auto 0;
+	margin: 55px auto 55px;
+	text-align: center;
 	text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {
   .corp_link_a {
 	  font-size: 16px;
-	  margin: 55px auto 0;
+	  margin: 15vw auto 15vw;
   }
 }
