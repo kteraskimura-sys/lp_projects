@@ -2694,3 +2694,22 @@ ul {
         font-size: 12px;
     }
 }
+
+/* 2026.06.03 rk add =========================================================*/
+/* ==========================================================================
+   コーポレートリンク. corp link
+   ========================================================================== */
+.corp_link_a {
+	color: #013b77;
+	font-size: 16px;
+	margin: 55px auto 55px;
+	text-align: center;
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .corp_link_a {
+	  font-size: 16px;
+	  margin: 15vw auto 15vw;
+  }
+}
