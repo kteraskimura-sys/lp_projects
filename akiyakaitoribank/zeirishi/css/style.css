@@ -2713,3 +2713,27 @@ ul {
 	  margin: 15vw auto 15vw;
   }
 }
+
+/* 2026.06.05 rk add =========================================================*/
+/* ==========================================================================
+   当社の取り組みについて　マガジン名
+   ========================================================================== */
+.approach-image-text{
+    color: var(--color-text);
+	font-size: 15px;
+    line-height: 1.8;
+	margin: 5px auto 0;
+	width: 100%;
+}
+
+.approach_magazine_01a{
+	display: inline-block;
+    font-size: 15px;
+}
+
+.approach_magazine_01a_company{
+    display: inline-block;
+	font-size: 12px;
+	line-height: 17.5px;
+	margin: 3px auto 0;
+}
