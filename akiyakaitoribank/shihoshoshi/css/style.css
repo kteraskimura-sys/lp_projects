@@ -2622,13 +2622,18 @@ ul {
     color: var(--color-text);
 	font-size: 15px;
     line-height: 1.8;
-	margin: 0 auto 0;
+	margin: 5px auto 0;
+	width: 100%;
 }
 
 .approach_magazine_01a{
-	margin: 0 auto 0;
+	display: inline-block;
+    font-size: 15px;
 }
 
 .approach_magazine_01a_company{
-	margin: 0 auto 0;
+    display: inline-block;
+	font-size: 12px;
+	line-height: 17.5px;
+	margin: 3px auto 0;
 }
