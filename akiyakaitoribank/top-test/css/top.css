@@ -1208,7 +1208,7 @@
 /* 下部CTA */
 .remaining-items-cta {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 333px 1fr;
   gap: 16px;
   align-items: center;
   margin-top: 22px;
