@@ -166,7 +166,8 @@
 
 .problem-flow {
   display: grid;
-  margin-top: 34px;
+  /*margin-top: 34px;*/
+	margin-top: 10px;
 }
 
 .problem-flow li {
@@ -178,7 +179,7 @@
   /*width: 52px;*/
 	width: 80px;
   /*height: 52px;*/
-	height: 100px;
+	height: 80px;
   /*margin: 0 auto 10px;*/
 	margin: 0 auto -5px;
 }
