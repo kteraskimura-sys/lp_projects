@@ -118,9 +118,12 @@
 }
 
 .problem-card__icon {
-  width: 54px;
-  height: 54px;
-  margin: 0 auto 12px;
+  /*width: 54px;*/
+	width: 80px;
+  /*height: 54px;*/
+	height: 80px;
+  /*margin: 0 auto 12px;*/
+	margin: 0 auto 5px;
 }
 
 .problem-card__icon img {
