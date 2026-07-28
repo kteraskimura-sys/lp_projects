@@ -408,7 +408,8 @@ body {
   display: none;
 }
 
-@media (max-width: 750px) {
+/* 1023px以下：スマホ・タブレット用ヘッダー */
+@media (max-width: 1023px) {
   .site-header {
     position: sticky;
     top: 0;
@@ -500,6 +501,7 @@ body {
   }
 }
 
+/* 420px以下：小さめスマホ用の微調整 */
 @media (max-width: 420px) {
   .site-header__inner {
     padding: 0 12px;
