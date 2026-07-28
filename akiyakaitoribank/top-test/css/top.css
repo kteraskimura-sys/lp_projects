@@ -175,9 +175,12 @@
 }
 
 .problem-flow__icon {
-  width: 52px;
-  height: 52px;
-  margin: 0 auto 10px;
+  /*width: 52px;*/
+	width: 80px;
+  /*height: 52px;*/
+	height: 100px;
+  /*margin: 0 auto 10px;*/
+	margin: 0 auto -5px;
 }
 
 .problem-flow__icon img {
@@ -517,8 +520,10 @@
 }
 
 .strength-card__icon {
-  width: 54px;
-  height: 54px;
+  /*width: 54px;*/
+	width: 80px;
+  /*height: 54px;*/
+	height: 80px;
   margin: 0 auto 12px;
 }
 
@@ -3171,4 +3176,3 @@
 @media (max-width: 480px) {
 
 }
-
