@@ -3242,9 +3242,12 @@
 
   .hero__visual {
     position: absolute;
-    right: -118px;
-    top: 300px;
-    width: 560px;
+    /*right: -118px;*/
+	  right: 0px;
+    /*top: 300px;*/
+	  top: 0px;
+    /*width: 560px;*/
+	  width: 100%;
     margin: 0;
     z-index: 1;
     pointer-events: none;
@@ -3265,7 +3268,8 @@
     gap: 16px;
     width: 100%;
     max-width: 680px;
-    margin: 430px auto 0;
+    /*margin: 430px auto 0;*/
+	  margin: 100px auto 0;
   }
 
   .hero__buttons .btn {
@@ -3366,13 +3370,17 @@
   }
 
   .hero__visual {
-    top: 385px;
-    right: -126px;
-    width: 520px;
+    /*top: 385px;*/
+	  top: 0px;
+    /*right: -126px;*/
+	  right: 0px;
+    /*width: 520px;*/
+	  width: 100%;
   }
 
   .hero__buttons {
-    margin-top: 390px;
+    /*margin-top: 390px;*/
+	  margin-top: 50px;
   }
 
   .hero__buttons .btn {
@@ -3406,14 +3414,18 @@
   }
 
   .hero__visual {
-    top: 398px;
-    right: -122px;
-    width: 500px;
+    /*top: 398px;*/
+	  top: 0px;
+    /*right: -122px;*/
+	  right: 0px;
+    /*width: 500px;*/
+	  width: 100%;
   }
 
   .hero__buttons {
     gap: 14px;
-    margin-top: 370px;
+    /*margin-top: 370px;*/
+	  margin-top: 50px;
   }
 
   .hero__buttons .btn {
@@ -3457,13 +3469,17 @@
   }
 
   .hero__visual {
-    top: 390px;
-    right: -135px;
-    width: 500px;
+    /*top: 390px;*/
+	  top: 0px;
+    /*right: -135px;*/
+	  right: 0px;
+    /*width: 500px;*/
+	  width: 100%;
   }
 
   .hero__buttons {
-    margin-top: 360px;
+    /*margin-top: 360px;*/
+	  margin-top: 50px;
   }
 
   .hero__buttons .btn {
