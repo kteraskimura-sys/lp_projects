@@ -217,9 +217,9 @@
   }
 
   .problem-card__icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 5px;
+    /*width: 80px;*/
+    /*height: 80px;*/
+    /*margin: 0 auto 5px;*/
   }
 
   .problem-card p {
@@ -307,9 +307,9 @@
 
   .problem-card__icon {
     /*width: 62px;*/
-	  width: 18vw;
+	  width: clamp(58px, 18vw, 120px);
     /*height: 62px;*/
-	  height: 18vw;
+	  height: clamp(58px, 18vw, 120px);
     margin: 0 auto 8px;
   }
 
@@ -405,9 +405,9 @@
 
   .problem-card__icon {
     /*width: 58px;*/
-	  width: 22vw;
+	  width: clamp(64px, 22vw, 120px);
     /*height: 58px;*/
-	  height: 22vw;
+	  height: clamp(64px, 22vw, 120px);
     margin: 0 auto 8px;
   }
 
@@ -513,7 +513,9 @@
 
   .problem-about__content p {
     font-size: 15px;
-    line-height: 1.9;
+    /*line-height: 1.9;*/
+	  line-height: 1.95;
+	  font-weight: 500;
   }
 
   .problem-flow {
@@ -3476,7 +3478,7 @@
     line-height: 1.45;
   }
 
-  .hero__br-sp {
+  .hero__br-sp, .text01a__br-sp {
     display: block;
   }
 
