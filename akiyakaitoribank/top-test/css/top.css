@@ -3371,11 +3371,11 @@
 
   .hero__visual {
     /*top: 385px;*/
-	  top: 0px;
+	  /*top: 0px;*/
     /*right: -126px;*/
-	  right: 0px;
+	  /*right: 0px;*/
     /*width: 520px;*/
-	  width: 100%;
+	  /*width: 100%;*/
   }
 
   .hero__buttons {
@@ -3398,11 +3398,13 @@
   }
 
   .hero__content {
-    padding-top: 58px;
+    /*padding-top: 58px;*/
+	  padding-top: 8.8vw;
   }
 
   .hero__title {
-    font-size: 37px;
+    /*font-size: 37px;*/
+	  font-size: 8.8vw;
     line-height: 1.45;
     letter-spacing: 0;
   }
@@ -3415,11 +3417,11 @@
 
   .hero__visual {
     /*top: 398px;*/
-	  top: 0px;
+	  /*top: 0px;*/
     /*right: -122px;*/
-	  right: 0px;
+	  /*right: 0px;*/
     /*width: 500px;*/
-	  width: 100%;
+	  /*width: 100%;*/
   }
 
   .hero__buttons {
@@ -3461,7 +3463,8 @@
   }
 
   .hero__title {
-    font-size: 35px;
+    /*font-size: 35px;*/
+	  font-size: 8.8vw;
   }
 
   .hero__lead {
@@ -3470,11 +3473,11 @@
 
   .hero__visual {
     /*top: 390px;*/
-	  top: 0px;
+	  /*top: 0px;*/
     /*right: -135px;*/
-	  right: 0px;
+	  /*right: 0px;*/
     /*width: 500px;*/
-	  width: 100%;
+	  /*width: 100%;*/
   }
 
   .hero__buttons {
