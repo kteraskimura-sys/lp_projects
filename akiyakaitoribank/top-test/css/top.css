@@ -349,8 +349,10 @@
   }
 
   .problem-flow__icon {
-    width: 64px;
-    height: 64px;
+    /*width: 64px;*/
+	  width: clamp(64px, 10vw, 100px);
+    /*height: 64px;*/
+	  height: clamp(64px, 10vw, 100px);
     margin: 0 auto 0;
   }
 
@@ -362,7 +364,7 @@
 
 /* ========================================
    Problem / Smartphone
-   750px以下：スマホ実機向け
+   750px以下：スマホ実機向け 2列×2段
 ======================================== */
 
 @media (max-width: 750px) {
@@ -444,8 +446,10 @@
   }
 
   .problem-flow__icon {
-    width: 58px;
-    height: 58px;
+    /*width: 58px;*/
+	  width: clamp(64px, 22vw, 120px);
+    /*height: 58px;*/
+	  height: clamp(64px, 22vw, 120px);
     margin: 0 auto 2px;
   }
 
@@ -457,7 +461,7 @@
 
 /* ========================================
    Problem / iPhone
-   420px以下：iPhone幅向け
+   420px以下：iPhone幅向け 2列×2段を維持
 ======================================== */
 
 @media (max-width: 420px) {
@@ -478,6 +482,11 @@
     font-size: 20px;
     line-height: 1.55;
   }
+
+.problem__heading h2::before,
+.problem__heading h2::after {
+  top: 52%;
+}
 
   .problem-card-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -524,8 +533,10 @@
   }
 
   .problem-flow__icon {
-    width: 56px;
-    height: 56px;
+    /*width: 56px;*/
+	  width: clamp(64px, 22vw, 120px);
+    /*height: 56px;*/
+	  height: clamp(64px, 22vw, 120px);
     margin-bottom: 0;
   }
 
@@ -537,7 +548,7 @@
 
 /* ========================================
    Problem / Small Smartphone
-   374px以下：小さめスマホ向け
+   374px以下：小さめスマホ向け 2列×2段を維持
 ======================================== */
 
 @media (max-width: 374px) {
@@ -571,8 +582,14 @@
   }
 
   .problem-flow__icon {
-    width: 52px;
-    height: 52px;
+    /*width: 52px;*/
+	  width: clamp(60px, 22vw, 120px);
+    /*height: 52px;*/
+	  height: clamp(60px, 22vw, 120px);
+  }
+
+	.problem-flow span {
+    font-size: 12.5px;
   }
 }
 
@@ -3300,7 +3317,7 @@
    1023px以下：スマホ・タブレット用ヒーロー
 ======================================== */
 
-.hero__br-sp, .text01a__br-sp {
+.hero__br-sp, .br-sp {
   display: none;
 }
 
@@ -3478,7 +3495,7 @@
     line-height: 1.45;
   }
 
-  .hero__br-sp, .text01a__br-sp {
+  .hero__br-sp, .br-sp {
     display: block;
   }
 
