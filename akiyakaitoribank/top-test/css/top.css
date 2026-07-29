@@ -118,12 +118,9 @@
 }
 
 .problem-card__icon {
-  /*width: 54px;*/
-	width: 80px;
-  /*height: 54px;*/
-	height: 80px;
-  /*margin: 0 auto 12px;*/
-	margin: 0 auto 5px;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 5px;
 }
 
 .problem-card__icon img {
@@ -169,8 +166,7 @@
 
 .problem-flow {
   display: grid;
-  /*margin-top: 34px;*/
-	margin-top: 10px;
+  margin-top: 10px;
 }
 
 .problem-flow li {
@@ -179,12 +175,9 @@
 }
 
 .problem-flow__icon {
-  /*width: 52px;*/
-	width: 80px;
-  /*height: 52px;*/
-	height: 80px;
-  /*margin: 0 auto 10px;*/
-	margin: 0 auto -5px;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto -5px;
 }
 
 .problem-flow__icon img {
@@ -201,8 +194,13 @@
   font-weight: 700;
 }
 
-/* 1101px以上：PC固定 */
-@media (min-width: 1100px) {
+
+/* ========================================
+   Problem / PC
+   PC版：1024px以上
+======================================== */
+
+@media (min-width: 1024px) {
   .problem__inner {
     width: 1040px;
     max-width: 1040px;
@@ -218,9 +216,30 @@
     padding: 18px 10px 16px;
   }
 
+  .problem-card__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 5px;
+  }
+
+  .problem-card p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
   .problem-about {
     grid-template-columns: 430px 1fr;
     gap: 55px;
+  }
+
+  .problem-about__content h2 {
+    font-size: 28px;
+    text-align: left;
+  }
+
+  .problem-about__content p {
+    font-size: 16px;
+    line-height: 2;
   }
 
   .problem-flow {
@@ -236,79 +255,43 @@
     color: var(--color-subtext);
     font-size: 18px;
   }
-}
-
-/* 901px〜1100px：PC寄りの可変・6枚横並び */
-@media (min-width: 900px) and (max-width: 1100px) {
-  .problem__inner {
-    width: calc(100% - 40px);
-    max-width: 1040px;
-  }
-
-  .problem-card-list {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 12px;
-  }
-
-  .problem-card {
-    min-height: 140px;
-    padding: 16px 8px 14px;
-  }
-
-  .problem-card__icon {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 10px;
-  }
-
-  .problem-card p {
-    font-size: 12px;
-    line-height: 1.6;
-  }
-
-  .problem-about {
-    grid-template-columns: 380px 1fr;
-    gap: 32px;
-  }
-
-  .problem-about__content h2 {
-    font-size: 26px;
-  }
-
-  .problem-about__content p {
-    font-size: 15px;
-    line-height: 1.9;
-  }
-
-  .problem-flow {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-
-  .problem-flow li:not(:last-child)::after {
-    content: "→";
-    position: absolute;
-    top: 22px;
-    right: -16px;
-    color: var(--color-subtext);
-    font-size: 16px;
-  }
 
   .problem-flow__icon {
-    width: 48px;
-    height: 48px;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto -5px;
   }
 
   .problem-flow span {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
-/* 751px〜900px：PC寄りの可変・3枚×2段 */
-@media (min-width: 750px) and (max-width: 900px) {
+
+/* ========================================
+   Problem / Tablet & Smartphone
+   1023px以下：タブレット・スマホ共通
+======================================== */
+
+@media (max-width: 1023px) {
+  .problem {
+    padding: 46px 0 58px;
+  }
+
   .problem__inner {
     width: calc(100% - 40px);
-    max-width: 1040px;
+    max-width: 880px;
+  }
+
+  .problem__heading {
+    margin-bottom: 26px;
+  }
+
+  .problem__heading h2 {
+    padding: 0 34px;
+    font-size: 24px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
   }
 
   .problem-card-list {
@@ -317,105 +300,46 @@
   }
 
   .problem-card {
-    min-height: 138px;
-    padding: 16px 10px 14px;
-  }
-
-  .problem-about {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    margin-top: 36px;
-  }
-
-  .problem-about__image {
-    max-width: 520px;
-    margin: 0 auto;
-  }
-
-  .problem-about__content h2 {
-    font-size: 26px;
-    text-align: center;
-  }
-
-  .problem-about__content p {
-    font-size: 15px;
-    line-height: 1.9;
-  }
-
-  .problem-flow {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 18px;
-  }
-
-  .problem-flow li::after {
-    display: none;
-  }
-}
-
-/* 750px以下：スマホ・タブレット */
-@media (max-width: 750px) {
-  .problem {
-    padding: 44px 0 56px;
-  }
-
-  .problem__inner {
-    width: calc(100% - 32px);
-  }
-
-  .problem__heading {
-    margin-bottom: 22px;
-  }
-
-  .problem__heading h2 {
-    padding: 0 28px;
-    font-size: 20px;
-  }
-
-  .problem-card-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
-  }
-
-  .problem-card {
-    min-height: 136px;
-    padding: 16px 10px 14px;
+    min-height: 150px;
+    padding: 18px 10px 16px;
+    border-radius: 14px;
   }
 
   .problem-card__icon {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 10px;
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 8px;
   }
 
   .problem-card p {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.6;
   }
 
   .problem-about {
     grid-template-columns: 1fr;
-    gap: 28px;
-    margin-top: 36px;
+    gap: 30px;
+    margin-top: 40px;
   }
 
   .problem-about__image {
-    max-width: 520px;
+    max-width: 560px;
     margin: 0 auto;
   }
 
   .problem-about__content h2 {
-    font-size: 24px;
+    font-size: 28px;
     text-align: center;
   }
 
   .problem-about__content p {
-    font-size: 15px;
-    line-height: 1.9;
+    font-size: 16px;
+    line-height: 1.95;
   }
 
   .problem-flow {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px 18px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
   }
 
   .problem-flow li::after {
@@ -423,8 +347,9 @@
   }
 
   .problem-flow__icon {
-    width: 48px;
-    height: 48px;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 0;
   }
 
   .problem-flow span {
@@ -432,37 +357,12 @@
   }
 }
 
-/* 480px以下：小さいスマホ */
-@media (max-width: 480px) {
-  .problem__inner {
-    width: calc(100% - 24px);
-  }
-
-  .problem-card-list {
-    grid-template-columns: 1fr;
-  }
-
-  .problem-card {
-    min-height: auto;
-    padding: 18px 14px 16px;
-  }
-
-  .problem__heading h2 {
-    padding: 0 24px;
-    font-size: 19px;
-  }
-
-  .problem-flow {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* ========================================
-   Problem / Smartphone Adjustment
-   スマホ版：お悩みセクション調整
+   Problem / Smartphone
+   750px以下：スマホ実機向け
 ======================================== */
 
-/* 750px以下：お悩みカードは2列×3段 */
 @media (max-width: 750px) {
   .problem {
     padding: 46px 0 58px;
@@ -470,6 +370,7 @@
 
   .problem__inner {
     width: calc(100% - 28px);
+    max-width: none;
   }
 
   .problem__heading {
@@ -489,7 +390,6 @@
   }
 
   .problem-card-list {
-    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px;
   }
@@ -512,10 +412,55 @@
     line-height: 1.55;
     font-weight: 700;
   }
+
+  .problem-about {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 38px;
+  }
+
+  .problem-about__image {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .problem-about__content h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .problem-about__content p {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  .problem-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 18px;
+  }
+
+  .problem-flow__icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 2px;
+  }
+
+  .problem-flow span {
+    font-size: 13px;
+  }
 }
 
-/* 480px以下：小さいスマホでも2列を維持 */
-@media (max-width: 480px) {
+
+/* ========================================
+   Problem / iPhone
+   420px以下：iPhone幅向け
+======================================== */
+
+@media (max-width: 420px) {
+  .problem {
+    padding: 44px 0 56px;
+  }
+
   .problem__inner {
     width: calc(100% - 24px);
   }
@@ -552,12 +497,51 @@
     line-height: 1.55;
     letter-spacing: 0;
   }
+
+  .problem-about {
+    gap: 26px;
+    margin-top: 36px;
+  }
+
+  .problem-about__content h2 {
+    font-size: 24px;
+  }
+
+  .problem-about__content p {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  .problem-flow {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .problem-flow__icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 0;
+  }
+
+  .problem-flow span {
+    font-size: 13px;
+  }
 }
 
-/* 374px以下：369px前後の微調整 */
+
+/* ========================================
+   Problem / Small Smartphone
+   374px以下：小さめスマホ向け
+======================================== */
+
 @media (max-width: 374px) {
   .problem__inner {
     width: calc(100% - 20px);
+  }
+
+  .problem__heading h2 {
+    padding: 0 22px;
+    font-size: 19px;
   }
 
   .problem-card-list {
@@ -578,6 +562,11 @@
   .problem-card p {
     font-size: 10.5px;
     line-height: 1.55;
+  }
+
+  .problem-flow__icon {
+    width: 52px;
+    height: 52px;
   }
 }
 
