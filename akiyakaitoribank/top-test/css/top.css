@@ -4421,10 +4421,10 @@
   }
 }*/
 .br-550-750 {
-  display: none;
+  display: inline;
 }
 @media (min-width: 550px) and (max-width: 750px) {
   .br-550-750 {
-    display: block;
+    display: none;
   }
 }
