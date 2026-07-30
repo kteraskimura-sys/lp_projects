@@ -1044,7 +1044,7 @@
   letter-spacing: 0.06em;
 }
 
-.remaining-items__heading h2 span {
+.remaining-items__heading h2 span.color01a {
   color: var(--color-main);
 }
 
@@ -1069,7 +1069,7 @@
   font-weight: 700;
 }
 
-.remaining-items__content h3 span {
+.remaining-items__content h3 span.color01a {
   color: var(--color-main);
 }
 
