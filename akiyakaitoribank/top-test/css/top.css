@@ -47,9 +47,14 @@
   }
 }
 
-@media (min-width: 550px) and (max-width: 750px) {
+/*@media (min-width: 550px) and (max-width: 750px) {
   .br-550-750 {
     display: block;
+  }
+}*/
+@media (min-width: 550px) and (max-width: 750px) {
+  .br-550-750 {
+    display: inline;
   }
 }
 
@@ -883,7 +888,8 @@
     min-height: auto;
     padding: 18px 18px;
     border-radius: 14px;
-    box-shadow: 0 10px 24px rgba(74, 55, 32, 0.07);
+    /*box-shadow: 0 10px 24px rgba(74, 55, 32, 0.07);*/
+	  box-shadow: 0 2px 3px rgba(74, 55, 32, 0.07);
     text-align: left;
   }
 
@@ -2153,15 +2159,17 @@
 /*----------------------------------- デザイン案 1 --*/
   .remaining-items__content h3 {
     display: inline-block;
-    padding: 10px 14px;
-    margin: 0 auto 14px;
-    border-radius: 12px;
-    background: rgba(255, 247, 232, 0.9);
-    border: 1px solid rgba(139, 190, 70, 0.25);
+    padding: 10px 0vw;
+    margin: 0 auto 0px;
+    border-radius: 3px;
+    background: rgba(255, 213, 160, 0.5);
+    /*border: 1px solid rgba(139, 190, 70, 0.25);*/
     font-size: 20px;
     line-height: 1.55;
     letter-spacing: 0.02em;
     text-align: center;
+	  width: 100%;
+	  box-shadow: 0 0px 5px rgba(255, 255, 255, 0.9);
   }
 
   .remaining-items__content h3 span {
