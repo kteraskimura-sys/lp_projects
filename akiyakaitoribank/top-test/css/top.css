@@ -4427,7 +4427,7 @@
   }
 }*/
 
-.br-max751px, .br-min550px {
+.br-max550px, .br-max751px, .br-min550px {
   display: none;
 }
 
@@ -4438,7 +4438,7 @@
 }
 
 @media (min-width: 550px) {
-  .br-min550px {
+  .br-min550px, .br-max550px {
     display: block;
   }
 }
