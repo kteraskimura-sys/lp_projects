@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
-.br-pc {
+.br-751px {
   display: none;
 }
 
 @media (min-width: 751px) {
-  .br-pc {
+  .br-751px {
     display: block;
   }
 }
