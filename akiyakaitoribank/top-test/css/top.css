@@ -2143,6 +2143,46 @@
     min-height: 64px;
     font-size: 16px;
   }
+
+
+
+
+
+
+
+/*----------------------------------- デザイン案 1 --*/
+  .remaining-items__content h3 {
+    display: inline-block;
+    padding: 10px 14px;
+    margin: 0 auto 14px;
+    border-radius: 12px;
+    background: rgba(255, 247, 232, 0.9);
+    border: 1px solid rgba(139, 190, 70, 0.25);
+    font-size: 20px;
+    line-height: 1.55;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+
+  .remaining-items__content h3 span {
+    color: var(--color-main);
+  }
+
+  .remaining-items__content > p {
+    padding: 0 2px;
+    font-size: 14px;
+    line-height: 1.95;
+  }
+
+  .remaining-items__content h3 {
+    justify-self: center;
+  }
+
+
+
+
+
+
 }
 
 /* ========================================
