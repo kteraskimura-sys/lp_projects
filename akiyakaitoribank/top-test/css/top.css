@@ -1,11 +1,26 @@
 @charset "UTF-8";
 
-.br-751px {
+.br-375px, .br-421px, .br-751px, .br-1024px {
   display: none;
 }
 
+@media (min-width: 375px) {
+  .br-375px {
+    display: block;
+  }
+}
+@media (min-width: 421px) {
+  .br-421px {
+    display: block;
+  }
+}
 @media (min-width: 751px) {
   .br-751px {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .br-1024px {
     display: block;
   }
 }
