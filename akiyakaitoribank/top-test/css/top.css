@@ -4415,7 +4415,7 @@
 
 }
 
-/**/
+/*
 .test-br-550-750::after {
   content: "";
 }
@@ -4424,5 +4424,21 @@
   .test-br-550-750::after {
     content: "\A";
     white-space: pre;
+  }
+}*/
+
+.br-max751px, .br-min550px {
+  display: none;
+}
+
+@media (max-width: 751px) {
+  .br-max751px {
+    display: block;
+  }
+}
+
+@media (min-width: 550px) {
+  .br-min550px {
+    display: block;
   }
 }
