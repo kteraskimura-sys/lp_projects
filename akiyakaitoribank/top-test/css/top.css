@@ -830,8 +830,10 @@
   }
 
   .strength-card__icon {
-    width: clamp(64px, 10vw, 100px);
-    height: clamp(64px, 10vw, 100px);
+    /*width: clamp(64px, 10vw, 100px);*/
+	  width: clamp(64px, 20vw, 120px);
+    /*height: clamp(64px, 10vw, 100px);*/
+	  height: clamp(64px, 20vw, 120px);
     margin: 0 auto 10px;
   }
 
@@ -884,8 +886,10 @@
   }
 
   .strength-card__icon {
-    width: clamp(64px, 18vw, 86px);
-    height: clamp(64px, 18vw, 86px);
+    /*width: clamp(64px, 18vw, 86px);*/
+	  width: clamp(64px, 22vw, 120px);
+    /*height: clamp(64px, 18vw, 86px);*/
+	  height: clamp(64px, 22vw, 120px);
     margin: 0 auto 8px;
   }
 
@@ -921,8 +925,10 @@
   }
 
   .strength-card__icon {
-    width: clamp(60px, 18vw, 80px);
-    height: clamp(60px, 18vw, 80px);
+    /*width: clamp(60px, 18vw, 80px);*/
+	  width: clamp(60px, 22vw, 120px);
+    /*height: clamp(60px, 18vw, 80px);*/
+	  height: clamp(60px, 22vw, 120px);
     margin-bottom: 8px;
   }
 
@@ -935,6 +941,109 @@
     line-height: 1.7;
   }
 }
+
+
+
+
+
+
+/* ========================================
+   Strength / Smartphone Horizontal Card
+   750px以下：強みカードを横型に調整
+======================================== */
+
+@media (max-width: 750px) {
+  .strength-card-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .strength-card {
+    display: grid;
+    grid-template-columns: clamp(88px, 20vw, 120px) 1fr;
+    align-items: center;
+    gap: 14px;
+    min-height: auto;
+    padding: 18px 18px;
+    text-align: left;
+  }
+
+  .strength-card__icon {
+    width: clamp(80px, 20vw, 112px);
+    height: clamp(80px, 20vw, 112px);
+    margin: 0;
+  }
+
+  .strength-card h3 {
+    margin-bottom: 6px;
+    font-size: 15px;
+    line-height: 1.45;
+    text-align: left;
+  }
+
+  .strength-card p {
+    font-size: 13px;
+    line-height: 1.7;
+    text-align: left;
+  }
+}
+
+/* 420px以下：iPhone幅向け微調整 */
+@media (max-width: 420px) {
+  .strength-card-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .strength-card {
+    grid-template-columns: clamp(82px, 22vw, 100px) 1fr;
+    gap: 12px;
+    padding: 17px 14px;
+  }
+
+  .strength-card__icon {
+    width: clamp(78px, 22vw, 96px);
+    height: clamp(78px, 22vw, 96px);
+    margin: 0;
+  }
+
+  .strength-card h3 {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .strength-card p {
+    font-size: 12.5px;
+    line-height: 1.65;
+  }
+}
+
+/* 374px以下：小さめスマホ向け微調整 */
+@media (max-width: 374px) {
+  .strength-card {
+    grid-template-columns: clamp(76px, 22vw, 90px) 1fr;
+    gap: 10px;
+    padding: 16px 12px;
+  }
+
+  .strength-card__icon {
+    width: clamp(72px, 22vw, 88px);
+    height: clamp(72px, 22vw, 88px);
+  }
+
+  .strength-card h3 {
+    font-size: 13.5px;
+  }
+
+  .strength-card p {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+}
+
+
+
+
 
 /* ========================================
    Remaining Items / 残置物対応
