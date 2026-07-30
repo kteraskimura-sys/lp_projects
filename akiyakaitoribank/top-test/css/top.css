@@ -2150,7 +2150,7 @@
 
 
 
-/*----------------------------------- デザイン案 1 --
+/*----------------------------------- デザイン案 1 --*/
   .remaining-items__content h3 {
     display: inline-block;
     padding: 10px 14px;
@@ -2178,7 +2178,7 @@
     justify-self: center;
   }
 
-/*----------------------------------- デザイン案 2 --*/
+/*----------------------------------- デザイン案 2 --
   .remaining-items__content h3 {
     position: relative;
     padding: 12px 14px 12px 18px;
@@ -2204,7 +2204,7 @@
   .remaining-items__content > p {
     font-size: 14px;
     line-height: 1.95;
-  }
+  }*/
 
 
 
