@@ -1,26 +1,48 @@
 @charset "UTF-8";
 
-.br-375px, .br-421px, .br-751px, .br-1024px {
+.br-max375px, .br-max421px, .br-max751px, .br-max1023px, .br-min375px, .br-min421px, .br-min751px, .br-min1024px {
   display: none;
 }
 
+@media (max-width: 374px) {
+  .br-max374px {
+    display: block;
+  }
+}
+@media (max-width: 420px) {
+  .br-max420px {
+    display: block;
+  }
+}
+@media (max-width: 750px) {
+  .br-max750px {
+    display: block;
+  }
+}
+@media (max-width: 1023px) {
+  .br-max1023px {
+    display: block;
+  }
+}
+
+
 @media (min-width: 375px) {
-  .br-375px {
+  .br-min375px {
     display: block;
   }
 }
 @media (min-width: 421px) {
-  .br-421px {
+  .br-min421px {
     display: block;
   }
 }
 @media (min-width: 751px) {
-  .br-751px {
+  .br-min751px {
     display: block;
   }
 }
 @media (min-width: 1024px) {
-  .br-1024px {
+  .br-min1024px {
     display: block;
   }
 }
