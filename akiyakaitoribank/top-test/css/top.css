@@ -4431,6 +4431,12 @@
   display: none;
 }
 
+@media (max-width: 550px) {
+  .br-max550px {
+    display: block;
+  }
+}
+
 @media (max-width: 751px) {
   .br-max751px {
     display: block;
@@ -4438,7 +4444,13 @@
 }
 
 @media (min-width: 550px) {
-  .br-min550px, .br-max550px {
+  .br-min550px {
+    display: block;
+  }
+}
+
+@media (min-width: 751px) {
+  .br-min751px {
     display: block;
   }
 }
