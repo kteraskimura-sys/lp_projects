@@ -1310,7 +1310,8 @@
   }
 
   .remaining-items__main {
-    grid-template-columns: 440px 1fr;
+    /*grid-template-columns: 440px 1fr;*/
+	  grid-template-columns: 420px 1fr;
     gap: 28px;
   }
 
@@ -1330,16 +1331,22 @@
   }
 
   .remaining-items-feature-list {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    /*grid-template-columns: repeat(4, minmax(0, 1fr));*/
+	  grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
-    width: 660px;
+    /*width: 660px;*/
+	  /*width: 420px;*/
+	  width: 100%;
+	  max-width: 420px;
     margin-top: 30px;
   }
 
   .remaining-items-feature {
     gap: 9px;
-    min-height: 70px;
-    padding: 10px 9px;
+    /*min-height: 70px;*/
+	  min-height: auto;
+    /*padding: 10px 9px;*/
+	  padding: 9px 9px;
     border-radius: 8px;
   }
 
@@ -1355,22 +1362,30 @@
   }
 
   .remaining-items__bottom {
-    grid-template-columns: 360px 1fr;
+    /*grid-template-columns: 360px 1fr;*/
+	  grid-template-columns: 420px 1fr;
     gap: 24px;
     margin-top: 30px;
   }
 
   .remaining-items-license {
-    grid-template-columns: 125px 1fr;
-    gap: 15px;
-    min-height: 138px;
-    padding: 15px;
-    border-radius: 8px;
+    /*grid-template-columns: 125px 1fr;*/
+	  grid-template-columns: 150px 1fr;
+    /*gap: 15px;*/
+	  gap: 18px;
+    /*min-height: 138px;*/
+	  min-height: 148px;
+    /*padding: 15px;*/
+	  padding: 18px;
+    /*border-radius: 8px;*/
+	  border-radius: 10px;
   }
 
   .remaining-items-license__label {
-    margin-bottom: 4px;
-    font-size: 10px;
+    /*margin-bottom: 4px;*/
+	  margin-bottom: 5px;
+    /*font-size: 10px;*/
+	  font-size: 12px;
     line-height: 1.5;
   }
 
@@ -1380,16 +1395,22 @@
   }
 
   .remaining-items-license__number {
-    margin-top: 2px;
-    font-size: 16px;
-    line-height: 1.28;
+    /*margin-top: 2px;*/
+	  margin-top: 3px;
+    /*font-size: 16px;*/
+	  font-size: 22px;
+    /*line-height: 1.28;*/
+	  line-height: 1.25;
     letter-spacing: 0.02em;
   }
 
   .remaining-items-license__note {
-    margin-top: 7px;
-    font-size: 10px;
-    line-height: 1.55;
+    /*margin-top: 7px;*/
+	  margin-top: 8px;
+    /*font-size: 10px;*/
+	  font-size: 12px;
+    /*line-height: 1.55;*/
+	  line-height: 1.6;
   }
 
   .remaining-items-flow h3 {
