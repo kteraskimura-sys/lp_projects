@@ -47,6 +47,37 @@
   }
 }
 
+.br-max550px, .br-max751px, .br-min550px {
+  display: none;
+}
+
+@media (max-width: 550px) {
+  .br-max550px {
+    display: block;
+  }
+}
+
+@media (max-width: 751px) {
+  .br-max751px {
+    display: block;
+  }
+}
+
+@media (min-width: 550px) {
+  .br-min550px {
+    display: block;
+  }
+}
+
+@media (min-width: 751px) {
+  .br-min751px {
+    display: block;
+  }
+}
+
+/* ========================================
+   hero
+======================================== */
 .hero {
   overflow: hidden;
   /*background:
@@ -102,7 +133,6 @@
 /* ========================================
    Problem
 ======================================== */
-
 .problem {
   padding: 48px 0 72px;
   background: var(--color-bg);
@@ -241,12 +271,10 @@
   font-weight: 700;
 }
 
-
 /* ========================================
    Problem / PC
    PC版：1024px以上
 ======================================== */
-
 @media (min-width: 1024px) {
   .problem__inner {
     width: 1040px;
@@ -314,12 +342,10 @@
   }
 }
 
-
 /* ========================================
    Problem / Tablet & Smartphone
    1023px以下：タブレット・スマホ共通
 ======================================== */
-
 @media (max-width: 1023px) {
   .problem {
     padding: 46px 0 58px;
@@ -410,12 +436,10 @@
   }
 }
 
-
 /* ========================================
    Problem / Smartphone
    750px以下：スマホ実機向け 2列×2段
 ======================================== */
-
 @media (max-width: 750px) {
   .problem {
     padding: 46px 0 58px;
@@ -511,12 +535,10 @@
   }
 }
 
-
 /* ========================================
    Problem / iPhone
    420px以下：iPhone幅向け 2列×2段を維持
 ======================================== */
-
 @media (max-width: 420px) {
   .problem {
     padding: 44px 0 56px;
@@ -602,12 +624,10 @@
   }
 }
 
-
 /* ========================================
    Problem / Small Smartphone
    374px以下：小さめスマホ向け 2列×2段を維持
 ======================================== */
-
 @media (max-width: 374px) {
   .problem__inner {
     width: calc(100% - 20px);
@@ -658,7 +678,6 @@
 /* ========================================
    Strength
 ======================================== */
-
 .strength {
   padding: 48px 0 72px;
   background: var(--color-bg);
@@ -748,12 +767,10 @@
   font-weight: 600;
 }
 
-
 /* ========================================
    Strength / PC
    PC版：1024px以上
 ======================================== */
-
 @media (min-width: 1024px) {
   .strength__inner {
     width: 1040px;
@@ -781,12 +798,10 @@
   }
 }
 
-
 /* ========================================
    Strength / Tablet & Smartphone
    1023px以下：タブレット・スマホ共通
 ======================================== */
-
 @media (max-width: 1023px) {
   .strength {
     padding: 46px 0 58px;
@@ -837,12 +852,10 @@
   }
 }
 
-
 /* ========================================
    Strength / Smartphone
    750px以下：横型カード
 ======================================== */
-
 @media (max-width: 750px) {
   .strength {
     padding: 46px 0 58px;
@@ -911,12 +924,10 @@
   }
 }
 
-
 /* ========================================
    Strength / iPhone
    420px以下：iPhone幅向け
 ======================================== */
-
 @media (max-width: 420px) {
   .strength {
     padding: 44px 0 56px;
@@ -965,12 +976,10 @@
   }
 }
 
-
 /* ========================================
    Strength / Small Smartphone
    374px以下：小さめスマホ向け
 ======================================== */
-
 @media (max-width: 374px) {
   .strength__inner {
     width: calc(100% - 20px);
@@ -1002,11 +1011,9 @@
   }
 }
 
-
 /* ========================================
    Remaining Items / 残置物対応
 ======================================== */
-
 .remaining-items {
   padding: 54px 0 46px;
   background: #fffdf8;
@@ -1292,12 +1299,10 @@
   object-fit: contain;
 }
 
-
 /* ========================================
    Remaining Items / PC
    PC版：1024px以上
 ======================================== */
-
 @media (min-width: 1024px) {
   .remaining-items__inner {
     width: 1040px;
@@ -1498,12 +1503,10 @@
   }
 }
 
-
 /* ========================================
    Remaining Items / Tablet & Smartphone
    1023px以下：タブレット・スマホ共通
 ======================================== */
-
 @media (max-width: 1023px) {
   .remaining-items {
     padding: 52px 0 56px;
@@ -1723,12 +1726,10 @@
   }
 }
 
-
 /* ========================================
    Remaining Items / Smartphone
    750px以下：スマホ実機向け
 ======================================== */
-
 @media (max-width: 750px) {
   .remaining-items {
     padding: 48px 0 56px;
@@ -1942,12 +1943,10 @@
   }
 }
 
-
 /* ========================================
    Remaining Items / iPhone
    420px以下：iPhone幅向け
 ======================================== */
-
 @media (max-width: 420px) {
   .remaining-items {
     padding: 46px 0 54px;
@@ -2069,12 +2068,10 @@
   }
 }
 
-
 /* ========================================
    Remaining Items / Small Smartphone
    374px以下：小さめスマホ向け
 ======================================== */
-
 @media (max-width: 374px) {
   .remaining-items__inner {
     width: calc(100% - 20px);
@@ -2139,12 +2136,6 @@
     font-size: 16px;
   }
 
-
-
-
-
-
-
 /*----------------------------------- デザイン案 1 --*/
   .remaining-items__content h3 {
     display: inline-block;
@@ -2203,14 +2194,11 @@
     line-height: 1.95;
   }*/
 
-
-
 }
 
 /* ========================================
    Service / サービス一覧
 ======================================== */
-
 .service {
   padding: 60px 0 72px;
   background: var(--color-bg);
@@ -2321,7 +2309,6 @@
   font-weight: 700;
 }
 
-
 /* 1100px以上：PC固定 */
 @media (min-width: 1100px) {
   .service__inner {
@@ -2334,7 +2321,6 @@
     gap: 14px;
   }
 }
-
 
 /* 900px〜1100px：PC寄りの可変 */
 @media (min-width: 900px) and (max-width: 1100px) {
@@ -2368,7 +2354,6 @@
   }
 }
 
-
 /* 750px〜900px：3枚×2段 */
 @media (min-width: 750px) and (max-width: 900px) {
   .service__inner {
@@ -2381,7 +2366,6 @@
     gap: 16px;
   }
 }
-
 
 /* 750px以下：スマホ・タブレット */
 @media (max-width: 750px) {
@@ -2407,7 +2391,6 @@
   }
 }
 
-
 /* 480px以下：小さいスマホ */
 @media (max-width: 480px) {
   .service__inner {
@@ -2426,7 +2409,6 @@
 /* ========================================
    Case Study / 解決事例
 ======================================== */
-
 .case-study {
   padding: 58px 0 72px;
   background: #fffdf8;
@@ -2586,7 +2568,6 @@
   margin-left: 4px;
 }
 
-
 /* 1100px以上：PC固定 */
 @media (min-width: 1100px) {
   .case-study__inner {
@@ -2599,7 +2580,6 @@
     gap: 18px;
   }
 }
-
 
 /* 900px〜1100px：PC寄りの可変 */
 @media (min-width: 900px) and (max-width: 1100px) {
@@ -2628,7 +2608,6 @@
   }
 }
 
-
 /* 750px〜900px：2枚×2段 */
 @media (min-width: 750px) and (max-width: 900px) {
   .case-study__inner {
@@ -2645,7 +2624,6 @@
     right: 0;
   }
 }
-
 
 /* 750px以下：スマホ・タブレット */
 @media (max-width: 750px) {
@@ -2692,7 +2670,6 @@
   }
 }
 
-
 /* 480px以下：小さいスマホ */
 @media (max-width: 480px) {
   .case-study__inner {
@@ -2711,7 +2688,6 @@
 /* ========================================
    Column News / コラム新着記事
 ======================================== */
-
 .column-news {
   padding: 58px 0 72px;
   background: var(--color-bg);
@@ -2859,7 +2835,6 @@
   font-weight: 700;
 }
 
-
 /* 1100px以上：PC固定 */
 @media (min-width: 1100px) {
   .column-news__inner {
@@ -2872,7 +2847,6 @@
     gap: 22px;
   }
 }
-
 
 /* 900px〜1100px：PC寄りの可変 */
 @media (min-width: 900px) and (max-width: 1100px) {
@@ -2896,7 +2870,6 @@
   }
 }
 
-
 /* 750px〜900px：2枚×2段 */
 @media (min-width: 750px) and (max-width: 900px) {
   .column-news__inner {
@@ -2909,7 +2882,6 @@
     gap: 20px 16px;
   }
 }
-
 
 /* 750px以下：スマホ・タブレット */
 @media (max-width: 750px) {
@@ -2959,7 +2931,6 @@
   }
 }
 
-
 /* 480px以下：小さいスマホ */
 @media (max-width: 480px) {
   .column-news__inner {
@@ -2983,7 +2954,6 @@
 /* ========================================
    FAQ / よくあるご質問
 ======================================== */
-
 .faq {
   padding: 58px 0 72px;
   background: #fffdf8;
@@ -3130,7 +3100,6 @@
   border-radius: 8px;
 }
 
-
 /* 1100px以上：PC固定 */
 @media (min-width: 1100px) {
   .faq__inner {
@@ -3143,7 +3112,6 @@
     gap: 28px;
   }
 }
-
 
 /* 900px〜1100px：PC寄りの可変 */
 @media (min-width: 900px) and (max-width: 1100px) {
@@ -3163,7 +3131,6 @@
   }
 }
 
-
 /* 750px〜900px：質問2列＋画像下 */
 @media (min-width: 750px) and (max-width: 900px) {
   .faq__inner {
@@ -3182,7 +3149,6 @@
     margin: 10px auto 0;
   }
 }
-
 
 /* 750px以下：スマホ・タブレット */
 @media (max-width: 750px) {
@@ -3223,7 +3189,6 @@
   }
 }
 
-
 /* 480px以下：小さいスマホ */
 @media (max-width: 480px) {
   .faq__inner {
@@ -3240,12 +3205,9 @@
   }
 }
 
-
-
 /* ========================================
    Closing / 最終
 ======================================== */
-
 .closing {
   padding: 58px 0 48px;
   background: var(--color-bg);
@@ -3511,7 +3473,6 @@
   object-fit: contain;
 }
 
-
 /* 1100px以上：PC固定 */
 @media (min-width: 1100px) {
   .closing__inner {
@@ -3528,7 +3489,6 @@
     gap: 20px;
   }
 }
-
 
 /* 900px〜1100px：PC寄りの可変 */
 @media (min-width: 900px) and (max-width: 1100px) {
@@ -3573,7 +3533,6 @@
   }
 }
 
-
 /* 750px〜900px：タブレット */
 @media (min-width: 750px) and (max-width: 900px) {
   .closing__inner {
@@ -3605,7 +3564,6 @@
     flex-wrap: wrap;
   }
 }
-
 
 /* 750px以下：スマホ・タブレット */
 @media (max-width: 750px) {
@@ -3676,7 +3634,6 @@
     max-width: 320px;
   }
 }
-
 
 /* 480px以下：小さいスマホ */
 @media (max-width: 480px) {
@@ -4415,42 +4372,3 @@
 
 }
 
-/*
-.test-br-550-750::after {
-  content: "";
-}
-
-@media (min-width: 550px) and (max-width: 750px) {
-  .test-br-550-750::after {
-    content: "\A";
-    white-space: pre;
-  }
-}*/
-
-.br-max550px, .br-max751px, .br-min550px {
-  display: none;
-}
-
-@media (max-width: 550px) {
-  .br-max550px {
-    display: block;
-  }
-}
-
-@media (max-width: 751px) {
-  .br-max751px {
-    display: block;
-  }
-}
-
-@media (min-width: 550px) {
-  .br-min550px {
-    display: block;
-  }
-}
-
-@media (min-width: 751px) {
-  .br-min751px {
-    display: block;
-  }
-}
