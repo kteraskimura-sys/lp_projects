@@ -1742,16 +1742,16 @@
 
   .remaining-items-cta {
     /*grid-template-columns: 333px 1fr;*/
-	  grid-template-columns: 30vw 1fr;
-    gap: 16px;
+	  grid-template-columns: 1fr;
+    gap: 18px;
     margin-top: 24px;
-    padding: 14px 18px;
-    border-radius: 10px;
+    padding: 20px 22px;
+    border-radius: 14px;
   }
 
   .zanchibutsu-bottom-message {
+    justify-content: center;
     gap: 16px;
-	  width: 30.1vw;
   }
 
   .zanchibutsu-bottom-message__icon {
@@ -1762,34 +1762,30 @@
   }
 
   .zanchibutsu-bottom-message__text {
-    /*font-size: 22px;
+    font-size: 24px;
     line-height: 1.55;
-    text-align: left;*/
-    /*font-size: 24px;*/
-	  font-size: 1.5vw;
-    line-height: 1.6;
+    text-align: left;
   }
 
   .remaining-items-cta__buttons {
-    /*justify-content: center;*/
-	  justify-content: flex-end;
-    /*flex-wrap: wrap;*/
-	  flex-wrap: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
     gap: 12px;
+    width: 100%;
   }
 
   .remaining-items-cta__buttons .btn {
-	  gap: 10px;
-    /*width: 210px;
-    min-width: 210px;
-    min-height: 56px;*/
-    width: 200px;
-    min-width: 200px;
-    min-height: 54px;
-    padding: 0 14px;
+    gap: 10px;
+    width: min(31%, 210px);
+    min-width: 0;
+    min-height: 56px;
+    padding: 0 12px;
     border-radius: 999px;
-    /*font-size: 14px;*/
-	  font-size: 13px;
+    font-size: 13px;
+    white-space: nowrap;
   }
 
   .remaining-items-cta__buttons .btn--phone {
@@ -1799,6 +1795,16 @@
   .remaining-items-cta__buttons .btn-icon {
     width: 18px;
     height: 18px;
+  }
+
+  .remaining-items-cta__buttons .btn-phone__number {
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+  .remaining-items-cta__buttons .btn-phone__time {
+    font-size: 9px;
+    line-height: 1.2;
   }
 }
 
