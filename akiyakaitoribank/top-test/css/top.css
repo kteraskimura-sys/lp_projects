@@ -1931,11 +1931,12 @@
   }
 
   .remaining-items-flow {
+	  margin: 37px auto 0;
     width: 100%;
   }
 
   .remaining-items-flow h3 {
-    margin-bottom: 24px;
+    margin-bottom: 37px;
     font-size: 20px;
 	  line-height: 1.5;
   }
@@ -1950,7 +1951,7 @@
 	  display: grid;
     grid-template-columns: 1fr;
     /*gap: 12px;*/
-	  gap: 18px;
+	  gap: 37px;
 	  justify-items: center;
   }
 
@@ -2024,7 +2025,7 @@
     padding: 22px 18px;
     border-radius: 14px;
 	  width: 100%;
-	  margin: 28px auto 0;
+	  margin: 37px auto 0;
   }
 
   .zanchibutsu-bottom-message {
@@ -2159,7 +2160,7 @@
   }
 
   .remaining-items-flow__list {
-    gap: 16px;
+    gap: 37px;
   }
 
   .remaining-items-flow__list li {
@@ -2194,6 +2195,7 @@
 
   .remaining-items-cta {
     padding: 22px 18px;
+	  margin: 37px auto 0;
   }
 
   .zanchibutsu-bottom-message {
