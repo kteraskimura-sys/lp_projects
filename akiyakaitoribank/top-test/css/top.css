@@ -1995,9 +1995,9 @@
 
 /* ========================================
    Remaining Items / iPhone
-   420px以下：iPhone幅向け
+   480px以下：iPhone幅向け
 ======================================== */
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .remaining-items {
     padding: 46px 0 54px;
   }
