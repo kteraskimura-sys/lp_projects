@@ -1889,7 +1889,8 @@
   }
 
   .remaining-items-license__number {
-    font-size: 24px;
+    /*font-size: 24px;*/
+	  font-size: 4.5vw;
   }
 
   .remaining-items-license__note {
