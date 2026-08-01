@@ -2212,6 +2212,7 @@
     column-gap: 9px;
     padding: 12px 10px;*/
 	  padding: 24px 14px 18px;
+	  width: min(82%, 430px);
   }
 
   .remaining-items-flow__num {
