@@ -1517,6 +1517,7 @@
 
   .zanchibutsu-bottom-message {
     gap: 16px;
+	  width: 370px;
   }
 
   .zanchibutsu-bottom-message__icon {
@@ -1525,7 +1526,8 @@
   }
 
   .zanchibutsu-bottom-message__text {
-    font-size: 24px;
+    /*font-size: 24px;*/
+	  font-size: 19px;
     line-height: 1.6;
   }
 
