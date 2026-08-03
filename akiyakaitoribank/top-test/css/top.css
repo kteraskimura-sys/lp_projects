@@ -4770,6 +4770,11 @@
   }
 }
 
+.hero__buttons .btn::after {
+  content: none;
+  display: none;
+}
+
 /* 480px以下 */
 @media (max-width: 480px) {
 
