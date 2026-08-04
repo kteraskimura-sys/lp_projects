@@ -3450,6 +3450,10 @@
   letter-spacing: 0.03em;
 }
 
+.closing-message__intro h2 span {
+  color: var(--color-green-dark);
+}
+
 .closing-message__intro p {
   color: var(--color-subtext);
   font-size: 14px;
@@ -3938,6 +3942,13 @@
     width: 100%;
     max-width: 620px;
   }
+
+  .closing-note,
+  .closing-promise {
+    width: 100%;
+    max-width: 560px;
+    /*max-width: 620px;*/
+  }
 }
 
 
@@ -3996,8 +4007,19 @@
     width: 32px;
     height: 32px;
   }
+
+  .closing-note,
+  .closing-promise {
+    max-width: 520px;
+  }
 }
 
+@media (max-width: 550px) {
+  .closing-note,
+  .closing-promise {
+    max-width: none;
+  }
+}
 
 /* 480px以下：iPhone幅向け */
 @media (max-width: 480px) {
