@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.br-max375px, .br-max421px, .br-max751px, .br-max1023px, .br-min375px, .br-min421px, .br-min751px, .br-min1024px {
+.br-max375px, .br-max420px, .br-max421px, .br-max751px, .br-max1023px, .br-min375px, .br-min421px, .br-min751px, .br-min1024px {
   display: none;
 }
 
@@ -11,6 +11,11 @@
 }
 @media (max-width: 420px) {
   .br-max420px {
+    display: block;
+  }
+}
+@media (max-width: 421px) {
+  .br-max421px {
     display: block;
   }
 }
