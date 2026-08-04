@@ -3843,6 +3843,212 @@
 
 
 
+/* ========================================
+   Closing Message / 最新ブレイクポイント調整
+   ※最終セクション上段のみ
+   ※下段CTAは次工程で調整
+======================================== */
+
+
+/* 1024px以上：PC版は現状維持 */
+@media (min-width: 1024px) {
+  .closing__inner {
+    width: 1040px;
+    max-width: 1040px;
+  }
+
+  .closing-message {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .closing-message__intro,
+  .closing-message__profile {
+    padding: 40px 40px 38px;
+  }
+
+  .closing-message__profile {
+    border-left: 1px solid rgba(139, 190, 70, 0.25);
+    border-top: none;
+  }
+}
+
+
+/* 1023px以下：1カラムに統一して、右余白を抑える */
+@media (max-width: 1023px) {
+  .closing {
+    padding: 56px 0 46px;
+  }
+
+  .closing__inner {
+    width: min(calc(100% - 40px), 720px);
+    max-width: 720px;
+  }
+
+  .closing-message {
+    grid-template-columns: 1fr;
+    border-radius: 12px;
+  }
+
+  .closing-message__intro,
+  .closing-message__profile {
+    padding: 38px 40px 36px;
+  }
+
+  .closing-message__intro {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .closing-message__profile {
+    border-left: none;
+    border-top: 1px solid rgba(139, 190, 70, 0.25);
+  }
+
+  .closing-message__intro h2 {
+    font-size: 32px;
+    line-height: 1.5;
+  }
+
+  .closing-message__intro p {
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .closing-note {
+    width: 100%;
+    max-width: 560px;
+    margin-top: 24px;
+    padding: 20px 22px;
+  }
+
+  .closing-message__profile h3 {
+    font-size: 22px;
+  }
+
+  .closing-message__profile > p {
+    font-size: 15px;
+  }
+
+  .closing-promise {
+    width: 100%;
+    max-width: 620px;
+  }
+}
+
+
+/* 750px以下：スマホ実機向け */
+@media (max-width: 750px) {
+  .closing {
+    padding: 52px 0 44px;
+  }
+
+  .closing__inner {
+    width: min(calc(100% - 32px), 620px);
+    max-width: 620px;
+  }
+
+  .closing-message__intro,
+  .closing-message__profile {
+    padding: 28px 24px;
+  }
+
+  .closing-message__intro h2 {
+    font-size: 24px;
+    line-height: 1.55;
+  }
+
+  .closing-message__intro p {
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  .closing-note {
+    width: 100%;
+    max-width: none;
+    margin-top: 22px;
+    padding: 18px 20px;
+  }
+
+  .closing-message__profile h3 {
+    font-size: 18px;
+  }
+
+  .closing-message__profile > p {
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  .closing-promise {
+    max-width: none;
+    padding: 18px 18px;
+  }
+
+  .closing-promise li {
+    grid-template-columns: 32px 1fr;
+  }
+
+  .closing-promise li span {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
+/* 480px以下：iPhone幅向け */
+@media (max-width: 480px) {
+  .closing__inner {
+    width: calc(100% - 24px);
+  }
+
+  .closing-message__intro,
+  .closing-message__profile {
+    padding: 24px 20px;
+  }
+
+  .closing-message__intro h2 {
+    font-size: 24px;
+  }
+
+  .closing-message__name {
+    flex-direction: column;
+    gap: 4px;
+    font-size: 17px;
+  }
+}
+
+
+/* 374px以下：小さめスマホ向け */
+@media (max-width: 374px) {
+  .closing-message__intro,
+  .closing-message__profile {
+    padding: 24px 18px;
+  }
+
+  .closing-message__intro h2 {
+    font-size: 23px;
+  }
+
+  .closing-note {
+    padding: 17px 18px;
+  }
+
+  .closing-promise {
+    padding: 17px 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .reason {
   background: var(--color-bg);
