@@ -4217,6 +4217,7 @@
     font-size: 22px;
     line-height: 1.65;
     text-align: center;
+	  margin: 0 auto;
   }
 
   .closing-cta__buttons {
