@@ -5362,3 +5362,185 @@
   font-weight: 600;
   line-height: 1.2;
 }
+
+@media (min-width: 1024px) {
+  .btn {
+    gap: 8px;
+    width: 200px;
+    min-width: 200px;
+    min-height: 58px;
+    padding: 0 14px;
+    font-size: 13px;
+  }
+
+  .btn-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .btn-cta__main {
+    font-size: 13px;
+  }
+
+  .btn-cta__sub {
+    font-size: 10px;
+  }
+
+  .btn-phone__number {
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+  .btn-phone__time {
+    margin-top: 3px;
+    font-size: 9px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 1023px) {
+  .btn {
+    gap: 10px;
+    width: min(31%, 210px);
+    min-width: 0;
+    min-height: 58px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
+  .btn-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .btn-cta__main {
+    font-size: 13px;
+  }
+
+  .btn-cta__sub {
+    font-size: 10px;
+  }
+
+  .btn-phone__number {
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+  .btn-phone__time {
+    margin-top: 3px;
+    font-size: 9px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 750px) {
+  .btn {
+    gap: 14px;
+    width: min(72vw, 430px);
+    min-width: 0;
+    min-height: 68px;
+    padding: 0 18px;
+    font-size: 18px;
+  }
+
+  .btn-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .btn-cta__main {
+    font-size: 18px;
+  }
+
+  .btn-cta__sub {
+    margin-top: 4px;
+    font-size: 12px;
+  }
+
+  .btn-phone__number {
+    font-size: clamp(22px, 4.8vw, 24px);
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+  }
+
+  .btn-phone__time {
+    margin-top: 4px;
+    font-size: clamp(11px, 2.6vw, 12px);
+    line-height: 1.2;
+  }
+}
+
+
+/* ========================================
+   Closing CTA / iPhone
+   480px以下
+======================================== */
+
+@media (max-width: 480px) {
+  .btn {
+    gap: 12px;
+    width: min(88vw, 430px);
+    min-height: 66px;
+    padding: 0 18px;
+    font-size: 17px;
+  }
+
+  .btn-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .btn-cta__main {
+    font-size: 17px;
+  }
+
+  .btn-cta__sub {
+    font-size: 11.5px;
+  }
+
+  .btn-phone__number {
+    font-size: clamp(21px, 5.5vw, 23px);
+  }
+
+  .btn-phone__time {
+    font-size: clamp(10.5px, 2.8vw, 11.5px);
+  }
+}
+
+
+/* ========================================
+   Closing CTA / Small Smartphone
+   374px以下
+======================================== */
+
+@media (max-width: 374px) {
+  .btn {
+    gap: 10px;
+    width: min(92vw, 430px);
+    min-height: 64px;
+    padding: 0 16px;
+    font-size: 16px;
+  }
+
+  .btn-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .btn-cta__main {
+    font-size: 16px;
+  }
+
+  .btn-cta__sub {
+    font-size: 11px;
+  }
+
+  .btn-phone__number {
+    font-size: clamp(20px, 5.7vw, 22px);
+    letter-spacing: 0.01em;
+  }
+
+  .btn-phone__time {
+    font-size: clamp(10px, 2.8vw, 11px);
+  }
+}	
