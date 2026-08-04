@@ -431,7 +431,8 @@ body {
   }
 
   .site-header__logo {
-    width: 150px;
+    /*width: 150px;*/
+	  width: 222px;
     flex-shrink: 0;
     position: static;
     right: auto;
@@ -504,17 +505,22 @@ body {
 /* 420px以下：小さめスマホ用の微調整 */
 @media (max-width: 420px) {
   .site-header__inner {
-    padding: 0 12px;
+    /*padding: 0 12px;*/
+	  /*padding: 0 10px;*/
+	  padding: 0 5vw 0 0;
     gap: 8px;
   }
 
   .site-header__logo {
-    width: 142px;
+    /*width: 142px;*/
+	  width: 50vw;
   }
 
   .site-header__button {
-    width: 124px;
-    min-width: 124px;
+    /*width: 124px;*/
+	  width: 33vw;
+    /*min-width: 124px;*/
+	  max-width: 135px;
     height: 44px;
     font-size: 11px;
   }
