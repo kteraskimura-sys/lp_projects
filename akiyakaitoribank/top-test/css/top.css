@@ -4116,25 +4116,6 @@
   object-fit: contain;
 }
 
-.btn-cta__text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 1.2;
-}
-
-.btn-cta__main {
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.btn-cta__sub {
-  margin-top: 3px;
-  font-weight: 600;
-  line-height: 1.2;
-}
-
-
 /* ========================================
    Closing CTA / PC
    1024px以上
@@ -5359,3 +5340,24 @@
 
 }
 
+/* ========================================
+   CTA Button Text / 2段テキスト共通
+======================================== */
+
+.btn-cta__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.2;
+}
+
+.btn-cta__main {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.btn-cta__sub {
+  margin-top: 3px;
+  font-weight: 600;
+  line-height: 1.2;
+}
