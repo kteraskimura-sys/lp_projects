@@ -4077,6 +4077,349 @@
 
 
 
+/* ========================================
+   Closing CTA / 最新ブレイクポイント調整
+   残置物CTAの設計をベースに調整
+======================================== */
+
+/* 共通 */
+.closing-cta {
+  display: grid;
+  align-items: center;
+  background: #fff7e8;
+  box-shadow: 0 10px 26px rgba(74, 55, 32, 0.06);
+}
+
+.closing-cta__message {
+  margin: 0;
+  color: var(--color-text);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.closing-cta__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.closing-cta__buttons .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.closing-cta__buttons .btn-icon {
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.btn-cta__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.2;
+}
+
+.btn-cta__main {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.btn-cta__sub {
+  margin-top: 3px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+
+/* ========================================
+   Closing CTA / PC
+   1024px以上
+======================================== */
+
+@media (min-width: 1024px) {
+  .closing-cta {
+    grid-template-columns: 333px 1fr;
+    gap: 16px;
+    margin-top: 24px;
+    padding: 14px 18px;
+    border-radius: 10px;
+  }
+
+  .closing-cta__message {
+    width: auto;
+    font-size: 19px;
+    line-height: 1.65;
+    text-align: left;
+  }
+
+  .closing-cta__buttons {
+    justify-content: flex-end;
+    gap: 12px;
+  }
+
+  .closing-cta__buttons .btn {
+    gap: 8px;
+    width: 200px;
+    min-width: 200px;
+    min-height: 58px;
+    padding: 0 14px;
+    font-size: 13px;
+  }
+
+  .closing-cta__buttons .btn-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .closing-cta__buttons .btn-cta__main {
+    font-size: 13px;
+  }
+
+  .closing-cta__buttons .btn-cta__sub {
+    font-size: 10px;
+  }
+
+  .closing-cta__buttons .btn-phone__number {
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+  .closing-cta__buttons .btn-phone__time {
+    margin-top: 3px;
+    font-size: 9px;
+    line-height: 1.2;
+  }
+}
+
+
+/* ========================================
+   Closing CTA / Tablet
+   1023px以下：上段メッセージ・下段3ボタン
+   ※750px以下は後続で上書き
+======================================== */
+
+@media (max-width: 1023px) {
+  .closing-cta {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 24px;
+    padding: 24px 22px;
+    border-radius: 14px;
+    text-align: center;
+  }
+
+  .closing-cta__message {
+    width: auto;
+    font-size: 22px;
+    line-height: 1.65;
+    text-align: center;
+  }
+
+  .closing-cta__buttons {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .closing-cta__buttons .btn {
+    gap: 10px;
+    width: min(31%, 210px);
+    min-width: 0;
+    min-height: 58px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
+  .closing-cta__buttons .btn-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .closing-cta__buttons .btn-cta__main {
+    font-size: 13px;
+  }
+
+  .closing-cta__buttons .btn-cta__sub {
+    font-size: 10px;
+  }
+
+  .closing-cta__buttons .btn-phone__number {
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+  .closing-cta__buttons .btn-phone__time {
+    margin-top: 3px;
+    font-size: 9px;
+    line-height: 1.2;
+  }
+}
+
+
+/* ========================================
+   Closing CTA / Smartphone
+   750px以下：縦並び
+======================================== */
+
+@media (max-width: 750px) {
+  .closing-cta {
+    gap: 18px;
+    margin-top: 24px;
+    padding: 26px 20px 28px;
+    border-radius: 14px;
+  }
+
+  .closing-cta__message {
+    font-size: 20px;
+    line-height: 1.65;
+  }
+
+  .closing-cta__buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .closing-cta__buttons .btn {
+    gap: 14px;
+    width: min(72vw, 430px);
+    min-width: 0;
+    min-height: 68px;
+    padding: 0 18px;
+    font-size: 18px;
+  }
+
+  .closing-cta__buttons .btn-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .closing-cta__buttons .btn-cta__main {
+    font-size: 18px;
+  }
+
+  .closing-cta__buttons .btn-cta__sub {
+    margin-top: 4px;
+    font-size: 12px;
+  }
+
+  .closing-cta__buttons .btn-phone__number {
+    font-size: clamp(22px, 4.8vw, 24px);
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+  }
+
+  .closing-cta__buttons .btn-phone__time {
+    margin-top: 4px;
+    font-size: clamp(11px, 2.6vw, 12px);
+    line-height: 1.2;
+  }
+}
+
+
+/* ========================================
+   Closing CTA / iPhone
+   480px以下
+======================================== */
+
+@media (max-width: 480px) {
+  .closing-cta {
+    padding: 26px 18px 28px;
+  }
+
+  .closing-cta__message {
+    font-size: 19px;
+    line-height: 1.65;
+  }
+
+  .closing-cta__buttons .btn {
+    gap: 12px;
+    width: min(88vw, 430px);
+    min-height: 66px;
+    padding: 0 18px;
+    font-size: 17px;
+  }
+
+  .closing-cta__buttons .btn-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .closing-cta__buttons .btn-cta__main {
+    font-size: 17px;
+  }
+
+  .closing-cta__buttons .btn-cta__sub {
+    font-size: 11.5px;
+  }
+
+  .closing-cta__buttons .btn-phone__number {
+    font-size: clamp(21px, 5.5vw, 23px);
+  }
+
+  .closing-cta__buttons .btn-phone__time {
+    font-size: clamp(10.5px, 2.8vw, 11.5px);
+  }
+}
+
+
+/* ========================================
+   Closing CTA / Small Smartphone
+   374px以下
+======================================== */
+
+@media (max-width: 374px) {
+  .closing-cta {
+    padding: 24px 14px 26px;
+  }
+
+  .closing-cta__message {
+    font-size: 18px;
+    line-height: 1.65;
+  }
+
+  .closing-cta__buttons .btn {
+    gap: 10px;
+    width: min(92vw, 430px);
+    min-height: 64px;
+    padding: 0 16px;
+    font-size: 16px;
+  }
+
+  .closing-cta__buttons .btn-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .closing-cta__buttons .btn-cta__main {
+    font-size: 16px;
+  }
+
+  .closing-cta__buttons .btn-cta__sub {
+    font-size: 11px;
+  }
+
+  .closing-cta__buttons .btn-phone__number {
+    font-size: clamp(20px, 5.7vw, 22px);
+    letter-spacing: 0.01em;
+  }
+
+  .closing-cta__buttons .btn-phone__time {
+    font-size: clamp(10px, 2.8vw, 11px);
+  }
+}
+
+
+
+
+
+
 
 
 .reason {
