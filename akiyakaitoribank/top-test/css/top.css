@@ -5335,6 +5335,80 @@
   display: none;
 }
 
+/* ========================================
+   Hero Visual / スマホ版ヒーロー画像切り替え
+======================================== */
+
+.hero__visual picture {
+  display: block;
+  width: 100%;
+}
+
+.hero__visual picture img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+
+/* ========================================
+   Hero Visual / Smartphone Image
+   550px以下：スマホ版ヒーロー画像を使用
+======================================== */
+
+@media (max-width: 550px) {
+  .hero__visual {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .hero__visual picture,
+  .hero__visual picture img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
+
+  .hero__content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero__buttons {
+    position: relative;
+    z-index: 3;
+  }
+}
+
+/* ========================================
+   Hero Text Glow / スマホ版テキスト光彩
+======================================== */
+
+@media (max-width: 550px) {
+  .hero__title,
+  .hero__lead {
+    text-shadow:
+      0 0 4px rgba(255, 255, 255, 0.95),
+      0 0 10px rgba(255, 255, 255, 0.9),
+      0 2px 12px rgba(255, 255, 255, 0.85);
+  }
+}
+
+
+
+
+
+
+
+
+
+
 /* 480px以下 */
 @media (max-width: 480px) {
 
@@ -5543,4 +5617,4 @@
   .btn-phone__time {
     font-size: clamp(10px, 2.8vw, 11px);
   }
-}	
+}
