@@ -5432,7 +5432,7 @@
    Hero Text Glow / スマホ版テキスト光彩
 ======================================== */
 
-@media (max-width: 550px) {
+@media (max-width: 750px) {
   .hero__title,
   .hero__lead {
     text-shadow:
