@@ -5181,7 +5181,8 @@
     gap: 14px;
     width: 100%;
     max-width: 700px;
-    margin: 100px auto 0;
+    /*margin: 100px auto 0;*/
+	  margin: 9.8vw auto 0;
   }
 
   .hero__buttons .btn {
@@ -5246,7 +5247,8 @@
     gap: 14px;
     width: 100%;
     max-width: none;
-    margin: 50px auto 0;
+    /*margin: 50px auto 0;*/
+	  margin: 8.8vw auto 0;
   }
 
   .hero__buttons .btn {
