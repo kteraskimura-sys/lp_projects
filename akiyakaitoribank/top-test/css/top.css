@@ -4867,6 +4867,7 @@
     margin: 0;
     z-index: 1;
     pointer-events: none;
+	  overflow: hidden;
   }
 
   .hero__visual img {
@@ -4958,6 +4959,34 @@
     font-weight: 600;
     line-height: 1.2;
   }
+
+  .hero__visual picture img {
+    display: block;
+    width: 140vw;
+    max-width: none;
+    height: auto;
+    position: relative;
+    left: 10vw;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .hero {
+    overflow: hidden;
+  }
+
+  .hero__visual {
+    overflow: hidden;
+  }
+
+  .hero__visual picture img {
+    display: block;
+    width: 140vw;
+    max-width: none;
+    height: auto;
+    position: relative;
+    left: 10vw;
+  }
 }
 
 /* 750px以下：スマホ実機向け */
@@ -4967,11 +4996,13 @@
   }
 
   .hero__content {
-    padding-top: 64px;
+    /*padding-top: 64px;*/
+	  padding-top: 8.8vw
   }
 
   .hero__title {
-    font-size: 39px;
+    /*font-size: 39px;*/
+	  font-size: 7.07vw;
     line-height: 1.45;
   }
 
@@ -5004,6 +5035,15 @@
     min-height: 72px;
     border-radius: 17px;
     font-size: 21px;
+  }
+
+  .hero__visual picture img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    position: relative;
+    margin: 0;
   }
 }
 
