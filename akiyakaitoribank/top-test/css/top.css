@@ -5044,6 +5044,7 @@
     height: auto;
     position: relative;
     margin: 0;
+    left: 0;
   }
 }
 
@@ -5385,10 +5386,10 @@
 }
 
 .hero__visual picture img {
-  display: block;
-  width: 100%;
-  max-width: none;
-  height: auto;
+  /*display: block;*/
+  /*width: 100%;*/
+  /*max-width: none;*/
+  /*height: auto;*/
 }
 
 /* ========================================
