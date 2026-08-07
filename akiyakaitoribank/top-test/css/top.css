@@ -5414,6 +5414,7 @@
     width: 100%;
     max-width: none;
     height: auto;
+	  left: 0;
   }
 
   .hero__content {
