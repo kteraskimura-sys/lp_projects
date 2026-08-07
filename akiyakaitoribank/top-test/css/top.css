@@ -116,7 +116,10 @@
 
 .hero__lead {
   margin-top: 24px;
-  color: var(--color-subtext);
+  /*color: var(--color-subtext);*/
+	/*color: #4f4740;*/
+	color: #4a423b;
+	/*color: #5a5149;/
   font-size: 18px;
   line-height: 2;
 }
@@ -4633,7 +4636,10 @@
 
 .hero__lead {
     margin-top: 28px;
-    color: var(--color-subtext);
+    /*color: var(--color-subtext);*/
+	/*color: #4f4740;*/
+	color: #4a423b;
+	/*color: #5a5149;/
     font-size: 17px;
     line-height: 2;
     font-weight: 500;
@@ -4775,7 +4781,10 @@
 
 .hero__lead {
 	margin-top: 20px;
-	color: var(--color-subtext);
+	/*color: var(--color-subtext);*/
+	/*color: #4f4740;*/
+	color: #4a423b;
+	/*color: #5a5149;/
 	font-size: 16px;
 	line-height: 1.9;
 	}
@@ -4837,7 +4846,7 @@
   }
 
   .hero__title {
-    font-size: 42px;
+    font-size: 50px;
     line-height: 1.42;
     letter-spacing: 0.01em;
     font-weight: 700;
@@ -4850,7 +4859,10 @@
 
   .hero__lead {
     margin-top: 28px;
-    color: var(--color-subtext);
+    /*color: var(--color-subtext);*/
+	/*color: #4f4740;*/
+	color: #4a423b;
+	/*color: #5a5149;/
     font-size: 18px;
     line-height: 2;
     font-weight: 600;
