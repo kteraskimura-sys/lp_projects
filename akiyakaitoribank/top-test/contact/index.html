@@ -1,1 +1,321 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>無料相談フォーム｜空き家買取バンク</title>
+  <meta name="description" content="空き家・相続不動産・再建築不可物件・共有持分・事故物件など、不動産に関するご相談をメールで受け付けています。">
+  <meta name="robots" content="noindex, nofollow">
 
+  <link rel="stylesheet" href="../css/contact.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../" class="site-header__logo" aria-label="空き家買取バンク トップページへ">
+        <img src="../img/common/logo.svg" alt="空き家買取バンク">
+      </a>
+
+      <button class="site-header__menu-button" type="button" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-header__nav" aria-label="グローバルナビゲーション">
+        <ul>
+          <li><a href="../">ホーム</a></li>
+          <li><a href="../#service">サービス一覧</a></li>
+          <li><a href="../#case-study">解決事例</a></li>
+          <li><a href="../#column-news">コラム</a></li>
+          <li><a href="../#faq">よくあるご質問</a></li>
+          <li><a href="../#company">会社情報</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__contact">
+        <a href="tel:0120949017" class="site-header__tel">
+          <span class="site-header__tel-number">0120-949-017</span>
+          <span class="site-header__tel-time">受付時間 10:00〜19:00（平日）</span>
+        </a>
+        <a href="./" class="site-header__button">無料相談はこちら</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="contact-hero__inner">
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+          <ol>
+            <li><a href="../">ホーム</a></li>
+            <li>無料相談フォーム</li>
+          </ol>
+        </nav>
+
+        <div class="contact-hero__content">
+          <div class="contact-hero__text">
+            <p class="section-label">CONTACT</p>
+            <h1><span>無料相談</span>フォーム</h1>
+            <p class="contact-hero__lead">
+              空き家・相続不動産・再建築不可物件・共有持分・事故物件など、<br class="br-pc">
+              不動産に関するご相談をメールで受け付けています。
+            </p>
+            <p class="contact-hero__note">
+              まずはお気軽にご相談ください。ご相談内容を確認後、担当スタッフよりご連絡いたします。
+              しつこい営業は一切いたしませんので、ご安心してご利用ください。
+            </p>
+          </div>
+
+          <div class="contact-hero__illustration" aria-hidden="true">
+            <div class="contact-illust">
+              <div class="contact-illust__house">
+                <span class="contact-illust__roof"></span>
+                <span class="contact-illust__body"></span>
+                <span class="contact-illust__door"></span>
+              </div>
+              <div class="contact-illust__mail">
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-section__inner">
+        <div class="contact-form-card">
+          <form id="contactForm" class="contact-form" action="#" method="post">
+            <input type="hidden" name="user_agent" id="user_agent">
+            <input type="hidden" name="page_url" id="page_url">
+
+            <div class="form-row">
+              <div class="form-label">
+                <label for="name">お名前</label>
+                <span class="required">必須</span>
+              </div>
+              <div class="form-field">
+                <input type="text" id="name" name="name" placeholder="例）山田 太郎" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-label">
+                <label for="phone">電話番号</label>
+                <span class="required">必須</span>
+              </div>
+              <div class="form-field">
+                <input type="tel" id="phone" name="phone" placeholder="例）090-1234-5678" required>
+                <p class="form-help">ハイフンあり・なし、どちらでも入力できます。</p>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-label">
+                <label for="email">メールアドレス</label>
+                <span class="required">必須</span>
+              </div>
+              <div class="form-field">
+                <input type="email" id="email" name="email" placeholder="例）mail@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-label">
+                <span>ご相談種別</span>
+                <span class="required">必須</span>
+              </div>
+              <div class="form-field">
+                <div class="choice-grid choice-grid--category">
+                  <label>
+                    <input type="radio" name="category" value="空き家売却" required>
+                    <span>空き家売却</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="category" value="相続不動産">
+                    <span>相続不動産</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="category" value="再建築不可物件">
+                    <span>再建築不可物件</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="category" value="共有持分">
+                    <span>共有持分</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="category" value="事故物件">
+                    <span>事故物件</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="category" value="空き家相談">
+                    <span>空き家相談</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="category" value="残置物対応">
+                    <span>残置物対応</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="category" value="その他">
+                    <span>その他</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-label">
+                <label for="property_location">物件所在地</label>
+                <span class="optional">任意</span>
+              </div>
+              <div class="form-field">
+                <input type="text" id="property_location" name="property_location" placeholder="例）東京都渋谷区〇〇町">
+                <p class="form-help">市区町村まででも構いません。</p>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-label">
+                <label for="message">ご相談内容</label>
+                <span class="required">必須</span>
+              </div>
+              <div class="form-field">
+                <textarea id="message" name="message" placeholder="ご相談内容をできるだけ詳しくご記入ください。" required></textarea>
+                <p class="form-help">写真や資料がある場合は、送信後に担当者よりご案内いたします。</p>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-label">
+                <span>ご希望の連絡方法</span>
+                <span class="optional">任意</span>
+              </div>
+              <div class="form-field">
+                <div class="check-list">
+                  <label>
+                    <input type="checkbox" name="contact_method" value="電話">
+                    <span>電話での連絡を希望</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" name="contact_method" value="メール">
+                    <span>メールでの返信を希望</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" name="contact_method" value="LINE">
+                    <span>LINEでの案内を希望</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="privacy-area">
+              <label>
+                <input type="checkbox" name="privacy_consent" value="TRUE" required>
+                <span><a href="../privacy-policy/" target="_blank" rel="noopener">プライバシーポリシー</a>に同意のうえ送信します</span>
+              </label>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="submit-button">
+                <span>送信する</span>
+              </button>
+              <p>営業目的のお問い合わせはご遠慮ください。</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-support">
+      <div class="contact-support__inner">
+        <div class="contact-support__text">
+          <p class="contact-support__label">このようなご相談もお気軽に</p>
+          <ul>
+            <li>まだ売るか決めていない</li>
+            <li>他社で断られた</li>
+            <li>相続後の進め方が分からない</li>
+            <li>遠方の実家について相談したい</li>
+          </ul>
+        </div>
+
+        <div class="contact-support__buttons">
+          <a href="./" class="support-button support-button--mail">
+            <span class="support-button__main">無料相談フォーム</span>
+            <span class="support-button__sub">24時間受付中</span>
+          </a>
+          <a href="tel:0120949017" class="support-button support-button--tel">
+            <span class="support-button__main">0120-949-017</span>
+            <span class="support-button__sub">受付時間 10:00〜19:00（平日）</span>
+          </a>
+          <a href="#" class="support-button support-button--line">
+            <span class="support-button__main">LINEで相談する</span>
+            <span class="support-button__sub">かんたん相談受付中</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <a href="../" class="site-footer__logo">
+          <img src="../img/common/logo.svg" alt="空き家買取バンク">
+        </a>
+        <p>KTERAS株式会社</p>
+        <p>〒000-0000<br>東京都〇〇区〇〇0-0-0 〇〇ビル4F</p>
+        <a href="tel:0120949017" class="site-footer__tel">0120-949-017</a>
+        <p>受付時間 10:00〜19:00（平日）</p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="フッターナビゲーション">
+        <div class="site-footer__group">
+          <h2>サイトメニュー</h2>
+          <ul>
+            <li><a href="../">ホーム</a></li>
+            <li><a href="../#service">サービス一覧</a></li>
+            <li><a href="../#case-study">解決事例</a></li>
+            <li><a href="../#column-news">コラム</a></li>
+            <li><a href="../#faq">よくあるご質問</a></li>
+            <li><a href="../#company">会社情報</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__group">
+          <h2>サービス</h2>
+          <ul>
+            <li><a href="#">空き家売却</a></li>
+            <li><a href="#">相続不動産</a></li>
+            <li><a href="#">再建築不可物件</a></li>
+            <li><a href="#">共有持分</a></li>
+            <li><a href="#">事故物件</a></li>
+            <li><a href="#">残置物対応</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__group">
+          <h2>お問い合わせ</h2>
+          <ul>
+            <li><a href="./">無料相談フォーム</a></li>
+            <li><a href="tel:0120949017">電話で相談する</a></li>
+            <li><a href="#">LINEで相談する</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="site-footer__bottom">
+      <ul class="site-footer__legal">
+        <li><a href="../privacy-policy/">プライバシーポリシー</a></li>
+        <li><a href="../legal/">特定商取引法に基づく表記</a></li>
+        <li><a href="../sitemap/">サイトマップ</a></li>
+      </ul>
+      <p>© 2024 Akiya Kaitori Bank. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
