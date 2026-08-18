@@ -2359,34 +2359,6 @@
     justify-self: center;
   }
 
-/*----------------------------------- デザイン案 2 --
-  .remaining-items__content h3 {
-    position: relative;
-    padding: 12px 14px 12px 18px;
-    margin-bottom: 14px;
-    border-radius: 12px;
-    background: rgba(255, 250, 240, 0.9);
-    text-align: left;
-    font-size: 20px;
-    line-height: 1.55;
-  }
-
-  .remaining-items__content h3::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 14px;
-    bottom: 14px;
-    width: 4px;
-    border-radius: 999px;
-    background: var(--color-main);
-  }
-
-  .remaining-items__content > p {
-    font-size: 14px;
-    line-height: 1.95;
-  }*/
-
 }
 
 /* ========================================
@@ -3850,18 +3822,11 @@
   }
 }
 
-
-
-
-
-
 /* ========================================
    Closing Message / 最新ブレイクポイント調整
    ※最終セクション上段のみ
    ※下段CTAは次工程で調整
 ======================================== */
-
-
 /* 1024px以上：PC版は現状維持 */
 @media (min-width: 1024px) {
   .closing__inner {
@@ -3883,7 +3848,6 @@
     border-top: none;
   }
 }
-
 
 /* 1023px以下：1カラムに統一して、右余白を抑える */
 @media (max-width: 1023px) {
@@ -4048,7 +4012,6 @@
   }
 }
 
-
 /* 374px以下：小さめスマホ向け */
 @media (max-width: 374px) {
   .closing-message__intro,
@@ -4068,16 +4031,6 @@
     padding: 17px 16px;
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 /* ========================================
@@ -4145,38 +4098,6 @@
     gap: 12px;
   }
 
-  /*.closing-cta__buttons .btn {
-    gap: 8px;
-    width: 200px;
-    min-width: 200px;
-    min-height: 58px;
-    padding: 0 14px;
-    font-size: 13px;
-  }
-
-  .closing-cta__buttons .btn-icon {
-    width: 18px;
-    height: 18px;
-  }
-
-  .closing-cta__buttons .btn-cta__main {
-    font-size: 13px;
-  }
-
-  .closing-cta__buttons .btn-cta__sub {
-    font-size: 10px;
-  }
-
-  .closing-cta__buttons .btn-phone__number {
-    font-size: 16px;
-    line-height: 1.1;
-  }
-
-  .closing-cta__buttons .btn-phone__time {
-    margin-top: 3px;
-    font-size: 9px;
-    line-height: 1.2;
-  }*/
 }
 
 
@@ -4212,38 +4133,6 @@
     width: 100%;
   }
 
-  /*.closing-cta__buttons .btn {
-    gap: 10px;
-    width: min(31%, 210px);
-    min-width: 0;
-    min-height: 58px;
-    padding: 0 12px;
-    font-size: 13px;
-  }
-
-  .closing-cta__buttons .btn-icon {
-    width: 18px;
-    height: 18px;
-  }
-
-  .closing-cta__buttons .btn-cta__main {
-    font-size: 13px;
-  }
-
-  .closing-cta__buttons .btn-cta__sub {
-    font-size: 10px;
-  }
-
-  .closing-cta__buttons .btn-phone__number {
-    font-size: 16px;
-    line-height: 1.1;
-  }
-
-  .closing-cta__buttons .btn-phone__time {
-    margin-top: 3px;
-    font-size: 9px;
-    line-height: 1.2;
-  }*/
 }
 
 
@@ -4271,40 +4160,6 @@
     gap: 12px;
   }
 
-  /*.closing-cta__buttons .btn {
-    gap: 14px;
-    width: min(72vw, 430px);
-    min-width: 0;
-    min-height: 68px;
-    padding: 0 18px;
-    font-size: 18px;
-  }
-
-  .closing-cta__buttons .btn-icon {
-    width: 28px;
-    height: 28px;
-  }
-
-  .closing-cta__buttons .btn-cta__main {
-    font-size: 18px;
-  }
-
-  .closing-cta__buttons .btn-cta__sub {
-    margin-top: 4px;
-    font-size: 12px;
-  }
-
-  .closing-cta__buttons .btn-phone__number {
-    font-size: clamp(22px, 4.8vw, 24px);
-    line-height: 1.1;
-    letter-spacing: 0.02em;
-  }
-
-  .closing-cta__buttons .btn-phone__time {
-    margin-top: 4px;
-    font-size: clamp(11px, 2.6vw, 12px);
-    line-height: 1.2;
-  }*/
 }
 
 
@@ -4323,34 +4178,6 @@
     line-height: 1.65;
   }
 
-  /*.closing-cta__buttons .btn {
-    gap: 12px;
-    width: min(88vw, 430px);
-    min-height: 66px;
-    padding: 0 18px;
-    font-size: 17px;
-  }
-
-  .closing-cta__buttons .btn-icon {
-    width: 26px;
-    height: 26px;
-  }
-
-  .closing-cta__buttons .btn-cta__main {
-    font-size: 17px;
-  }
-
-  .closing-cta__buttons .btn-cta__sub {
-    font-size: 11.5px;
-  }
-
-  .closing-cta__buttons .btn-phone__number {
-    font-size: clamp(21px, 5.5vw, 23px);
-  }
-
-  .closing-cta__buttons .btn-phone__time {
-    font-size: clamp(10.5px, 2.8vw, 11.5px);
-  }*/
 }
 
 
@@ -4369,35 +4196,6 @@
     line-height: 1.65;
   }
 
-  /*.closing-cta__buttons .btn {
-    gap: 10px;
-    width: min(92vw, 430px);
-    min-height: 64px;
-    padding: 0 16px;
-    font-size: 16px;
-  }
-
-  .closing-cta__buttons .btn-icon {
-    width: 25px;
-    height: 25px;
-  }
-
-  .closing-cta__buttons .btn-cta__main {
-    font-size: 16px;
-  }
-
-  .closing-cta__buttons .btn-cta__sub {
-    font-size: 11px;
-  }
-
-  .closing-cta__buttons .btn-phone__number {
-    font-size: clamp(20px, 5.7vw, 22px);
-    letter-spacing: 0.01em;
-  }
-
-  .closing-cta__buttons .btn-phone__time {
-    font-size: clamp(10px, 2.8vw, 11px);
-  }*/
 }
 
 
