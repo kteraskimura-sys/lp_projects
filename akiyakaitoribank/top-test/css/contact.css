@@ -1,15 +1,23 @@
 :root {
-  --color-text: #2f2a25;
-  --color-sub: #4a423b;
+  /*--color-text: #2f2a25;*/
+  --color-text: #2b2520;
+  /*--color-sub: #4a423b;*/
+  --color-sub: #6b6258;
   --color-orange: #f28a1a;
-  --color-orange-dark: #e97800;
-  --color-green: #7bc943;
-  --color-green-dark: #2e7d32;
-  --color-bg: #faf7f0;
+  --color-orange-dark: #d96f00;
+  --color-orange-light: #fff3e3;
+  /*--color-green: #7bc943;*/
+  --color-green: #8bc34a;
+  /*--color-green-dark: #2e7d32;*/
+  --color-green-dark: #6da82f;
+  --color-green-light: #f2f8e8;
+  /*--color-bg: #faf7f0;*/
+  --color-bg: #fffdf8;
   --color-bg-light: #fffaf0;
   --color-border: #eadfce;
   --color-white: #ffffff;
-  --shadow-card: 0 8px 24px rgba(70, 48, 20, 0.08);
+  /*--shadow-card: 0 8px 24px rgba(70, 48, 20, 0.08);*/
+  --shadow-card: 0 10px 30px rgba(74, 55, 32, 0.08);
   --inner-width: 1040px;
 }
 
