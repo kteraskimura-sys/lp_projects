@@ -437,6 +437,12 @@ textarea {
   color: var(--color-text);
 }
 
+.privacy-area span {
+  line-height: 1.8;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
 .check-list span::before,
 .privacy-area span::before {
   content: "";
@@ -489,6 +495,7 @@ textarea {
   color: var(--color-green-dark);
   text-decoration: underline;
   text-underline-offset: 3px;
+	white-space: nowrap;
 }
 
 .form-submit {
@@ -797,6 +804,10 @@ textarea {
     font-size: 12px;
   }
 
+  .privacy-area span {
+    font-size: 13px;
+    line-height: 1.8;
+  }
 }
 
 /* 374px以下 */
@@ -815,4 +826,24 @@ textarea {
     font-size: 11px;
   }
 
+}
+
+
+
+@media (max-width: 750px) {
+  .contact-form input[type="text"],
+  .contact-form input[type="tel"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    font-size: 16px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    max-width: 100%;
+  }
+
+  .form-field {
+    min-width: 0;
+  }
 }
