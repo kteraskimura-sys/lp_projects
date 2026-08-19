@@ -498,6 +498,35 @@ textarea {
 	white-space: nowrap;
 }
 
+.privacy-area label {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.privacy-area span {
+  display: block;
+  align-items: initial;
+  line-height: 1.8;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.privacy-area a {
+  white-space: nowrap;
+}
+
+.privacy-area span::before {
+  top: 0.35em;
+}
+
+.privacy-area input:checked + span::after {
+  top: 0.55em;
+  transform: rotate(45deg);
+}
+
+
 .form-submit {
   margin-top: 26px;
   text-align: center;
@@ -845,5 +874,12 @@ textarea {
 
   .form-field {
     min-width: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .privacy-area span {
+    font-size: 13px;
+    letter-spacing: 0.01em;
   }
 }
