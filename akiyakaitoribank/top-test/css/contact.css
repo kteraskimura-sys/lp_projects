@@ -595,41 +595,53 @@ textarea {
   font-size: 12px;
 }
 
-/* support area */
+/* ========================================
+   Contact Support CTA
+======================================== */
+
 .contact-support {
   padding: 0 0 54px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
 }
 
-/*.contact-support__inner {
+.contact-support__inner {
   width: min(calc(100% - 48px), var(--inner-width));
   margin: 0 auto;
-  padding: 26px 30px;
+  padding: 18px 24px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 540px;
+  grid-template-columns: 132px minmax(260px, 1fr) 492px;
   align-items: center;
-  gap: 28px;
+  gap: 22px;
   background: #fffdf7;
-  border: 1px solid rgba(123, 201, 67, 0.5);
+  border: 1px solid rgba(139, 195, 74, 0.55);
   border-radius: 12px;
-}*/
-.contact-support__inner {
-	width: min(calc(100% - 48px), var(--inner-width));
-    margin: 0 auto;
-    padding: 26px 30px;
-    display: flex;
-    /*grid-template-columns: minmax(0, 2fr) 640px;*/
-    align-items: center;
-    gap: 28px;
-    background: #fffdf7;
-    border: 1px solid rgba(123, 201, 67, 0.5);
-    border-radius: 12px;
+}
+
+.contact-support__image {
+  width: 126px;
+  margin: 0;
+}
+
+.contact-support__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.contact-support__text {
+  width: auto;
+  margin: 0;
+  padding-right: 24px;
+  border-right: 1px solid rgba(234, 223, 206, 0.95);
 }
 
 .contact-support__label {
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   color: var(--color-green-dark);
   font-size: 18px;
   font-weight: 800;
+  line-height: 1.5;
 }
 
 .contact-support ul {
@@ -640,17 +652,18 @@ textarea {
 
 .contact-support li {
   position: relative;
-  padding-left: 28px;
+  padding-left: 27px;
+  color: var(--color-text);
   font-size: 15px;
   font-weight: 700;
-  line-height: 1.8;
+  line-height: 1.75;
 }
 
 .contact-support li::before {
   content: "✓";
   position: absolute;
   left: 0;
-  top: 0.18em;
+  top: 0.22em;
   display: grid;
   place-items: center;
   width: 18px;
@@ -662,52 +675,51 @@ textarea {
   border-radius: 50%;
 }
 
-.contact-support__image {
-	margin: 0 auto;
-	width: 20%;
-}
-
-.contact-support__text {
-	margin: 0 auto;
-	width: 30%;
-}
-
 .contact-support__buttons {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-	width: 50%;
-}
-
-.contact-support__buttons {
+  width: auto;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 12px;
-	width: 50%;
 }
 
 .support-button {
-  min-height: 88px;
-  padding: 14px 12px;
+  width: 156px;
+  min-width: 156px;
+  min-height: 96px;
+  padding: 12px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 7px;
   border-radius: 10px;
   text-align: center;
-  line-height: 1.45;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.support-button .btn-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  object-fit: contain;
 }
 
 .support-button__main {
+  display: block;
   font-size: 15px;
   font-weight: 800;
+  line-height: 1.35;
 }
 
 .support-button__sub {
-  margin-top: 4px;
+  display: block;
+  margin-top: 0;
   font-size: 11px;
   font-weight: 700;
+  line-height: 1.35;
 }
 
 .support-button--mail {
@@ -723,8 +735,156 @@ textarea {
 
 .support-button--line {
   color: #ffffff;
-  /*background: var(--color-green-dark);*/
-	background: #41b549;
+  background: #41b549;
+}
+
+/* ========================================
+   Contact Support CTA / Tablet
+   1023px以下
+======================================== */
+
+@media (max-width: 1023px) {
+  .contact-support__inner {
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: 20px 22px;
+    padding: 22px 24px;
+  }
+
+  .contact-support__image {
+    width: 108px;
+  }
+
+  .contact-support__text {
+    padding-right: 0;
+    border-right: none;
+  }
+
+  .contact-support__buttons {
+    grid-column: 1 / -1;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .support-button {
+    width: 200px;
+    min-width: 0;
+    min-height: 72px;
+    flex-direction: row;
+    gap: 8px;
+    border-radius: 999px;
+  }
+
+  .support-button__main,
+  .support-button__sub {
+    line-height: 1.35;
+  }
+}
+
+/* ========================================
+   Contact Support CTA / Smartphone
+   750px以下
+======================================== */
+
+@media (max-width: 750px) {
+  .contact-support {
+    padding-bottom: 42px;
+  }
+
+  .contact-support__inner {
+    width: calc(100% - 32px);
+    grid-template-columns: 86px minmax(0, 1fr);
+    gap: 18px 16px;
+    padding: 22px 20px 24px;
+  }
+
+  .contact-support__image {
+    width: 84px;
+  }
+
+  .contact-support__label {
+    margin-bottom: 8px;
+    font-size: 17px;
+  }
+
+  .contact-support li {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .contact-support__buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .support-button {
+    width: min(100%, 360px);
+    min-height: 68px;
+    margin: 0 auto;
+  }
+}
+
+/* ========================================
+   Contact Support CTA / iPhone
+   420px以下
+======================================== */
+
+@media (max-width: 420px) {
+  .contact-support__inner {
+    width: calc(100% - 28px);
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contact-support__image {
+    width: 96px;
+    margin: 0 auto;
+  }
+
+  .contact-support li {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .contact-support__buttons {
+    margin-top: 2px;
+  }
+
+  .support-button {
+    width: min(100%, 320px);
+  }
+}
+
+/* ========================================
+   Contact Support CTA / Small Smartphone
+   374px以下
+======================================== */
+
+@media (max-width: 374px) {
+  .contact-support__inner {
+    padding: 20px 16px 22px;
+  }
+
+  .contact-support__label {
+    font-size: 16px;
+  }
+
+  .contact-support li {
+    font-size: 13px;
+  }
+
+  .support-button {
+    width: min(100%, 300px);
+  }
+
+  .support-button__main {
+    font-size: 14px;
+  }
+
+  .support-button__sub {
+    font-size: 10px;
+  }
 }
 
 /* footer */
