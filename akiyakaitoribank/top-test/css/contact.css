@@ -755,6 +755,10 @@ textarea {
   border: 2px solid var(--color-green);
 }
 
+.tel_sub_color{
+	color: var(--color-text);
+}
+
 .support-button--line {
   color: #ffffff;
   background: #41b549;
@@ -962,7 +966,8 @@ textarea {
   }
 
   .support-button__text {
-    align-items: flex-start;
+    /*align-items: flex-start;*/
+	  align-items: center;
   }
 
   .support-button__main {
@@ -1012,11 +1017,11 @@ textarea {
   }
 
   .support-button__main {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .support-button__sub {
-    font-size: 9px;
+    font-size: clamp(10px, 2.8vw, 11px);
   }
 }
 
@@ -1151,7 +1156,7 @@ textarea {
 
   .support-button {
     width: min(100%, 360px);
-    min-height: 68px;
+    min-height: 58px;
     margin: 0 auto;
     border-radius: 999px;
   }
