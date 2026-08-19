@@ -608,18 +608,19 @@ textarea {
 .contact-support__inner {
   width: min(calc(100% - 48px), var(--inner-width));
   margin: 0 auto;
-  padding: 18px 24px;
+  padding: 18px 18px;
   display: grid;
-  grid-template-columns: 132px minmax(260px, 1fr) 492px;
+  grid-template-columns: 112px minmax(300px, 1fr) 496px;
   align-items: center;
-  gap: 22px;
+  gap: 18px;
   background: #fffdf7;
   border: 1px solid rgba(139, 195, 74, 0.55);
   border-radius: 12px;
+  overflow: hidden;
 }
 
 .contact-support__image {
-  width: 126px;
+  width: 112px;
   margin: 0;
 }
 
@@ -631,8 +632,9 @@ textarea {
 
 .contact-support__text {
   width: auto;
+  min-width: 0;
   margin: 0;
-  padding-right: 24px;
+  padding-right: 20px;
   border-right: 1px solid rgba(234, 223, 206, 0.95);
 }
 
@@ -642,6 +644,7 @@ textarea {
   font-size: 18px;
   font-weight: 800;
   line-height: 1.5;
+  letter-spacing: 0.03em;
 }
 
 .contact-support ul {
@@ -657,6 +660,7 @@ textarea {
   font-size: 15px;
   font-weight: 700;
   line-height: 1.75;
+  white-space: nowrap;
 }
 
 .contact-support li::before {
@@ -680,31 +684,47 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 12px;
+  gap: 10px;
+  min-width: 0;
 }
 
 .support-button {
-  width: 156px;
-  min-width: 156px;
-  min-height: 96px;
-  padding: 12px 10px;
-  display: flex;
-  flex-direction: column;
+  min-width: 0;
+  min-height: 72px;
+  padding: 0 12px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  border-radius: 10px;
-  text-align: center;
+  gap: 8px;
+  border-radius: 999px;
+  text-align: left;
   line-height: 1.35;
-  white-space: nowrap;
+  white-space: normal;
+  overflow: hidden;
+}
+
+.support-button--mail,
+.support-button--line {
+  width: 150px;
+}
+
+.support-button--tel {
+  width: 176px;
 }
 
 .support-button .btn-icon {
   display: block;
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
   object-fit: contain;
+}
+
+.support-button__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.35;
 }
 
 .support-button__main {
@@ -712,14 +732,16 @@ textarea {
   font-size: 15px;
   font-weight: 800;
   line-height: 1.35;
+  white-space: nowrap;
 }
 
 .support-button__sub {
   display: block;
-  margin-top: 0;
-  font-size: 11px;
+  margin-top: 2px;
+  font-size: 10px;
   font-weight: 700;
   line-height: 1.35;
+  white-space: nowrap;
 }
 
 .support-button--mail {
@@ -740,18 +762,19 @@ textarea {
 
 /* ========================================
    Contact Support CTA / Tablet
-   1023px以下
+   751px〜1023px
 ======================================== */
 
-@media (max-width: 1023px) {
+@media (min-width: 751px) and (max-width: 1023px) {
   .contact-support__inner {
-    grid-template-columns: 110px minmax(0, 1fr);
-    gap: 20px 22px;
-    padding: 22px 24px;
+    grid-template-columns: 132px minmax(0, 420px);
+    justify-content: center;
+    gap: 22px 28px;
+    padding: 28px 28px 30px;
   }
 
   .contact-support__image {
-    width: 108px;
+    width: 132px;
   }
 
   .contact-support__text {
@@ -759,68 +782,108 @@ textarea {
     border-right: none;
   }
 
+  .contact-support__label {
+    font-size: 20px;
+  }
+
+  .contact-support li {
+    font-size: 16px;
+  }
+
   .contact-support__buttons {
     grid-column: 1 / -1;
     justify-content: center;
     width: 100%;
+    gap: 12px;
   }
 
   .support-button {
-    width: 200px;
-    min-width: 0;
-    min-height: 72px;
-    flex-direction: row;
-    gap: 8px;
-    border-radius: 999px;
+    min-height: 68px;
+    padding: 0 14px;
   }
 
-  .support-button__main,
+  .support-button--mail,
+  .support-button--line {
+    width: 200px;
+  }
+
+  .support-button--tel {
+    width: 220px;
+  }
+
+  .support-button__main {
+    font-size: 15px;
+  }
+
   .support-button__sub {
-    line-height: 1.35;
+    font-size: 10px;
   }
 }
 
 /* ========================================
    Contact Support CTA / Smartphone
-   750px以下
+   421px〜750px
 ======================================== */
 
-@media (max-width: 750px) {
+@media (min-width: 421px) and (max-width: 750px) {
   .contact-support {
     padding-bottom: 42px;
   }
 
   .contact-support__inner {
     width: calc(100% - 32px);
-    grid-template-columns: 86px minmax(0, 1fr);
-    gap: 18px 16px;
-    padding: 22px 20px 24px;
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: 18px 18px;
+    padding: 24px 22px 26px;
   }
 
   .contact-support__image {
-    width: 84px;
+    width: 96px;
+  }
+
+  .contact-support__text {
+    padding-right: 0;
+    border-right: none;
   }
 
   .contact-support__label {
     margin-bottom: 8px;
-    font-size: 17px;
+    font-size: 18px;
+    line-height: 1.5;
   }
 
   .contact-support li {
     font-size: 14px;
     line-height: 1.7;
+    white-space: normal;
   }
 
   .contact-support__buttons {
+    grid-column: 1 / -1;
     flex-direction: column;
     align-items: center;
     gap: 12px;
+    width: 100%;
   }
 
   .support-button {
     width: min(100%, 360px);
     min-height: 68px;
-    margin: 0 auto;
+    padding: 0 18px;
+  }
+
+  .support-button--mail,
+  .support-button--tel,
+  .support-button--line {
+    width: min(100%, 360px);
+  }
+
+  .support-button__main {
+    font-size: 15px;
+  }
+
+  .support-button__sub {
+    font-size: 10px;
   }
 }
 
@@ -830,9 +893,15 @@ textarea {
 ======================================== */
 
 @media (max-width: 420px) {
+  .contact-support {
+    padding-bottom: 42px;
+  }
+
   .contact-support__inner {
     width: calc(100% - 28px);
     grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 24px 18px 26px;
     text-align: center;
   }
 
@@ -841,18 +910,67 @@ textarea {
     margin: 0 auto;
   }
 
-  .contact-support li {
+  .contact-support__text {
+    width: 100%;
+    padding-right: 0;
+    border-right: none;
+  }
+
+  .contact-support__label {
+    margin-bottom: 10px;
+    font-size: 17px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .contact-support ul {
     width: fit-content;
+    max-width: 100%;
     margin: 0 auto;
     text-align: left;
   }
 
+  .contact-support li {
+    width: auto;
+    padding-left: 26px;
+    font-size: 14px;
+    line-height: 1.7;
+    white-space: normal;
+  }
+
   .contact-support__buttons {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
     margin-top: 2px;
   }
 
-  .support-button {
-    width: min(100%, 320px);
+  .support-button,
+  .support-button--mail,
+  .support-button--tel,
+  .support-button--line {
+    width: 100%;
+    max-width: 320px;
+    min-height: 64px;
+    padding: 0 16px;
+  }
+
+  .support-button .btn-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .support-button__text {
+    align-items: flex-start;
+  }
+
+  .support-button__main {
+    font-size: 15px;
+  }
+
+  .support-button__sub {
+    font-size: 10px;
   }
 }
 
@@ -863,7 +981,12 @@ textarea {
 
 @media (max-width: 374px) {
   .contact-support__inner {
-    padding: 20px 16px 22px;
+    width: calc(100% - 24px);
+    padding: 22px 14px 24px;
+  }
+
+  .contact-support__image {
+    width: 88px;
   }
 
   .contact-support__label {
@@ -874,8 +997,18 @@ textarea {
     font-size: 13px;
   }
 
-  .support-button {
-    width: min(100%, 300px);
+  .support-button,
+  .support-button--mail,
+  .support-button--tel,
+  .support-button--line {
+    max-width: 292px;
+    min-height: 62px;
+    padding: 0 14px;
+  }
+
+  .support-button .btn-icon {
+    width: 18px;
+    height: 18px;
   }
 
   .support-button__main {
@@ -883,7 +1016,7 @@ textarea {
   }
 
   .support-button__sub {
-    font-size: 10px;
+    font-size: 9px;
   }
 }
 
