@@ -1045,9 +1045,9 @@ textarea {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .contact-support__inner {
+  /*.contact-support__inner {
     grid-template-columns: 1fr;
-  }
+  }*/
 }
 
 /* 750px以下 */
