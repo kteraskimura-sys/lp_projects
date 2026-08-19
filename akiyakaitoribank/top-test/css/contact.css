@@ -509,8 +509,6 @@ textarea {
   align-items: initial;
   line-height: 1.8;
   white-space: normal;
-  word-break: keep-all;
-  overflow-wrap: normal;
 }
 
 .privacy-area a {
@@ -524,6 +522,42 @@ textarea {
 .privacy-area input:checked + span::after {
   top: 0.55em;
   transform: rotate(45deg);
+}
+
+.br-max420px {
+  display: none;
+}
+
+.privacy-area label {
+  display: inline-block;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.privacy-area .privacy-text {
+  position: relative;
+  display: block;
+  padding-left: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.8;
+  color: var(--color-text);
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.privacy-area .privacy-text::before {
+  top: 0.35em;
+}
+
+.privacy-area input:checked + .privacy-text::after {
+  top: 0.55em;
+  transform: rotate(45deg);
+}
+
+.privacy-area a {
+  white-space: nowrap;
 }
 
 
@@ -881,5 +915,18 @@ textarea {
   .privacy-area span {
     font-size: 13px;
     letter-spacing: 0.01em;
+  }
+
+  .br-max420px {
+    display: block;
+  }
+
+  .privacy-area {
+    justify-content: flex-start;
+  }
+
+  .privacy-area .privacy-text {
+    font-size: 13px;
+    line-height: 1.8;
   }
 }
