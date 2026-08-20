@@ -1203,6 +1203,10 @@ textarea {
 		font-size: clamp(21px, 5.5vw, 23px);
         letter-spacing: 0.02em;
 	}
+
+	.support-button__sub {
+		font-size: 11.5px;
+	}
 }	
 
 /* 420px以下 */
