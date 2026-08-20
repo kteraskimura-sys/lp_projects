@@ -1029,7 +1029,7 @@ textarea {
 	  /*font-size: clamp(20px, 5.7vw, 22px);*/
   }
 
-  .support-button__main .tell_main {
+  .support-button__text .tell_main {
     font-size: clamp(20px, 5.7vw, 22px);
   }
 
