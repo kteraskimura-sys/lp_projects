@@ -783,9 +783,16 @@ textarea {
    1024px〜
 ======================================== */
 @media (min-width: 1024px) {
+	.contact-support__inner {
+		grid-template-columns: 96px 266px 540px;
+		gap: 18px;
+		padding: 18px;
+  }
+
 	.contact-support__image {
-		width: 112px;
 		margin: 0;
+		/*width: 112px;*/
+		width: 96px;
 	}
 
 	.contact-support__text {
@@ -797,14 +804,22 @@ textarea {
 		width: 270px;
 	}
 
+	.contact-support__label {
+		white-space: nowrap;
+	}
+
+	.contact-support li {
+		white-space: nowrap;
+	}
+
 	.contact-support__buttons {
 		width: auto;
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
 		gap: 10px;
+		width: 550px;
 		min-width: 0;
-		/* width: 500px; */
 	}
 
 	.support-button {
@@ -812,7 +827,8 @@ textarea {
 		/*min-height: 72px;*/
 		/*min-height: 88px;*/
 		min-height: 130px;
-		padding: 0 12px;
+		/*padding: 0 12px;*/
+		padding: 0 10px;
 		/*display: inline-flex;*/
 		display: flex;
 		flex-direction: column;
@@ -821,10 +837,21 @@ textarea {
 		gap: 8px;
 		/*border-radius: 999px;*/
 		border-radius: 10px;
-		text-align: left;
+		text-align: center;
 		line-height: 1.35;
 		white-space: normal;
 		overflow: hidden;
+	}
+
+	.support-button--mail,
+	.support-button--line {
+		/*width: 150px;*/
+		width: 200px;
+	}
+
+	.support-button--tel {
+		/*width: 220px;*/
+		width: 200px;
 	}
 
 	.support-button .btn-icon {
@@ -836,6 +863,21 @@ textarea {
 		flex: 0 0 auto;
 		object-fit: contain;
 	}
+
+  .support-button__text .tel_main {
+	  font-size: 22px;
+	  /*font-weight: 800;*/
+	  letter-spacing: 0.02em;
+	}
+
+  .support-button__text .tel_sub {
+	  color: var(--color-text);
+	  font-size: 10px;
+	  letter-spacing: -0.5px;
+	  position: relative;
+	  bottom: 4.5px;
+	}
+
 }
 
 /* ========================================
