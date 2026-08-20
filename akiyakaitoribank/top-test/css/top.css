@@ -3619,8 +3619,10 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: 200px;
-  min-width: 200px;
+  /*width: 200px;*/
+	width: min(31%, 210px);
+  /*min-width: 200px;*/
+	min-width: min(31%, 210px);
   min-height: 58px;
   padding: 0 14px;
   font-size: 13px;
@@ -3698,8 +3700,10 @@
   }
 
   .closing-cta__buttons .btn {
-    width: 180px;
-    min-width: 180px;
+    /*width: 180px;*/
+	  width: 210px;
+    /*min-width: 180px;*/
+	  min-width: 210px;
   }
 }
 
