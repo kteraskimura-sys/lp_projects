@@ -768,7 +768,7 @@ textarea {
 
 .tel_sub {
 	color: var(--color-text);
-	letter-spacing: 0.01vw;
+	/*letter-spacing: 0.01vw;*/
 }
 
 .support-button--line {
@@ -980,8 +980,8 @@ textarea {
   }
 
   .support-button .btn-icon {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
 
   .support-button__text {
