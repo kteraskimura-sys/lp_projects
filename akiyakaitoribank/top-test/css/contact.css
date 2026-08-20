@@ -1188,9 +1188,17 @@ textarea {
     min-height: 58px;
     margin: 0 auto;
     border-radius: 999px;
+	  max-width: 320px;
   }
 
 }
+
+/* 480px以下 */
+@media (max-width: 480px) {
+  .support-button__main {
+	  font-size: 17px;
+  }	
+}	
 
 /* 420px以下 */
 @media (max-width: 420px) {
