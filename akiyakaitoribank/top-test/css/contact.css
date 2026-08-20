@@ -818,7 +818,7 @@ textarea {
 	  min-height: 58px;
     padding: 0 14px;
 	  width: min(31%, 210px);
-	  min-width: 200px;
+	  min-width: 210px;
   }
 
   /*.support-button--mail,
