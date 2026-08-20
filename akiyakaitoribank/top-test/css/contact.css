@@ -754,7 +754,7 @@ textarea {
 
 .support-button--tel {
   /*color: var(--color-green-dark);*/
-	color: ##8bc34a;
+	color: #8bc34a;
   background: #ffffff;
   border: 2px solid var(--color-green);
 }
