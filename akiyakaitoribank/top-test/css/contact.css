@@ -758,11 +758,11 @@ textarea {
   border: 2px solid var(--color-green);
 }
 
-.tel_main_color{
+.tel_main{
 	font-size: clamp(20px, 5.7vw, 22px);
 }
 
-.tel_sub_color{
+.tel_sub {
 	color: var(--color-text);
 	letter-spacing: 0.01vw;
 }
@@ -1034,8 +1034,13 @@ textarea {
   }
 
   .support-button__sub {
-    font-size: clamp(10px, 2.8vw, 11px);
+    font-size: 11px;
+	  margin-top: 4px;
   }
+
+	.tel_sub {
+		font-size: clamp(10px, 2.8vw, 11px);
+	}
 }
 
 /* footer */
