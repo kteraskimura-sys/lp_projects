@@ -831,12 +831,22 @@ textarea {
   }*/
 
   .support-button__main {
-    font-size: 15px;
+    /*font-size: 15px;*/
+	  font-size: 13px;
+  }
+
+  .support-button__text .tel_main {
+	  font-size: 16px;
   }
 
   .support-button__sub {
     font-size: 10px;
+	  margin-top: 3px;
   }
+
+	.tel_sub {
+		font-size: 9px;
+	}
 }
 
 /* ========================================
