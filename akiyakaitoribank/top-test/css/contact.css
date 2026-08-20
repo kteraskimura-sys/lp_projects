@@ -1,3 +1,6 @@
+/* contact */
+@charset "UTF-8";
+
 :root {
   /*--color-text: #2f2a25;*/
   --color-text: #2b2520;
@@ -1022,8 +1025,12 @@ textarea {
   }
 
   .support-button__main {
-    /*font-size: 16px;*/
-	  font-size: clamp(20px, 5.7vw, 22px);
+	  font-size: 16px;
+	  /*font-size: clamp(20px, 5.7vw, 22px);*/
+  }
+
+  .support-button__main .tell_main {
+    font-size: clamp(20px, 5.7vw, 22px);
   }
 
   .support-button__sub {
