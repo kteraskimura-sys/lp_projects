@@ -817,7 +817,7 @@ textarea {
     /*min-height: 68px;*/
 	  min-height: 58px;
     padding: 0 14px;
-	  width: 200px;
+	  width: min(31%, 210px);
 	  min-width: 200px;
   }
 
@@ -848,6 +848,17 @@ textarea {
 	.tel_sub {
 		font-size: 9px;
 	}
+}
+
+/* ========================================
+   Contact Support CTA / Smartphone
+   901px〜110px
+======================================== */
+@media (min-width: 900px) and (max-width: 1100px) {
+    .support-button {
+        width: 210px;
+        min-width: 210px;
+    }
 }
 
 /* ========================================
