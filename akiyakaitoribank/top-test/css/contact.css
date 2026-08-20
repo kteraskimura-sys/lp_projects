@@ -1460,3 +1460,178 @@ textarea {
     line-height: 1.8;
   }
 }
+
+/* ================================================================================
+   Thanks Page                                                      Thanks Page
+================================================================================ */
+
+.thanks-hero {
+  padding: 42px 0 70px;
+  background:
+    radial-gradient(circle at 85% 25%, rgba(139, 195, 74, 0.13), transparent 34%),
+    linear-gradient(180deg, #fffaf0 0%, #fffdf8 55%, var(--color-bg) 100%);
+}
+
+.thanks-hero__inner {
+  width: min(calc(100% - 48px), var(--inner-width));
+  margin: 0 auto;
+}
+
+.thanks-card {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 56px 54px 50px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid rgba(234, 223, 206, 0.9);
+  border-radius: 18px;
+  box-shadow: var(--shadow-card);
+}
+
+.thanks-card h1 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 42px;
+  line-height: 1.45;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.thanks-card__lead {
+  margin: 24px 0 0;
+  color: var(--color-green-dark);
+  font-size: 20px;
+  line-height: 1.8;
+  font-weight: 800;
+}
+
+.thanks-card__text {
+  margin: 18px 0 0;
+  color: var(--color-sub);
+  font-size: 15px;
+  line-height: 1.9;
+  font-weight: 500;
+}
+
+.thanks-card__notice {
+  margin: 30px auto 0;
+  padding: 20px 24px;
+  max-width: 540px;
+  text-align: left;
+  background: #fffaf0;
+  border: 1px solid rgba(234, 223, 206, 0.9);
+  border-radius: 10px;
+}
+
+.thanks-card__notice p {
+  position: relative;
+  margin: 0;
+  padding-left: 24px;
+  color: var(--color-text);
+  font-size: 14px;
+  line-height: 1.8;
+  font-weight: 600;
+}
+
+.thanks-card__notice p + p {
+  margin-top: 6px;
+}
+
+.thanks-card__notice p::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+  background: var(--color-green);
+  border-radius: 50%;
+}
+
+.thanks-card__buttons {
+  margin-top: 34px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.thanks-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  min-height: 56px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.thanks-button--orange {
+  color: #ffffff;
+  background: var(--color-orange);
+}
+
+.thanks-button--tel {
+  color: var(--color-green-dark);
+  background: #ffffff;
+  border: 2px solid var(--color-green);
+}
+
+/* 750px以下 */
+@media (max-width: 750px) {
+  .thanks-hero {
+    padding: 30px 0 50px;
+  }
+
+  .thanks-hero__inner {
+    width: calc(100% - 32px);
+  }
+
+  .thanks-card {
+    padding: 42px 24px 38px;
+    border-radius: 14px;
+  }
+
+  .thanks-card h1 {
+    font-size: 32px;
+  }
+
+  .thanks-card__lead {
+    font-size: 17px;
+  }
+
+  .thanks-card__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .thanks-button {
+    width: min(100%, 320px);
+  }
+}
+
+/* 420px以下 */
+@media (max-width: 420px) {
+  .thanks-hero__inner {
+    width: calc(100% - 28px);
+  }
+
+  .thanks-card {
+    padding: 36px 20px 34px;
+  }
+
+  .thanks-card h1 {
+    font-size: 28px;
+  }
+
+  .thanks-card__notice {
+    padding: 18px 16px;
+  }
+}
