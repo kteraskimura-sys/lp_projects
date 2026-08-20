@@ -44,10 +44,9 @@ a {
 }
 
 .contact-hero,
-.contact-section,
-.contact-support {
-  line-height: 1.8;
-  letter-spacing: 0.03em;
+.contact-section, {
+  /*line-height: 1.8;*/
+  /*letter-spacing: 0.03em;*/
 }
 
 button,
@@ -604,8 +603,8 @@ textarea {
 
 .contact-support {
   padding: 0 0 54px;
-  line-height: 1.8;
-  letter-spacing: 0.03em;
+  /*line-height: 1.8;*/
+  /*letter-spacing: 0.03em;*/
 }
 
 .contact-support__inner {
