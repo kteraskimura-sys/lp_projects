@@ -814,18 +814,21 @@ textarea {
   }
 
   .support-button {
-    min-height: 68px;
+    /*min-height: 68px;*/
+	  min-height: 58px;
     padding: 0 14px;
+	  width: 200px;
+	  min-width: 200px;
   }
 
-  .support-button--mail,
+  /*.support-button--mail,
   .support-button--line {
     width: 200px;
-  }
+  }*/
 
-  .support-button--tel {
+  /*.support-button--tel {
     width: 220px;
-  }
+  }*/
 
   .support-button__main {
     font-size: 15px;
