@@ -716,8 +716,10 @@ textarea {
 
 .support-button .btn-icon {
   display: block;
-  width: 20px;
-  height: 20px;
+  /*width: 20px;*/
+	width: 18px;
+  /*height: 20px;*/
+	height: 18px;
   flex: 0 0 auto;
   object-fit: contain;
 }
@@ -727,6 +729,7 @@ textarea {
   flex-direction: column;
   min-width: 0;
   line-height: 1.35;
+	align-items: center;
 }
 
 .support-button__main {
@@ -739,7 +742,8 @@ textarea {
 
 .support-button__sub {
   display: block;
-  margin-top: 2px;
+  /*margin-top: 2px;*/
+	margin-top: 4px;
   font-size: 10px;
   font-weight: 600;
   line-height: 1.35;
@@ -891,11 +895,17 @@ textarea {
   }
 
   .support-button__main {
-    font-size: 15px;
+    /*font-size: 15px;*/
+	  font-size: 18px;
+  }
+
+  .support-button__text .tel_main {
+    font-size: clamp(22px, 4.8vw, 24px);
   }
 
   .support-button__sub {
-    font-size: 10px;
+    /*font-size: 10px;*/
+	  font-size: 12px;
   }
 }
 
