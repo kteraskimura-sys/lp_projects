@@ -1195,9 +1195,14 @@ textarea {
 
 /* 480px以下 */
 @media (max-width: 480px) {
-  .support-button__main {
-	  font-size: 17px;
-  }	
+	.support-button__main {
+		font-size: 17px;
+	}
+
+	.support-button__text .tel_main {
+		font-size: clamp(21px, 5.5vw, 23px);
+        letter-spacing: 0.02em;
+	}
 }	
 
 /* 420px以下 */
