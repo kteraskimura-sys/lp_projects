@@ -355,6 +355,25 @@
   }
 }
 
+ /* ========================================
+   Service Hero height final adjustment
+   PC 1024px以上：ヒーロー高さを少しだけ詰める
+======================================== */
+
+@media (min-width: 1024px) {
+  .service-hero__inner {
+    min-height: 455px;
+    padding: 38px 0 34px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1100px) {
+  .service-hero__inner {
+    min-height: 450px;
+    padding: 36px 0 32px;
+  }
+}
+
 /* ========================================
    Worry
 ======================================== */
