@@ -1635,3 +1635,9 @@ textarea {
     padding: 18px 16px;
   }
 }
+
+.submit-button:disabled,
+.submit-button.is-sending {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
