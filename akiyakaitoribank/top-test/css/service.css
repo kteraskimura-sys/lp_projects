@@ -976,6 +976,111 @@
 }
 
 /* ========================================
+   Service Hero gradient final fix
+   751px〜1023px：縦線を消して自然なグラデーションにする
+======================================== */
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .service-hero {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* 画像側のグラデーションは停止 */
+  .service-hero__image::before {
+    content: none;
+  }
+
+  /* ヒーロー全体にグラデーションをかける */
+  .service-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(
+      90deg,
+      #fffaf0 0%,
+      rgba(255, 250, 240, 0.99) 24%,
+      rgba(255, 250, 240, 0.90) 38%,
+      rgba(255, 250, 240, 0.58) 52%,
+      rgba(255, 250, 240, 0.20) 64%,
+      rgba(255, 250, 240, 0) 76%
+    );
+  }
+
+  .service-hero__text {
+    position: relative;
+    z-index: 3;
+  }
+
+  .service-hero__image {
+    z-index: 1;
+  }
+}
+
+/* 751px〜850px：画像位置は今の良い状態を維持 */
+@media (min-width: 751px) and (max-width: 850px) {
+  .service-hero__image {
+    right: -88px;
+    width: 640px;
+    max-width: none;
+  }
+
+  .service-hero__image img {
+    object-position: 78% center;
+  }
+}
+
+/* 851px〜1023px：1023px側の良いバランスを維持 */
+@media (min-width: 851px) and (max-width: 1023px) {
+  .service-hero__image img {
+    object-position: 86% center;
+  }
+}
+
+/* ========================================
+   Service Hero SP temporary image edge fix
+   750px以下：PC画像使用中の右端余白を消す
+======================================== */
+
+@media (max-width: 750px) {
+  .service-hero {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-hero__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    width: 100vw;
+    min-width: 100vw;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+    transform: none;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .service-hero__image picture,
+  .service-hero__image img {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+  }
+
+  .service-hero__image img {
+    object-fit: cover;
+    object-position: 62% center;
+  }
+}
+
+/* ========================================
    Worry
 ======================================== */
 
