@@ -854,6 +854,128 @@
 }
 
 /* ========================================
+   Service Hero 751 / 750 second adjustment
+======================================== */
+
+/* 751px〜850px：画像を右へ寄せ、グラデーションを左へ逃がす */
+@media (min-width: 751px) and (max-width: 850px) {
+  .service-hero {
+    --service-hero-gradient-width: 40%;
+  }
+
+  .service-hero__image {
+    right: -88px;
+    width: 640px;
+    max-width: none;
+  }
+
+  .service-hero__image::before {
+    left: -12%;
+    width: var(--service-hero-gradient-width);
+    background: linear-gradient(
+      90deg,
+      #fffdf8 0%,
+      rgba(255, 253, 248, 0.96) 24%,
+      rgba(255, 253, 248, 0.52) 56%,
+      rgba(255, 253, 248, 0) 100%
+    );
+  }
+
+  .service-hero__image img {
+    object-position: 78% center;
+  }
+}
+
+/* 851px〜1023px：1023pxはOKなので、グラデーションだけ少し軽くする */
+@media (min-width: 851px) and (max-width: 1023px) {
+  .service-hero__image::before {
+    left: -6%;
+    width: 38%;
+    background: linear-gradient(
+      90deg,
+      #fffdf8 0%,
+      rgba(255, 253, 248, 0.96) 24%,
+      rgba(255, 253, 248, 0.56) 58%,
+      rgba(255, 253, 248, 0) 100%
+    );
+  }
+
+  .service-hero__image img {
+    object-position: 86% center;
+  }
+}
+
+/* 750px以下：PC画像使用中の暫定調整 */
+@media (max-width: 750px) {
+  .service-hero {
+    min-height: 650px;
+  }
+
+  .service-hero__inner {
+    min-height: 650px;
+  }
+
+  .service-hero__image {
+    left: 0;
+    right: auto;
+    width: 110vw;
+    max-width: none;
+    transform: translateX(-3vw);
+  }
+
+  .service-hero__image::before {
+    background:
+      linear-gradient(
+        90deg,
+        #fffaf0 0%,
+        rgba(255, 250, 240, 0.98) 38%,
+        rgba(255, 250, 240, 0.78) 50%,
+        rgba(255, 250, 240, 0.24) 63%,
+        rgba(255, 250, 240, 0) 76%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(255, 250, 240, 0.02) 0%,
+        rgba(255, 250, 240, 0.82) 100%
+      );
+  }
+
+  .service-hero__image img {
+    object-position: 60% center;
+  }
+}
+
+/* 550px以下：PC画像のままなので、少しだけ高さを調整 */
+@media (max-width: 550px) {
+  .service-hero {
+    min-height: 630px;
+  }
+
+  .service-hero__inner {
+    min-height: 630px;
+  }
+
+  .service-hero__image img {
+    object-position: 58% center;
+  }
+}
+
+/* 420px以下 */
+@media (max-width: 420px) {
+  .service-hero {
+    min-height: 610px;
+  }
+
+  .service-hero__inner {
+    min-height: 610px;
+  }
+
+  .service-hero__image img {
+    object-position: 56% center;
+  }
+}
+
+/* ========================================
    Worry
 ======================================== */
 
