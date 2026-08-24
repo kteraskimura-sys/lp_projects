@@ -646,6 +646,36 @@
   }
 }
 
+ /* ========================================
+   Service Hero right edge fix
+   1024px以上 / 750px以下：画像右端を画面右端に固定
+======================================== */
+
+/* 1024px以上：PC版ヒーロー画像の右端を画面右端に固定 */
+@media (min-width: 1024px) {
+  .service-hero__image {
+    right: calc(50% - 50vw);
+  }
+}
+
+/* 750px以下：スマホ版ヒーロー画像の右端を画面右端に固定 */
+@media (max-width: 750px) {
+  .service-hero__image {
+    right: calc(50% - 50vw);
+    left: auto;
+    width: 100vw;
+    min-width: 100vw;
+    max-width: none;
+  }
+
+  .service-hero__image picture,
+  .service-hero__image img {
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+  }
+}
+
 /* ========================================
    Worry
 ======================================== */
