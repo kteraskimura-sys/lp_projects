@@ -830,6 +830,64 @@
 }
 
 /* ========================================
+   Service Hero SP fine tuning
+   見出し微調整＋CTA中央寄せ
+======================================== */
+
+/* 421px〜750px：画像なしヒーローの見出しを少しだけ強くする */
+@media (min-width: 421px) and (max-width: 750px) {
+  .service-hero h1 {
+    font-size: 46px;
+    line-height: 1.32;
+    font-weight: 700;
+  }
+
+  .service-hero h1 span {
+    font-weight: 800;
+  }
+}
+
+/* 551px〜750px：CTAボタンを中央寄せ＆少し細めに */
+@media (min-width: 551px) and (max-width: 750px) {
+  .service-hero .service-button {
+    width: min(100%, 500px);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+}
+
+/* 421px〜550px：CTAボタンを中央寄せ＆横幅を調整 */
+@media (min-width: 421px) and (max-width: 550px) {
+  .service-hero .service-button {
+    width: min(100%, 430px);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+}
+
+/* 420px以下：現状の読みやすさを優先して大きくしすぎない */
+@media (max-width: 420px) {
+  .service-hero h1 {
+    font-size: 36px;
+    line-height: 1.36;
+  }
+
+  .service-hero .service-button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* 374px以下：小さめスマホは現状維持寄り */
+@media (max-width: 374px) {
+  .service-hero h1 {
+    font-size: 33px;
+  }
+}
+
+/* ========================================
    Worry
 ======================================== */
 
