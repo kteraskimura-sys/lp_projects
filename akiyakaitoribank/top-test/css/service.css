@@ -585,6 +585,251 @@
 }
 
 /* ========================================
+   Service Hero SP design adjustment
+   750px以下：画像なしヒーロー改善版
+======================================== */
+
+/* 420px以下だけ表示する改行 */
+.br-max420 {
+  display: none;
+}
+
+@media (max-width: 420px) {
+  .br-max420 {
+    display: block;
+  }
+}
+
+/* 750px以下：画像なしヒーローの見た目を強化 */
+@media (max-width: 750px) {
+  .service-hero {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(
+        circle at 92% 12%,
+        rgba(245, 139, 18, 0.12) 0%,
+        rgba(245, 139, 18, 0.06) 26%,
+        rgba(245, 139, 18, 0) 58%
+      ),
+      radial-gradient(
+        circle at 8% 88%,
+        rgba(123, 201, 67, 0.13) 0%,
+        rgba(123, 201, 67, 0.06) 24%,
+        rgba(123, 201, 67, 0) 56%
+      ),
+      linear-gradient(180deg, #fffaf0 0%, #fffdf8 100%);
+  }
+
+  .service-hero::before {
+    content: "";
+    position: absolute;
+    right: -90px;
+    top: 52px;
+    width: 220px;
+    height: 220px;
+    background: rgba(245, 139, 18, 0.08);
+    border-radius: 50%;
+    filter: blur(24px);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .service-hero__inner {
+    position: relative;
+    z-index: 2;
+    width: calc(100% - 40px);
+    max-width: 690px;
+    min-height: auto;
+    margin: 0 auto;
+    padding: 44px 0 52px;
+  }
+
+  .service-hero__text {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: none;
+  }
+
+  .service-label {
+    position: relative;
+    display: inline-block;
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    color: var(--service-green-dark);
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+  }
+
+  .service-label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 46px;
+    height: 3px;
+    background: var(--service-green);
+    border-radius: 999px;
+  }
+
+  .service-hero h1 {
+    margin: 0;
+    color: var(--service-text);
+    font-size: 44px;
+    line-height: 1.32;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+
+  .service-hero h1 span {
+    color: var(--service-orange);
+    font-weight: 800;
+  }
+
+  .service-hero__lead {
+    max-width: 680px;
+    margin: 30px 0 0;
+    color: var(--service-text);
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 2;
+  }
+
+  .service-hero__note {
+    max-width: 680px;
+    margin: 28px 0 0;
+    color: var(--service-sub);
+    font-size: 14.5px;
+    font-weight: 600;
+    line-height: 1.95;
+  }
+
+  .service-hero .service-button {
+    width: min(100%, 520px);
+    min-width: 0;
+    min-height: 62px;
+    margin-top: 34px;
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-size: 17px;
+    font-weight: 800;
+    box-shadow: 0 12px 24px rgba(245, 139, 18, 0.24);
+  }
+
+  .service-hero .service-button__icon {
+    width: 23px;
+    height: 23px;
+  }
+
+  .service-hero__image {
+    display: none;
+  }
+}
+
+/* 550px以下：スマホ実機向けに少しだけ詰める */
+@media (max-width: 550px) {
+  .service-hero__inner {
+    width: calc(100% - 32px);
+    padding: 40px 0 48px;
+  }
+
+  .service-hero h1 {
+    font-size: 40px;
+    line-height: 1.34;
+  }
+
+  .service-hero__lead {
+    margin-top: 28px;
+    font-size: 15.5px;
+    line-height: 1.95;
+  }
+
+  .service-hero__note {
+    margin-top: 26px;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .service-hero .service-button {
+    width: min(100%, 440px);
+    min-height: 60px;
+    margin-top: 32px;
+    font-size: 16.5px;
+  }
+}
+
+/* 420px以下：iPhone幅向け。見出しは2行で読みやすく */
+@media (max-width: 420px) {
+  .service-hero__inner {
+    width: calc(100% - 28px);
+    padding: 38px 0 46px;
+  }
+
+  .service-label {
+    margin-bottom: 18px;
+    font-size: 12px;
+  }
+
+  .service-hero h1 {
+    font-size: 36px;
+    line-height: 1.36;
+    letter-spacing: 0.02em;
+  }
+
+  .service-hero__lead {
+    margin-top: 28px;
+    font-size: 15px;
+    line-height: 1.95;
+  }
+
+  .service-hero__note {
+    margin-top: 26px;
+    font-size: 13.5px;
+    line-height: 1.9;
+  }
+
+  .service-hero .service-button {
+    width: 100%;
+    min-height: 60px;
+    margin-top: 32px;
+    font-size: 16px;
+  }
+
+  .service-hero .service-button__icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* 374px以下：小さめスマホ向け */
+@media (max-width: 374px) {
+  .service-hero__inner {
+    width: calc(100% - 24px);
+    padding: 36px 0 44px;
+  }
+
+  .service-hero h1 {
+    font-size: 33px;
+  }
+
+  .service-hero__lead {
+    font-size: 14px;
+  }
+
+  .service-hero__note {
+    font-size: 13px;
+  }
+
+  .service-hero .service-button {
+    min-height: 58px;
+    font-size: 15.5px;
+  }
+}
+
+/* ========================================
    Worry
 ======================================== */
 
