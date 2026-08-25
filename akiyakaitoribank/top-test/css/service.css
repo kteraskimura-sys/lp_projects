@@ -183,10 +183,14 @@
   flex-shrink: 0;
 }
 
+/* ========================================
+   Hero Image：751px以上で使用
+======================================== */
+
 .service-hero__image {
   position: absolute;
   top: 0;
-  right: 0;
+  right: calc(50% - 50vw);
   bottom: 0;
   z-index: 1;
   width: clamp(620px, 62vw, 760px);
@@ -199,17 +203,18 @@
   content: "";
   position: absolute;
   top: 0;
-  left: -22%;
+  left: 0;
   z-index: 2;
-  width: 58%;
+  width: 52%;
   height: 100%;
   background: linear-gradient(
     90deg,
-    #fffaf0 0%,
-    rgba(255, 250, 240, 0.98) 28%,
-    rgba(255, 250, 240, 0.76) 48%,
-    rgba(255, 250, 240, 0.34) 70%,
-    rgba(255, 250, 240, 0) 100%
+    #fffcf5 0%,
+    rgba(255, 252, 245, 0.99) 20%,
+    rgba(255, 252, 245, 0.88) 38%,
+    rgba(255, 252, 245, 0.56) 60%,
+    rgba(255, 252, 245, 0.22) 80%,
+    rgba(255, 252, 245, 0) 100%
   );
   pointer-events: none;
 }
@@ -278,8 +283,7 @@
   }
 
   .service-hero__image::before {
-    left: -24%;
-    width: 60%;
+    width: 56%;
   }
 }
 
@@ -290,10 +294,6 @@
 @media (min-width: 751px) and (max-width: 1023px) {
   .service-hero {
     background: linear-gradient(90deg, #fffaf0 0%, #fffdf8 52%, #f7f7f1 100%);
-  }
-
-  .service-hero::after {
-    content: none;
   }
 
   .service-hero__inner {
@@ -357,21 +357,29 @@
   .service-hero__image::before {
     content: "";
     top: 0;
-    left: -26%;
-    width: 62%;
+    left: 0;
+    width: 58%;
     height: 100%;
     background: linear-gradient(
       90deg,
-      #fffaf0 0%,
-      rgba(255, 250, 240, 0.98) 30%,
-      rgba(255, 250, 240, 0.74) 48%,
-      rgba(255, 250, 240, 0.34) 70%,
-      rgba(255, 250, 240, 0) 100%
+      #fffcf5 0%,
+      rgba(255, 252, 245, 0.99) 20%,
+      rgba(255, 252, 245, 0.88) 38%,
+      rgba(255, 252, 245, 0.56) 60%,
+      rgba(255, 252, 245, 0.22) 80%,
+      rgba(255, 252, 245, 0) 100%
     );
   }
 
   .service-hero__image img {
     object-position: center right;
+  }
+}
+
+/* 1015px〜1023px：1024px切替直前の右端余白対策 */
+@media (min-width: 1015px) and (max-width: 1023px) {
+  .service-hero__image {
+    right: calc(50% - 50vw);
   }
 }
 
@@ -383,12 +391,18 @@
   }
 
   .service-hero__image::before {
-    left: -24%;
     width: 60%;
   }
 
   .service-hero__image img {
     object-position: 86% center;
+  }
+}
+
+/* 1015px〜1023px：851px〜1023px指定より後に再度右端固定 */
+@media (min-width: 1015px) and (max-width: 1023px) {
+  .service-hero__image {
+    right: calc(50% - 50vw);
   }
 }
 
@@ -427,7 +441,6 @@
   }
 
   .service-hero__image::before {
-    left: -28%;
     width: 64%;
   }
 
@@ -438,7 +451,7 @@
 
 /* ========================================
    750px以下：スマホ版レイアウト
-   ※スマホ画像作成前の暫定状態
+   画像なし
 ======================================== */
 
 @media (max-width: 750px) {
@@ -449,29 +462,22 @@
   .service-hero {
     position: relative;
     overflow: hidden;
-    min-height: 650px;
-    background: #fffaf0;
-  }
-
-  .service-hero::after {
-    content: none;
+    background: linear-gradient(180deg, #fffaf0 0%, #fffdf8 100%);
   }
 
   .service-hero__inner {
-    position: relative;
-    z-index: 3;
     width: calc(100% - 32px);
-    min-height: 650px;
+    min-height: auto;
     margin: 0 auto;
-    padding: 40px 0 44px;
+    padding: 40px 0 46px;
     display: block;
   }
 
   .service-hero__text {
     position: relative;
-    z-index: 4;
+    z-index: 2;
     width: 100%;
-    max-width: 470px;
+    max-width: 520px;
   }
 
   .service-label {
@@ -518,54 +524,7 @@
   }
 
   .service-hero__image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: auto;
-    z-index: 1;
-    width: 100vw;
-    min-width: 100vw;
-    max-width: none;
-    height: 100%;
-    margin: 0;
-    transform: none;
-    overflow: hidden;
-    pointer-events: none;
-  }
-
-  .service-hero__image::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    pointer-events: none;
-    background:
-      linear-gradient(
-        90deg,
-        #fffaf0 0%,
-        rgba(255, 250, 240, 0.98) 36%,
-        rgba(255, 250, 240, 0.82) 50%,
-        rgba(255, 250, 240, 0.34) 66%,
-        rgba(255, 250, 240, 0) 84%
-      ),
-      linear-gradient(
-        180deg,
-        rgba(255, 250, 240, 0.02) 0%,
-        rgba(255, 250, 240, 0.84) 100%
-      );
-  }
-
-  .service-hero__image picture,
-  .service-hero__image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
-  .service-hero__image img {
-    object-fit: cover;
-    object-position: 64% center;
+    display: none;
   }
 }
 
@@ -574,17 +533,9 @@
 ======================================== */
 
 @media (max-width: 550px) {
-  .service-hero {
-    min-height: 630px;
-  }
-
   .service-hero__inner {
-    min-height: 630px;
-    padding: 36px 0 40px;
-  }
-
-  .service-hero__image img {
-    object-position: 62% center;
+    width: calc(100% - 32px);
+    padding: 36px 0 42px;
   }
 }
 
@@ -593,14 +544,9 @@
 ======================================== */
 
 @media (max-width: 420px) {
-  .service-hero {
-    min-height: 610px;
-  }
-
   .service-hero__inner {
     width: calc(100% - 28px);
-    min-height: 610px;
-    padding: 34px 0 38px;
+    padding: 34px 0 40px;
   }
 
   .service-hero h1 {
@@ -617,10 +563,6 @@
 
   .service-hero .service-button {
     width: 100%;
-  }
-
-  .service-hero__image img {
-    object-position: 60% center;
   }
 }
 
@@ -639,277 +581,6 @@
 
   .service-hero__note {
     font-size: 12.5px;
-  }
-
-  .service-hero__image img {
-    object-position: 58% center;
-  }
-}
-
- /* ========================================
-   Service Hero right edge fix
-   1024px以上 / 750px以下：画像右端を画面右端に固定
-======================================== */
-
-/* 1024px以上：PC版ヒーロー画像の右端を画面右端に固定 */
-@media (min-width: 1024px) {
-  .service-hero__image {
-    right: calc(50% - 50vw);
-  }
-}
-
-/* 750px以下：スマホ版ヒーロー画像の右端を画面右端に固定 */
-@media (max-width: 750px) {
-  .service-hero__image {
-    right: calc(50% - 50vw);
-    left: auto;
-    width: 100vw;
-    min-width: 100vw;
-    max-width: none;
-  }
-
-  .service-hero__image picture,
-  .service-hero__image img {
-    width: 100%;
-    min-width: 100%;
-    height: 100%;
-  }
-}
-
-/* ========================================
-   Service Hero 1015px〜1023px right edge fix
-   1024px切替直前の数px余白だけ調整
-======================================== */
-
-@media (min-width: 1015px) and (max-width: 1023px) {
-  .service-hero__image {
-    right: calc(50% - 50vw);
-  }
-}
-
-/* ========================================
-   Service Hero gradient mockup adjustment
-   グラデーションをモックアップ寄りに調整
-======================================== */
-
-/* 念のため、ヒーロー全体にかかるグラデーションは停止 */
-@media (min-width: 751px) {
-  .service-hero::after {
-    content: none;
-  }
-}
-
-/* 1024px以上：PC版グラデーション調整 */
-@media (min-width: 1024px) {
-  .service-hero__image {
-    right: calc(50% - 50vw);
-  }
-
-  .service-hero__image::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 52%;
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      #fffaf0 0%,
-      rgba(255, 250, 240, 0.99) 18%,
-      rgba(255, 250, 240, 0.88) 36%,
-      rgba(255, 250, 240, 0.58) 58%,
-      rgba(255, 250, 240, 0.24) 78%,
-      rgba(255, 250, 240, 0) 100%
-    );
-    pointer-events: none;
-  }
-}
-
-/* 1024px〜1100px：PC最小幅付近は少しだけ広め */
-@media (min-width: 1024px) and (max-width: 1100px) {
-  .service-hero__image::before {
-    width: 56%;
-    background: linear-gradient(
-      90deg,
-      #fffaf0 0%,
-      rgba(255, 250, 240, 0.99) 20%,
-      rgba(255, 250, 240, 0.88) 38%,
-      rgba(255, 250, 240, 0.56) 60%,
-      rgba(255, 250, 240, 0.22) 80%,
-      rgba(255, 250, 240, 0) 100%
-    );
-  }
-}
-
-/* 751px〜1023px：画像位置は維持し、境界線をやわらげる */
-@media (min-width: 751px) and (max-width: 1023px) {
-  .service-hero::after {
-    content: none;
-  }
-
-  .service-hero__image::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 58%;
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      #fffaf0 0%,
-      rgba(255, 250, 240, 0.99) 22%,
-      rgba(255, 250, 240, 0.86) 40%,
-      rgba(255, 250, 240, 0.56) 62%,
-      rgba(255, 250, 240, 0.20) 82%,
-      rgba(255, 250, 240, 0) 100%
-    );
-    pointer-events: none;
-  }
-}
-
-/* 851px〜1023px：1023px側の境界線を少し自然に */
-@media (min-width: 851px) and (max-width: 1023px) {
-  .service-hero__image::before {
-    width: 60%;
-  }
-}
-
-/* 751px〜850px：751px側は少し広めにぼかす */
-@media (min-width: 751px) and (max-width: 850px) {
-  .service-hero__image::before {
-    width: 64%;
-    background: linear-gradient(
-      90deg,
-      #fffaf0 0%,
-      rgba(255, 250, 240, 0.99) 24%,
-      rgba(255, 250, 240, 0.88) 42%,
-      rgba(255, 250, 240, 0.56) 64%,
-      rgba(255, 250, 240, 0.20) 84%,
-      rgba(255, 250, 240, 0) 100%
-    );
-  }
-}
-
-/* 1015px〜1023px：右端余白の再発防止 */
-@media (min-width: 1015px) and (max-width: 1023px) {
-  .service-hero__image {
-    right: calc(50% - 50vw);
-  }
-}
-
-/* 750px以下：スマホ画像作成前の暫定グラデーション調整 */
-@media (max-width: 750px) {
-  .service-hero__image {
-    right: calc(50% - 50vw);
-    left: auto;
-    width: 100vw;
-    min-width: 100vw;
-    max-width: none;
-  }
-
-  .service-hero__image::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    pointer-events: none;
-    background:
-      linear-gradient(
-        90deg,
-        #fffaf0 0%,
-        rgba(255, 250, 240, 0.98) 30%,
-        rgba(255, 250, 240, 0.80) 42%,
-        rgba(255, 250, 240, 0.42) 54%,
-        rgba(255, 250, 240, 0.10) 64%,
-        rgba(255, 250, 240, 0) 70%
-      ),
-      linear-gradient(
-        180deg,
-        rgba(255, 250, 240, 0.02) 0%,
-        rgba(255, 250, 240, 0.82) 100%
-      );
-  }
-}
-
-/* ========================================
-   Service Hero gradient final tuning
-   PC〜タブレット：境界線を自然にする
-   750px以下：グラデーション右端のクッキリ感を軽減
-======================================== */
-
-/* 751px以上：木村さん調整版の色味を正式採用 */
-@media (min-width: 751px) {
-  .service-hero__image::before {
-    background: linear-gradient(
-      90deg,
-      #fffcf5 0%,
-      rgba(255, 252, 245, 0.99) 20%,
-      rgba(255, 252, 245, 0.88) 38%,
-      rgba(255, 252, 245, 0.56) 60%,
-      rgba(255, 252, 245, 0.22) 80%,
-      rgba(255, 252, 245, 0) 100%
-    );
-  }
-}
-
-/* 1024px〜1100px：PC最小幅付近も同じ色味で統一 */
-@media (min-width: 1024px) and (max-width: 1100px) {
-  .service-hero__image::before {
-    background: linear-gradient(
-      90deg,
-      #fffcf5 0%,
-      rgba(255, 252, 245, 0.99) 20%,
-      rgba(255, 252, 245, 0.88) 38%,
-      rgba(255, 252, 245, 0.56) 60%,
-      rgba(255, 252, 245, 0.22) 80%,
-      rgba(255, 252, 245, 0) 100%
-    );
-  }
-}
-
-/* 751px〜1023px：751pxの理想状態を崩さず、色味だけ統一 */
-@media (min-width: 751px) and (max-width: 1023px) {
-  .service-hero__image::before {
-    background: linear-gradient(
-      90deg,
-      #fffcf5 0%,
-      rgba(255, 252, 245, 0.99) 20%,
-      rgba(255, 252, 245, 0.88) 38%,
-      rgba(255, 252, 245, 0.56) 60%,
-      rgba(255, 252, 245, 0.22) 80%,
-      rgba(255, 252, 245, 0) 100%
-    );
-  }
-}
-
-/* 750px以下：右端がクッキリしないように暫定調整 */
-@media (max-width: 750px) {
-  .service-hero__image::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    pointer-events: none;
-    background:
-      linear-gradient(
-        96deg,
-        #fffcf5 0%,
-        rgba(255, 252, 245, 0.99) 28%,
-        rgba(255, 252, 245, 0.86) 42%,
-        rgba(255, 252, 245, 0.54) 56%,
-        rgba(255, 252, 245, 0.24) 70%,
-        rgba(255, 252, 245, 0.08) 84%,
-        rgba(255, 252, 245, 0) 100%
-      ),
-      radial-gradient(
-        ellipse at 28% 92%,
-        rgba(255, 252, 245, 0.72) 0%,
-        rgba(255, 252, 245, 0.42) 34%,
-        rgba(255, 252, 245, 0.16) 58%,
-        rgba(255, 252, 245, 0) 78%
-      );
   }
 }
 
