@@ -73,15 +73,22 @@
 .service-page {
   --service-orange: #f58b12;
   --service-green: #7bc943;
+  --service-line: #39b54a;
   --service-green-dark: #4f8f2f;
   --service-text: #2f2a26;
   --service-sub: #4a423b;
   --service-cream: #fffaf0;
 }
 
-/* 750px以下だけ表示する改行 */
-.br-max750 {
+/* 420px以下だけ表示する改行 */
+.br-max420 {
   display: none;
+}
+
+@media (max-width: 420px) {
+  .br-max420 {
+    display: block;
+  }
 }
 
 /* ========================================
@@ -92,10 +99,6 @@
   position: relative;
   overflow: hidden;
   background: linear-gradient(90deg, #fffaf0 0%, #fffdf8 50%, #f7f7f1 100%);
-}
-
-.service-hero::after {
-  content: none;
 }
 
 .service-hero__inner {
@@ -119,6 +122,7 @@
   color: var(--service-green-dark);
   font-size: 14px;
   font-weight: 800;
+  line-height: 1.2;
   letter-spacing: 0.18em;
 }
 
@@ -152,28 +156,35 @@
   line-height: 1.9;
 }
 
-.service-hero .service-button {
+/* ========================================
+   Hero CTA
+======================================== */
+
+.service-hero__buttons {
+  width: min(680px, calc(100vw - 96px));
   margin-top: 34px;
-  min-width: 280px;
+  display: flex;
+  align-items: stretch;
+  gap: 14px;
+  position: relative;
+  z-index: 5;
+}
+
+.service-hero .service-button {
+  flex: 1 1 0;
+  min-width: 0;
   min-height: 58px;
-  padding: 12px 28px;
+  padding: 11px 14px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  color: #fff;
-  background: var(--service-orange);
+  gap: 8px;
   border-radius: 999px;
-  font-size: 16px;
   font-weight: 800;
-  line-height: 1.4;
+  line-height: 1.35;
+  text-align: center;
   text-decoration: none;
-  box-shadow: 0 8px 18px rgba(245, 139, 18, 0.22);
-}
-
-.service-hero .service-button--orange {
-  color: #fff;
-  background: var(--service-orange);
+  box-sizing: border-box;
 }
 
 .service-button__icon {
@@ -181,6 +192,49 @@
   width: 22px;
   height: 22px;
   flex-shrink: 0;
+}
+
+.service-button__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-button__main {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 800;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.service-button__sub {
+  display: block;
+  margin-top: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.service-button--orange {
+  color: #fff;
+  background: var(--service-orange);
+  box-shadow: 0 8px 18px rgba(245, 139, 18, 0.22);
+}
+
+.service-button--tel {
+  color: var(--service-green-dark);
+  background: rgba(255, 255, 255, 0.94);
+  border: 2px solid var(--service-green);
+  box-shadow: 0 8px 18px rgba(123, 201, 67, 0.14);
+}
+
+.service-button--line {
+  color: #fff;
+  background: var(--service-line);
+  box-shadow: 0 8px 18px rgba(57, 181, 74, 0.2);
 }
 
 /* ========================================
@@ -271,11 +325,28 @@
     line-height: 1.85;
   }
 
-  .service-hero .service-button {
+  .service-hero__buttons {
+    width: min(620px, calc(100vw - 72px));
     margin-top: 30px;
-    min-width: 260px;
-    min-height: 56px;
-    font-size: 15px;
+    gap: 10px;
+  }
+
+  .service-hero .service-button {
+    min-height: 54px;
+    padding: 10px 12px;
+  }
+
+  .service-button__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .service-button__main {
+    font-size: 13.5px;
+  }
+
+  .service-button__sub {
+    font-size: 9px;
   }
 
   .service-hero__image {
@@ -335,12 +406,29 @@
     line-height: 1.85;
   }
 
-  .service-hero .service-button {
+  .service-hero__buttons {
+    width: min(590px, calc(100vw - 70px));
     margin-top: 28px;
-    min-width: 260px;
-    min-height: 56px;
-    padding: 12px 26px;
-    font-size: 15px;
+    gap: 10px;
+  }
+
+  .service-hero .service-button {
+    min-height: 52px;
+    padding: 9px 10px;
+  }
+
+  .service-button__icon {
+    width: 19px;
+    height: 19px;
+  }
+
+  .service-button__main {
+    font-size: 12.5px;
+  }
+
+  .service-button__sub {
+    margin-top: 2px;
+    font-size: 8.5px;
   }
 
   .service-hero__image {
@@ -376,13 +464,6 @@
   }
 }
 
-/* 1015px〜1023px：1024px切替直前の右端余白対策 */
-@media (min-width: 1015px) and (max-width: 1023px) {
-  .service-hero__image {
-    right: calc(50% - 50vw);
-  }
-}
-
 /* 851px〜1023px：1023px側 */
 @media (min-width: 851px) and (max-width: 1023px) {
   .service-hero__image {
@@ -399,7 +480,7 @@
   }
 }
 
-/* 1015px〜1023px：851px〜1023px指定より後に再度右端固定 */
+/* 1015px〜1023px：1024px切替直前の右端余白対策 */
 @media (min-width: 1015px) and (max-width: 1023px) {
   .service-hero__image {
     right: calc(50% - 50vw);
@@ -429,10 +510,27 @@
     font-size: 12.5px;
   }
 
+  .service-hero__buttons {
+    width: min(540px, calc(100vw - 48px));
+    gap: 8px;
+  }
+
   .service-hero .service-button {
-    min-width: 240px;
-    min-height: 54px;
-    font-size: 14px;
+    min-height: 50px;
+    padding: 8px 8px;
+  }
+
+  .service-button__icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .service-button__main {
+    font-size: 11.5px;
+  }
+
+  .service-button__sub {
+    font-size: 7.8px;
   }
 
   .service-hero__image {
@@ -454,153 +552,6 @@
    画像なし
 ======================================== */
 
-@media (max-width: 750px) {
-  .br-max750 {
-    display: block;
-  }
-
-  .service-hero {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(180deg, #fffaf0 0%, #fffdf8 100%);
-  }
-
-  .service-hero__inner {
-    width: calc(100% - 32px);
-    min-height: auto;
-    margin: 0 auto;
-    padding: 40px 0 46px;
-    display: block;
-  }
-
-  .service-hero__text {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    max-width: 520px;
-  }
-
-  .service-label {
-    margin: 0 0 14px;
-    font-size: 12px;
-    letter-spacing: 0.18em;
-  }
-
-  .service-hero h1 {
-    font-size: 34px;
-    line-height: 1.36;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-  }
-
-  .service-hero h1 span {
-    font-weight: 700;
-  }
-
-  .service-hero__lead {
-    margin-top: 24px;
-    font-size: 14px;
-    line-height: 1.9;
-  }
-
-  .service-hero__note {
-    margin-top: 22px;
-    font-size: 13px;
-    line-height: 1.85;
-  }
-
-  .service-hero .service-button {
-    margin-top: 28px;
-    width: min(100%, 330px);
-    min-width: 0;
-    min-height: 56px;
-    padding: 12px 24px;
-    font-size: 15px;
-  }
-
-  .service-hero .service-button__icon {
-    width: 21px;
-    height: 21px;
-  }
-
-  .service-hero__image {
-    display: none;
-  }
-}
-
-/* ========================================
-   550px以下：スマホ実機向け
-======================================== */
-
-@media (max-width: 550px) {
-  .service-hero__inner {
-    width: calc(100% - 32px);
-    padding: 36px 0 42px;
-  }
-}
-
-/* ========================================
-   420px以下：iPhone幅向け
-======================================== */
-
-@media (max-width: 420px) {
-  .service-hero__inner {
-    width: calc(100% - 28px);
-    padding: 34px 0 40px;
-  }
-
-  .service-hero h1 {
-    font-size: 31px;
-  }
-
-  .service-hero__lead {
-    font-size: 13.5px;
-  }
-
-  .service-hero__note {
-    font-size: 12.8px;
-  }
-
-  .service-hero .service-button {
-    width: 100%;
-  }
-}
-
-/* ========================================
-   374px以下：小さめスマホ
-======================================== */
-
-@media (max-width: 374px) {
-  .service-hero h1 {
-    font-size: 29px;
-  }
-
-  .service-hero__lead {
-    font-size: 13px;
-  }
-
-  .service-hero__note {
-    font-size: 12.5px;
-  }
-}
-
-/* ========================================
-   Service Hero SP design adjustment
-   750px以下：画像なしヒーロー改善版
-======================================== */
-
-/* 420px以下だけ表示する改行 */
-.br-max420 {
-  display: none;
-}
-
-@media (max-width: 420px) {
-  .br-max420 {
-    display: block;
-  }
-}
-
-/* 750px以下：画像なしヒーローの見た目を強化 */
 @media (max-width: 750px) {
   .service-hero {
     position: relative;
@@ -678,7 +629,7 @@
   .service-hero h1 {
     margin: 0;
     color: var(--service-text);
-    font-size: 44px;
+    font-size: 46px;
     line-height: 1.32;
     font-weight: 700;
     letter-spacing: 0.03em;
@@ -707,21 +658,33 @@
     line-height: 1.95;
   }
 
-  .service-hero .service-button {
+  .service-hero__buttons {
     width: min(100%, 520px);
-    min-width: 0;
-    min-height: 62px;
-    margin-top: 34px;
-    padding: 14px 28px;
-    border-radius: 999px;
-    font-size: 17px;
-    font-weight: 800;
-    box-shadow: 0 12px 24px rgba(245, 139, 18, 0.24);
+    margin: 34px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
 
-  .service-hero .service-button__icon {
-    width: 23px;
-    height: 23px;
+  .service-hero .service-button {
+    width: 100%;
+    min-height: 60px;
+    padding: 13px 24px;
+    border-radius: 999px;
+  }
+
+  .service-button__icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .service-button__main {
+    font-size: 16px;
+  }
+
+  .service-button__sub {
+    margin-top: 3px;
+    font-size: 10.5px;
   }
 
   .service-hero__image {
@@ -729,7 +692,10 @@
   }
 }
 
-/* 550px以下：スマホ実機向けに少しだけ詰める */
+/* ========================================
+   550px以下：スマホ実機向け
+======================================== */
+
 @media (max-width: 550px) {
   .service-hero__inner {
     width: calc(100% - 32px);
@@ -753,15 +719,28 @@
     line-height: 1.9;
   }
 
+  .service-hero__buttons {
+    width: min(100%, 430px);
+    gap: 11px;
+  }
+
   .service-hero .service-button {
-    width: min(100%, 440px);
-    min-height: 60px;
-    margin-top: 32px;
-    font-size: 16.5px;
+    min-height: 58px;
+  }
+
+  .service-button__main {
+    font-size: 15.5px;
+  }
+
+  .service-button__sub {
+    font-size: 10px;
   }
 }
 
-/* 420px以下：iPhone幅向け。見出しは2行で読みやすく */
+/* ========================================
+   420px以下：iPhone幅向け
+======================================== */
+
 @media (max-width: 420px) {
   .service-hero__inner {
     width: calc(100% - 28px);
@@ -791,20 +770,34 @@
     line-height: 1.9;
   }
 
-  .service-hero .service-button {
+  .service-hero__buttons {
     width: 100%;
-    min-height: 60px;
-    margin-top: 32px;
-    font-size: 16px;
+    gap: 10px;
   }
 
-  .service-hero .service-button__icon {
-    width: 22px;
-    height: 22px;
+  .service-hero .service-button {
+    min-height: 58px;
+    padding: 12px 20px;
+  }
+
+  .service-button__icon {
+    width: 21px;
+    height: 21px;
+  }
+
+  .service-button__main {
+    font-size: 15px;
+  }
+
+  .service-button__sub {
+    font-size: 9.5px;
   }
 }
 
-/* 374px以下：小さめスマホ向け */
+/* ========================================
+   374px以下：小さめスマホ
+======================================== */
+
 @media (max-width: 374px) {
   .service-hero__inner {
     width: calc(100% - 24px);
@@ -824,66 +817,15 @@
   }
 
   .service-hero .service-button {
-    min-height: 58px;
-    font-size: 15.5px;
-  }
-}
-
-/* ========================================
-   Service Hero SP fine tuning
-   見出し微調整＋CTA中央寄せ
-======================================== */
-
-/* 421px〜750px：画像なしヒーローの見出しを少しだけ強くする */
-@media (min-width: 421px) and (max-width: 750px) {
-  .service-hero h1 {
-    font-size: 46px;
-    line-height: 1.32;
-    font-weight: 700;
+    min-height: 56px;
   }
 
-  .service-hero h1 span {
-    font-weight: 800;
-  }
-}
-
-/* 551px〜750px：CTAボタンを中央寄せ＆少し細めに */
-@media (min-width: 551px) and (max-width: 750px) {
-  .service-hero .service-button {
-    width: min(100%, 500px);
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-  }
-}
-
-/* 421px〜550px：CTAボタンを中央寄せ＆横幅を調整 */
-@media (min-width: 421px) and (max-width: 550px) {
-  .service-hero .service-button {
-    width: min(100%, 430px);
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-  }
-}
-
-/* 420px以下：現状の読みやすさを優先して大きくしすぎない */
-@media (max-width: 420px) {
-  .service-hero h1 {
-    font-size: 36px;
-    line-height: 1.36;
+  .service-button__main {
+    font-size: 14.5px;
   }
 
-  .service-hero .service-button {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* 374px以下：小さめスマホは現状維持寄り */
-@media (max-width: 374px) {
-  .service-hero h1 {
-    font-size: 33px;
+  .service-button__sub {
+    font-size: 9px;
   }
 }
 
