@@ -80,7 +80,7 @@
   --service-cream: #fffaf0;
 }
 
-/* 420px以下だけ表示する改行 */
+/* 420px以下だけ表示する改行 
 .br-max420 {
   display: none;
 }
@@ -89,7 +89,7 @@
   .br-max420 {
     display: block;
   }
-}
+}*/
 
 /* ========================================
    Hero Base
