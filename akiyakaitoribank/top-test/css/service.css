@@ -1427,6 +1427,23 @@
 }
 
 /* ========================================
+   Service Hero CTA / 751px〜1023px はみ出し対策
+   テキスト幅は維持し、CTA行だけ広く使う
+======================================== */
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .service-hero__text {
+    overflow: visible;
+  }
+
+  .service-hero__buttons {
+    width: min(700px, calc(100vw - 40px));
+    max-width: none;
+    justify-content: flex-start;
+  }
+}
+
+/* ========================================
    Worry
 ======================================== */
 
