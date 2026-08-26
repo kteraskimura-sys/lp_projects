@@ -80,118 +80,76 @@
   --service-cream: #fffaf0;
 }
 
-/* 420px以下だけ表示する改行 
-.br-max420 {
-  display: none;
-}
-
-@media (max-width: 420px) {
-  .br-max420 {
-    display: block;
-  }
-}*/
-
 /* ========================================
    Hero Base
+   共通の土台
 ======================================== */
 
 .service-hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(90deg, #fffaf0 0%, #fffdf8 50%, #f7f7f1 100%);
 }
 
 .service-hero__inner {
-  width: min(calc(100% - 48px), 1120px);
-  min-height: 455px;
-  margin: 0 auto;
-  padding: 38px 0 34px;
   position: relative;
   z-index: 3;
-  display: block;
+  box-sizing: border-box;
 }
 
 .service-hero__text {
   position: relative;
   z-index: 4;
-  width: 430px;
 }
 
 .service-label {
-  margin: 0 0 16px;
   color: var(--service-green-dark);
-  font-size: 14px;
   font-weight: 800;
   line-height: 1.2;
-  letter-spacing: 0.18em;
 }
 
 .service-hero h1 {
   margin: 0;
   color: var(--service-text);
-  font-size: 46px;
-  line-height: 1.35;
-  font-weight: 600;
-  letter-spacing: 0.04em;
 }
 
 .service-hero h1 span {
   color: var(--service-orange);
-  font-weight: 700;
 }
 
 .service-hero__lead {
-  margin: 28px 0 0;
   color: var(--service-text);
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 2;
 }
 
 .service-hero__note {
-  margin: 24px 0 0;
   color: var(--service-sub);
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.9;
 }
 
 /* ========================================
-   Hero CTA
+   Hero CTA Base
 ======================================== */
 
 .service-hero__buttons {
-  width: min(680px, calc(100vw - 96px));
-  margin-top: 34px;
-  display: flex;
-  align-items: stretch;
-  gap: 14px;
   position: relative;
   z-index: 5;
+  display: flex;
 }
 
 .service-hero .service-button {
-  flex: 1 1 0;
-  min-width: 0;
-  min-height: 58px;
-  padding: 11px 14px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  box-sizing: border-box;
   border-radius: 999px;
   font-weight: 800;
   line-height: 1.35;
   text-align: center;
   text-decoration: none;
-  box-sizing: border-box;
 }
 
 .service-button__icon {
   display: block;
-  width: 22px;
-  height: 22px;
   flex-shrink: 0;
+  object-fit: contain;
 }
 
 .service-button__text {
@@ -203,7 +161,6 @@
 
 .service-button__main {
   display: block;
-  font-size: 14.5px;
   font-weight: 800;
   line-height: 1.25;
   white-space: nowrap;
@@ -212,7 +169,6 @@
 .service-button__sub {
   display: block;
   margin-top: 3px;
-  font-size: 10px;
   font-weight: 700;
   line-height: 1.25;
   white-space: nowrap;
@@ -238,61 +194,144 @@
 }
 
 /* ========================================
-   Hero Image：751px以上で使用
+   1024px以上：PC版
+   TOPページと同じ確認ルール
 ======================================== */
 
-.service-hero__image {
-  position: absolute;
-  top: 0;
-  right: calc(50% - 50vw);
-  bottom: 0;
-  z-index: 1;
-  width: clamp(620px, 62vw, 760px);
-  height: auto;
-  overflow: hidden;
-  pointer-events: none;
-}
+@media (min-width: 1024px) {
+  .service-hero {
+    background: linear-gradient(90deg, #fffaf0 0%, #fffdf8 50%, #f7f7f1 100%);
+  }
 
-.service-hero__image::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  width: 52%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    #fffcf5 0%,
-    rgba(255, 252, 245, 0.99) 20%,
-    rgba(255, 252, 245, 0.88) 38%,
-    rgba(255, 252, 245, 0.56) 60%,
-    rgba(255, 252, 245, 0.22) 80%,
-    rgba(255, 252, 245, 0) 100%
-  );
-  pointer-events: none;
-}
+  .service-hero__inner {
+    width: var(--pc-inner-width, 1100px);
+    min-height: 455px;
+    margin: 0 auto;
+    padding: 38px 30px 34px;
+  }
 
-.service-hero__image picture,
-.service-hero__image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
+  .service-hero__text {
+    width: 430px;
+  }
 
-.service-hero__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center right;
-  border-radius: 0;
+  .service-label {
+    margin: 0 0 16px;
+    font-size: 14px;
+    letter-spacing: 0.18em;
+  }
+
+  .service-hero h1 {
+    font-size: 46px;
+    line-height: 1.35;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  .service-hero h1 span {
+    font-weight: 700;
+  }
+
+  .service-hero__lead {
+    margin: 28px 0 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 2;
+  }
+
+  .service-hero__note {
+    margin: 24px 0 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.9;
+  }
+
+  .service-hero__buttons {
+    align-items: stretch;
+    gap: 14px;
+    width: auto;
+    margin-top: 34px;
+  }
+
+  .service-hero .service-button {
+    gap: 8px;
+    width: 210px;
+    min-width: 210px;
+    min-height: 54px;
+    padding: 0 16px;
+  }
+
+  .service-button__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .service-button--line .service-button__icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .service-button__main {
+    font-size: 14px;
+  }
+
+  .service-button__sub {
+    font-size: 10px;
+  }
+
+  .service-hero__image {
+    position: absolute;
+    top: 0;
+    right: calc(50% - 50vw);
+    bottom: 0;
+    z-index: 1;
+    width: 760px;
+    height: auto;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .service-hero__image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 52%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      #fffcf5 0%,
+      rgba(255, 252, 245, 0.99) 20%,
+      rgba(255, 252, 245, 0.88) 38%,
+      rgba(255, 252, 245, 0.56) 60%,
+      rgba(255, 252, 245, 0.22) 80%,
+      rgba(255, 252, 245, 0) 100%
+    );
+    pointer-events: none;
+  }
+
+  .service-hero__image picture,
+  .service-hero__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .service-hero__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right;
+    border-radius: 0;
+  }
 }
 
 /* ========================================
-   1024px〜1100px：PC最小幅
+   1024px〜1099px：PC最小幅の微調整
+   1024px以上のPCルールをベースに、窮屈な部分だけ調整
 ======================================== */
 
-@media (min-width: 1024px) and (max-width: 1100px) {
+@media (min-width: 1024px) and (max-width: 1099px) {
   .service-hero__inner {
     width: min(calc(100% - 48px), 1040px);
     min-height: 450px;
@@ -332,6 +371,9 @@
   }
 
   .service-hero .service-button {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
     min-height: 54px;
     padding: 10px 12px;
   }
@@ -341,16 +383,21 @@
     height: 20px;
   }
 
+  .service-button--line .service-button__icon {
+    width: 21px;
+    height: 21px;
+  }
+
   .service-button__main {
-    font-size: 13.5px;
+    font-size: 14px;
   }
 
   .service-button__sub {
-    font-size: 9px;
+    font-size: 9.5px;
   }
 
   .service-hero__image {
-    width: clamp(590px, 64vw, 700px);
+    width: 700px;
   }
 
   .service-hero__image::before {
@@ -359,7 +406,7 @@
 }
 
 /* ========================================
-   751px〜1023px：PC版レイアウト
+   751px〜1023px：PC寄りレイアウト
 ======================================== */
 
 @media (min-width: 751px) and (max-width: 1023px) {
@@ -370,6 +417,7 @@
   .service-hero__inner {
     width: min(calc(100% - 40px), 960px);
     min-height: 500px;
+    margin: 0 auto;
     padding: 46px 0 40px;
   }
 
@@ -397,22 +445,29 @@
   .service-hero__lead {
     margin-top: 24px;
     font-size: 14.5px;
+    font-weight: 700;
     line-height: 1.9;
   }
 
   .service-hero__note {
     margin-top: 22px;
     font-size: 13px;
+    font-weight: 600;
     line-height: 1.85;
   }
 
   .service-hero__buttons {
+    align-items: stretch;
+    gap: 10px;
     width: min(590px, calc(100vw - 70px));
     margin-top: 28px;
-    gap: 10px;
   }
 
   .service-hero .service-button {
+    flex: 1 1 0;
+    gap: 8px;
+    width: auto;
+    min-width: 0;
     min-height: 52px;
     padding: 9px 10px;
   }
@@ -420,6 +475,11 @@
   .service-button__icon {
     width: 19px;
     height: 19px;
+  }
+
+  .service-button--line .service-button__icon {
+    width: 20px;
+    height: 20px;
   }
 
   .service-button__main {
@@ -432,20 +492,26 @@
   }
 
   .service-hero__image {
+    position: absolute;
     top: 0;
     right: -36px;
     bottom: 0;
     left: auto;
+    z-index: 1;
     width: clamp(500px, 61vw, 680px);
     max-width: none;
     height: auto;
+    overflow: hidden;
+    pointer-events: none;
     transform: none;
   }
 
   .service-hero__image::before {
     content: "";
+    position: absolute;
     top: 0;
     left: 0;
+    z-index: 2;
     width: 58%;
     height: 100%;
     background: linear-gradient(
@@ -457,10 +523,22 @@
       rgba(255, 252, 245, 0.22) 80%,
       rgba(255, 252, 245, 0) 100%
     );
+    pointer-events: none;
+  }
+
+  .service-hero__image picture,
+  .service-hero__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 
   .service-hero__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     object-position: center right;
+    border-radius: 0;
   }
 }
 
@@ -487,7 +565,7 @@
   }
 }
 
-/* 751px〜850px：PC版最小寄り */
+/* 751px〜850px：PC寄り最小幅 */
 @media (min-width: 751px) and (max-width: 850px) {
   .service-hero__inner {
     min-height: 500px;
@@ -525,6 +603,11 @@
     height: 18px;
   }
 
+  .service-button--line .service-button__icon {
+    width: 19px;
+    height: 19px;
+  }
+
   .service-button__main {
     font-size: 11.5px;
   }
@@ -548,14 +631,12 @@
 }
 
 /* ========================================
-   750px以下：スマホ版レイアウト
+   750px以下：スマホ版
    画像なし
 ======================================== */
 
 @media (max-width: 750px) {
   .service-hero {
-    position: relative;
-    overflow: hidden;
     background:
       radial-gradient(
         circle at 92% 12%,
@@ -587,8 +668,6 @@
   }
 
   .service-hero__inner {
-    position: relative;
-    z-index: 2;
     width: calc(100% - 40px);
     max-width: 690px;
     min-height: auto;
@@ -597,8 +676,6 @@
   }
 
   .service-hero__text {
-    position: relative;
-    z-index: 3;
     width: 100%;
     max-width: none;
   }
@@ -608,10 +685,7 @@
     display: inline-block;
     margin: 0 0 20px;
     padding-bottom: 10px;
-    color: var(--service-green-dark);
     font-size: 13px;
-    font-weight: 800;
-    line-height: 1.2;
     letter-spacing: 0.2em;
   }
 
@@ -627,8 +701,6 @@
   }
 
   .service-hero h1 {
-    margin: 0;
-    color: var(--service-text);
     font-size: 46px;
     line-height: 1.32;
     font-weight: 700;
@@ -636,14 +708,12 @@
   }
 
   .service-hero h1 span {
-    color: var(--service-orange);
     font-weight: 800;
   }
 
   .service-hero__lead {
     max-width: 680px;
     margin: 30px 0 0;
-    color: var(--service-text);
     font-size: 16px;
     font-weight: 800;
     line-height: 2;
@@ -652,7 +722,6 @@
   .service-hero__note {
     max-width: 680px;
     margin: 28px 0 0;
-    color: var(--service-sub);
     font-size: 14.5px;
     font-weight: 600;
     line-height: 1.95;
@@ -661,16 +730,15 @@
   .service-hero__buttons {
     width: min(100%, 520px);
     margin: 34px auto 0;
-    display: flex;
     flex-direction: column;
     gap: 12px;
   }
 
   .service-hero .service-button {
     width: 100%;
+    min-width: 0;
     min-height: 60px;
     padding: 13px 24px;
-    border-radius: 999px;
   }
 
   .service-button__icon {
@@ -678,12 +746,16 @@
     height: 22px;
   }
 
+  .service-button--line .service-button__icon {
+    width: 23px;
+    height: 23px;
+  }
+
   .service-button__main {
     font-size: 16px;
   }
 
   .service-button__sub {
-    margin-top: 3px;
     font-size: 10.5px;
   }
 
@@ -785,6 +857,11 @@
     height: 21px;
   }
 
+  .service-button--line .service-button__icon {
+    width: 22px;
+    height: 22px;
+  }
+
   .service-button__main {
     font-size: 15px;
   }
@@ -826,50 +903,6 @@
 
   .service-button__sub {
     font-size: 9px;
-  }
-}
-
-/* ========================================
-   Service Hero CTA fine tuning
-   1100px以上：TOPページCTAに近づける
-======================================== */
-
-@media (min-width: 1101px) {
-  .service-hero .service-button {
-    min-height: 60px;
-    padding: 12px 18px;
-    gap: 10px;
-  }
-
-  .service-button__icon {
-    width: 22px;
-    height: 22px;
-  }
-
-  .service-button__main {
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 1.25;
-  }
-
-  .service-button__sub {
-    margin-top: 3px;
-    font-size: 10px;
-    font-weight: 700;
-    line-height: 1.25;
-  }
-}
-
-/* 1024px〜1100px：少しだけTOP寄せ。ただし窮屈にならないサイズ */
-@media (min-width: 1024px) and (max-width: 1100px) {
-  .service-button__main {
-    font-size: 14.5px;
-    font-weight: 800;
-  }
-
-  .service-button__sub {
-    font-size: 9.5px;
-    font-weight: 700;
   }
 }
 
