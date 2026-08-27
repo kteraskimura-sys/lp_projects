@@ -5397,3 +5397,42 @@
     font-size: clamp(10px, 2.8vw, 11px);
   }
 }
+
+/* ========================================
+   TOP Hero / 1024px〜1099px 余白調整
+   空き家売却ページと同じ確認ルールに寄せる
+======================================== */
+
+@media (min-width: 1024px) and (max-width: 1099px) {
+  .hero__canvas {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    min-height: 452px;
+    margin-left: 0;
+    transform: none;
+    overflow: hidden;
+  }
+
+  .hero__inner {
+    position: relative;
+    width: min(calc(100% - 48px), 1040px);
+    min-height: 452px;
+    margin: 0 auto;
+  }
+
+  .hero__content {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 700px;
+    z-index: 2;
+  }
+
+  .hero__visual {
+    position: absolute;
+    left: 325px;
+    width: 940px;
+    z-index: 1;
+  }
+}
