@@ -2357,3 +2357,18 @@
     margin-top: 5px;
   }
 }
+
+/* ========================================
+   Service Worry / 見出しアイコン最終調整
+======================================== */
+
+.service-worry__heading {
+  gap: 2px;
+}
+
+.service-worry__heading .service-heading__icon {
+  width: 50px;
+  height: 50px;
+  flex: 0 0 50px;
+  margin-top: 0;
+}
