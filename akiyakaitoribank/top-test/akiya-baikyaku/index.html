@@ -1,564 +1,2359 @@
-<!--
-========================================
-PAGE: akiya-baikyaku/index.html
-URL: /top-test/akiya-baikyaku/
-用途: 空き家売却ページ
-注意: TOPページの index.html ではありません
-========================================
--->
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* service */
+.service-page {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
 
-  <title>空き家売却をご検討中の方へ｜空き家買取バンク</title>
-  <meta name="description" content="相続した実家、長年放置している空き家、残置物が残ったままの住宅など、空き家売却に関するお悩みを空き家買取バンクがサポートします。">
-  <meta name="robots" content="noindex, nofollow">
+.service-inner {
+  width: min(calc(100% - 48px), 1040px);
+  margin: 0 auto;
+}
 
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/service.css">
-</head>
+.service-label {
+  margin: 0 0 12px;
+  color: var(--color-green-dark);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
 
-<body>
-	<header class="site-header">
-		<div class="site-header__inner">
-			<h1 class="site-header__logo">
-				<a href="index.html">
-					<img src="../img/common/logo.png" alt="空き家買取バンク">
-				</a>
-			</h1>
+.service-heading {
+  position: relative;
+  margin: 0 0 24px;
+  padding-bottom: 12px;
+  color: var(--color-text);
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.5;
+}
 
-			<nav class="site-header__nav" aria-label="グローバルナビゲーション">
-				<ul>
-					<li><a href="index.html">ホーム</a></li>
-					<li><a href="#service"><span class="head-menu_ls_a">サービス</span>一覧</a></li>
-					<li><a href="#case">解決事例</a></li>
-					<li><a href="columns/index.html">コラム</a></li>
-					<li><a href="#faq"><span class="head-menu_ls_a">よくある</span>ご質問</a></li>
-					<li><a href="#company">会社情報</a></li>
-				</ul>
-			</nav>
+.service-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-orange);
+  opacity: 0.65;
+}
 
-			<div class="site-header__contact">
-				<a href="tel:0120949017" class="site-header__phone">
-					<span class="site-header__phone-icon" aria-hidden="true">☎</span>
-					<span class="site-header__phone-text">
-						<span class="site-header__phone-number">0120-949-017</span>
-						<span class="site-header__phone-time">受付時間 10:00〜19:00（平日）</span>
-					</span>
-				</a>
+.service-button,
+.service-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-align: center;
+}
 
-				<a href="/top-test/contact/" class="site-header__button">
-					<img src="../img/top/hero_cta_icon_01a.svg" alt="" class="site-header__button-icon">
-					<span>無料相談はこちら</span>
-				</a>
-			</div>
+.service-button--orange,
+.service-cta-button--mail {
+  color: #fff;
+  background: var(--color-orange);
+}
 
-			<button class="site-header__menu-button" type="button" aria-label="メニューを開く" aria-expanded="false">
-				<span></span>
-				<span></span>
-				<span></span>
-				<!--<span>ホーム</span>
-				<span>サービス一覧</span>
-				<span>解決事例</span>
-				<span>コラム</span>
-				<span>よくあるご質問</span>
-				<span>会社情報</span>-->
-			</button>
-		</div>
-	</header>
+.service-cta-button--tel {
+  color: var(--color-green-dark);
+  background: #fff;
+  border: 2px solid var(--color-green);
+}
 
-	<main class="service-page akiya-sale-page">
-		<section class="service-hero">
-			<div class="service-hero__inner">
-				<div class="service-hero__text">
-					<p class="service-label">AKIYA SALE</p>
+.service-cta-button--line {
+  color: #fff;
+  background: #41b549;
+}
 
-					<h1>
-						<span>空き家売却</span>を<br class="br-min751px br-max420px">
-						ご検討中の方へ
-					</h1>
+/* ========================================
+   Hero
+======================================== */
 
-					<p class="service-hero__lead">
-						相続した実家、長年放置している空き家、<br class="br-max420px">
-						残置物が残ったままの住宅など、<br class="br-max420px">
-						空き家に関するお悩みはありませんか？
-					</p>
+.service-page {
+  --service-orange: #f58b12;
+  --service-green: #7bc943;
+  --service-line: #39b54a;
+  --service-green-dark: #4f8f2f;
+  --service-text: #2f2a26;
+  --service-sub: #4a423b;
+  --service-cream: #fffaf0;
+}
 
-					<p class="service-hero__note">
-						空き家買取バンクでは、空き家の状況やご事情に合わせて、<br class="br-max420px">
-						最適な解決方法をご提案いたします。
-					</p>
+/* ========================================
+   Hero Base
+   共通の土台
+======================================== */
 
-					<div class="service-hero__buttons">
-						<a href="/top-test/contact/" class="service-button service-button--orange">
-							<img src="../img/top/hero_cta_icon_01a.svg" alt="" class="service-button__icon">
-							<span class="service-button__text">
-								<span class="service-button__main">無料相談フォーム</span>
-								<span class="service-button__sub">24時間受付中</span>
-							</span>
-						</a>
+.service-hero {
+  position: relative;
+  overflow: hidden;
+}
 
-						<a href="tel:0120949017" class="service-button service-button--tel">
-							<img src="../img/top/hero_cta_icon_02a.svg" alt="" class="service-button__icon">
-							<span class="service-button__text">
-								<span class="service-button__main">0120-949-017</span>
-								<span class="service-button__sub">受付時間 10:00〜19:00（平日）</span>
-							</span>
-						</a>
+.service-hero__inner {
+  position: relative;
+  z-index: 3;
+  box-sizing: border-box;
+}
 
-						<a href="#" class="service-button service-button--line">
-							<img src="../img/top/hero_cta_icon_03a.svg" alt="" class="service-button__icon">
-							<span class="service-button__text">
-								<span class="service-button__main">LINEで相談する</span>
-								<span class="service-button__sub">かんたん相談受付中</span>
-							</span>
-						</a>
-					</div>
-				</div>
+.service-hero__text {
+  position: relative;
+  z-index: 4;
+}
 
-				<div class="service-hero__image">
-					<picture>
-						<source media="(max-width: 750px)" srcset="../img/akiya-baikyaku/hero-pc-01a.webp" type="image/webp">
-						<img src="../img/akiya-baikyaku/hero-pc-01a.webp" alt="空き家売却を検討するご夫婦">
-					</picture>
-				</div>
-			</div>
-		</section>
+.service-label {
+  color: var(--service-green-dark);
+  font-weight: 800;
+  line-height: 1.2;
+}
 
-		<section class="service-worry">
-			<div class="service-inner">
-				<h2 class="service-heading service-worry__heading">
-					<span class="service-heading__icon" aria-hidden="true">
-						<svg viewBox="0 0 48 48">
-							<path d="M8 24L24 11L40 24" />
-							<path d="M13 22V38H35V22" />
-							<path d="M20 38V28H28V38" />
-						</svg>
-					</span>
-					<span>このようなお悩みはありませんか？</span>
-				</h2>
+.service-hero h1 {
+  margin: 0;
+  color: var(--service-text);
+}
 
-				<div class="worry-list">
-					<article class="worry-card">
-						<span class="worry-card__check" aria-hidden="true">✓</span>
-						<div class="worry-card__icon" aria-hidden="true">
-							<svg viewBox="0 0 64 64">
-								<path d="M10 32L32 14L54 32" />
-								<path d="M17 30V52H47V30" />
-								<path d="M26 52V39H38V52" />
-								<circle cx="48" cy="19" r="8" />
-								<path d="M48 15.5C50.5 15.5 51.5 17 51.5 18.7C51.5 21.5 48 21.5 48 24" />
-								<path d="M48 27H48.1" />
-							</svg>
-						</div>
-						<p>相続した実家を<br>どうするか<br>決まっていない</p>
-					</article>
+.service-hero h1 span {
+  color: var(--service-orange);
+}
 
-					<article class="worry-card">
-						<span class="worry-card__check" aria-hidden="true">✓</span>
-						<div class="worry-card__icon" aria-hidden="true">
-							<svg viewBox="0 0 64 64">
-								<rect x="13" y="16" width="38" height="36" rx="3" />
-								<path d="M13 26H51" />
-								<path d="M22 12V20" />
-								<path d="M42 12V20" />
-								<path d="M22 34H26" />
-								<path d="M31 34H35" />
-								<path d="M40 34H44" />
-								<path d="M22 42H26" />
-								<path d="M31 42H35" />
-							</svg>
-						</div>
-						<p>空き家になって<br>数年が経過している</p>
-					</article>
+.service-hero__lead {
+  color: var(--service-text);
+}
 
-					<article class="worry-card">
-						<span class="worry-card__check" aria-hidden="true">✓</span>
-						<div class="worry-card__icon" aria-hidden="true">
-							<svg viewBox="0 0 64 64">
-								<path d="M16 26L32 17L48 26V49H16V26Z" />
-								<path d="M16 26L32 35L48 26" />
-								<path d="M32 35V49" />
-								<path d="M23 20L18 13H30L32 17" />
-								<path d="M41 20L46 13H34L32 17" />
-							</svg>
-						</div>
-						<p>荷物が残ったまま<br>になっている</p>
-					</article>
+.service-hero__note {
+  color: var(--service-sub);
+}
 
-					<article class="worry-card">
-						<span class="worry-card__check" aria-hidden="true">✓</span>
-						<div class="worry-card__icon" aria-hidden="true">
-							<svg viewBox="0 0 64 64">
-								<path d="M32 54C32 54 48 38 48 25C48 16.2 40.8 9 32 9C23.2 9 16 16.2 16 25C16 38 32 54 32 54Z" />
-								<circle cx="32" cy="25" r="6" />
-								<path d="M12 54H52" />
-							</svg>
-						</div>
-						<p>遠方に住んでいて<br>管理できない</p>
-					</article>
+/* ========================================
+   Hero CTA Base
+======================================== */
 
-					<article class="worry-card">
-						<span class="worry-card__check" aria-hidden="true">✓</span>
-						<div class="worry-card__icon" aria-hidden="true">
-							<svg viewBox="0 0 64 64">
-								<path d="M10 33L32 15L54 33" />
-								<path d="M17 31V52H47V31" />
-								<path d="M25 52V39H39V52" />
-								<path d="M37 24L32 32L38 32L32 42" />
-							</svg>
-						</div>
-						<p>建物が古く<br>売れるか不安</p>
-					</article>
+.service-hero__buttons {
+  position: relative;
+  z-index: 5;
+  display: flex;
+}
 
-					<article class="worry-card">
-						<span class="worry-card__check" aria-hidden="true">✓</span>
-						<div class="worry-card__icon" aria-hidden="true">
-							<svg viewBox="0 0 64 64">
-								<path d="M10 33L32 15L54 33" stroke-dasharray="5 4" />
-								<path d="M17 31V52H47V31" stroke-dasharray="5 4" />
-								<path d="M24 52V40H40V52" stroke-dasharray="5 4" />
-							</svg>
-						</div>
-						<p>再建築不可と<br>言われた</p>
-					</article>
+.service-hero .service-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 999px;
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: center;
+  text-decoration: none;
+}
 
-					<article class="worry-card">
-						<span class="worry-card__check" aria-hidden="true">✓</span>
-						<div class="worry-card__icon" aria-hidden="true">
-							<svg viewBox="0 0 64 64">
-								<circle cx="32" cy="20" r="9" />
-								<path d="M16 52C18 41 23.5 35 32 35C40.5 35 46 41 48 52" />
-								<path d="M47 17L55 25" />
-								<path d="M55 17L47 25" />
-							</svg>
-						</div>
-						<p>他社で<br>断られた</p>
-					</article>
-				</div>
-			</div>
-		</section>
+.service-button__icon {
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+}
 
-		<section class="service-risk">
-			<div class="service-inner">
-				<h2 class="service-heading">空き家を放置するリスク</h2>
+.service-button__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-				<div class="risk-grid">
-					<article class="risk-card">
-						<img src="../img/service/akiya-risk-01.webp" alt="">
-						<h3>固定資産税の負担が続く</h3>
-						<p>空き家を所有している限り、固定資産税や都市計画税などの負担が発生します。</p>
-					</article>
+.service-button__main {
+  display: block;
+  font-weight: 800;
+  line-height: 1.25;
+  white-space: nowrap;
+}
 
-					<article class="risk-card">
-						<img src="../img/service/akiya-risk-02.webp" alt="">
-						<h3>建物の老朽化が進む</h3>
-						<p>人が住まなくなることで劣化が進みやすくなり、修繕費用が発生する場合があります。</p>
-					</article>
+.service-button__sub {
+  display: block;
+  margin-top: 3px;
+  font-weight: 700;
+  line-height: 1.25;
+  white-space: nowrap;
+}
 
-					<article class="risk-card">
-						<img src="../img/service/akiya-risk-03.webp" alt="">
-						<h3>近隣トラブルにつながる</h3>
-						<p>雑草や樹木の繁茂、害虫や不法投棄など、近隣とのトラブルの原因になることがあります。</p>
-					</article>
+.service-button--orange {
+  color: #fff;
+  background: var(--service-orange);
+  box-shadow: 0 8px 18px rgba(245, 139, 18, 0.22);
+}
 
-					<article class="risk-card">
-						<img src="../img/service/akiya-risk-04.webp" alt="">
-						<h3>行政から指導を受ける可能性がある</h3>
-						<p>管理状態によっては、行政から改善指導を受ける場合があります。</p>
-					</article>
-				</div>
-			</div>
-		</section>
+.service-button--tel {
+  color: var(--service-green-dark);
+  background: rgba(255, 255, 255, 0.94);
+  border: 2px solid var(--service-green);
+  box-shadow: 0 8px 18px rgba(123, 201, 67, 0.14);
+}
 
-		<section class="service-flow">
-			<div class="service-inner">
-				<h2 class="service-heading">ご相談から解決までの流れ</h2>
+.service-button--line {
+  color: #fff;
+  background: var(--service-line);
+  box-shadow: 0 8px 18px rgba(57, 181, 74, 0.2);
+}
 
-				<ol class="flow-list">
-					<li>
-						<span>STEP 1</span>
-						<h3>お問い合わせ</h3>
-						<p>お電話・メール・LINEよりお気軽にご相談ください。</p>
-					</li>
-					<li>
-						<span>STEP 2</span>
-						<h3>現地調査</h3>
-						<p>物件の状況や周辺環境を確認します。</p>
-					</li>
-					<li>
-						<span>STEP 3</span>
-						<h3>ご提案</h3>
-						<p>物件状況やご希望に合わせて、最適な進め方をご提案します。</p>
-					</li>
-					<li>
-						<span>STEP 4</span>
-						<h3>ご契約</h3>
-						<p>内容にご納得いただいたうえで契約手続きを進めます。</p>
-					</li>
-					<li>
-						<span>STEP 5</span>
-						<h3>お引渡し</h3>
-						<p>お引渡し後も必要に応じてサポートします。</p>
-					</li>
-				</ol>
+/* ========================================
+   1024px以上：PC版
+   TOPページと同じ確認ルール
+======================================== */
 
-				<div class="flow-note">
-					<span>相談無料</span>
-					<span>査定無料</span>
-					<span>現状のまま相談可能</span>
-					<span>残置物が残っていても相談可能</span>
-				</div>
-			</div>
-		</section>
+@media (min-width: 1024px) {
+  .service-hero {
+    background: linear-gradient(90deg, #fffaf0 0%, #fffdf8 50%, #f7f7f1 100%);
+  }
 
-		<section class="service-reason">
-			<div class="service-inner">
-				<h2 class="service-heading">空き家買取バンクが選ばれる理由</h2>
+  .service-hero__inner {
+    width: var(--pc-inner-width, 1100px);
+    min-height: 455px;
+    margin: 0 auto;
+    padding: 38px 30px 34px;
+  }
 
-				<div class="reason-grid">
-					<article class="reason-card">
-						<h3>空き家専門</h3>
-						<p>空き家に関するご相談に特化しているため、状況に応じたご提案が可能です。</p>
-					</article>
-					<article class="reason-card">
-						<h3>残置物対応</h3>
-						<p>家具や生活用品が残った状態でもご相談いただけます。</p>
-					</article>
-					<article class="reason-card">
-						<h3>古物商許可</h3>
-						<p>古物商許可を取得しており、残置物の整理に関するご相談にも対応しています。</p>
-					</article>
-					<article class="reason-card">
-						<h3>相続不動産対応</h3>
-						<p>相続した実家や、相続手続きに関するお悩みにも対応しています。</p>
-					</article>
-					<article class="reason-card">
-						<h3>士業との連携</h3>
-						<p>司法書士・税理士・弁護士など、専門家と連携しながらサポートします。</p>
-					</article>
-					<article class="reason-card">
-						<h3>再建築不可対応</h3>
-						<p>一般的には売却が難しいとされる物件でも、状況に応じてご提案します。</p>
-					</article>
-				</div>
-			</div>
-		</section>
+  .service-hero__text {
+    width: 430px;
+  }
 
-		<section class="service-leftover">
-			<div class="service-inner">
-				<div class="leftover-box">
-					<div class="leftover-box__image">
-						<img src="../img/service/akiya-leftover.webp" alt="残置物が残った室内">
-					</div>
+  .service-label {
+    margin: 0 0 16px;
+    font-size: 14px;
+    letter-spacing: 0.18em;
+  }
 
-					<div class="leftover-box__text">
-						<h2>古物商許可を活かした残置物対応</h2>
-						<p>
-							空き家売却のご相談で多いのが、「荷物が残ったまま」というお悩みです。空き家買取バンクでは、残置物に関するご相談にも対応しています。
-						</p>
+  .service-hero h1 {
+    font-size: 46px;
+    line-height: 1.35;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
 
-						<ul>
-							<li>荷物が大量に残っている</li>
-							<li>何から片付ければいいか分からない</li>
-							<li>遠方に住んでいて整理できない</li>
-						</ul>
+  .service-hero h1 span {
+    font-weight: 700;
+  }
 
-						<a href="/top-test/contact/" class="service-text-link">まずは現在の状況をお聞かせください</a>
-					</div>
-				</div>
-			</div>
-		</section>
+  .service-hero__lead {
+    margin: 28px 0 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 2;
+  }
 
-		<section class="service-case">
-			<div class="service-inner">
-				<div class="service-heading-row">
-					<h2 class="service-heading">解決事例</h2>
-					<a href="#" class="service-more">解決事例一覧を見る</a>
-				</div>
+  .service-hero__note {
+    margin: 24px 0 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.9;
+  }
 
-				<div class="case-grid">
-					<article class="case-card">
-						<img src="../img/service/akiya-case-01.webp" alt="">
-						<p class="case-label">相続した実家</p>
-						<h3>相続した実家を売却した事例</h3>
-						<p>相続した実家をどうするか悩まれていた方のご相談例です。</p>
-					</article>
+  .service-hero__buttons {
+    align-items: stretch;
+    gap: 14px;
+    width: auto;
+    margin-top: 34px;
+  }
 
-					<article class="case-card">
-						<img src="../img/service/akiya-case-02.webp" alt="">
-						<p class="case-label">長期空き家</p>
-						<h3>長期間そのままだった空き家の事例</h3>
-						<p>管理が難しくなっていた空き家のご相談例です。</p>
-					</article>
+  .service-hero .service-button {
+    gap: 8px;
+    width: 210px;
+    min-width: 210px;
+    min-height: 54px;
+    padding: 0 16px;
+  }
 
-					<article class="case-card">
-						<img src="../img/service/akiya-case-03.webp" alt="">
-						<p class="case-label">残置物あり</p>
-						<h3>残置物が残る空き家の事例</h3>
-						<p>室内に荷物が残った状態でご相談いただいた事例です。</p>
-					</article>
+  .service-button__icon {
+    width: 20px;
+    height: 20px;
+  }
 
-					<article class="case-card">
-						<img src="../img/service/akiya-case-04.webp" alt="">
-						<p class="case-label">遠方管理</p>
-						<h3>遠方にあるご実家の事例</h3>
-						<p>遠方に住んでいて管理が難しい空き家のご相談例です。</p>
-					</article>
+  .service-button--line .service-button__icon {
+    width: 22px;
+    height: 22px;
+  }
 
-					<article class="case-card">
-						<img src="../img/service/akiya-case-05.webp" alt="">
-						<p class="case-label">再建築不可</p>
-						<h3>再建築不可の可能性がある空き家の事例</h3>
-						<p>条件に不安がある物件についてのご相談例です。</p>
-					</article>
-				</div>
-			</div>
-		</section>
+  .service-button__main {
+    font-size: 14px;
+  }
 
-		<section class="service-faq">
-			<div class="service-inner">
-				<h2 class="service-heading">よくあるご質問</h2>
+  .service-button__sub {
+    font-size: 10px;
+  }
 
-				<div class="faq-layout">
-					<div class="faq-list">
-						<details>
-							<summary>残置物が残ったままでも相談できますか？</summary>
-							<p>はい、残置物が残った状態でもご相談いただけます。</p>
-						</details>
-						<details>
-							<summary>相続登記前でも相談できますか？</summary>
-							<p>状況により異なりますので、まずは現在の状況をお聞かせください。</p>
-						</details>
-						<details>
-							<summary>遠方に住んでいても相談できますか？</summary>
-							<p>はい、遠方にお住まいの方からのご相談にも対応しています。</p>
-						</details>
-						<details>
-							<summary>相談だけでも可能ですか？</summary>
-							<p>はい、売却を決めていない段階でもお気軽にご相談ください。</p>
-						</details>
-						<details>
-							<summary>査定費用はかかりますか？</summary>
-							<p>ご相談・査定は無料です。</p>
-						</details>
-					</div>
+  .service-hero__image {
+    position: absolute;
+    top: 0;
+    right: calc(50% - 50vw);
+    bottom: 0;
+    z-index: 1;
+    width: 760px;
+    height: auto;
+    overflow: hidden;
+    pointer-events: none;
+  }
 
-					<div class="faq-image">
-						<img src="../img/service/akiya-faq.webp" alt="空き家相談のイメージ">
-					</div>
-				</div>
-			</div>
-		</section>
+  .service-hero__image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 52%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      #fffcf5 0%,
+      rgba(255, 252, 245, 0.99) 20%,
+      rgba(255, 252, 245, 0.88) 38%,
+      rgba(255, 252, 245, 0.56) 60%,
+      rgba(255, 252, 245, 0.22) 80%,
+      rgba(255, 252, 245, 0) 100%
+    );
+    pointer-events: none;
+  }
 
-		<section class="service-bottom-cta">
-			<div class="service-inner service-bottom-cta__inner">
-				<div class="service-bottom-cta__text">
-					<h2>空き家のお悩みはありませんか？</h2>
-					<p>
-						相続した実家、長年放置している空き家、残置物が残る住宅など、空き家に関するお悩みは一人で抱え込まずにご相談ください。
-					</p>
-				</div>
+  .service-hero__image picture,
+  .service-hero__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 
-				<div class="service-bottom-cta__buttons">
-					<a href="/top-test/contact/" class="service-cta-button service-cta-button--mail">
-						<span>無料相談はこちら</span>
-						<small>24時間受付中</small>
-					</a>
-					<a href="tel:0120949017" class="service-cta-button service-cta-button--tel">
-						<span>電話で相談する</span>
-						<small>0120-949-017</small>
-					</a>
-					<a href="#" class="service-cta-button service-cta-button--line">
-						<span>LINEで相談する</span>
-						<small>かんたん相談受付中</small>
-					</a>
-				</div>
-			</div>
-		</section>
+  .service-hero__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right;
+    border-radius: 0;
+  }
+}
 
-		<footer class="site-footer">
-			<div class="site-footer__canvas">
-				<div class="site-footer__inner">
+/* ========================================
+   1024px〜1099px：PC最小幅の微調整
+   1024px以上のPCルールをベースに、窮屈な部分だけ調整
+======================================== */
 
-					<div class="site-footer__brand">
-						<a href="/" class="site-footer__logo">
-							<img src="../img/common/logo.png" alt="空き家買取バンク">
-						</a>
+@media (min-width: 1024px) and (max-width: 1099px) {
+  .service-hero__inner {
+    width: min(calc(100% - 48px), 1040px);
+    min-height: 450px;
+    padding: 36px 0 32px;
+  }
 
-						<p class="site-footer__company">
-							KTERAS株式会社
-						</p>
+  .service-hero__text {
+    width: 410px;
+  }
 
-						<p class="site-footer__address">
-							〒000-0000<br>
-							東京都〇〇区〇〇 0-0-0
-						</p>
+  .service-label {
+    margin-bottom: 14px;
+    font-size: 13px;
+  }
 
-						<a href="tel:0120949017" class="site-footer__phone">
-							0120-949-017
-						</a>
+  .service-hero h1 {
+    font-size: 41px;
+    line-height: 1.34;
+  }
 
-						<p class="site-footer__time">
-							受付時間 10:00〜19:00（平日）
-						</p>
-					</div>
+  .service-hero__lead {
+    margin-top: 24px;
+    font-size: 15px;
+    line-height: 1.9;
+  }
 
-					<nav class="site-footer__nav" aria-label="フッターナビゲーション">
-						<div class="site-footer__group">
-							<h2>サイトメニュー</h2>
-							<ul>
-								<li><a href="/">ホーム</a></li>
-								<li><a href="#service">サービス一覧</a></li>
-								<li><a href="#case-study">解決事例</a></li>
-								<li><a href="#column">コラム</a></li>
-								<li><a href="#faq">よくあるご質問</a></li>
-								<li><a href="#company">会社情報</a></li>
-							</ul>
-						</div>
+  .service-hero__note {
+    margin-top: 22px;
+    font-size: 13.5px;
+    line-height: 1.85;
+  }
 
-						<div class="site-footer__group">
-							<h2>サービス</h2>
-							<ul>
-								<li><a href="#">空き家売却</a></li>
-								<li><a href="#">相続不動産</a></li>
-								<li><a href="#">再建築不可物件</a></li>
-								<li><a href="#">共有持分</a></li>
-								<li><a href="#">事故物件</a></li>
-								<li><a href="#">空き家相談</a></li>
-							</ul>
-						</div>
+  .service-hero__buttons {
+    width: min(620px, calc(100vw - 72px));
+    margin-top: 30px;
+    gap: 10px;
+  }
 
-						<div class="site-footer__group">
-							<h2>お問い合わせ</h2>
-							<ul>
-								<li><a href="/top-test/contact/">無料相談フォーム</a></li>
-								<li><a href="tel:0120949017">電話で相談する</a></li>
-								<li><a href="#">LINEで相談する</a></li>
-							</ul>
-						</div>
-					</nav>
+  .service-hero .service-button {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+    min-height: 54px;
+    padding: 10px 12px;
+  }
 
-				</div>
+  .service-button__icon {
+    width: 20px;
+    height: 20px;
+  }
 
-				<div class="site-footer__bottom">
-					<ul class="site-footer__legal">
-						<li><a href="#">プライバシーポリシー</a></li>
-						<li><a href="#">特定商取引法に基づく表記</a></li>
-						<li><a href="#">サイトマップ</a></li>
-					</ul>
+  .service-button--line .service-button__icon {
+    width: 21px;
+    height: 21px;
+  }
 
-					<p class="site-footer__copyright">
-						© 2024 Akiya Kaitori Bank. All Rights Reserved.
-					</p>
-				</div>
-			</div>
-		</footer>
-	</main>
+  .service-button__main {
+    font-size: 14px;
+  }
 
-<script src="../js/main.js" defer></script>
-</body>
-</html>
+  .service-button__sub {
+    font-size: 9.5px;
+  }
+
+  .service-hero__image {
+    width: 700px;
+  }
+
+  .service-hero__image::before {
+    width: 56%;
+  }
+}
+
+/* ========================================
+   751px〜1023px：PC寄りレイアウト
+======================================== */
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .service-hero {
+    background: linear-gradient(90deg, #fffaf0 0%, #fffdf8 52%, #f7f7f1 100%);
+  }
+
+  .service-hero__inner {
+    width: min(calc(100% - 40px), 960px);
+    min-height: 500px;
+    margin: 0 auto;
+    padding: 46px 0 40px;
+  }
+
+  .service-hero__text {
+    width: 390px;
+  }
+
+  .service-label {
+    margin: 0 0 14px;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+  }
+
+  .service-hero h1 {
+    font-size: 39px;
+    line-height: 1.34;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  .service-hero h1 span {
+    font-weight: 700;
+  }
+
+  .service-hero__lead {
+    margin-top: 24px;
+    font-size: 14.5px;
+    font-weight: 700;
+    line-height: 1.9;
+  }
+
+  .service-hero__note {
+    margin-top: 22px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.85;
+  }
+
+  .service-hero__buttons {
+    align-items: stretch;
+    gap: 10px;
+    width: min(590px, calc(100vw - 70px));
+    margin-top: 28px;
+  }
+
+  .service-hero .service-button {
+    flex: 1 1 0;
+    gap: 8px;
+    width: auto;
+    min-width: 0;
+    min-height: 52px;
+    padding: 9px 10px;
+  }
+
+  .service-button__icon {
+    width: 19px;
+    height: 19px;
+  }
+
+  .service-button--line .service-button__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .service-button__main {
+    font-size: 12.5px;
+  }
+
+  .service-button__sub {
+    margin-top: 2px;
+    font-size: 8.5px;
+  }
+
+  .service-hero__image {
+    position: absolute;
+    top: 0;
+    right: -36px;
+    bottom: 0;
+    left: auto;
+    z-index: 1;
+    width: clamp(500px, 61vw, 680px);
+    max-width: none;
+    height: auto;
+    overflow: hidden;
+    pointer-events: none;
+    transform: none;
+  }
+
+  .service-hero__image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 58%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      #fffcf5 0%,
+      rgba(255, 252, 245, 0.99) 20%,
+      rgba(255, 252, 245, 0.88) 38%,
+      rgba(255, 252, 245, 0.56) 60%,
+      rgba(255, 252, 245, 0.22) 80%,
+      rgba(255, 252, 245, 0) 100%
+    );
+    pointer-events: none;
+  }
+
+  .service-hero__image picture,
+  .service-hero__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .service-hero__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right;
+    border-radius: 0;
+  }
+}
+
+/* 851px〜1023px：1023px側 */
+@media (min-width: 851px) and (max-width: 1023px) {
+  .service-hero__image {
+    right: -28px;
+    width: clamp(590px, 66vw, 720px);
+  }
+
+  .service-hero__image::before {
+    width: 60%;
+  }
+
+  .service-hero__image img {
+    object-position: 86% center;
+  }
+}
+
+/* 1015px〜1023px：1024px切替直前の右端余白対策 */
+@media (min-width: 1015px) and (max-width: 1023px) {
+  .service-hero__image {
+    right: calc(50% - 50vw);
+  }
+}
+
+/* 751px〜850px：PC寄り最小幅 */
+@media (min-width: 751px) and (max-width: 850px) {
+  .service-hero__inner {
+    min-height: 500px;
+    padding: 42px 0 38px;
+  }
+
+  .service-hero__text {
+    width: 360px;
+  }
+
+  .service-hero h1 {
+    font-size: 35px;
+  }
+
+  .service-hero__lead {
+    font-size: 13.5px;
+  }
+
+  .service-hero__note {
+    font-size: 12.5px;
+  }
+
+  .service-hero__buttons {
+    width: min(540px, calc(100vw - 48px));
+    gap: 8px;
+  }
+
+  .service-hero .service-button {
+    min-height: 50px;
+    padding: 8px 8px;
+  }
+
+  .service-button__icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .service-button--line .service-button__icon {
+    width: 19px;
+    height: 19px;
+  }
+
+  .service-button__main {
+    font-size: 11.5px;
+  }
+
+  .service-button__sub {
+    font-size: 7.8px;
+  }
+
+  .service-hero__image {
+    right: -88px;
+    width: 640px;
+  }
+
+  .service-hero__image::before {
+    width: 64%;
+  }
+
+  .service-hero__image img {
+    object-position: 78% center;
+  }
+}
+
+/* ========================================
+   750px以下：スマホ版
+   画像なし
+======================================== */
+
+@media (max-width: 750px) {
+  .service-hero {
+    background:
+      radial-gradient(
+        circle at 92% 12%,
+        rgba(245, 139, 18, 0.12) 0%,
+        rgba(245, 139, 18, 0.06) 26%,
+        rgba(245, 139, 18, 0) 58%
+      ),
+      radial-gradient(
+        circle at 8% 88%,
+        rgba(123, 201, 67, 0.13) 0%,
+        rgba(123, 201, 67, 0.06) 24%,
+        rgba(123, 201, 67, 0) 56%
+      ),
+      linear-gradient(180deg, #fffaf0 0%, #fffdf8 100%);
+  }
+
+  .service-hero::before {
+    content: "";
+    position: absolute;
+    right: -90px;
+    top: 52px;
+    width: 220px;
+    height: 220px;
+    background: rgba(245, 139, 18, 0.08);
+    border-radius: 50%;
+    filter: blur(24px);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .service-hero__inner {
+    width: calc(100% - 40px);
+    max-width: 690px;
+    min-height: auto;
+    margin: 0 auto;
+    padding: 44px 0 52px;
+  }
+
+  .service-hero__text {
+    width: 100%;
+    max-width: none;
+  }
+
+  .service-label {
+    position: relative;
+    display: inline-block;
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+  }
+
+  .service-label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 46px;
+    height: 3px;
+    background: var(--service-green);
+    border-radius: 999px;
+  }
+
+  .service-hero h1 {
+    font-size: 46px;
+    line-height: 1.32;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+
+  .service-hero h1 span {
+    font-weight: 800;
+  }
+
+  .service-hero__lead {
+    max-width: 680px;
+    margin: 30px 0 0;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 2;
+  }
+
+  .service-hero__note {
+    max-width: 680px;
+    margin: 28px 0 0;
+    font-size: 14.5px;
+    font-weight: 600;
+    line-height: 1.95;
+  }
+
+  .service-hero__buttons {
+    width: min(100%, 520px);
+    margin: 34px auto 0;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .service-hero .service-button {
+    width: 100%;
+    min-width: 0;
+    min-height: 60px;
+    padding: 13px 24px;
+  }
+
+  .service-button__icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .service-button--line .service-button__icon {
+    width: 23px;
+    height: 23px;
+  }
+
+  .service-button__main {
+    font-size: 16px;
+  }
+
+  .service-button__sub {
+    font-size: 10.5px;
+  }
+
+  .service-hero__image {
+    display: none;
+  }
+}
+
+/* ========================================
+   550px以下：スマホ実機向け
+======================================== */
+
+@media (max-width: 550px) {
+  .service-hero__inner {
+    width: calc(100% - 32px);
+    padding: 40px 0 48px;
+  }
+
+  .service-hero h1 {
+    font-size: 40px;
+    line-height: 1.34;
+  }
+
+  .service-hero__lead {
+    margin-top: 28px;
+    font-size: 15.5px;
+    line-height: 1.95;
+  }
+
+  .service-hero__note {
+    margin-top: 26px;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .service-hero__buttons {
+    width: min(100%, 430px);
+    gap: 11px;
+  }
+
+  .service-hero .service-button {
+    min-height: 58px;
+  }
+
+  .service-button__main {
+    font-size: 15.5px;
+  }
+
+  .service-button__sub {
+    font-size: 10px;
+  }
+}
+
+/* ========================================
+   420px以下：iPhone幅向け
+======================================== */
+
+@media (max-width: 420px) {
+  .service-hero__inner {
+    width: calc(100% - 28px);
+    padding: 38px 0 46px;
+  }
+
+  .service-label {
+    margin-bottom: 18px;
+    font-size: 12px;
+  }
+
+  .service-hero h1 {
+    font-size: 36px;
+    line-height: 1.36;
+    letter-spacing: 0.02em;
+  }
+
+  .service-hero__lead {
+    margin-top: 28px;
+    font-size: 15px;
+    line-height: 1.95;
+  }
+
+  .service-hero__note {
+    margin-top: 26px;
+    font-size: 13.5px;
+    line-height: 1.9;
+  }
+
+  .service-hero__buttons {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .service-hero .service-button {
+    min-height: 58px;
+    padding: 12px 20px;
+  }
+
+  .service-button__icon {
+    width: 21px;
+    height: 21px;
+  }
+
+  .service-button--line .service-button__icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .service-button__main {
+    font-size: 15px;
+  }
+
+  .service-button__sub {
+    font-size: 9.5px;
+  }
+}
+
+/* ========================================
+   374px以下：小さめスマホ
+======================================== */
+
+@media (max-width: 374px) {
+  .service-hero__inner {
+    width: calc(100% - 24px);
+    padding: 36px 0 44px;
+  }
+
+  .service-hero h1 {
+    font-size: 33px;
+  }
+
+  .service-hero__lead {
+    font-size: 14px;
+  }
+
+  .service-hero__note {
+    font-size: 13px;
+  }
+
+  .service-hero .service-button {
+    min-height: 56px;
+  }
+
+  .service-button__main {
+    font-size: 14.5px;
+  }
+
+  .service-button__sub {
+    font-size: 9px;
+  }
+}
+
+/* ========================================
+   Service Hero CTA / TOPページCTA仕様に寄せる
+   全ブレイクポイント整理版
+======================================== */
+
+/* 共通：CTA内テキスト */
+.service-button__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-button__main {
+  display: block;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.service-button__sub {
+  display: block;
+  margin-top: 3px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* ========================================
+   1024px以上：PC版
+   TOPページPC CTAに統一
+======================================== */
+
+@media (min-width: 1024px) {
+  .service-hero__buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: auto;
+    margin-top: 30px;
+  }
+
+  .service-hero .service-button {
+    gap: 8px;
+    width: 210px;
+    min-width: 210px;
+    min-height: 54px;
+    padding: 0 16px;
+    border-radius: 999px;
+    font-size: 14px;
+  }
+
+  .service-button__icon {
+    width: 20px;
+    height: 20px;
+    max-width: 20px;
+    max-height: 20px;
+    flex: 0 0 20px;
+  }
+
+  .service-button--line .service-button__icon {
+    width: 22px;
+    height: 22px;
+    max-width: 22px;
+    max-height: 22px;
+    flex: 0 0 22px;
+  }
+
+  /* メール・LINE */
+  .service-button__main {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .service-button__sub {
+    margin-top: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  /* 電話 */
+  .service-button--tel {
+    gap: 8px;
+    min-height: 58px;
+    padding: 0 18px;
+  }
+
+  .service-button--tel .service-button__main {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .service-button--tel .service-button__sub {
+    margin-top: 3px;
+    color: var(--color-subtext);
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
+
+/* ========================================
+   1024px〜1099px：PC最小幅
+   PC仕様を維持しつつ、横幅だけ窮屈にならないよう調整
+======================================== */
+
+@media (min-width: 1024px) and (max-width: 1099px) {
+  .service-hero__buttons {
+    width: min(620px, calc(100vw - 72px));
+    gap: 10px;
+  }
+
+  .service-hero .service-button {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+    min-height: 54px;
+    padding: 0 12px;
+  }
+
+  .service-button__icon {
+    width: 20px;
+    height: 20px;
+    max-width: 20px;
+    max-height: 20px;
+    flex: 0 0 20px;
+  }
+
+  .service-button--line .service-button__icon {
+    width: 21px;
+    height: 21px;
+    max-width: 21px;
+    max-height: 21px;
+    flex: 0 0 21px;
+  }
+
+  .service-button__main {
+    font-size: 13px;
+  }
+
+  .service-button__sub {
+    font-size: 10px;
+  }
+
+  .service-button--tel .service-button__main {
+    font-size: 16px;
+  }
+
+  .service-button--tel .service-button__sub {
+    font-size: 9px;
+  }
+}
+
+/* ========================================
+   751px〜1023px：PC寄り横並びCTA
+   TOPページの1023px以下CTAに寄せる
+======================================== */
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .service-hero__buttons {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 14px;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 28px;
+  }
+
+  .service-hero .service-button {
+    gap: 12px;
+    width: 210px;
+    min-width: 0;
+    height: 56px;
+    min-height: 56px;
+    padding: 0 18px;
+    border-radius: 999px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .service-button__icon {
+    width: 22px;
+    height: 22px;
+    max-width: 22px;
+    max-height: 22px;
+    flex: 0 0 22px;
+  }
+
+  .service-button--tel {
+    gap: 10px;
+    height: 58px;
+    min-height: 58px;
+    padding: 0 16px;
+  }
+
+  .service-button--tel .service-button__icon {
+    width: 20px;
+    height: 20px;
+    max-width: 20px;
+    max-height: 20px;
+    flex: 0 0 20px;
+  }
+
+  .service-button__main {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .service-button__sub {
+    margin-top: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .service-button--tel .service-button__main {
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+  .service-button--tel .service-button__sub {
+    margin-top: 3px;
+    color: var(--color-subtext);
+    font-size: 9px;
+    line-height: 1.2;
+  }
+}
+
+/* 751px〜850px：横並びを維持するため、少しだけ圧縮 */
+@media (min-width: 751px) and (max-width: 850px) {
+  .service-hero__buttons {
+    gap: 8px;
+    max-width: 640px;
+  }
+
+  .service-hero .service-button {
+    gap: 8px;
+    width: auto;
+    flex: 1 1 0;
+    min-height: 52px;
+    height: 52px;
+    padding: 0 8px;
+  }
+
+  .service-button__icon {
+    width: 18px;
+    height: 18px;
+    max-width: 18px;
+    max-height: 18px;
+    flex: 0 0 18px;
+  }
+
+  .service-button--line .service-button__icon {
+    width: 19px;
+    height: 19px;
+    max-width: 19px;
+    max-height: 19px;
+    flex: 0 0 19px;
+  }
+
+  .service-button__main {
+    font-size: 11.5px;
+  }
+
+  .service-button__sub {
+    font-size: 7.8px;
+  }
+
+  .service-button--tel .service-button__main {
+    font-size: 14px;
+  }
+
+  .service-button--tel .service-button__sub {
+    font-size: 8px;
+  }
+}
+
+/* ========================================
+   750px以下：スマホ版 縦並びCTA
+   TOPページスマホCTAに寄せる
+   ※右矢印なしのためpaddingは中央寄せ優先
+======================================== */
+
+@media (max-width: 750px) {
+  .service-hero__buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    max-width: none;
+    margin: 34px auto 0;
+  }
+
+  .service-hero .service-button {
+    gap: 16px;
+    width: min(70vw, 430px);
+    max-width: 100%;
+    height: 70px;
+    min-height: 70px;
+    padding: 0 26px;
+    border-radius: 999px;
+    font-size: 20px;
+  }
+
+  .service-button__icon {
+    width: 30px;
+    height: 30px;
+    max-width: 30px;
+    max-height: 30px;
+    flex: 0 0 30px;
+  }
+
+  .service-button--tel {
+    gap: 12px;
+  }
+
+  .service-button--tel .service-button__icon {
+    width: 28px;
+    height: 28px;
+    max-width: 28px;
+    max-height: 28px;
+    flex: 0 0 28px;
+  }
+
+  .service-button__main {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .service-button__sub {
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .service-button--tel .service-button__main {
+    font-size: clamp(22px, 4.8vw, 24px);
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+  }
+
+  .service-button--tel .service-button__sub {
+    margin-top: 4px;
+    color: var(--color-text);
+    font-size: clamp(11px, 2.6vw, 12px);
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+}
+
+/* ========================================
+   550px以下
+   750px以下CTAルールを継承
+   空き家売却ページ側の独自調整は不要
+======================================== */
+
+@media (max-width: 550px) {
+  .service-hero__buttons {
+    gap: 14px;
+  }
+}
+
+/* ========================================
+   480px以下：TOPページの480px以下CTAに寄せる
+======================================== */
+
+@media (max-width: 480px) {
+  .service-hero .service-button {
+    gap: 14px;
+    width: min(88vw, 430px);
+    max-width: 100%;
+    height: 68px;
+    min-height: 68px;
+    padding: 0 24px;
+    font-size: 19px;
+  }
+
+  .service-button__icon {
+    width: 28px;
+    height: 28px;
+    max-width: 28px;
+    max-height: 28px;
+    flex: 0 0 28px;
+  }
+
+  .service-button--tel {
+    gap: 10px;
+  }
+
+  .service-button--tel .service-button__icon {
+    width: 27px;
+    height: 27px;
+    max-width: 27px;
+    max-height: 27px;
+    flex: 0 0 27px;
+  }
+
+  .service-button__main {
+    font-size: 17px;
+  }
+
+  .service-button__sub {
+    font-size: 11.5px;
+  }
+
+  .service-button--tel .service-button__main {
+    font-size: clamp(21px, 5.5vw, 23px);
+  }
+
+  .service-button--tel .service-button__sub {
+    font-size: clamp(10.5px, 2.8vw, 11.5px);
+  }
+}
+
+/* ========================================
+   420px以下：iPhone幅向け
+   TOPページに近いサイズ感を維持しつつ、横幅に収める
+======================================== */
+
+@media (max-width: 420px) {
+  .service-hero__buttons {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .service-hero .service-button {
+    width: min(88vw, 430px);
+    max-width: 100%;
+    height: 68px;
+    min-height: 68px;
+    padding: 0 22px;
+  }
+
+  .service-button__icon {
+    width: 28px;
+    height: 28px;
+    max-width: 28px;
+    max-height: 28px;
+    flex: 0 0 28px;
+  }
+
+  .service-button__main {
+    font-size: 17px;
+  }
+
+  .service-button__sub {
+    font-size: 11.5px;
+  }
+
+  .service-button--tel .service-button__main {
+    font-size: clamp(21px, 5.5vw, 23px);
+  }
+
+  .service-button--tel .service-button__sub {
+    font-size: clamp(10.5px, 2.8vw, 11.5px);
+  }
+}
+
+/* ========================================
+   374px以下：小さめスマホ向け
+   TOPページの374px以下CTAに寄せる
+======================================== */
+
+@media (max-width: 374px) {
+  .service-hero .service-button {
+    gap: 12px;
+    width: min(92vw, 430px);
+    max-width: 100%;
+    height: 66px;
+    min-height: 66px;
+    padding: 0 20px;
+    font-size: 18px;
+  }
+
+  .service-button__icon {
+    width: 26px;
+    height: 26px;
+    max-width: 26px;
+    max-height: 26px;
+    flex: 0 0 26px;
+  }
+
+  .service-button--tel {
+    gap: 8px;
+  }
+
+  .service-button--tel .service-button__icon {
+    width: 25px;
+    height: 25px;
+    max-width: 25px;
+    max-height: 25px;
+    flex: 0 0 25px;
+  }
+
+  .service-button__main {
+    font-size: 16px;
+  }
+
+  .service-button__sub {
+    font-size: 11px;
+  }
+
+  .service-button--tel .service-button__main {
+    font-size: clamp(20px, 5.7vw, 22px);
+    letter-spacing: 0.01em;
+  }
+
+  .service-button--tel .service-button__sub {
+    font-size: clamp(10px, 2.8vw, 11px);
+  }
+}
+
+/* ========================================
+   Service Hero CTA / 751px〜1023px はみ出し対策
+   テキスト幅は維持し、CTA行だけ広く使う
+======================================== */
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .service-hero__text {
+    overflow: visible;
+  }
+
+  .service-hero__buttons {
+    width: min(700px, calc(100vw - 40px));
+    max-width: none;
+    justify-content: flex-start;
+  }
+}
+
+/* ========================================
+   Worry
+======================================== */
+
+.service-worry,
+.service-risk,
+.service-flow,
+.service-reason,
+.service-leftover,
+.service-case,
+.service-faq {
+  padding: 48px 0 0;
+}
+
+.worry-list {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.worry-card {
+  min-height: 118px;
+  padding: 18px 10px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.6;
+  background: #fffaf0;
+  border: 1px solid rgba(234, 223, 206, 0.9);
+  border-radius: 8px;
+}
+
+/* ========================================
+   Risk
+======================================== */
+
+.risk-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.risk-card h3 {
+  margin: 14px 0 8px;
+  color: var(--color-orange);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.risk-card p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.risk-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* ========================================
+   Flow
+======================================== */
+
+.flow-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flow-list li {
+  padding: 20px 12px;
+  text-align: center;
+  background: #fffaf0;
+  border: 1px solid rgba(234, 223, 206, 0.9);
+  border-radius: 10px;
+}
+
+.flow-list span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 54px;
+  height: 24px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  background: var(--color-green);
+  border-radius: 999px;
+}
+
+.flow-list h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.flow-list p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.flow-note {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.flow-note span {
+  color: var(--color-green-dark);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* ========================================
+   Reason
+======================================== */
+
+.reason-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.reason-card {
+  padding: 20px 12px;
+  text-align: center;
+  background: #fffaf0;
+  border-radius: 10px;
+  border: 1px solid rgba(234, 223, 206, 0.9);
+}
+
+.reason-card h3 {
+  margin: 0 0 10px;
+  color: var(--color-green-dark);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.reason-card p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   Leftover
+======================================== */
+
+.leftover-box {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 26px;
+  align-items: center;
+  padding: 24px;
+  background: #fffaf0;
+  border: 2px solid rgba(242, 138, 26, 0.5);
+  border-radius: 14px;
+}
+
+.leftover-box__image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.leftover-box h2 {
+  margin: 0 0 14px;
+  color: var(--color-orange);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.leftover-box p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.leftover-box ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.leftover-box li {
+  color: var(--color-green-dark);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.service-text-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--color-orange);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* ========================================
+   Case
+======================================== */
+
+.service-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.service-more {
+  color: var(--color-orange);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.case-card {
+  background: #fffaf0;
+  border: 1px solid rgba(234, 223, 206, 0.9);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.case-card img {
+  width: 100%;
+  display: block;
+}
+
+.case-card {
+  padding-bottom: 14px;
+}
+
+.case-card h3,
+.case-card p {
+  padding: 0 12px;
+}
+
+.case-label {
+  display: inline-block;
+  margin: 12px 12px 8px;
+  padding: 4px 8px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  background: var(--color-green);
+  border-radius: 999px;
+}
+
+.case-card h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.case-card p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   FAQ
+======================================== */
+
+.faq-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 32px;
+  align-items: center;
+}
+
+.faq-list {
+  display: grid;
+  gap: 8px;
+}
+
+.faq-list details {
+  background: #fff;
+  border-bottom: 1px solid rgba(234, 223, 206, 0.9);
+}
+
+.faq-list summary {
+  cursor: pointer;
+  padding: 14px 0;
+  font-size: 14px;
+  font-weight: 800;
+  list-style: none;
+}
+
+.faq-list summary::after {
+  content: "+";
+  float: right;
+}
+
+.faq-list p {
+  margin: 0;
+  padding: 0 0 14px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.faq-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ========================================
+   Bottom CTA
+======================================== */
+
+.service-bottom-cta {
+  margin-top: 54px;
+  padding: 38px 0;
+  color: #fff;
+  background: var(--color-orange);
+}
+
+.service-bottom-cta__inner {
+  display: grid;
+  grid-template-columns: 1fr 560px;
+  align-items: center;
+  gap: 36px;
+}
+
+.service-bottom-cta h2 {
+  margin: 0 0 12px;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.service-bottom-cta p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.service-bottom-cta__buttons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.service-cta-button {
+  min-height: 96px;
+  flex-direction: column;
+  padding: 14px 12px;
+  background: #fff;
+}
+
+.service-cta-button span {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.service-cta-button small {
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.service-cta-button--mail span,
+.service-cta-button--mail small {
+  color: var(--color-orange);
+}
+
+.service-cta-button--tel span,
+.service-cta-button--tel small {
+  color: var(--color-green-dark);
+}
+
+.service-cta-button--line span,
+.service-cta-button--line small {
+  color: #41b549;
+}
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (max-width: 1023px) {
+  .service-hero__inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 46px 0;
+  }
+
+  .service-hero__image {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .worry-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .risk-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .flow-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .reason-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .leftover-box {
+    grid-template-columns: 1fr;
+  }
+
+  .case-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .faq-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .service-bottom-cta__inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 750px) {
+  .service-inner,
+  .service-hero__inner {
+    width: calc(100% - 32px);
+  }
+
+  .service-hero h1 {
+    font-size: 36px;
+  }
+
+  .service-hero__lead {
+    font-size: 15px;
+  }
+
+  .worry-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .risk-grid,
+  .flow-list,
+  .reason-grid,
+  .case-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-heading {
+    font-size: 22px;
+  }
+
+  .leftover-box {
+    padding: 20px;
+  }
+
+  .leftover-box h2 {
+    font-size: 23px;
+  }
+
+  .service-heading-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .service-bottom-cta {
+    padding: 34px 0;
+  }
+
+  .service-bottom-cta h2 {
+    font-size: 24px;
+  }
+
+  .service-bottom-cta__buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .service-cta-button {
+    width: min(100%, 360px);
+    margin: 0 auto;
+    min-height: 70px;
+    border-radius: 999px;
+  }
+}
+
+@media (max-width: 420px) {
+  .service-inner,
+  .service-hero__inner {
+    width: calc(100% - 28px);
+  }
+
+  .service-hero h1 {
+    font-size: 32px;
+  }
+
+  .worry-card {
+    min-height: 96px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 374px) {
+  .service-hero h1 {
+    font-size: 30px;
+  }
+
+  .service-button {
+    width: 100%;
+  }
+}
+
+/* ========================================
+   Service Worry / 空き家売却ページ
+======================================== */
+
+.service-worry {
+  padding: 46px 0 0;
+}
+
+.service-worry__heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.service-heading__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  color: var(--service-orange, #f58b12);
+  flex: 0 0 26px;
+}
+
+.service-heading__icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.service-heading__icon path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.worry-list {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.worry-card {
+  position: relative;
+  min-height: 128px;
+  padding: 18px 8px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  background: #fffaf0;
+  border: 1px solid rgba(234, 223, 206, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(74, 55, 32, 0.04);
+  box-sizing: border-box;
+}
+
+.worry-card__check {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: #fff;
+  background: var(--service-green-dark, #4f8f2f);
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.worry-card__icon {
+  width: 52px;
+  height: 52px;
+  margin: 6px auto 8px;
+  color: #6b625a;
+}
+
+.worry-card__icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.worry-card__icon path,
+.worry-card__icon circle,
+.worry-card__icon rect {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.worry-card p {
+  margin: 0;
+  color: var(--service-text, #2f2a26);
+  font-size: 12.5px;
+  font-weight: 800;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+
+/* ========================================
+   1024px〜1099px：PC最小幅
+======================================== */
+
+@media (min-width: 1024px) and (max-width: 1099px) {
+  .worry-list {
+    gap: 8px;
+  }
+
+  .worry-card {
+    min-height: 126px;
+    padding: 18px 6px 13px;
+  }
+
+  .worry-card__icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .worry-card p {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+}
+
+/* ========================================
+   751px〜1023px：タブレット
+======================================== */
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .service-worry {
+    padding: 46px 0 0;
+  }
+
+  .worry-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .worry-card {
+    min-height: 132px;
+    padding: 18px 10px 15px;
+  }
+
+  .worry-card__icon {
+    width: 54px;
+    height: 54px;
+    margin-top: 6px;
+  }
+
+  .worry-card p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+/* ========================================
+   750px以下：スマホ
+======================================== */
+
+@media (max-width: 750px) {
+  .service-worry {
+    padding: 44px 0 0;
+  }
+
+  .service-worry__heading {
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .service-heading__icon {
+    width: 24px;
+    height: 24px;
+    flex-basis: 24px;
+  }
+
+  .worry-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .worry-card {
+    min-height: 128px;
+    padding: 18px 8px 14px;
+    border-radius: 9px;
+  }
+
+  .worry-card__check {
+    top: 8px;
+    left: 8px;
+  }
+
+  .worry-card__icon {
+    width: 50px;
+    height: 50px;
+    margin: 6px auto 8px;
+  }
+
+  .worry-card p {
+    font-size: 12.5px;
+    line-height: 1.58;
+  }
+}
+
+/* ========================================
+   420px以下：iPhone幅向け
+======================================== */
+
+@media (max-width: 420px) {
+  .service-worry {
+    padding-top: 42px;
+  }
+
+  .service-worry__heading {
+    align-items: flex-start;
+  }
+
+  .service-heading__icon {
+    margin-top: 6px;
+  }
+
+  .worry-list {
+    gap: 9px;
+  }
+
+  .worry-card {
+    min-height: 122px;
+    padding: 17px 7px 13px;
+  }
+
+  .worry-card__icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .worry-card p {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+}
+
+/* ========================================
+   374px以下：小さめスマホ
+======================================== */
+
+@media (max-width: 374px) {
+  .worry-list {
+    gap: 8px;
+  }
+
+  .worry-card {
+    min-height: 118px;
+    padding: 16px 6px 12px;
+  }
+
+  .worry-card__check {
+    width: 15px;
+    height: 15px;
+    font-size: 9px;
+  }
+
+  .worry-card__icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .worry-card p {
+    font-size: 11.5px;
+    line-height: 1.5;
+  }
+}
+
+/* ========================================
+   Service Worry / 見出しアイコン・下線調整
+======================================== */
+
+.service-worry__heading {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+}
+
+.service-worry__heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--service-orange, #f58b12);
+  opacity: 0.45;
+}
+
+.service-worry__heading .service-heading__icon {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  color: var(--service-orange, #f58b12);
+}
+
+.service-worry__heading .service-heading__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.service-worry__heading .service-heading__icon path {
+  stroke-width: 2.4;
+}
+
+/* 751px〜1023px */
+@media (min-width: 751px) and (max-width: 1023px) {
+  .service-worry__heading {
+    gap: 11px;
+    margin-bottom: 22px;
+    padding-bottom: 14px;
+  }
+
+  .service-worry__heading .service-heading__icon {
+    width: 32px;
+    height: 32px;
+    flex-basis: 32px;
+  }
+}
+
+/* 750px以下 */
+@media (max-width: 750px) {
+  .service-worry__heading {
+    gap: 10px;
+    margin-bottom: 22px;
+    padding-bottom: 14px;
+  }
+
+  .service-worry__heading .service-heading__icon {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+  }
+}
+
+/* 420px以下 */
+@media (max-width: 420px) {
+  .service-worry__heading {
+    gap: 9px;
+    margin-bottom: 20px;
+    padding-bottom: 13px;
+  }
+
+  .service-worry__heading .service-heading__icon {
+    width: 28px;
+    height: 28px;
+    flex-basis: 28px;
+    margin-top: 4px;
+  }
+}
+
+/* 374px以下 */
+@media (max-width: 374px) {
+  .service-worry__heading {
+    gap: 8px;
+  }
+
+  .service-worry__heading .service-heading__icon {
+    width: 26px;
+    height: 26px;
+    flex-basis: 26px;
+    margin-top: 5px;
+  }
+}
