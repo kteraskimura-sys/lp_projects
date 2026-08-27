@@ -5436,3 +5436,20 @@
     z-index: 1;
   }
 }
+
+/* ========================================
+   TOP Sections / 1024px〜1099px 余白調整
+   空き家売却ページと同じ確認ルールに寄せる
+======================================== */
+
+@media (min-width: 1024px) and (max-width: 1099px) {
+  .problem__inner,
+  .strength__inner,
+  .remaining-items__inner {
+    width: min(calc(100% - 48px), 1040px);
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+}
