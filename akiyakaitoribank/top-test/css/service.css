@@ -1975,3 +1975,285 @@
     width: 100%;
   }
 }
+
+/* ========================================
+   Service Worry / 空き家売却ページ
+======================================== */
+
+.service-worry {
+  padding: 46px 0 0;
+}
+
+.service-worry__heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.service-heading__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  color: var(--service-orange, #f58b12);
+  flex: 0 0 26px;
+}
+
+.service-heading__icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.service-heading__icon path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.worry-list {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.worry-card {
+  position: relative;
+  min-height: 128px;
+  padding: 18px 8px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  background: #fffaf0;
+  border: 1px solid rgba(234, 223, 206, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(74, 55, 32, 0.04);
+  box-sizing: border-box;
+}
+
+.worry-card__check {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: #fff;
+  background: var(--service-green-dark, #4f8f2f);
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.worry-card__icon {
+  width: 52px;
+  height: 52px;
+  margin: 6px auto 8px;
+  color: #6b625a;
+}
+
+.worry-card__icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.worry-card__icon path,
+.worry-card__icon circle,
+.worry-card__icon rect {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.worry-card p {
+  margin: 0;
+  color: var(--service-text, #2f2a26);
+  font-size: 12.5px;
+  font-weight: 800;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+
+/* ========================================
+   1024px〜1099px：PC最小幅
+======================================== */
+
+@media (min-width: 1024px) and (max-width: 1099px) {
+  .worry-list {
+    gap: 8px;
+  }
+
+  .worry-card {
+    min-height: 126px;
+    padding: 18px 6px 13px;
+  }
+
+  .worry-card__icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .worry-card p {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+}
+
+/* ========================================
+   751px〜1023px：タブレット
+======================================== */
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .service-worry {
+    padding: 46px 0 0;
+  }
+
+  .worry-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .worry-card {
+    min-height: 132px;
+    padding: 18px 10px 15px;
+  }
+
+  .worry-card__icon {
+    width: 54px;
+    height: 54px;
+    margin-top: 6px;
+  }
+
+  .worry-card p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+/* ========================================
+   750px以下：スマホ
+======================================== */
+
+@media (max-width: 750px) {
+  .service-worry {
+    padding: 44px 0 0;
+  }
+
+  .service-worry__heading {
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .service-heading__icon {
+    width: 24px;
+    height: 24px;
+    flex-basis: 24px;
+  }
+
+  .worry-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .worry-card {
+    min-height: 128px;
+    padding: 18px 8px 14px;
+    border-radius: 9px;
+  }
+
+  .worry-card__check {
+    top: 8px;
+    left: 8px;
+  }
+
+  .worry-card__icon {
+    width: 50px;
+    height: 50px;
+    margin: 6px auto 8px;
+  }
+
+  .worry-card p {
+    font-size: 12.5px;
+    line-height: 1.58;
+  }
+}
+
+/* ========================================
+   420px以下：iPhone幅向け
+======================================== */
+
+@media (max-width: 420px) {
+  .service-worry {
+    padding-top: 42px;
+  }
+
+  .service-worry__heading {
+    align-items: flex-start;
+  }
+
+  .service-heading__icon {
+    margin-top: 6px;
+  }
+
+  .worry-list {
+    gap: 9px;
+  }
+
+  .worry-card {
+    min-height: 122px;
+    padding: 17px 7px 13px;
+  }
+
+  .worry-card__icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .worry-card p {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+}
+
+/* ========================================
+   374px以下：小さめスマホ
+======================================== */
+
+@media (max-width: 374px) {
+  .worry-list {
+    gap: 8px;
+  }
+
+  .worry-card {
+    min-height: 118px;
+    padding: 16px 6px 12px;
+  }
+
+  .worry-card__check {
+    width: 15px;
+    height: 15px;
+    font-size: 9px;
+  }
+
+  .worry-card__icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .worry-card p {
+    font-size: 11.5px;
+    line-height: 1.5;
+  }
+}
