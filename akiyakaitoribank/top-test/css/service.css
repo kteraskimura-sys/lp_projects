@@ -2257,3 +2257,103 @@
     line-height: 1.5;
   }
 }
+
+/* ========================================
+   Service Worry / 見出しアイコン・下線調整
+======================================== */
+
+.service-worry__heading {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+}
+
+.service-worry__heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--service-orange, #f58b12);
+  opacity: 0.45;
+}
+
+.service-worry__heading .service-heading__icon {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  color: var(--service-orange, #f58b12);
+}
+
+.service-worry__heading .service-heading__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.service-worry__heading .service-heading__icon path {
+  stroke-width: 2.4;
+}
+
+/* 751px〜1023px */
+@media (min-width: 751px) and (max-width: 1023px) {
+  .service-worry__heading {
+    gap: 11px;
+    margin-bottom: 22px;
+    padding-bottom: 14px;
+  }
+
+  .service-worry__heading .service-heading__icon {
+    width: 32px;
+    height: 32px;
+    flex-basis: 32px;
+  }
+}
+
+/* 750px以下 */
+@media (max-width: 750px) {
+  .service-worry__heading {
+    gap: 10px;
+    margin-bottom: 22px;
+    padding-bottom: 14px;
+  }
+
+  .service-worry__heading .service-heading__icon {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+  }
+}
+
+/* 420px以下 */
+@media (max-width: 420px) {
+  .service-worry__heading {
+    gap: 9px;
+    margin-bottom: 20px;
+    padding-bottom: 13px;
+  }
+
+  .service-worry__heading .service-heading__icon {
+    width: 28px;
+    height: 28px;
+    flex-basis: 28px;
+    margin-top: 4px;
+  }
+}
+
+/* 374px以下 */
+@media (max-width: 374px) {
+  .service-worry__heading {
+    gap: 8px;
+  }
+
+  .service-worry__heading .service-heading__icon {
+    width: 26px;
+    height: 26px;
+    flex-basis: 26px;
+    margin-top: 5px;
+  }
+}
