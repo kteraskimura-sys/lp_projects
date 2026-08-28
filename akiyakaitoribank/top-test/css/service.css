@@ -2561,3 +2561,34 @@
     font-size: 13px;
   }
 }
+
+/* ========================================
+   Service Risk / 551px〜750pxだけ2列表示
+======================================== */
+
+@media (min-width: 551px) and (max-width: 750px) {
+  .risk-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px 18px;
+  }
+
+  .risk-card h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.45;
+    text-align: center;
+  }
+
+  .risk-card__image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .risk-card p {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+}
