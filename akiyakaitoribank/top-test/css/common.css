@@ -34,7 +34,7 @@
   --pc-inner-width: 1100px;
 }
 
-.br-max374px, .br-max375px, .br-max420px, .br-max421px, .br-max550px, .br-max750px, .br-max751px, .br-max1023px, .br-min375px, .br-min421px, .br-min550px, .br-min751px, .br-min1024px {
+.br-max374px, .br-max375px, .br-max420px, .br-max421px, .br-max550px, .br-max750px, .br-max751px, .br-max1023px, .br-min375px, .br-min421px, .br-min550px, .br-min751px, .br-min1024px, .br-421-550 {
   display: none;
 }
 
@@ -103,6 +103,12 @@
 }
 @media (min-width: 1024px) {
   .br-min1024px {
+    display: block;
+  }
+}
+
+@media (min-width: 421px) and (max-width: 550px) {
+  .br-421-550 {
     display: block;
   }
 }
