@@ -2577,7 +2577,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /*min-height: 46px;*/
+    min-height: 46px;
     margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.45;
