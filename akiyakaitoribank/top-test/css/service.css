@@ -5116,3 +5116,208 @@
     height: 36px;
   }
 }
+
+/* ========================================
+   Service Leftover / CTA横並び最終調整
+======================================== */
+
+/* 全画面幅共通：見出しはオレンジ */
+.service-leftover .leftover-box__title {
+  color: var(--service-orange, #f58b12) !important;
+}
+
+/* 3項目 + CTA の共通グループ */
+.leftover-action-row {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.leftover-action-row .leftover-point-list {
+  margin: 0;
+}
+
+.leftover-cta-break {
+  display: none;
+}
+
+/* ========================================
+   1024px以上：PC版
+   3項目 + 2行CTAを横並び
+======================================== */
+
+@media (min-width: 1024px) {
+  .leftover-action-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .leftover-action-row .leftover-point-list {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .leftover-box__link {
+    flex: 0 0 auto;
+    margin-top: 0;
+    white-space: nowrap;
+  }
+
+  .leftover-cta-break {
+    display: block;
+  }
+}
+
+/* ========================================
+   1024px〜1099px：PC最小幅
+======================================== */
+
+@media (min-width: 1024px) and (max-width: 1099px) {
+  .leftover-action-row {
+    gap: 18px;
+  }
+
+  .leftover-action-row .leftover-point-list {
+    gap: 10px;
+  }
+
+  .leftover-box__link {
+    font-size: 12.5px;
+  }
+}
+
+/* ========================================
+   851px〜1023px：PC寄り2カラム
+   3項目 + 2行CTAを横並び
+======================================== */
+
+@media (min-width: 851px) and (max-width: 1023px) {
+  .leftover-action-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 20px;
+  }
+
+  .leftover-action-row .leftover-point-list {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 9px;
+    margin: 0;
+  }
+
+  .leftover-box__link {
+    flex: 0 0 auto;
+    margin-top: 0;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .leftover-cta-break {
+    display: block;
+  }
+}
+
+/* ========================================
+   600px〜850px：1カラム・画像小さめ
+   3項目 + 2行CTAを横並び
+======================================== */
+
+@media (min-width: 600px) and (max-width: 850px) {
+  .leftover-action-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 20px;
+  }
+
+  .leftover-action-row .leftover-point-list {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin: 0;
+  }
+
+  .leftover-box__link {
+    flex: 0 0 auto;
+    margin-top: 0;
+    font-size: 12.5px;
+    white-space: nowrap;
+  }
+
+  .leftover-cta-break {
+    display: block;
+  }
+}
+
+/* ========================================
+   551px〜599px：550px以下と同じスマホ寄り
+======================================== */
+
+@media (min-width: 551px) and (max-width: 599px) {
+  .leftover-action-row {
+    display: block;
+    margin-top: 18px;
+  }
+
+  .leftover-action-row .leftover-point-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 0;
+  }
+
+  .leftover-point-list li {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 10px;
+    font-size: 13px;
+  }
+
+  .leftover-point-list li br {
+    display: none;
+  }
+
+  .leftover-box__link {
+    margin-top: 20px;
+    white-space: normal;
+  }
+
+  .leftover-cta-break {
+    display: none;
+  }
+}
+
+/* ========================================
+   550px以下：現状維持
+======================================== */
+
+@media (max-width: 550px) {
+  .leftover-action-row {
+    display: block;
+    margin-top: 18px;
+  }
+
+  .leftover-action-row .leftover-point-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 0;
+  }
+
+  .leftover-box__link {
+    margin-top: 20px;
+    white-space: normal;
+  }
+
+  .leftover-cta-break {
+    display: none;
+  }
+}
