@@ -3185,3 +3185,59 @@
     height: 43px;
   }
 }
+
+/* ========================================
+   Service Flow / 550px以下 左アイコンエリア調整
+======================================== */
+
+@media (max-width: 550px) {
+  .flow-step {
+    grid-template-columns: 118px 1fr;
+    column-gap: 12px;
+    padding: 18px 18px;
+  }
+
+  .flow-list .flow-step__badge {
+    justify-self: start;
+  }
+
+  .flow-step__icon {
+    justify-self: end;
+  }
+
+  .flow-step h3,
+  .flow-step p {
+    text-align: center;
+  }
+
+  .flow-step h3 {
+    transform: translateX(-4px);
+  }
+}
+
+/* 420px以下：左エリアを少しだけ狭める */
+@media (max-width: 420px) {
+  .flow-step {
+    grid-template-columns: 108px 1fr;
+    column-gap: 10px;
+    padding: 17px 14px;
+  }
+
+  .flow-step h3 {
+    transform: translateX(-3px);
+  }
+}
+
+/* 374px以下：369px付近の窮屈さ対策 */
+@media (max-width: 374px) {
+  .flow-step {
+    grid-template-columns: 100px 1fr;
+    column-gap: 8px;
+    padding: 16px 12px;
+  }
+
+  .flow-step h3 {
+    transform: translateX(-2px);
+  }
+}
+
