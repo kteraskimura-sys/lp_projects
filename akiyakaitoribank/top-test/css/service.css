@@ -5431,3 +5431,18 @@
     height: 32px;
   }
 }
+
+/* ========================================
+   Service Leftover / 600px〜850px
+   見出し・本文ブロックを中央寄せ
+======================================== */
+
+@media (min-width: 600px) and (max-width: 850px) {
+  .leftover-box__title,
+  .leftover-box__lead {
+    width: min(100%, 620px);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+}
