@@ -5451,3 +5451,20 @@
     text-align: left;
   }
 }
+
+/* ========================================
+   Service Leftover / 600px〜850px
+   3項目の間隔を広げすぎない
+======================================== */
+
+@media (min-width: 600px) and (max-width: 850px) {
+  .leftover-action-row {
+    justify-content: center;
+  }
+
+  .leftover-action-row .leftover-point-list {
+    flex: 0 1 360px;
+    max-width: 360px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
