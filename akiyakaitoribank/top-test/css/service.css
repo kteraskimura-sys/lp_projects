@@ -2595,3 +2595,503 @@
     line-height: 1.75;
   }
 }
+
+/* ========================================
+   Service Flow / ご相談から解決までの流れ
+======================================== */
+
+.service-flow {
+  padding: 54px 0 0;
+}
+
+.service-flow__heading {
+  margin-bottom: 22px;
+}
+
+/* Flow List */
+.flow-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flow-step {
+  position: relative;
+  min-width: 0;
+  min-height: 136px;
+  padding: 20px 10px 18px;
+  text-align: center;
+  background: #fffaf0;
+  border: 1px solid rgba(234, 223, 206, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(74, 55, 32, 0.04);
+  box-sizing: border-box;
+}
+
+/* PC版の矢印 */
+@media (min-width: 1024px) {
+  .flow-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -14px;
+    z-index: 2;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-left: 13px solid var(--service-green, #7bc943);
+    transform: translateY(-50%);
+    opacity: 0.72;
+  }
+}
+
+/* STEP丸バッジ */
+.flow-list .flow-step__badge {
+  position: absolute;
+  top: 8px;
+  left: 14px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  min-width: 38px;
+  height: 38px;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background: var(--service-green-dark, #4f8f2f);
+  border-radius: 50%;
+  line-height: 1;
+}
+
+.flow-step__badge small {
+  display: block;
+  margin: 0 0 1px;
+  padding: 0;
+  color: #fff;
+  font-size: 6.5px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.flow-step__badge b {
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* アイコン */
+.flow-step__icon {
+  width: 54px;
+  height: 54px;
+  margin: 8px auto 10px;
+  color: #6b625a;
+}
+
+.flow-step__icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.flow-step__icon path,
+.flow-step__icon circle,
+.flow-step__icon rect {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* テキスト */
+.flow-step h3 {
+  margin: 0 0 8px;
+  color: var(--service-text, #2f2a26);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.flow-step p {
+  margin: 0;
+  color: var(--service-text, #2f2a26);
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+}
+
+/* 補足 */
+.flow-note {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 18px;
+}
+
+.flow-note span {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--service-green-dark, #4f8f2f);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.flow-note span::before {
+  content: "✓";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  color: #fff;
+  background: var(--service-green-dark, #4f8f2f);
+  border-radius: 50%;
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* ========================================
+   1024px〜1099px：PC最小幅
+======================================== */
+
+@media (min-width: 1024px) and (max-width: 1099px) {
+  .service-flow {
+    padding-top: 52px;
+  }
+
+  .flow-list {
+    gap: 12px;
+  }
+
+  .flow-step {
+    min-height: 134px;
+    padding: 20px 8px 16px;
+  }
+
+  .flow-step:not(:last-child)::after {
+    right: -12px;
+    border-top-width: 12px;
+    border-bottom-width: 12px;
+    border-left-width: 12px;
+  }
+
+  .flow-list .flow-step__badge {
+    left: 10px;
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+  }
+
+  .flow-step__icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .flow-step h3 {
+    font-size: 13.5px;
+  }
+
+  .flow-step p {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .flow-note {
+    gap: 18px;
+  }
+}
+
+/* ========================================
+   751px〜1023px：タブレット
+======================================== */
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .service-flow {
+    padding-top: 52px;
+  }
+
+  .flow-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .flow-step {
+    min-height: 142px;
+    padding: 22px 12px 18px;
+  }
+
+  .flow-step::after {
+    display: none;
+  }
+
+  .flow-list .flow-step__badge {
+    top: 9px;
+    left: 13px;
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+  }
+
+  .flow-step__icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .flow-step h3 {
+    font-size: 14.5px;
+  }
+
+  .flow-step p {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .flow-note {
+    gap: 18px;
+    margin-top: 18px;
+  }
+}
+
+/* ========================================
+   551px〜750px：スマホ横幅広め
+======================================== */
+
+@media (min-width: 551px) and (max-width: 750px) {
+  .service-flow {
+    padding-top: 50px;
+  }
+
+  .flow-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .flow-step {
+    min-height: 146px;
+    padding: 22px 12px 18px;
+  }
+
+  .flow-step::after {
+    display: none;
+  }
+
+  .flow-list .flow-step__badge {
+    top: 10px;
+    left: 12px;
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+  }
+
+  .flow-step__icon {
+    width: 56px;
+    height: 56px;
+    margin-top: 8px;
+  }
+
+  .flow-step h3 {
+    font-size: 14.5px;
+  }
+
+  .flow-step p {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .flow-list .flow-step:last-child {
+    grid-column: 1 / -1;
+    width: calc((100% - 14px) / 2);
+    margin: 0 auto;
+  }
+
+  .flow-note {
+    gap: 12px 18px;
+    margin-top: 18px;
+  }
+
+  .flow-note span {
+    font-size: 12.5px;
+  }
+}
+
+/* ========================================
+   550px以下：スマホ実機向け
+======================================== */
+
+@media (max-width: 550px) {
+  .service-flow {
+    padding-top: 48px;
+  }
+
+  .flow-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .flow-step {
+    display: grid;
+    grid-template-columns: 58px 1fr;
+    grid-template-areas:
+      "icon title"
+      "icon text";
+    column-gap: 14px;
+    align-items: center;
+    min-height: 108px;
+    padding: 18px 18px 18px 70px;
+    text-align: left;
+  }
+
+  .flow-step::after {
+    display: none;
+  }
+
+  .flow-list .flow-step__badge {
+    top: 50%;
+    left: 16px;
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+    transform: translateY(-50%);
+  }
+
+  .flow-step__icon {
+    grid-area: icon;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+  }
+
+  .flow-step h3 {
+    grid-area: title;
+    margin: 0 0 5px;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .flow-step p {
+    grid-area: text;
+    font-size: 12.5px;
+    line-height: 1.65;
+  }
+
+  .flow-step p br {
+    display: none;
+  }
+
+  .flow-note {
+    justify-content: flex-start;
+    gap: 10px 16px;
+    margin-top: 18px;
+  }
+
+  .flow-note span {
+    font-size: 12.5px;
+  }
+}
+
+/* ========================================
+   420px以下：iPhone幅向け
+======================================== */
+
+@media (max-width: 420px) {
+  .service-flow {
+    padding-top: 46px;
+  }
+
+  .flow-step {
+    grid-template-columns: 52px 1fr;
+    column-gap: 12px;
+    min-height: 104px;
+    padding: 17px 14px 17px 64px;
+  }
+
+  .flow-list .flow-step__badge {
+    left: 14px;
+    width: 34px;
+    min-width: 34px;
+    height: 34px;
+  }
+
+  .flow-step__badge small {
+    font-size: 6px;
+  }
+
+  .flow-step__badge b {
+    font-size: 14px;
+  }
+
+  .flow-step__icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .flow-step h3 {
+    font-size: 14.5px;
+  }
+
+  .flow-step p {
+    font-size: 12px;
+  }
+
+  .flow-note {
+    gap: 9px 14px;
+  }
+
+  .flow-note span {
+    font-size: 12px;
+  }
+}
+
+/* ========================================
+   374px以下：小さめスマホ
+======================================== */
+
+@media (max-width: 374px) {
+  .flow-step {
+    grid-template-columns: 48px 1fr;
+    column-gap: 10px;
+    min-height: 100px;
+    padding: 16px 12px 16px 60px;
+  }
+
+  .flow-list .flow-step__badge {
+    left: 12px;
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+  }
+
+  .flow-step__icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .flow-step h3 {
+    font-size: 14px;
+  }
+
+  .flow-step p {
+    font-size: 11.5px;
+  }
+
+  .flow-note span {
+    font-size: 11.5px;
+  }
+}
