@@ -6285,3 +6285,228 @@
     font-size: 12.5px;
   }
 }
+
+/* ========================================
+   Service FAQ / よくあるご質問
+   2026-09-02
+======================================== */
+
+/* 見出しは「お悩み」セクションと同じ仕様 */
+.akiya-sale-page .service-faq__heading {
+  margin-bottom: 18px;
+}
+
+/* 1024px以上：PC版はFAQ左・画像右の2カラム */
+@media (min-width: 1024px) {
+  .akiya-sale-page .service-faq .faq-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 36px;
+    align-items: center;
+  }
+}
+
+/* FAQリスト */
+.akiya-sale-page .service-faq .faq-list {
+  display: grid;
+  gap: 0;
+}
+
+.akiya-sale-page .service-faq .faq-list details {
+  margin: 0;
+  background: transparent;
+  border-bottom: 1px solid rgba(234, 223, 206, 0.95);
+}
+
+.akiya-sale-page .service-faq .faq-list details:first-child {
+  border-top: 1px solid rgba(234, 223, 206, 0.95);
+}
+
+.akiya-sale-page .service-faq .faq-list summary {
+  position: relative;
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr) 24px;
+  gap: 8px;
+  align-items: center;
+  min-height: 32px;
+  padding: 7px 0;
+  cursor: pointer;
+  color: var(--service-text, #2f2a26);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.5;
+  list-style: none;
+}
+
+.akiya-sale-page .service-faq .faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+/* 左のQアイコン */
+.akiya-sale-page .service-faq .faq-list summary::before {
+  content: "Q";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1;
+  background: var(--service-green, #8ab234);
+  border-radius: 50%;
+}
+
+/* 右の＋アイコン */
+.akiya-sale-page .service-faq .faq-list summary::after {
+  content: "+";
+  float: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--service-text, #2f2a26);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.akiya-sale-page .service-faq .faq-list details[open] summary::after {
+  content: "−";
+}
+
+/* 開いたときの回答文 */
+.akiya-sale-page .service-faq .faq-list p {
+  margin: 0;
+  padding: 0 32px 12px 30px;
+  color: var(--service-text, #2f2a26);
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+/* 画像 */
+.akiya-sale-page .service-faq .faq-image {
+  width: 100%;
+}
+
+.akiya-sale-page .service-faq .faq-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #f3efe7;
+}
+
+/* 751px〜1023px：
+   スマホ・タブレット寄りとして1カラムに切り替え */
+@media (min-width: 751px) and (max-width: 1023px) {
+  .akiya-sale-page .service-faq .faq-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .akiya-sale-page .service-faq .faq-image {
+    width: min(100%, 520px);
+    margin: 0 auto;
+  }
+}
+
+/* 551px〜750px：1カラム */
+@media (min-width: 551px) and (max-width: 750px) {
+  .akiya-sale-page .service-faq .faq-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .akiya-sale-page .service-faq .faq-list summary {
+    grid-template-columns: 22px minmax(0, 1fr) 24px;
+    gap: 8px;
+    min-height: 34px;
+    padding: 8px 0;
+    font-size: 13px;
+  }
+
+  .akiya-sale-page .service-faq .faq-image {
+    width: min(100%, 520px);
+    margin: 0 auto;
+  }
+}
+
+/* 421px〜550px：1カラム */
+@media (min-width: 421px) and (max-width: 550px) {
+  .akiya-sale-page .service-faq .faq-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .akiya-sale-page .service-faq .faq-list summary {
+    grid-template-columns: 22px minmax(0, 1fr) 24px;
+    gap: 8px;
+    min-height: 36px;
+    padding: 8px 0;
+    font-size: 12.5px;
+    line-height: 1.55;
+  }
+
+  .akiya-sale-page .service-faq .faq-list p {
+    padding: 0 30px 12px 30px;
+    font-size: 12px;
+  }
+
+  .akiya-sale-page .service-faq .faq-image {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* 420px以下：小さめスマホ */
+@media (max-width: 420px) {
+  .akiya-sale-page .service-faq .faq-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .akiya-sale-page .service-faq .faq-list summary {
+    grid-template-columns: 21px minmax(0, 1fr) 22px;
+    gap: 7px;
+    min-height: 36px;
+    padding: 8px 0;
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .akiya-sale-page .service-faq .faq-list summary::before {
+    width: 17px;
+    height: 17px;
+    font-size: 9.5px;
+  }
+
+  .akiya-sale-page .service-faq .faq-list summary::after {
+    width: 22px;
+    height: 22px;
+    font-size: 18px;
+  }
+
+  .akiya-sale-page .service-faq .faq-list p {
+    padding: 0 28px 12px 28px;
+    font-size: 11.8px;
+    line-height: 1.75;
+  }
+
+  .akiya-sale-page .service-faq .faq-image {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .akiya-sale-page .service-faq .faq-image img {
+    border-radius: 9px;
+  }
+}
