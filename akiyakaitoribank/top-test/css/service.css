@@ -6146,3 +6146,142 @@
     min-height: 0;
   }
 }
+
+/* ========================================
+   Service Case / 一覧リンクボタン調整
+   2026-09-02
+======================================== */
+
+/* 751px以上：
+   見出し右側に配置し、見出しの中央に揃える
+---------------------------------------- */
+
+@media (min-width: 751px) {
+  .akiya-sale-page .service-case__head {
+    position: relative;
+    margin-bottom: 18px;
+  }
+
+  .akiya-sale-page .service-case__heading {
+    margin-bottom: 0;
+    padding-right: 210px;
+  }
+
+  .akiya-sale-page .service-case__more {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(calc(-50% - 6px));
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-width: 184px;
+    min-height: 38px;
+    padding: 8px 20px;
+
+    color: var(--color-orange);
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.4;
+    text-decoration: none;
+
+    background: #fff;
+    border: 1.5px solid var(--color-orange);
+    border-radius: 999px;
+    box-sizing: border-box;
+    box-shadow: 0 6px 16px rgba(245, 139, 18, 0.06);
+  }
+
+  .akiya-sale-page .service-case__more::after {
+    content: "›";
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1;
+    transform: translateY(-1px);
+  }
+}
+
+/* 751px〜1023px：
+   タブレット幅では少しだけコンパクトにする
+---------------------------------------- */
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .akiya-sale-page .service-case__heading {
+    padding-right: 190px;
+  }
+
+  .akiya-sale-page .service-case__more {
+    min-width: 176px;
+    min-height: 36px;
+    padding: 7px 18px;
+    font-size: 12.5px;
+  }
+}
+
+/* 750px以下：
+   見出し下に配置し、上のオレンジライン左端と揃える
+---------------------------------------- */
+
+@media (max-width: 750px) {
+  .akiya-sale-page .service-case__head {
+    margin-bottom: 18px;
+  }
+
+  .akiya-sale-page .service-case__heading {
+    padding-right: 0;
+  }
+
+  .akiya-sale-page .service-case__more {
+    position: static;
+    transform: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: fit-content;
+    min-width: 184px;
+    min-height: 38px;
+    margin: 14px 0 0 0;
+    padding: 8px 20px;
+
+    color: var(--color-orange);
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.4;
+    text-decoration: none;
+
+    background: #fff;
+    border: 1.5px solid var(--color-orange);
+    border-radius: 999px;
+    box-sizing: border-box;
+    box-shadow: 0 6px 16px rgba(245, 139, 18, 0.06);
+  }
+
+  .akiya-sale-page .service-case__more::after {
+    content: "›";
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1;
+    transform: translateY(-1px);
+  }
+}
+
+/* 420px以下：
+   小さめスマホでは少しだけコンパクトにする
+---------------------------------------- */
+
+@media (max-width: 420px) {
+  .akiya-sale-page .service-case__more {
+    min-width: 176px;
+    min-height: 36px;
+    padding: 7px 18px;
+    font-size: 12.5px;
+  }
+}
