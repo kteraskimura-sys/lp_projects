@@ -6510,3 +6510,91 @@
     border-radius: 9px;
   }
 }
+
+/* ========================================
+   Service FAQ / 751px〜1023px 横並び調整
+   2026-09-02
+======================================== */
+
+/* 751px〜1023px：
+   1024px以上と同じく、FAQ左・画像右の2カラムにする
+---------------------------------------- */
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .akiya-sale-page .service-faq .faq-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 26px;
+    align-items: center;
+  }
+
+  .akiya-sale-page .service-faq .faq-image {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .akiya-sale-page .service-faq .faq-image img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .akiya-sale-page .service-faq .faq-list summary {
+    grid-template-columns: 20px minmax(0, 1fr) 22px;
+    gap: 7px;
+    min-height: 31px;
+    padding: 6px 0;
+    font-size: 12.5px;
+    line-height: 1.45;
+    white-space: nowrap;
+  }
+
+  .akiya-sale-page .service-faq .faq-list summary::before {
+    width: 17px;
+    height: 17px;
+    font-size: 9.5px;
+  }
+
+  .akiya-sale-page .service-faq .faq-list summary::after {
+    width: 22px;
+    height: 22px;
+    font-size: 18px;
+  }
+
+  .akiya-sale-page .service-faq .faq-list p {
+    padding: 0 28px 12px 27px;
+    font-size: 12px;
+    line-height: 1.75;
+  }
+}
+
+/* 751px〜850px：
+   横幅が狭いため、画像を少し小さくしてFAQ側を確保
+---------------------------------------- */
+
+@media (min-width: 751px) and (max-width: 850px) {
+  .akiya-sale-page .service-faq .faq-layout {
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 22px;
+  }
+
+  .akiya-sale-page .service-faq .faq-list summary {
+    font-size: 12px;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* 851px〜1023px：
+   少し余裕がある幅では画像をやや大きくする
+---------------------------------------- */
+
+@media (min-width: 851px) and (max-width: 1023px) {
+  .akiya-sale-page .service-faq .faq-layout {
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 28px;
+  }
+
+  .akiya-sale-page .service-faq .faq-list summary {
+    font-size: 12.5px;
+  }
+}
