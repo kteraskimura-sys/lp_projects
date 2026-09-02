@@ -5962,10 +5962,11 @@
     display: inline-block;
     align-self: center;
     width: fit-content;
-    max-width: calc(100% - 20px);
+    /*max-width: calc(100% - 20px);*/
+	  max-width: calc(100% - 0px);
     margin-top: auto;
-    margin-left: 10px;
-    margin-right: 10px;
+    /*margin-left: 10px;*/
+    /*margin-right: 10px;*/
     padding: 7px 12px;
     box-sizing: border-box;
 
@@ -6025,9 +6026,10 @@
   }
 
   .akiya-sale-page .service-case .case-card .case-card__meta {
-    max-width: calc(100% - 16px);
-    margin-left: 8px;
-    margin-right: 8px;
+    /*max-width: calc(100% - 16px);*/
+	  max-width: calc(100% - 0px);
+    /*margin-left: 8px;*/
+    /*margin-right: 8px;*/
     padding: 6px 10px;
     font-size: 9.5px;
     line-height: 1.45;
@@ -6095,9 +6097,10 @@
   }
 
   .akiya-sale-page .service-case .case-card .case-card__meta {
-    max-width: calc(100% - 20px);
-    margin-left: 10px;
-    margin-right: 10px;
+    /*max-width: calc(100% - 20px);*/
+	  max-width: calc(100% - 0px);
+    /*margin-left: 10px;*/
+    /*margin-right: 10px;*/
     padding: 7px 12px;
     border-radius: 999px;
   }
