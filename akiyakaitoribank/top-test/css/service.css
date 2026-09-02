@@ -5474,3 +5474,253 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* ========================================
+   Service Case / 解決事例
+   2026-09-02
+======================================== */
+
+.service-case__head {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.service-case__heading {
+  margin-bottom: 0;
+  padding-right: 190px;
+}
+
+/* 一覧ボタン */
+.service-case__more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 172px;
+  min-height: 34px;
+  padding: 7px 18px;
+  color: var(--color-orange);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-decoration: none;
+  border: 1.5px solid var(--color-orange);
+  border-radius: 999px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.service-case__more::after {
+  content: "›";
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+
+/* カード一覧 */
+.service-case .case-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.service-case .case-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #fffaf0;
+  border: 1px solid rgba(234, 223, 206, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(74, 55, 32, 0.04);
+}
+
+.case-card__image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #f3efe7;
+}
+
+.case-card__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 10px 10px 12px;
+}
+
+.service-case .case-card h3 {
+  margin: 0 0 8px;
+  padding: 0;
+  color: var(--color-green);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+
+.service-case .case-card p {
+  margin: 0;
+  padding: 0;
+  color: var(--color-text);
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+}
+
+.service-case .case-card__meta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: auto;
+  padding: 5px 8px;
+  color: #6b5b46;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.4;
+  background: #f4eadb;
+  border-radius: 999px;
+  box-sizing: border-box;
+}
+
+/* 1024px〜：PC幅は5列維持 */
+@media (min-width: 1024px) {
+  .service-case .case-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+
+/* 751px〜1023px：3列 */
+@media (min-width: 751px) and (max-width: 1023px) {
+  .service-case__heading {
+    padding-right: 180px;
+  }
+
+  .service-case .case-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .service-case .case-card h3 {
+    font-size: 13px;
+  }
+
+  .service-case .case-card p {
+    font-size: 11.5px;
+  }
+}
+
+/* 551px〜750px：2列 */
+@media (min-width: 551px) and (max-width: 750px) {
+  .service-case__head {
+    margin-bottom: 18px;
+  }
+
+  .service-case__heading {
+    padding-right: 0;
+  }
+
+  .service-case__more {
+    position: static;
+    width: fit-content;
+    min-width: 172px;
+    margin: 12px 0 0 auto;
+  }
+
+  .service-case .case-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .service-case .case-card h3 {
+    font-size: 13px;
+  }
+
+  .service-case .case-card p {
+    font-size: 11.5px;
+  }
+}
+
+/* 550px以下：1列 */
+@media (max-width: 550px) {
+  .service-case__head {
+    margin-bottom: 18px;
+  }
+
+  .service-case__heading {
+    padding-right: 0;
+  }
+
+  .service-case__more {
+    position: static;
+    width: fit-content;
+    min-width: 172px;
+    margin: 12px 0 0 auto;
+    font-size: 12px;
+  }
+
+  .service-case .case-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .case-card__image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .case-card__body {
+    padding: 12px 14px 14px;
+  }
+
+  .service-case .case-card h3 {
+    font-size: 14px;
+  }
+
+  .service-case .case-card p {
+    font-size: 12px;
+  }
+
+  .service-case .case-card__meta {
+    margin-top: 12px;
+    font-size: 10.5px;
+  }
+}
+
+/* 420px以下：小さめスマホ */
+@media (max-width: 420px) {
+  .service-case__more {
+    min-height: 32px;
+    padding: 6px 16px;
+    font-size: 11.5px;
+  }
+
+  .case-card__body {
+    padding: 12px;
+  }
+
+  .service-case .case-card h3 {
+    font-size: 13.5px;
+  }
+
+  .service-case .case-card p {
+    font-size: 11.8px;
+  }
+}
