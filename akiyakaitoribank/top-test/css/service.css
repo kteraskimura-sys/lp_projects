@@ -5924,3 +5924,181 @@
     border-radius: 999px;
   }
 }
+
+/* ========================================
+   Service Case / 解決事例 最終上書き調整
+   2026-09-02
+======================================== */
+
+/* 421px以上＝横並び表示時の共通調整 */
+@media (min-width: 421px) {
+  .akiya-sale-page .service-case .case-grid {
+    align-items: stretch;
+  }
+
+  .akiya-sale-page .service-case .case-card {
+    height: 100%;
+  }
+
+  .akiya-sale-page .service-case .case-card__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  /* 横並び時はh3の高さをそろえる */
+  .akiya-sale-page .service-case .case-card h3 {
+    min-height: calc(1em * 1.55 * 2);
+  }
+
+  /* 説明文と下部情報ラベルの間隔 */
+  .akiya-sale-page .service-case .case-card__body > p:not(.case-card__meta) {
+    margin-bottom: 14px;
+    padding-bottom: 0;
+  }
+
+  /* 下部情報ラベルをカード下部にそろえる */
+  .akiya-sale-page .service-case .case-card .case-card__meta {
+    display: inline-block;
+    align-self: center;
+    width: fit-content;
+    max-width: calc(100% - 20px);
+    margin-top: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 7px 12px;
+    box-sizing: border-box;
+
+    color: #6b5b46;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.45;
+    text-align: center;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+
+    background: #f4eadb;
+    border-radius: 999px;
+  }
+}
+
+/* ========================================
+   421px〜550px：
+   550px以下の1列指定を上書きして2列に戻す
+======================================== */
+
+@media (min-width: 421px) and (max-width: 550px) {
+  .akiya-sale-page .service-case .case-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .akiya-sale-page .service-case .case-card {
+    border-radius: 10px;
+  }
+
+  .akiya-sale-page .service-case .case-card__image {
+    aspect-ratio: 16 / 10;
+  }
+
+  .akiya-sale-page .service-case .case-card__body {
+    padding: 10px;
+  }
+
+  .akiya-sale-page .service-case .case-card h3 {
+    min-height: calc(1em * 1.5 * 3);
+    margin-bottom: 7px;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+
+  .akiya-sale-page .service-case .case-card p {
+    font-size: 10.8px;
+    line-height: 1.65;
+  }
+
+  .akiya-sale-page .service-case .case-card__body > p:not(.case-card__meta) {
+    margin-bottom: 14px;
+    padding-bottom: 0;
+  }
+
+  .akiya-sale-page .service-case .case-card .case-card__meta {
+    max-width: calc(100% - 16px);
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 6px 10px;
+    font-size: 9.5px;
+    line-height: 1.45;
+    border-radius: 999px;
+  }
+}
+
+/* ========================================
+   551px〜750px：
+   2列時のh3高さ・下部ラベル位置を安定
+======================================== */
+
+@media (min-width: 551px) and (max-width: 750px) {
+  .akiya-sale-page .service-case .case-card h3 {
+    min-height: calc(1em * 1.55 * 2);
+  }
+
+  .akiya-sale-page .service-case .case-card .case-card__meta {
+    border-radius: 999px;
+  }
+}
+
+/* ========================================
+   751px〜1023px：
+   3列時のh3高さ・下部ラベル位置を安定
+======================================== */
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .akiya-sale-page .service-case .case-card h3 {
+    min-height: calc(1em * 1.55 * 2);
+  }
+
+  .akiya-sale-page .service-case .case-card .case-card__meta {
+    border-radius: 999px;
+  }
+}
+
+/* ========================================
+   1024px以上：
+   5列時のh3高さ・下部ラベル位置を安定
+======================================== */
+
+@media (min-width: 1024px) {
+  .akiya-sale-page .service-case .case-card h3 {
+    min-height: calc(1em * 1.55 * 2);
+  }
+
+  .akiya-sale-page .service-case .case-card .case-card__meta {
+    border-radius: 999px;
+  }
+}
+
+/* ========================================
+   420px以下：
+   1列表示は既存の見え方を優先
+======================================== */
+
+@media (max-width: 420px) {
+  .akiya-sale-page .service-case .case-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .akiya-sale-page .service-case .case-card h3 {
+    min-height: 0;
+  }
+
+  .akiya-sale-page .service-case .case-card .case-card__meta {
+    max-width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 7px 12px;
+    border-radius: 999px;
+  }
+}
