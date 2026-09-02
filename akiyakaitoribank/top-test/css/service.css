@@ -5724,3 +5724,77 @@
     font-size: 11.8px;
   }
 }
+
+/* ========================================
+   Service Case / 解決事例 修正調整
+   2026-09-02
+======================================== */
+
+/* 共通：
+   場所 / 築年数 / 建物構造 の余白と折り返し対策
+---------------------------------------- */
+
+.service-case .case-card__meta {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-top: auto;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: keep-all;
+  line-height: 1.45;
+  background: #f4eadb;
+  border-radius: 999px;
+}
+
+/* 文字数が多く2行になっても、背景内に自然に収める */
+.service-case .case-card__meta br {
+  display: none;
+}
+
+/* ========================================
+   421px〜550px：
+   「選ばれる理由」と同様に2列表示
+   ※420px以下は既存どおり1列
+======================================== */
+
+@media (min-width: 421px) and (max-width: 550px) {
+  .service-case .case-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .service-case .case-card {
+    border-radius: 10px;
+  }
+
+  .case-card__image {
+    aspect-ratio: 16 / 10;
+  }
+
+  .case-card__body {
+    padding: 10px;
+  }
+
+  .service-case .case-card h3 {
+    margin-bottom: 7px;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+
+  .service-case .case-card p {
+    font-size: 10.8px;
+    line-height: 1.65;
+  }
+
+  .service-case .case-card__meta {
+    margin-top: 10px;
+    padding: 6px 8px;
+    font-size: 9.5px;
+    line-height: 1.45;
+    border-radius: 8px;
+  }
+}
