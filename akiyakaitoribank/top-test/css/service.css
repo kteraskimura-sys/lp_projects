@@ -5870,10 +5870,11 @@
   display: inline-block;
   align-self: center;
   width: fit-content;
-  max-width: calc(100% - 20px);
+  /*max-width: calc(100% - 20px);*/
+	max-width: calc(100% - 0px);
   margin-top: auto;
-  margin-left: 10px;
-  margin-right: 10px;
+  /*margin-left: 10px;*/
+  /*margin-right: 10px;*/
   padding: 7px 12px;
   box-sizing: border-box;
 
@@ -6103,5 +6104,45 @@
     /*margin-right: 10px;*/
     padding: 7px 12px;
     border-radius: 999px;
+  }
+}
+
+/* ========================================
+   Service Case / 下部情報ラベル 横幅最終調整
+   2026-09-02
+======================================== */
+
+.service-case .case-card .case-card__meta,
+.akiya-sale-page .service-case .case-card .case-card__meta {
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 999px;
+}
+
+/* ========================================
+   Service Case / h3高さ最終調整
+   2026-09-02
+======================================== */
+
+/* 横並び時は、h3を2行分の高さでそろえる */
+@media (min-width: 421px) {
+  .akiya-sale-page .service-case .case-card h3 {
+    min-height: calc(1em * 1.55 * 2);
+  }
+}
+
+/* 421px〜550pxは、この幅専用のline-heightに合わせて2行分にする */
+@media (min-width: 421px) and (max-width: 550px) {
+  .akiya-sale-page .service-case .case-card h3 {
+    min-height: calc(1em * 1.5 * 2);
+  }
+}
+
+/* 420px以下は1列なので高さ固定しない */
+@media (max-width: 420px) {
+  .akiya-sale-page .service-case .case-card h3 {
+    min-height: 0;
   }
 }
