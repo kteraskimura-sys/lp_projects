@@ -6285,3 +6285,42 @@
     font-size: 12.5px;
   }
 }
+
+/* ========================================
+   Service Case / 一覧リンクボタン 色・枠線 最終調整
+   2026-09-02
+======================================== */
+
+.akiya-sale-page .service-case .service-case__more,
+.akiya-sale-page .service-case .service-case__more:visited {
+  color: var(--color-orange) !important;
+  background: #fff !important;
+  border: 1.5px solid var(--color-orange) !important;
+  border-radius: 999px !important;
+  text-decoration: none !important;
+}
+
+/* 中のテキストにも確実にオレンジを反映 */
+.akiya-sale-page .service-case .service-case__more span {
+  color: var(--color-orange) !important;
+}
+
+/* 矢印もオレンジに固定 */
+.akiya-sale-page .service-case .service-case__more::after {
+  color: var(--color-orange) !important;
+}
+
+/* hover時も黒に戻らないようにする */
+.akiya-sale-page .service-case .service-case__more:hover,
+.akiya-sale-page .service-case .service-case__more:focus {
+  color: var(--color-orange) !important;
+  background: #fffaf0 !important;
+  border-color: var(--color-orange) !important;
+}
+
+.akiya-sale-page .service-case .service-case__more:hover span,
+.akiya-sale-page .service-case .service-case__more:focus span,
+.akiya-sale-page .service-case .service-case__more:hover::after,
+.akiya-sale-page .service-case .service-case__more:focus::after {
+  color: var(--color-orange) !important;
+}
