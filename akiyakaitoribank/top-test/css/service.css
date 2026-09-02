@@ -5788,3 +5788,66 @@
     border-radius: 999px;
   }
 }
+
+/* ========================================
+   Service Case / 下部情報ラベル余白調整
+   2026-09-02
+======================================== */
+
+/* 説明文と下部情報ラベルの間隔を少し広げる */
+.service-case .case-card__body > p:not(.case-card__meta) {
+  padding-bottom: 12px;
+}
+
+/* 下部情報ラベル：
+   文字量に応じた幅にしつつ、カード左右に余白を残す */
+.service-case .case-card__meta {
+  display: inline-block;
+  align-self: center;
+  width: fit-content;
+  max-width: calc(100% - 20px);
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  color: #6b5b46;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.45;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: keep-all;
+  background: #f4eadb;
+  border-radius: 999px;
+}
+
+/* 421px〜550px：2列時は少しコンパクトに */
+@media (min-width: 421px) and (max-width: 550px) {
+  .service-case .case-card__body > p:not(.case-card__meta) {
+    padding-bottom: 14px;
+  }
+
+  .service-case .case-card__meta {
+    max-width: calc(100% - 16px);
+    padding: 6px 8px;
+    font-size: 9.5px;
+    line-height: 1.45;
+    border-radius: 8px;
+  }
+}
+
+/* 420px以下：1列なので余裕を戻す */
+@media (max-width: 420px) {
+  .service-case .case-card__body > p:not(.case-card__meta) {
+    padding-bottom: 12px;
+  }
+
+  .service-case .case-card__meta {
+    max-width: calc(100% - 20px);
+    padding: 6px 10px;
+    font-size: 10.5px;
+    border-radius: 999px;
+  }
+}
