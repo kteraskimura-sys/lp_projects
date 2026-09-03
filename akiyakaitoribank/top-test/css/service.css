@@ -8128,3 +8128,163 @@
     --sp-inner-top: 82px;
   }
 }
+
+/* ========================================
+   Service Bottom CTA / 最終レイアウト調整
+   2026-09-03
+======================================== */
+
+/* ========================================
+   750px以下：テキスト＋ボタン一式を上へ移動
+   緑の装飾はカード内に収める
+======================================== */
+
+@media (max-width: 750px) {
+  .akiya-sale-page .service-bottom-cta__inner {
+    /* 人物画像の下に空きすぎていた余白を詰める */
+    padding-top: var(--sp-inner-top-adjusted);
+
+    /* 緑の丸を背景として扱い、カード内に収める */
+    background:
+      radial-gradient(
+        circle at 100% 100%,
+        rgba(139, 195, 74, 0.14) 0,
+        rgba(139, 195, 74, 0.14) 42%,
+        transparent 43%
+      ),
+      #fffaf0;
+  }
+
+  /* 既存の緑丸装飾が ::after の場合は非表示にする */
+  .akiya-sale-page .service-bottom-cta__inner::after {
+    display: none;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text,
+  .akiya-sale-page .service-bottom-cta__buttons {
+    position: relative;
+    z-index: 7;
+  }
+}
+
+/* 551px〜750px */
+@media (min-width: 551px) and (max-width: 750px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-inner-top-adjusted: 46px;
+  }
+}
+
+/* 421px〜550px */
+@media (min-width: 421px) and (max-width: 550px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-inner-top-adjusted: 44px;
+  }
+}
+
+/* 375px〜420px */
+@media (min-width: 375px) and (max-width: 420px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-inner-top-adjusted: 42px;
+  }
+}
+
+/* 374px以下 */
+@media (max-width: 374px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-inner-top-adjusted: 40px;
+  }
+}
+
+
+/* ========================================
+   751px〜850px：人物画像の下余白をなくす
+======================================== */
+
+@media (min-width: 751px) and (max-width: 850px) {
+  .akiya-sale-page .service-bottom-cta__visual {
+    bottom: 0;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual img {
+    display: block;
+    object-position: center bottom;
+  }
+}
+
+
+/* ========================================
+   751px以上：カード幅を1024px基準で固定
+   1100px以上でも広がりすぎないようにする
+======================================== */
+
+@media (min-width: 751px) {
+  .akiya-sale-page .service-bottom-cta__inner {
+    width: min(calc(100% - 48px), 1040px);
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* 1024px以上も、無理に横へ広げない */
+@media (min-width: 1024px) {
+  .akiya-sale-page .service-bottom-cta__inner {
+    width: min(calc(100% - 48px), 1040px);
+    max-width: 1040px;
+  }
+}
+
+
+/* ========================================
+   751px〜1100px：ボタン幅を少し広げる
+======================================== */
+
+@media (min-width: 751px) and (max-width: 1100px) {
+  .akiya-sale-page .service-bottom-cta__buttons {
+    width: min(100%, 640px);
+    max-width: 640px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons a {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+/* 751px〜850pxは人物画像との干渉を避けつつ、電話ボタンの窮屈感を軽減 */
+@media (min-width: 751px) and (max-width: 850px) {
+  .akiya-sale-page .service-bottom-cta__buttons {
+    width: min(100%, 600px);
+    max-width: 600px;
+    gap: 12px;
+  }
+}
+
+/* 851px〜1100pxは少し余裕を持たせる */
+@media (min-width: 851px) and (max-width: 1100px) {
+  .akiya-sale-page .service-bottom-cta__buttons {
+    width: min(100%, 640px);
+    max-width: 640px;
+  }
+}
+
+
+/* ========================================
+   1101px以上：1024px付近の見え方を維持
+======================================== */
+
+@media (min-width: 1101px) {
+  .akiya-sale-page .service-bottom-cta__inner {
+    width: 1040px;
+    max-width: 1040px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons {
+    width: 640px;
+    max-width: 640px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
