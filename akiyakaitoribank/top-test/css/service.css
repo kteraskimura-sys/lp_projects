@@ -8080,3 +8080,51 @@
     --sp-inner-top: 82px;
   }
 }
+
+/* ========================================
+   Service Bottom CTA / 750px以下 人物画像位置 安定化
+   2026-09-03
+======================================== */
+
+/* 750px以下だけ、人物画像の上下位置を固定気味にする */
+@media (max-width: 750px) {
+  .akiya-sale-page .service-bottom-cta__visual {
+    top: calc(-1 * var(--sp-hiromi-space));
+  }
+}
+
+/* 551px〜750px */
+@media (min-width: 551px) and (max-width: 750px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-hiromi-space: 250px;
+    --sp-hiromi-width: 430px;
+    --sp-inner-top: 108px;
+  }
+}
+
+/* 421px〜550px */
+@media (min-width: 421px) and (max-width: 550px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-hiromi-space: 196px;
+    --sp-hiromi-width: 360px;
+    --sp-inner-top: 88px;
+  }
+}
+
+/* 375px〜420px */
+@media (min-width: 375px) and (max-width: 420px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-hiromi-space: 178px;
+    --sp-hiromi-width: 320px;
+    --sp-inner-top: 84px;
+  }
+}
+
+/* 374px以下 */
+@media (max-width: 374px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-hiromi-space: 164px;
+    --sp-hiromi-width: 292px;
+    --sp-inner-top: 82px;
+  }
+}
