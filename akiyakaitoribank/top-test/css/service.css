@@ -8682,3 +8682,166 @@
     max-width: 180px;
   }
 }
+
+/* ========================================
+   Service Bottom CTA / 750px以下崩れ修正・PC幅維持
+   2026-09-03
+======================================== */
+
+
+/* ========================================
+   750px以下：
+   人物画像をカード上に戻す
+   緑丸はbackgroundで表現
+   下余白を増やす
+======================================== */
+
+@media (max-width: 750px) {
+  .akiya-sale-page .service-bottom-cta__inner {
+    position: relative;
+    overflow: visible !important;
+
+    /* 緑丸は疑似要素ではなく背景で処理 */
+    background:
+      radial-gradient(
+        circle at 100% 100%,
+        rgba(139, 195, 74, 0.14) 0,
+        rgba(139, 195, 74, 0.14) 42%,
+        transparent 42.5%
+      ),
+      #fffaf0 !important;
+
+    padding-top: var(--sp-inner-top-adjusted);
+    padding-bottom: var(--sp-inner-bottom-adjusted);
+  }
+
+  /* 既存の緑丸疑似要素を止める */
+  .akiya-sale-page .service-bottom-cta__inner::before {
+    content: none !important;
+    display: none !important;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual {
+    position: absolute !important;
+    left: 50%;
+    top: var(--sp-visual-top);
+    bottom: auto !important;
+    z-index: 1;
+    width: var(--sp-visual-width);
+    height: auto !important;
+    max-height: none !important;
+    margin: 0;
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual img {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    max-height: none !important;
+    margin: 0;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text,
+  .akiya-sale-page .service-bottom-cta__buttons {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+
+/* 551px〜750px */
+@media (min-width: 551px) and (max-width: 750px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-inner-top-adjusted: 150px;
+    --sp-inner-bottom-adjusted: 78px;
+    --sp-visual-width: 560px;
+    --sp-visual-top: -148px;
+  }
+}
+
+
+/* 421px〜550px */
+@media (min-width: 421px) and (max-width: 550px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-inner-top-adjusted: 132px;
+    --sp-inner-bottom-adjusted: 74px;
+    --sp-visual-width: 500px;
+    --sp-visual-top: -130px;
+  }
+}
+
+
+/* 375px〜420px */
+@media (min-width: 375px) and (max-width: 420px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-inner-top-adjusted: 118px;
+    --sp-inner-bottom-adjusted: 70px;
+    --sp-visual-width: 440px;
+    --sp-visual-top: -116px;
+  }
+}
+
+
+/* 374px以下 */
+@media (max-width: 374px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-inner-top-adjusted: 108px;
+    --sp-inner-bottom-adjusted: 66px;
+    --sp-visual-width: 400px;
+    --sp-visual-top: -106px;
+  }
+}
+
+
+/* ========================================
+   751px〜850px：
+   人物画像の下余白対策
+   height:226px を解除
+======================================== */
+
+@media (min-width: 751px) and (max-width: 850px) {
+  .akiya-sale-page .service-bottom-cta__visual {
+    height: auto !important;
+    max-height: none !important;
+    bottom: 0 !important;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual img {
+    height: auto !important;
+    max-height: none !important;
+    display: block;
+    margin-bottom: -1px;
+  }
+}
+
+
+/* ========================================
+   751px〜1023px：
+   CTAカード幅を広げすぎない
+======================================== */
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .akiya-sale-page .service-bottom-cta__inner {
+    width: min(calc(100% - 64px), 800px);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* ========================================
+   1024px以上：
+   1100px以上でも広げすぎない
+======================================== */
+
+@media (min-width: 1024px) {
+  .akiya-sale-page .service-bottom-cta__inner {
+    width: min(calc(100% - 48px), 800px);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
