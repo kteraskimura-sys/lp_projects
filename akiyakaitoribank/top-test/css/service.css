@@ -7171,3 +7171,592 @@
     min-height: 55px;
   }
 }
+
+/* ========================================
+   Service Bottom CTA / ラストCTA 最終調整
+   2026-09-03
+======================================== */
+
+/* 共通：前回CSSを安定上書き */
+.akiya-sale-page .service-bottom-cta {
+  margin-top: 56px;
+  padding: 0 0 52px;
+  background: var(--color-bg, #fffdf8);
+  overflow: hidden;
+}
+
+.akiya-sale-page .service-bottom-cta__inner {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #fff7e8 0%, #fffdf8 100%);
+  border: 1px solid rgba(234, 223, 206, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(74, 55, 32, 0.06);
+}
+
+/* 緑の装飾は必ず背面へ */
+.akiya-sale-page .service-bottom-cta__inner::before {
+  content: "";
+  position: absolute;
+  right: -90px;
+  bottom: -110px;
+  z-index: 0;
+  width: 300px;
+  height: 300px;
+  background: rgba(139, 195, 74, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* テキスト・ボタンは装飾より前面 */
+.akiya-sale-page .service-bottom-cta__content {
+  position: relative;
+  z-index: 3;
+  min-width: 0;
+}
+
+.akiya-sale-page .service-bottom-cta__text h2 {
+  margin: 0 0 12px;
+  color: var(--color-text);
+  font-weight: 800;
+  line-height: 1.45;
+  letter-spacing: 0.03em;
+}
+
+.akiya-sale-page .service-bottom-cta__text p {
+  margin: 0;
+  color: var(--color-subtext);
+  font-weight: 600;
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+}
+
+/* 369pxだけで使う改行 */
+.service-bottom-cta__title-br {
+  display: none;
+}
+
+/* ボタン全体 */
+.akiya-sale-page .service-bottom-cta__buttons {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.akiya-sale-page .service-bottom-cta__buttons a.btn {
+  position: relative;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+  min-height: 56px;
+  padding: 0 14px;
+  border-radius: 999px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  opacity: 1;
+  text-decoration: none;
+}
+
+/* ボタン内アイコン */
+.akiya-sale-page .service-bottom-cta__buttons .btn-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+/* ボタン内テキスト配置 */
+.akiya-sale-page .service-bottom-cta__buttons .btn-cta__text,
+.akiya-sale-page .service-bottom-cta__buttons .btn-phone__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-width: 0;
+  line-height: 1.35;
+}
+
+.akiya-sale-page .service-bottom-cta__buttons .btn-cta__main {
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.akiya-sale-page .service-bottom-cta__buttons .btn-cta__sub {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.akiya-sale-page .service-bottom-cta__buttons .btn-phone__number {
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+}
+
+.akiya-sale-page .service-bottom-cta__buttons .btn-phone__time {
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+/* TOPと同じ配色：無料相談フォーム */
+.akiya-sale-page .service-bottom-cta__buttons a.btn.btn--orange {
+  color: #fff;
+  background: var(--service-orange);
+  border: 2px solid var(--service-orange);
+}
+
+.akiya-sale-page .service-bottom-cta__buttons a.btn.btn--orange .btn-cta__main,
+.akiya-sale-page .service-bottom-cta__buttons a.btn.btn--orange .btn-cta__sub {
+  color: #fff;
+}
+
+/* TOPと同じ配色：電話 */
+.akiya-sale-page .service-bottom-cta__buttons a.btn.btn--outline-green {
+  color: var(--service-green);
+  background: #fff;
+  border: 2px solid var(--service-green);
+}
+
+.akiya-sale-page .service-bottom-cta__buttons a.btn.btn--outline-green .btn-phone__number,
+.akiya-sale-page .service-bottom-cta__buttons a.btn.btn--outline-green .btn-phone__time {
+  color: var(--service-green);
+}
+
+/* TOPと同じ配色：LINE */
+.akiya-sale-page .service-bottom-cta__buttons a.btn.btn--green {
+  color: #fff;
+  background: var(--service-green);
+  border: 2px solid var(--service-green);
+}
+
+.akiya-sale-page .service-bottom-cta__buttons a.btn.btn--green .btn-cta__main,
+.akiya-sale-page .service-bottom-cta__buttons a.btn.btn--green .btn-cta__sub {
+  color: #fff;
+}
+
+/* 人物画像 */
+.akiya-sale-page .service-bottom-cta__visual {
+  position: absolute;
+  z-index: 1;
+  right: 18px;
+  bottom: 0;
+  display: block;
+  pointer-events: none;
+}
+
+.akiya-sale-page .service-bottom-cta__visual img {
+  display: block;
+  width: auto;
+  max-width: none;
+  height: 240px;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 12px 18px rgba(74, 55, 32, 0.12));
+}
+
+/* ========================================
+   1101px以上：PCワイド
+======================================== */
+
+@media (min-width: 1101px) {
+  .akiya-sale-page .service-bottom-cta__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 240px;
+    padding: 30px 210px 30px 34px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text {
+    max-width: 680px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text h2 {
+    font-size: 28px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text p {
+    max-width: 560px;
+    font-size: 13.5px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons {
+    justify-content: flex-start;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons a.btn {
+    flex: 0 0 184px;
+    width: 184px;
+    max-width: 184px;
+    min-height: 58px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual {
+    right: 24px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual img {
+    height: 260px;
+  }
+}
+
+/* ========================================
+   751px〜1100px：
+   1024px〜1100pxもここに含めて安定化
+======================================== */
+
+@media (min-width: 751px) and (max-width: 1100px) {
+  .akiya-sale-page .service-bottom-cta__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: min(calc(100% - 48px), 760px);
+    max-width: 760px;
+    min-height: 250px;
+    padding: 28px 142px 30px 30px;
+    text-align: center;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text {
+    width: min(100%, 560px);
+    margin: 0 auto;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text h2 {
+    font-size: 26px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text p {
+    max-width: 520px;
+    margin: 0 auto;
+    font-size: 13px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons {
+    justify-content: center;
+    gap: 9px;
+    margin-top: 16px;
+    width: 100%;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons a.btn {
+    flex: 0 0 156px;
+    width: 156px;
+    max-width: 156px;
+    min-height: 54px;
+    padding: 0 10px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons .btn-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons .btn-cta__main {
+    font-size: 11.8px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons .btn-cta__sub {
+    font-size: 9px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons .btn-phone__number {
+    font-size: 12.5px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons .btn-phone__time {
+    font-size: 8px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual {
+    right: 8px;
+    bottom: 0;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual img {
+    height: 226px;
+  }
+}
+
+/* 751px〜850px：さらに狭い横並び幅 */
+@media (min-width: 751px) and (max-width: 850px) {
+  .akiya-sale-page .service-bottom-cta__inner {
+    padding-right: 126px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons a.btn {
+    flex-basis: 148px;
+    width: 148px;
+    max-width: 148px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual {
+    right: 2px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual img {
+    height: 214px;
+  }
+}
+
+/* ========================================
+   551px〜750px：スマホ大きめ
+   ボタンをTOP寄せでサイズダウン
+======================================== */
+
+@media (min-width: 551px) and (max-width: 750px) {
+  .akiya-sale-page .service-bottom-cta {
+    padding: 0 0 48px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: min(calc(100% - 40px), 600px);
+    max-width: 600px;
+    gap: 18px;
+    padding: 28px 28px 30px;
+    text-align: center;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text {
+    width: min(100%, 480px);
+    margin: 0 auto;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text h2 {
+    font-size: 25px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text p {
+    max-width: 420px;
+    margin: 0 auto;
+    font-size: 13px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons a.btn {
+    width: min(100%, 318px);
+    max-width: 318px;
+    min-height: 54px;
+    padding: 0 14px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual {
+    right: -34px;
+    bottom: -10px;
+    opacity: 0.18;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual img {
+    height: 170px;
+    filter: none;
+  }
+}
+
+/* ========================================
+   421px〜550px：スマホ
+======================================== */
+
+@media (min-width: 421px) and (max-width: 550px) {
+  .akiya-sale-page .service-bottom-cta {
+    padding: 0 0 46px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: min(calc(100% - 32px), 500px);
+    max-width: 500px;
+    gap: 18px;
+    padding: 26px 22px 28px;
+    text-align: center;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text {
+    width: min(100%, 420px);
+    margin: 0 auto;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text h2 {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text p {
+    max-width: 380px;
+    margin: 0 auto;
+    font-size: 12.8px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons a.btn {
+    width: min(100%, 300px);
+    max-width: 300px;
+    min-height: 53px;
+    padding: 0 14px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons .btn-cta__main {
+    font-size: 12.6px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons .btn-cta__sub {
+    font-size: 9.6px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons .btn-phone__number {
+    font-size: 13.2px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons .btn-phone__time {
+    font-size: 8.8px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual {
+    right: -42px;
+    bottom: -12px;
+    opacity: 0.14;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual img {
+    height: 150px;
+    filter: none;
+  }
+}
+
+/* ========================================
+   420px以下：小さめスマホ
+======================================== */
+
+@media (max-width: 420px) {
+  .akiya-sale-page .service-bottom-cta {
+    padding: 0 0 44px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: calc(100% - 24px);
+    gap: 17px;
+    padding: 24px 18px 26px;
+    text-align: center;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text h2 {
+    margin-bottom: 10px;
+    font-size: 22.5px;
+    line-height: 1.55;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text p {
+    max-width: 310px;
+    margin: 0 auto;
+    font-size: 12.4px;
+    line-height: 1.9;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons a.btn {
+    width: min(100%, 286px);
+    max-width: 286px;
+    min-height: 52px;
+    padding: 0 13px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons .btn-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons .btn-cta__main {
+    font-size: 12.4px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons .btn-cta__sub {
+    font-size: 9.4px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons .btn-phone__number {
+    font-size: 13px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons .btn-phone__time {
+    font-size: 8.6px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual {
+    right: -48px;
+    bottom: -14px;
+    opacity: 0.12;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual img {
+    height: 138px;
+    filter: none;
+  }
+}
+
+/* 374px以下：
+   「空き家のお悩みは」で改行 */
+@media (max-width: 374px) {
+  .service-bottom-cta__title-br {
+    display: block;
+  }
+
+  .akiya-sale-page .service-bottom-cta__inner {
+    width: calc(100% - 20px);
+    padding: 23px 16px 25px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text h2 {
+    font-size: 22px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text p {
+    font-size: 12.1px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__buttons a.btn {
+    width: min(100%, 276px);
+    max-width: 276px;
+    min-height: 51px;
+  }
+}
