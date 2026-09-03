@@ -8845,3 +8845,154 @@
     margin-right: auto;
   }
 }
+
+/* ========================================
+   Service Bottom CTA / SP人物画像重なり修正
+   2026-09-03
+======================================== */
+
+
+/* ========================================
+   750px以下：
+   人物画像をカード基準ではなく
+   CTAセクション基準で配置する
+======================================== */
+
+@media (max-width: 750px) {
+  .akiya-sale-page .service-bottom-cta {
+    position: relative;
+    padding-top: var(--sp-figure-space) !important;
+  }
+
+  .akiya-sale-page .service-bottom-cta__inner {
+    position: static !important;
+    overflow: visible !important;
+
+    padding-top: var(--sp-card-text-top) !important;
+    padding-bottom: var(--sp-card-bottom) !important;
+
+    background:
+      radial-gradient(
+        circle at 100% 100%,
+        rgba(139, 195, 74, 0.14) 0,
+        rgba(139, 195, 74, 0.14) 42%,
+        transparent 42.5%
+      ),
+      #fffaf0 !important;
+  }
+
+  /* 以前の緑丸疑似要素は完全に停止 */
+  .akiya-sale-page .service-bottom-cta__inner::before {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* 人物画像はCTAセクション全体を基準に固定 */
+  .akiya-sale-page .service-bottom-cta__visual {
+    position: absolute !important;
+    left: 50% !important;
+    top: var(--sp-figure-top) !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    z-index: 2;
+    width: var(--sp-figure-width) !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    transform: translateX(-50%) !important;
+    pointer-events: none;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual img {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text,
+  .akiya-sale-page .service-bottom-cta__buttons {
+    position: relative;
+    z-index: 3;
+  }
+}
+
+
+/* 551px〜750px */
+@media (min-width: 551px) and (max-width: 750px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-figure-space: 170px;
+    --sp-figure-top: 0px;
+    --sp-figure-width: 520px;
+
+    --sp-card-text-top: 160px;
+    --sp-card-bottom: 84px;
+  }
+}
+
+
+/* 421px〜550px */
+@media (min-width: 421px) and (max-width: 550px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-figure-space: 160px;
+    --sp-figure-top: 0px;
+    --sp-figure-width: 480px;
+
+    --sp-card-text-top: 150px;
+    --sp-card-bottom: 78px;
+  }
+}
+
+
+/* 375px〜420px */
+@media (min-width: 375px) and (max-width: 420px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-figure-space: 150px;
+    --sp-figure-top: 0px;
+    --sp-figure-width: 430px;
+
+    --sp-card-text-top: 142px;
+    --sp-card-bottom: 72px;
+  }
+}
+
+
+/* 374px以下 */
+@media (max-width: 374px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-figure-space: 138px;
+    --sp-figure-top: 0px;
+    --sp-figure-width: 390px;
+
+    --sp-card-text-top: 136px;
+    --sp-card-bottom: 68px;
+  }
+}
+
+
+/* ========================================
+   751px〜850px：
+   height:226px を確実に解除
+======================================== */
+
+@media (min-width: 751px) and (max-width: 850px) {
+  .akiya-sale-page .service-bottom-cta__visual {
+    height: auto !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    bottom: -1px !important;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual img {
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center bottom !important;
+    margin-bottom: -1px !important;
+  }
+}
