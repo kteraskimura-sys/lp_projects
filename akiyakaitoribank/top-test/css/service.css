@@ -8288,3 +8288,184 @@
     gap: 14px;
   }
 }
+
+/* ========================================
+   Service Bottom CTA / 余白・装飾・ボタン幅 最終調整
+   2026-09-03
+======================================== */
+
+
+/* ========================================
+   750px以下：
+   下余白を増やす + 緑丸装飾を ::before でカード内に収める
+======================================== */
+
+@media (max-width: 750px) {
+  .akiya-sale-page .service-bottom-cta__inner {
+    position: relative;
+    overflow: hidden;
+    background: #fffaf0;
+    padding-top: var(--sp-inner-top-adjusted);
+    padding-bottom: var(--sp-inner-bottom-adjusted);
+  }
+
+  .akiya-sale-page .service-bottom-cta__inner::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    display: block;
+    border-radius: 50%;
+    background: rgba(139, 195, 74, 0.14);
+    filter: none;
+    pointer-events: none;
+  }
+
+  .akiya-sale-page .service-bottom-cta__text,
+  .akiya-sale-page .service-bottom-cta__buttons,
+  .akiya-sale-page .service-bottom-cta__visual {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+/* 551px〜750px */
+@media (min-width: 551px) and (max-width: 750px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-inner-bottom-adjusted: 82px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__inner::before {
+    width: 430px;
+    height: 430px;
+    right: -150px;
+    bottom: -165px;
+  }
+}
+
+/* 421px〜550px */
+@media (min-width: 421px) and (max-width: 550px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-inner-bottom-adjusted: 78px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__inner::before {
+    width: 390px;
+    height: 390px;
+    right: -145px;
+    bottom: -150px;
+  }
+}
+
+/* 375px〜420px */
+@media (min-width: 375px) and (max-width: 420px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-inner-bottom-adjusted: 72px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__inner::before {
+    width: 350px;
+    height: 350px;
+    right: -135px;
+    bottom: -132px;
+  }
+}
+
+/* 374px以下 */
+@media (max-width: 374px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-inner-bottom-adjusted: 66px;
+  }
+
+  .akiya-sale-page .service-bottom-cta__inner::before {
+    width: 320px;
+    height: 320px;
+    right: -128px;
+    bottom: -118px;
+  }
+}
+
+
+/* ========================================
+   751px〜1023px：
+   CTAカードが画面幅いっぱいに広がりすぎないようにする
+======================================== */
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .akiya-sale-page .service-bottom-cta__inner {
+    width: min(calc(100% - 64px), 900px);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* ========================================
+   1024px以上：
+   1024px時点の見え方を維持する
+   1100px以上でも無理に広げない
+======================================== */
+
+@media (min-width: 1024px) {
+  .akiya-sale-page .service-bottom-cta__inner {
+    width: min(calc(100% - 48px), 976px);
+    max-width: 976px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* ========================================
+   751px〜850px：
+   人物画像の下余白をなくす
+======================================== */
+
+@media (min-width: 751px) and (max-width: 850px) {
+  .akiya-sale-page .service-bottom-cta__inner {
+    overflow: hidden;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual {
+    top: auto;
+    bottom: 0;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual img {
+    display: block;
+    margin-bottom: -1px;
+    object-position: center bottom;
+    vertical-align: bottom;
+  }
+}
+
+
+/* ========================================
+   751px〜1100px：
+   ボタン幅を広げて、電話ボタンの窮屈感を解消
+======================================== */
+
+@media (min-width: 751px) and (max-width: 850px) {
+  .akiya-sale-page .service-bottom-cta__buttons a.btn {
+    flex-basis: 168px;
+    width: 168px;
+    max-width: 168px;
+  }
+}
+
+@media (min-width: 851px) and (max-width: 1100px) {
+  .akiya-sale-page .service-bottom-cta__buttons a.btn {
+    flex-basis: 180px;
+    width: 180px;
+    max-width: 180px;
+  }
+}
+
+/* 1101px以上も、1024px基準のまとまりを維持 */
+@media (min-width: 1101px) {
+  .akiya-sale-page .service-bottom-cta__buttons a.btn {
+    flex-basis: 180px;
+    width: 180px;
+    max-width: 180px;
+  }
+}
