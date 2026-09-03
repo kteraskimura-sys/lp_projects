@@ -7998,3 +7998,85 @@
     max-width: 272px;
   }
 }
+
+/* ========================================
+   Service Bottom CTA / 750px以下 人物画像位置調整
+   2026-09-03
+======================================== */
+
+/* 750px以下だけ調整。751px以上のPC版は触らない */
+@media (max-width: 750px) {
+  .akiya-sale-page .service-bottom-cta {
+    margin-top: 0;
+    padding-top: var(--sp-hiromi-space);
+  }
+
+  .akiya-sale-page .service-bottom-cta__inner {
+    position: relative;
+    overflow: visible;
+    padding-top: var(--sp-inner-top);
+  }
+
+  /* 人物画像はカード上部に安定して重ねる */
+  .akiya-sale-page .service-bottom-cta__visual {
+    position: absolute;
+    left: 50%;
+    top: calc(2px - var(--sp-hiromi-space));
+    right: auto;
+    bottom: auto;
+    z-index: 6;
+    display: block;
+    width: var(--sp-hiromi-width);
+    max-width: 92%;
+    opacity: 1;
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual picture {
+    display: block;
+    width: 100%;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    filter: drop-shadow(0 8px 12px rgba(74, 55, 32, 0.08));
+  }
+
+  /* テキストとボタンは人物画像より前面へ */
+  .akiya-sale-page .service-bottom-cta__text,
+  .akiya-sale-page .service-bottom-cta__buttons {
+    position: relative;
+    z-index: 7;
+  }
+}
+
+/* 421px〜750px：画面幅に合わせてなめらかに調整 */
+@media (min-width: 421px) and (max-width: 750px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-hiromi-space: clamp(190px, calc(113px + 18.3vw), 250px);
+    --sp-hiromi-width: clamp(360px, calc(270px + 21.3vw), 430px);
+    --sp-inner-top: clamp(88px, calc(62px + 6.2vw), 108px);
+  }
+}
+
+/* 420px以下：小さめスマホ */
+@media (max-width: 420px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-hiromi-space: clamp(160px, calc(56px + 29vw), 180px);
+    --sp-hiromi-width: clamp(292px, 86vw, 320px);
+    --sp-inner-top: 84px;
+  }
+}
+
+/* 374px以下：369px付近の微調整 */
+@media (max-width: 374px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-hiromi-space: 162px;
+    --sp-hiromi-width: 292px;
+    --sp-inner-top: 82px;
+  }
+}
