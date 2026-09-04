@@ -6904,6 +6904,8 @@
   .akiya-sale-page .service-bottom-cta__visual img {
     height: 226px;
     margin-bottom: -1px;
+	  position: relative;
+	  right: 15px;	
   }
 }
 
@@ -6934,6 +6936,8 @@
 
   .akiya-sale-page .service-bottom-cta__visual img {
     height: 214px;
+	  position: relative;
+	  right: 15px;	  
   }
 }
 
@@ -7092,17 +7096,21 @@
 /* 551px〜750px */
 @media (min-width: 551px) and (max-width: 750px) {
   .akiya-sale-page .service-bottom-cta {
-    --sp-cta-section-top: 144px;
+    /*--sp-cta-section-top: 144px;*/
+	  --sp-cta-section-top: 180px;
     --sp-cta-section-bottom: 58px;
     --sp-cta-side-space: 40px;
     --sp-cta-card-max: 600px;
 
-    --sp-cta-image-overlap: 142px;
+    /*--sp-cta-image-overlap: 142px;*/
+	  --sp-cta-image-overlap: 233px;
     --sp-cta-image-width: 420px;
 
-    --sp-cta-card-top: 170px;
+    /*--sp-cta-card-top: 170px;*/
+	  --sp-cta-card-top: 50px;
     --sp-cta-card-x: 28px;
-    --sp-cta-card-bottom: 82px;
+    /*--sp-cta-card-bottom: 82px;*/
+	  --sp-cta-card-bottom: 50px;
 
     --sp-cta-text-width: 500px;
     --sp-cta-lead-width: 440px;
@@ -7126,17 +7134,21 @@
 /* 421px〜550px */
 @media (min-width: 421px) and (max-width: 550px) {
   .akiya-sale-page .service-bottom-cta {
-    --sp-cta-section-top: 128px;
+    /*--sp-cta-section-top: 128px;*/
+	  --sp-cta-section-top: 150px;
     --sp-cta-section-bottom: 54px;
     --sp-cta-side-space: 32px;
     --sp-cta-card-max: 500px;
 
-    --sp-cta-image-overlap: 126px;
+    /*--sp-cta-image-overlap: 126px;*/
+	  --sp-cta-image-overlap: 200px;
     --sp-cta-image-width: 358px;
 
-    --sp-cta-card-top: 154px;
+    /*--sp-cta-card-top: 154px;*/
+	  --sp-cta-card-top: 40px;
     --sp-cta-card-x: 22px;
-    --sp-cta-card-bottom: 76px;
+    /*--sp-cta-card-bottom: 76px;*/
+	  --sp-cta-card-bottom: 50px;
 
     --sp-cta-text-width: 420px;
     --sp-cta-lead-width: 390px;
@@ -7167,17 +7179,21 @@
 /* 375px〜420px */
 @media (min-width: 375px) and (max-width: 420px) {
   .akiya-sale-page .service-bottom-cta {
-    --sp-cta-section-top: 112px;
+    /*--sp-cta-section-top: 112px;*/
+	  --sp-cta-section-top: 125px;
     --sp-cta-section-bottom: 52px;
     --sp-cta-side-space: 24px;
     --sp-cta-card-max: 420px;
 
-    --sp-cta-image-overlap: 110px;
+    /*--sp-cta-image-overlap: 110px;*/
+	  --sp-cta-image-overlap: 178px;
     --sp-cta-image-width: 320px;
 
-    --sp-cta-card-top: 140px;
+    /*--sp-cta-card-top: 140px;*/
+	  --sp-cta-card-top: 37px;
     --sp-cta-card-x: 18px;
-    --sp-cta-card-bottom: 70px;
+    /*--sp-cta-card-bottom: 70px;*/
+	  --sp-cta-card-bottom: 50px;
 
     --sp-cta-text-width: 100%;
     --sp-cta-lead-width: 310px;
@@ -7205,17 +7221,21 @@
 /* 374px以下 */
 @media (max-width: 374px) {
   .akiya-sale-page .service-bottom-cta {
-    --sp-cta-section-top: 104px;
+    /*--sp-cta-section-top: 104px;*/
+	  --sp-cta-section-top: 111px;
     --sp-cta-section-bottom: 50px;
     --sp-cta-side-space: 20px;
     --sp-cta-card-max: 374px;
 
-    --sp-cta-image-overlap: 102px;
+    /*--sp-cta-image-overlap: 102px;*/
+	  --sp-cta-image-overlap: 163px;
     --sp-cta-image-width: 292px;
 
-    --sp-cta-card-top: 132px;
+    /*--sp-cta-card-top: 132px;*/
+	  --sp-cta-card-top: 30px;
     --sp-cta-card-x: 16px;
-    --sp-cta-card-bottom: 68px;
+    /*--sp-cta-card-bottom: 68px;*/
+	  --sp-cta-card-bottom: 50px;
 
     --sp-cta-text-width: 100%;
     --sp-cta-lead-width: 300px;
@@ -7243,15 +7263,19 @@
 /* 320px以下：300px確認用の最小幅調整 */
 @media (max-width: 320px) {
   .akiya-sale-page .service-bottom-cta {
-    --sp-cta-section-top: 100px;
+    /*--sp-cta-section-top: 100px;*/
+	  --sp-cta-section-top: 31.5vw;
     --sp-cta-section-bottom: 48px;
 
-    --sp-cta-image-overlap: 98px;
+    /*--sp-cta-image-overlap: 98px;*/
+	  --sp-cta-image-overlap: 48.5vw;
     --sp-cta-image-width: 282px;
 
-    --sp-cta-card-top: 128px;
+    /*--sp-cta-card-top: 128px;*/
+	  --sp-cta-card-top: 10vw;
     --sp-cta-card-x: 14px;
-    --sp-cta-card-bottom: 66px;
+    /*--sp-cta-card-bottom: 66px;*/
+	  --sp-cta-card-bottom: 15vw;
 
     --sp-cta-lead-width: 270px;
 
