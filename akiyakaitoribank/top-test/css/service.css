@@ -6779,9 +6779,12 @@
   border: 2px solid var(--service-green);
 }
 
-.akiya-sale-page .service-bottom-cta__buttons a.btn.btn--outline-green .btn-phone__number,
-.akiya-sale-page .service-bottom-cta__buttons a.btn.btn--outline-green .btn-phone__time {
+.akiya-sale-page .service-bottom-cta__buttons a.btn.btn--outline-green .btn-phone__number {
   color: var(--service-green);
+}
+
+.akiya-sale-page .service-bottom-cta__buttons a.btn.btn--outline-green .btn-phone__time {
+  color: var(--color-text);
 }
 
 /* LINE */
