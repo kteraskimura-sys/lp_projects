@@ -6946,24 +6946,27 @@
 }
 
 /* ========================================
-   750px以下：スマホ
-   人物画像をカード上部に配置
+   Service Bottom CTA / 750px以下 最終調整
+   2026-09-04
+   ※751px以上は現状維持
 ======================================== */
 
+/* 750px以下：スマホ共通 */
 @media (max-width: 750px) {
   .akiya-sale-page .service-bottom-cta {
     position: relative;
     padding-top: var(--sp-cta-section-top);
-    padding-bottom: 48px;
+    padding-bottom: var(--sp-cta-section-bottom);
     overflow: visible;
   }
 
   .akiya-sale-page .service-bottom-cta__inner {
     position: relative;
+    isolation: isolate;
     grid-template-columns: 1fr;
-    width: min(calc(100% - 40px), 600px);
-    max-width: 600px;
-    gap: 18px;
+    width: min(calc(100% - var(--sp-cta-side-space)), var(--sp-cta-card-max));
+    max-width: var(--sp-cta-card-max);
+    gap: 0;
     padding: var(--sp-cta-card-top) var(--sp-cta-card-x) var(--sp-cta-card-bottom);
     overflow: visible;
     text-align: center;
@@ -6975,6 +6978,7 @@
         transparent 42.5%
       ),
       linear-gradient(135deg, #fff7e8 0%, #fffdf8 100%);
+    border-radius: 16px;
   }
 
   .akiya-sale-page .service-bottom-cta__inner::before {
@@ -6982,14 +6986,22 @@
     display: none;
   }
 
+  .akiya-sale-page .service-bottom-cta__content {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+  }
+
   .akiya-sale-page .service-bottom-cta__text {
+    position: relative;
+    z-index: 4;
     width: 100%;
     max-width: var(--sp-cta-text-width);
     margin: 0 auto;
   }
 
   .akiya-sale-page .service-bottom-cta__text h2 {
-    margin-bottom: 14px;
+    margin: 0 0 var(--sp-cta-title-bottom);
     font-size: var(--sp-cta-title-size);
     line-height: 1.5;
     letter-spacing: 0.01em;
@@ -7005,11 +7017,13 @@
   }
 
   .akiya-sale-page .service-bottom-cta__buttons {
+    position: relative;
+    z-index: 5;
     flex-direction: column;
     align-items: center;
     gap: var(--sp-cta-button-gap);
     width: 100%;
-    margin-top: 18px;
+    margin-top: var(--sp-cta-button-top);
   }
 
   .akiya-sale-page .service-bottom-cta__buttons a.btn {
@@ -7017,6 +7031,7 @@
     max-width: var(--sp-cta-button-width);
     min-height: var(--sp-cta-button-height);
     padding: 0 14px;
+    opacity: 1;
   }
 
   .akiya-sale-page .service-bottom-cta__buttons .btn-icon {
@@ -7047,21 +7062,29 @@
     top: calc(-1 * var(--sp-cta-image-overlap));
     right: auto;
     bottom: auto;
-    z-index: 4;
+    z-index: 3;
     display: block;
     width: var(--sp-cta-image-width);
-    max-width: 92%;
+    max-width: 94%;
     height: auto;
     margin: 0;
     opacity: 1;
     transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  .akiya-sale-page .service-bottom-cta__visual picture {
+    display: block;
   }
 
   .akiya-sale-page .service-bottom-cta__visual img {
+    display: block;
     width: 100%;
-    height: auto;
     max-width: none;
+    height: auto;
     margin: 0;
+    object-fit: contain;
+    object-position: center bottom;
     filter: drop-shadow(0 8px 12px rgba(74, 55, 32, 0.08));
   }
 }
@@ -7069,20 +7092,26 @@
 /* 551px〜750px */
 @media (min-width: 551px) and (max-width: 750px) {
   .akiya-sale-page .service-bottom-cta {
-    --sp-cta-section-top: 150px;
-    --sp-cta-image-overlap: 148px;
-    --sp-cta-image-width: 430px;
+    --sp-cta-section-top: 144px;
+    --sp-cta-section-bottom: 58px;
+    --sp-cta-side-space: 40px;
+    --sp-cta-card-max: 600px;
 
-    --sp-cta-card-top: 180px;
+    --sp-cta-image-overlap: 142px;
+    --sp-cta-image-width: 420px;
+
+    --sp-cta-card-top: 170px;
     --sp-cta-card-x: 28px;
-    --sp-cta-card-bottom: 78px;
+    --sp-cta-card-bottom: 82px;
 
-    --sp-cta-text-width: 480px;
-    --sp-cta-lead-width: 420px;
+    --sp-cta-text-width: 500px;
+    --sp-cta-lead-width: 440px;
 
     --sp-cta-title-size: 25px;
+    --sp-cta-title-bottom: 16px;
     --sp-cta-lead-size: 13px;
 
+    --sp-cta-button-top: 24px;
     --sp-cta-button-width: 292px;
     --sp-cta-button-height: 52px;
     --sp-cta-button-gap: 10px;
@@ -7097,20 +7126,26 @@
 /* 421px〜550px */
 @media (min-width: 421px) and (max-width: 550px) {
   .akiya-sale-page .service-bottom-cta {
-    --sp-cta-section-top: 132px;
-    --sp-cta-image-overlap: 130px;
-    --sp-cta-image-width: 360px;
+    --sp-cta-section-top: 128px;
+    --sp-cta-section-bottom: 54px;
+    --sp-cta-side-space: 32px;
+    --sp-cta-card-max: 500px;
 
-    --sp-cta-card-top: 160px;
+    --sp-cta-image-overlap: 126px;
+    --sp-cta-image-width: 358px;
+
+    --sp-cta-card-top: 154px;
     --sp-cta-card-x: 22px;
-    --sp-cta-card-bottom: 74px;
+    --sp-cta-card-bottom: 76px;
 
     --sp-cta-text-width: 420px;
     --sp-cta-lead-width: 390px;
 
     --sp-cta-title-size: 23px;
+    --sp-cta-title-bottom: 15px;
     --sp-cta-lead-size: 12.7px;
 
+    --sp-cta-button-top: 23px;
     --sp-cta-button-width: 292px;
     --sp-cta-button-height: 52px;
     --sp-cta-button-gap: 10px;
@@ -7120,21 +7155,27 @@
     --sp-cta-phone-size: 13.2px;
     --sp-cta-phone-sub-size: 8.8px;
   }
+}
 
-  .akiya-sale-page .service-bottom-cta__inner {
-    width: min(calc(100% - 32px), 500px);
-    max-width: 500px;
+/* 421px〜448px：見出しの改行位置を安定させる */
+@media (min-width: 421px) and (max-width: 448px) {
+  .akiya-sale-page .service-bottom-cta__title-br {
+    display: block;
   }
 }
 
 /* 375px〜420px */
 @media (min-width: 375px) and (max-width: 420px) {
   .akiya-sale-page .service-bottom-cta {
-    --sp-cta-section-top: 118px;
-    --sp-cta-image-overlap: 116px;
+    --sp-cta-section-top: 112px;
+    --sp-cta-section-bottom: 52px;
+    --sp-cta-side-space: 24px;
+    --sp-cta-card-max: 420px;
+
+    --sp-cta-image-overlap: 110px;
     --sp-cta-image-width: 320px;
 
-    --sp-cta-card-top: 146px;
+    --sp-cta-card-top: 140px;
     --sp-cta-card-x: 18px;
     --sp-cta-card-bottom: 70px;
 
@@ -7142,8 +7183,10 @@
     --sp-cta-lead-width: 310px;
 
     --sp-cta-title-size: 22.5px;
+    --sp-cta-title-bottom: 14px;
     --sp-cta-lead-size: 12.4px;
 
+    --sp-cta-button-top: 22px;
     --sp-cta-button-width: 282px;
     --sp-cta-button-height: 51px;
     --sp-cta-button-gap: 9px;
@@ -7154,10 +7197,6 @@
     --sp-cta-phone-sub-size: 8.6px;
   }
 
-  .akiya-sale-page .service-bottom-cta__inner {
-    width: calc(100% - 24px);
-  }
-
   .akiya-sale-page .service-bottom-cta__title-br {
     display: block;
   }
@@ -7166,20 +7205,26 @@
 /* 374px以下 */
 @media (max-width: 374px) {
   .akiya-sale-page .service-bottom-cta {
-    --sp-cta-section-top: 108px;
-    --sp-cta-image-overlap: 106px;
+    --sp-cta-section-top: 104px;
+    --sp-cta-section-bottom: 50px;
+    --sp-cta-side-space: 20px;
+    --sp-cta-card-max: 374px;
+
+    --sp-cta-image-overlap: 102px;
     --sp-cta-image-width: 292px;
 
-    --sp-cta-card-top: 136px;
+    --sp-cta-card-top: 132px;
     --sp-cta-card-x: 16px;
-    --sp-cta-card-bottom: 66px;
+    --sp-cta-card-bottom: 68px;
 
     --sp-cta-text-width: 100%;
     --sp-cta-lead-width: 300px;
 
     --sp-cta-title-size: 22px;
+    --sp-cta-title-bottom: 14px;
     --sp-cta-lead-size: 12.1px;
 
+    --sp-cta-button-top: 22px;
     --sp-cta-button-width: 272px;
     --sp-cta-button-height: 51px;
     --sp-cta-button-gap: 9px;
@@ -7190,11 +7235,35 @@
     --sp-cta-phone-sub-size: 8.5px;
   }
 
-  .akiya-sale-page .service-bottom-cta__inner {
-    width: calc(100% - 20px);
-  }
-
   .akiya-sale-page .service-bottom-cta__title-br {
     display: block;
+  }
+}
+
+/* 320px以下：300px確認用の最小幅調整 */
+@media (max-width: 320px) {
+  .akiya-sale-page .service-bottom-cta {
+    --sp-cta-section-top: 100px;
+    --sp-cta-section-bottom: 48px;
+
+    --sp-cta-image-overlap: 98px;
+    --sp-cta-image-width: 282px;
+
+    --sp-cta-card-top: 128px;
+    --sp-cta-card-x: 14px;
+    --sp-cta-card-bottom: 66px;
+
+    --sp-cta-lead-width: 270px;
+
+    --sp-cta-title-size: 21px;
+    --sp-cta-lead-size: 11.8px;
+
+    --sp-cta-button-width: 260px;
+    --sp-cta-button-height: 50px;
+
+    --sp-cta-main-size: 11.8px;
+    --sp-cta-sub-size: 9px;
+    --sp-cta-phone-size: 12.4px;
+    --sp-cta-phone-sub-size: 8.2px;
   }
 }
