@@ -6892,7 +6892,8 @@
 
   .akiya-sale-page .service-bottom-cta__visual {
     position: absolute;
-    right: 8px;
+    /*right: 8px;*/
+	  right: 22px;
     bottom: 0;
     z-index: 1;
     display: block;
@@ -6904,8 +6905,7 @@
   .akiya-sale-page .service-bottom-cta__visual img {
     height: 226px;
     margin-bottom: -1px;
-	  position: relative;
-	  right: 15px;	
+	  position: static;
   }
 }
 
@@ -6930,14 +6930,14 @@
   }
 
   .akiya-sale-page .service-bottom-cta__visual {
-    right: 2px;
-    bottom: 0;
+    /*right: 2px;*/
+	  right: 17px;
+    /*bottom: 0;*/
   }
 
   .akiya-sale-page .service-bottom-cta__visual img {
     height: 214px;
-	  position: relative;
-	  right: 15px;	  
+	  position: static;
   }
 }
 
