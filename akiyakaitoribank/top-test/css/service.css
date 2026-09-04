@@ -6762,8 +6762,8 @@
 .akiya-sale-page .service-bottom-cta__buttons a.btn.btn--orange,
 .akiya-sale-page .service-bottom-cta__buttons a.btn.btn--orange:visited {
   color: #fff;
-  background: var(--service-orange);
-  border: 2px solid var(--service-orange);
+  background: var(--color-main);
+  border: 2px solid var(--color-main);
 }
 
 .akiya-sale-page .service-bottom-cta__buttons a.btn.btn--orange .btn-cta__main,
@@ -6774,13 +6774,13 @@
 /* 電話 */
 .akiya-sale-page .service-bottom-cta__buttons a.btn.btn--outline-green,
 .akiya-sale-page .service-bottom-cta__buttons a.btn.btn--outline-green:visited {
-  color: var(--service-green);
+  color: var(--color-green);
   background: #fff;
-  border: 2px solid var(--service-green);
+  border: 2px solid var(--color-green);
 }
 
 .akiya-sale-page .service-bottom-cta__buttons a.btn.btn--outline-green .btn-phone__number {
-  color: var(--service-green);
+  color: var(--color-green);
 }
 
 .akiya-sale-page .service-bottom-cta__buttons a.btn.btn--outline-green .btn-phone__time {
@@ -6791,8 +6791,10 @@
 .akiya-sale-page .service-bottom-cta__buttons a.btn.btn--green,
 .akiya-sale-page .service-bottom-cta__buttons a.btn.btn--green:visited {
   color: #fff;
-  background: var(--service-green);
-  border: 2px solid var(--service-green);
+  /*background: var(--service-green);*/
+	background: #41b549;
+  /*border: 2px solid var(--service-green);*/
+	border: 2px solid #41b549;
 }
 
 .akiya-sale-page .service-bottom-cta__buttons a.btn.btn--green .btn-cta__main,
