@@ -1443,537 +1443,17 @@
   }
 }
 
+
 /* ========================================
-   Worry
+   Service Sections / 共通整理
+   2026-09-07
+   ※旧Worry〜Bottom CTAの初期案ブロックを整理。
+   ※空き家売却ページの確定済み各セクションは、この下の個別ブロックで管理。
 ======================================== */
 
-.service-worry,
-.service-risk,
-.service-flow,
-.service-reason,
-.service-leftover,
 .service-case,
 .service-faq {
   padding: 48px 0 0;
-}
-
-.worry-list {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 10px;
-}
-
-.worry-card {
-  min-height: 118px;
-  padding: 18px 10px;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1.6;
-  background: #fffaf0;
-  border: 1px solid rgba(234, 223, 206, 0.9);
-  border-radius: 8px;
-}
-
-/* ========================================
-   Risk
-======================================== */
-
-.risk-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.risk-card h3 {
-  margin: 14px 0 8px;
-  color: var(--service-orange);
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 1.5;
-}
-
-.risk-card p {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-.risk-card img {
-  width: 100%;
-  border-radius: 6px;
-}
-
-/* ========================================
-   Flow
-======================================== */
-
-.flow-list {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 14px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.flow-list li {
-  padding: 20px 12px;
-  text-align: center;
-  background: #fffaf0;
-  border: 1px solid rgba(234, 223, 206, 0.9);
-  border-radius: 10px;
-}
-
-.flow-list span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 54px;
-  height: 24px;
-  margin-bottom: 10px;
-  color: #fff;
-  font-size: 11px;
-  font-weight: 800;
-  background: var(--color-green);
-  border-radius: 999px;
-}
-
-.flow-list h3 {
-  margin: 0 0 8px;
-  font-size: 15px;
-  font-weight: 800;
-}
-
-.flow-list p {
-  margin: 0;
-  font-size: 12px;
-  line-height: 1.7;
-}
-
-.flow-note {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 18px;
-  margin-top: 20px;
-}
-
-.flow-note span {
-  color: var(--color-green-dark);
-  font-size: 13px;
-  font-weight: 800;
-}
-
-/* ========================================
-   Reason
-======================================== */
-
-.reason-grid {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.reason-card {
-  padding: 20px 12px;
-  text-align: center;
-  background: #fffaf0;
-  border-radius: 10px;
-  border: 1px solid rgba(234, 223, 206, 0.9);
-}
-
-.reason-card h3 {
-  margin: 0 0 10px;
-  color: var(--color-green-dark);
-  font-size: 15px;
-  font-weight: 800;
-}
-
-.reason-card p {
-  margin: 0;
-  font-size: 12px;
-  line-height: 1.7;
-}
-
-/* ========================================
-   Leftover
-======================================== */
-
-.leftover-box {
-  display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 26px;
-  align-items: center;
-  padding: 24px;
-  background: #fffaf0;
-  border: 2px solid rgba(242, 138, 26, 0.5);
-  border-radius: 14px;
-}
-
-.leftover-box__image img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.leftover-box h2 {
-  margin: 0 0 14px;
-  color: var(--service-orange);
-  font-size: 28px;
-  font-weight: 800;
-  line-height: 1.5;
-}
-
-.leftover-box p {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.9;
-}
-
-.leftover-box ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 18px;
-  margin: 18px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.leftover-box li {
-  color: var(--color-green-dark);
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.service-text-link {
-  display: inline-block;
-  margin-top: 18px;
-  color: var(--service-orange);
-  font-size: 14px;
-  font-weight: 800;
-}
-
-/* ========================================
-   Case
-======================================== */
-
-.service-heading-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.service-more {
-  color: var(--service-orange);
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.case-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.case-card {
-  background: #fffaf0;
-  border: 1px solid rgba(234, 223, 206, 0.9);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.case-card img {
-  width: 100%;
-  display: block;
-}
-
-.case-card {
-  padding-bottom: 14px;
-}
-
-.case-card h3,
-.case-card p {
-  padding: 0 12px;
-}
-
-.case-label {
-  display: inline-block;
-  margin: 12px 12px 8px;
-  padding: 4px 8px;
-  color: #fff;
-  font-size: 11px;
-  font-weight: 800;
-  background: var(--color-green);
-  border-radius: 999px;
-}
-
-.case-card h3 {
-  margin: 0 0 8px;
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 1.6;
-}
-
-.case-card p {
-  margin: 0;
-  font-size: 12px;
-  line-height: 1.7;
-}
-
-/* ========================================
-   FAQ
-======================================== */
-
-.faq-layout {
-  display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 32px;
-  align-items: center;
-}
-
-.faq-list {
-  display: grid;
-  gap: 8px;
-}
-
-.faq-list details {
-  background: #fff;
-  border-bottom: 1px solid rgba(234, 223, 206, 0.9);
-}
-
-.faq-list summary {
-  cursor: pointer;
-  padding: 14px 0;
-  font-size: 14px;
-  font-weight: 800;
-  list-style: none;
-}
-
-.faq-list summary::after {
-  content: "+";
-  float: right;
-}
-
-.faq-list p {
-  margin: 0;
-  padding: 0 0 14px;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-.faq-image img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* ========================================
-   Bottom CTA
-======================================== */
-
-.service-bottom-cta {
-  margin-top: 54px;
-  padding: 38px 0;
-  color: #fff;
-  background: var(--service-orange);
-}
-
-.service-bottom-cta__inner {
-  display: grid;
-  grid-template-columns: 1fr 560px;
-  align-items: center;
-  gap: 36px;
-}
-
-.service-bottom-cta h2 {
-  margin: 0 0 12px;
-  font-size: 30px;
-  font-weight: 800;
-}
-
-.service-bottom-cta p {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.9;
-}
-
-.service-bottom-cta__buttons {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.service-cta-button {
-  min-height: 96px;
-  flex-direction: column;
-  padding: 14px 12px;
-  background: #fff;
-}
-
-.service-cta-button span {
-  font-size: 15px;
-  font-weight: 800;
-}
-
-.service-cta-button small {
-  margin-top: 6px;
-  font-size: 11px;
-  font-weight: 700;
-}
-
-.service-cta-button--mail span,
-.service-cta-button--mail small {
-  color: var(--service-orange);
-}
-
-.service-cta-button--tel span,
-.service-cta-button--tel small {
-  color: var(--color-green-dark);
-}
-
-.service-cta-button--line span,
-.service-cta-button--line small {
-  color: #41b549;
-}
-
-/* ========================================
-   Responsive
-======================================== */
-
-@media (max-width: 1023px) {
-  .service-hero__inner {
-    grid-template-columns: 1fr;
-    min-height: auto;
-    padding: 46px 0;
-  }
-
-  .service-hero__image {
-    max-width: 640px;
-    margin: 0 auto;
-  }
-
-  .worry-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .risk-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .flow-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .reason-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .leftover-box {
-    grid-template-columns: 1fr;
-  }
-
-  .case-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .faq-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .service-bottom-cta__inner {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 750px) {
-  .service-inner,
-  .service-hero__inner {
-    width: calc(100% - 32px);
-  }
-
-  .service-hero h1 {
-    font-size: 36px;
-  }
-
-  .service-hero__lead {
-    font-size: 15px;
-  }
-
-  .worry-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .risk-grid,
-  .flow-list,
-  .reason-grid,
-  .case-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .service-heading {
-    font-size: 22px;
-  }
-
-  .leftover-box {
-    padding: 20px;
-  }
-
-  .leftover-box h2 {
-    font-size: 23px;
-  }
-
-  .service-heading-row {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .service-bottom-cta {
-    padding: 34px 0;
-  }
-
-  .service-bottom-cta h2 {
-    font-size: 24px;
-  }
-
-  .service-bottom-cta__buttons {
-    grid-template-columns: 1fr;
-  }
-
-  .service-cta-button {
-    width: min(100%, 360px);
-    margin: 0 auto;
-    min-height: 70px;
-    border-radius: 999px;
-  }
-}
-
-@media (max-width: 420px) {
-  .service-inner,
-  .service-hero__inner {
-    width: calc(100% - 28px);
-  }
-
-  .service-hero h1 {
-    font-size: 32px;
-  }
-
-  .worry-card {
-    min-height: 96px;
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 374px) {
-  .service-hero h1 {
-    font-size: 30px;
-  }
-
-  .service-button {
-    width: 100%;
-  }
 }
 
 /* ========================================
@@ -2577,9 +2057,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /*min-height: 46px;*/
 	  min-height: 41px;
-    /*margin-bottom: 10px;*/
 	  margin-bottom: 3px;
     font-size: 14px;
     line-height: 1.45;
@@ -5870,11 +5348,8 @@
   display: inline-block;
   align-self: center;
   width: fit-content;
-  /*max-width: calc(100% - 20px);*/
 	max-width: calc(100% - 0px);
   margin-top: auto;
-  /*margin-left: 10px;*/
-  /*margin-right: 10px;*/
   padding: 7px 12px;
   box-sizing: border-box;
 
@@ -5963,11 +5438,8 @@
     display: inline-block;
     align-self: center;
     width: fit-content;
-    /*max-width: calc(100% - 20px);*/
 	  max-width: calc(100% - 0px);
     margin-top: auto;
-    /*margin-left: 10px;*/
-    /*margin-right: 10px;*/
     padding: 7px 12px;
     box-sizing: border-box;
 
@@ -6027,10 +5499,7 @@
   }
 
   .akiya-sale-page .service-case .case-card .case-card__meta {
-    /*max-width: calc(100% - 16px);*/
 	  max-width: calc(100% - 0px);
-    /*margin-left: 8px;*/
-    /*margin-right: 8px;*/
     padding: 6px 10px;
     font-size: 9.5px;
     line-height: 1.45;
@@ -6098,10 +5567,7 @@
   }
 
   .akiya-sale-page .service-case .case-card .case-card__meta {
-    /*max-width: calc(100% - 20px);*/
 	  max-width: calc(100% - 0px);
-    /*margin-left: 10px;*/
-    /*margin-right: 10px;*/
     padding: 7px 12px;
     border-radius: 999px;
   }
@@ -6600,10 +6066,6 @@
 }
 
 /* ========================================
-   Service Bottom CTA / ラストCTA
-   下層ページ共通・人物画像あり
-   2026-09-03
-======================================== */
 /* ========================================
    Service Bottom CTA / ラストCTA
    空き家売却ページ・整理版
@@ -6791,9 +6253,7 @@
 .akiya-sale-page .service-bottom-cta__buttons a.btn.btn--green,
 .akiya-sale-page .service-bottom-cta__buttons a.btn.btn--green:visited {
   color: #fff;
-  /*background: var(--service-green);*/
 	background: #41b549;
-  /*border: 2px solid var(--service-green);*/
 	border: 2px solid #41b549;
 }
 
@@ -6897,7 +6357,6 @@
 
   .akiya-sale-page .service-bottom-cta__visual {
     position: absolute;
-    /*right: 8px;*/
 	  right: 22px;
     bottom: 0;
     z-index: 1;
@@ -6935,9 +6394,7 @@
   }
 
   .akiya-sale-page .service-bottom-cta__visual {
-    /*right: 2px;*/
 	  right: 17px;
-    /*bottom: 0;*/
   }
 
   .akiya-sale-page .service-bottom-cta__visual img {
@@ -7101,20 +6558,16 @@
 /* 551px〜750px */
 @media (min-width: 551px) and (max-width: 750px) {
   .akiya-sale-page .service-bottom-cta {
-    /*--sp-cta-section-top: 144px;*/
 	  --sp-cta-section-top: 180px;
     --sp-cta-section-bottom: 58px;
     --sp-cta-side-space: 40px;
     --sp-cta-card-max: 600px;
 
-    /*--sp-cta-image-overlap: 142px;*/
 	  --sp-cta-image-overlap: 233px;
     --sp-cta-image-width: 420px;
 
-    /*--sp-cta-card-top: 170px;*/
 	  --sp-cta-card-top: 50px;
     --sp-cta-card-x: 28px;
-    /*--sp-cta-card-bottom: 82px;*/
 	  --sp-cta-card-bottom: 50px;
 
     --sp-cta-text-width: 500px;
@@ -7139,20 +6592,16 @@
 /* 421px〜550px */
 @media (min-width: 421px) and (max-width: 550px) {
   .akiya-sale-page .service-bottom-cta {
-    /*--sp-cta-section-top: 128px;*/
 	  --sp-cta-section-top: 150px;
     --sp-cta-section-bottom: 54px;
     --sp-cta-side-space: 32px;
     --sp-cta-card-max: 500px;
 
-    /*--sp-cta-image-overlap: 126px;*/
 	  --sp-cta-image-overlap: 200px;
     --sp-cta-image-width: 358px;
 
-    /*--sp-cta-card-top: 154px;*/
 	  --sp-cta-card-top: 40px;
     --sp-cta-card-x: 22px;
-    /*--sp-cta-card-bottom: 76px;*/
 	  --sp-cta-card-bottom: 50px;
 
     --sp-cta-text-width: 420px;
@@ -7184,20 +6633,16 @@
 /* 375px〜420px */
 @media (min-width: 375px) and (max-width: 420px) {
   .akiya-sale-page .service-bottom-cta {
-    /*--sp-cta-section-top: 112px;*/
 	  --sp-cta-section-top: 125px;
     --sp-cta-section-bottom: 52px;
     --sp-cta-side-space: 24px;
     --sp-cta-card-max: 420px;
 
-    /*--sp-cta-image-overlap: 110px;*/
 	  --sp-cta-image-overlap: 178px;
     --sp-cta-image-width: 320px;
 
-    /*--sp-cta-card-top: 140px;*/
 	  --sp-cta-card-top: 37px;
     --sp-cta-card-x: 18px;
-    /*--sp-cta-card-bottom: 70px;*/
 	  --sp-cta-card-bottom: 50px;
 
     --sp-cta-text-width: 100%;
@@ -7226,20 +6671,16 @@
 /* 374px以下 */
 @media (max-width: 374px) {
   .akiya-sale-page .service-bottom-cta {
-    /*--sp-cta-section-top: 104px;*/
 	  --sp-cta-section-top: 111px;
     --sp-cta-section-bottom: 50px;
     --sp-cta-side-space: 20px;
     --sp-cta-card-max: 374px;
 
-    /*--sp-cta-image-overlap: 102px;*/
 	  --sp-cta-image-overlap: 163px;
     --sp-cta-image-width: 292px;
 
-    /*--sp-cta-card-top: 132px;*/
 	  --sp-cta-card-top: 30px;
     --sp-cta-card-x: 16px;
-    /*--sp-cta-card-bottom: 68px;*/
 	  --sp-cta-card-bottom: 50px;
 
     --sp-cta-text-width: 100%;
@@ -7268,18 +6709,14 @@
 /* 320px以下：300px確認用の最小幅調整 */
 @media (max-width: 320px) {
   .akiya-sale-page .service-bottom-cta {
-    /*--sp-cta-section-top: 100px;*/
 	  --sp-cta-section-top: 31.5vw;
     --sp-cta-section-bottom: 48px;
 
-    /*--sp-cta-image-overlap: 98px;*/
 	  --sp-cta-image-overlap: 48.5vw;
     --sp-cta-image-width: 282px;
 
-    /*--sp-cta-card-top: 128px;*/
 	  --sp-cta-card-top: 10vw;
     --sp-cta-card-x: 14px;
-    /*--sp-cta-card-bottom: 66px;*/
 	  --sp-cta-card-bottom: 15vw;
 
     --sp-cta-lead-width: 270px;
