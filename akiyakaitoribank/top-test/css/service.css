@@ -6990,20 +6990,55 @@ service-inner
 }
 
 /* ========================================
-   Sozoku Worry
+   Sozoku Worry / お悩み
+   TOPページ problem セクション寄せ
 ======================================== */
 
-.sozoku-worry,
-.sozoku-organize,
-.sozoku-support,
-.sozoku-expert,
-.sozoku-case,
-.sozoku-faq-cta {
+.sozoku-worry {
+  padding: 48px 0 72px;
   background: var(--color-bg);
+  overflow: hidden;
 }
 
-.sozoku-worry {
-  padding: 34px 0 42px;
+.sozoku-worry .service-section-heading {
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.sozoku-worry .service-section-heading h2 {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0 34px;
+  color: var(--color-text);
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.sozoku-worry .service-section-heading h2::before,
+.sozoku-worry .service-section-heading h2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 18px;
+  height: 2px;
+  background: var(--color-green);
+}
+
+.sozoku-worry .service-section-heading h2::before {
+  left: 0;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.sozoku-worry .service-section-heading h2::after {
+  right: 0;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.sozoku-worry .br-sp {
+  display: none;
 }
 
 .sozoku-worry-list {
@@ -7011,27 +7046,45 @@ service-inner
 }
 
 .sozoku-worry-card {
+  position: relative;
   min-width: 0;
-  padding: 18px 10px 16px;
-  border-radius: 10px;
   background: var(--color-white);
   box-shadow: 0 10px 26px rgba(74, 55, 32, 0.07);
   text-align: center;
+  box-sizing: border-box;
+}
+
+.sozoku-worry-card__check {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: #fff;
+  background: var(--service-green-dark, #4f8f2f);
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1;
 }
 
 .sozoku-worry-card .sozoku-card-icon {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 6px;
+  color: var(--sozoku-green-dark, var(--service-green-dark, #4f8f2f));
 }
 
 .sozoku-worry-card p {
   margin: 0;
   color: var(--color-text);
-  font-size: 13px;
   font-weight: 700;
-  line-height: 1.65;
 }
+
+/* ========================================
+   1024px以上：PC
+   1行 × 7列
+======================================== */
 
 @media (min-width: 1024px) {
   .sozoku-worry-list {
@@ -7040,54 +7093,199 @@ service-inner
   }
 
   .sozoku-worry-card {
-    min-height: 140px;
+    min-height: 148px;
+    padding: 18px 8px 16px;
+    border-radius: 10px;
+  }
+
+  .sozoku-worry-card .sozoku-card-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 5px;
+  }
+
+  .sozoku-worry-card p {
+    font-size: 13px;
+    line-height: 1.65;
   }
 }
 
+/* ========================================
+   751px〜1023px：タブレット
+   2行 × 4列
+======================================== */
+
 @media (min-width: 751px) and (max-width: 1023px) {
+  .sozoku-worry {
+    padding: 46px 0 58px;
+  }
+
+  .sozoku-worry .service-section-heading {
+    margin-bottom: 26px;
+  }
+
+  .sozoku-worry .service-section-heading h2 {
+    padding: 0 34px;
+    font-size: 24px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+  }
+
   .sozoku-worry-list {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 14px;
   }
 
   .sozoku-worry-card {
-    min-height: 142px;
-  }
-}
-
-@media (max-width: 750px) {
-  .sozoku-worry {
-    padding: 42px 0 48px;
-  }
-
-  .sozoku-worry-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-  }
-
-  .sozoku-worry-card {
-    min-height: 138px;
-    padding: 16px 8px 14px;
+    min-height: 150px;
+    padding: 18px 10px 16px;
     border-radius: 14px;
   }
 
   .sozoku-worry-card .sozoku-card-icon {
-    width: clamp(58px, 18vw, 82px);
-    height: clamp(58px, 18vw, 82px);
+    width: clamp(58px, 18vw, 120px);
+    height: clamp(58px, 18vw, 120px);
+    margin: 0 auto 8px;
   }
 
   .sozoku-worry-card p {
-    font-size: 12px;
-  }
-
-  .sozoku-fudosan-page .sozoku-hero .service-hero__buttons {
-    margin: 34px auto 0;
+    font-size: 13px;
+    line-height: 1.6;
   }
 }
 
-@media (max-width: 374px) {
+/* ========================================
+   750px以下：スマホ
+   4行 × 2列
+======================================== */
+
+@media (max-width: 750px) {
+  .sozoku-worry {
+    padding: 46px 0 58px;
+  }
+
+  .sozoku-worry .service-section-heading {
+    margin-bottom: 24px;
+  }
+
+  .sozoku-worry .service-section-heading h2 {
+    padding: 0 30px;
+    font-size: 22px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+  }
+
+  .sozoku-worry .service-section-heading h2::before,
+  .sozoku-worry .service-section-heading h2::after {
+    width: 18px;
+  }
+
+  .sozoku-worry .br-sp {
+    display: block;
+  }
+
+  .sozoku-worry-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .sozoku-worry-card {
+    min-height: 156px;
+    padding: 18px 8px 16px;
+    border-radius: 14px;
+    box-shadow: 0 10px 24px rgba(74, 55, 32, 0.07);
+  }
+
+  .sozoku-worry-card .sozoku-card-icon {
+    width: clamp(64px, 22vw, 120px);
+    height: clamp(64px, 22vw, 120px);
+    margin: 0 auto 8px;
+  }
+
+  .sozoku-worry-card p {
+    font-size: 13px;
+    line-height: 1.55;
+    font-weight: 700;
+  }
+}
+
+/* ========================================
+   420px以下：iPhone幅
+======================================== */
+
+@media (max-width: 420px) {
+  .sozoku-worry {
+    padding: 44px 0 56px;
+  }
+
+  .sozoku-worry .service-section-heading {
+    margin-bottom: 22px;
+  }
+
+  .sozoku-worry .service-section-heading h2 {
+    padding: 0 24px;
+    font-size: 20px;
+    line-height: 1.55;
+  }
+
+  .sozoku-worry .service-section-heading h2::before,
+  .sozoku-worry .service-section-heading h2::after {
+    top: 52%;
+  }
+
+  .sozoku-worry-list {
+    gap: 12px;
+  }
+
+  .sozoku-worry-card {
+    min-height: 142px;
+    padding: 16px 6px 14px;
+    border-radius: 12px;
+  }
+
+  .sozoku-worry-card .sozoku-card-icon {
+    margin-bottom: 7px;
+  }
+
   .sozoku-worry-card p {
     font-size: 11px;
+    line-height: 1.55;
+    letter-spacing: 0;
+  }
+}
+
+/* ========================================
+   374px以下：小さめスマホ
+======================================== */
+
+@media (max-width: 374px) {
+  .sozoku-worry .service-section-heading h2 {
+    padding: 0 22px;
+    font-size: 19px;
+  }
+
+  .sozoku-worry-list {
+    gap: 10px;
+  }
+
+  .sozoku-worry-card {
+    min-height: 136px;
+    padding: 15px 5px 13px;
+  }
+
+  .sozoku-worry-card__check {
+    width: 15px;
+    height: 15px;
+    font-size: 9px;
+  }
+
+  .sozoku-worry-card .sozoku-card-icon {
+    margin-bottom: 6px;
+  }
+
+  .sozoku-worry-card p {
+    font-size: 10.5px;
+    line-height: 1.55;
   }
 }
 
