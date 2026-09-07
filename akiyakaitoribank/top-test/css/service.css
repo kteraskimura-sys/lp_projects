@@ -573,7 +573,7 @@
   }
 
   .service-hero__text {
-    width: 360px;
+    /*width: 360px;*/width: 370px;
   }
 
   .service-hero h1 {
