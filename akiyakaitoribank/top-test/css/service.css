@@ -6832,7 +6832,7 @@
 }
 
 .sozoku-fudosan-page .sozoku-hero .service-hero__buttons {
-  /*margin-top: 28px;*/margin-top: 30px;
+  /*margin-top: 28px;*//*margin-top: 30px;*/
 }
 
 @media (min-width: 1024px) {
@@ -6916,6 +6916,10 @@
 
   .sozoku-fudosan-page .sozoku-hero .service-hero__lead {
     /*margin-top: 26px;*/margin-top: 28px;
+  }
+
+  .sozoku-fudosan-page .sozoku-hero .service-hero__buttons {
+    margin: 34px auto 0;
   }
 }
 
@@ -7028,6 +7032,10 @@
 
   .sozoku-worry-card p {
     font-size: 12px;
+  }
+
+  .sozoku-fudosan-page .sozoku-hero .service-hero__buttons {
+    margin: 34px auto 0;
   }
 }
 
