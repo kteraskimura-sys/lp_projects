@@ -6733,3 +6733,1179 @@
     --sp-cta-phone-sub-size: 8.2px;
   }
 }
+
+/* ========================================
+   Sozoku Fudosan Page / 相続不動産ページ
+   2026-09-07
+======================================== */
+
+.sozoku-fudosan-page {
+  --sozoku-orange: var(--service-orange, #f58b12);
+  --sozoku-green: var(--service-green, #7bc943);
+  --sozoku-green-dark: var(--service-green-dark, #4f8f2f);
+  --sozoku-text: var(--service-text, #2f2a26);
+  --sozoku-sub: var(--service-sub, #4a423b);
+  --sozoku-cream: var(--service-cream, #fffaf0);
+}
+
+.sozoku-fudosan-page .sozoku-color-orange {
+  color: var(--sozoku-orange);
+}
+
+.sozoku-fudosan-page .sozoku-color-green {
+  color: var(--sozoku-green-dark);
+}
+
+/* TOPページと同じ「＼ セクションタイトル ／」型 */
+.sozoku-fudosan-page .service-section-heading {
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.sozoku-fudosan-page .service-section-heading h2 {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0 34px;
+  color: var(--color-text);
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.sozoku-fudosan-page .service-section-heading h2::before,
+.sozoku-fudosan-page .service-section-heading h2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 18px;
+  height: 2px;
+  background: var(--color-green);
+}
+
+.sozoku-fudosan-page .service-section-heading h2::before {
+  left: 0;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.sozoku-fudosan-page .service-section-heading h2::after {
+  right: 0;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.sozoku-fudosan-page .service-section-heading p {
+  margin: 12px auto 0;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+}
+
+/* アイコン共通 */
+.sozoku-fudosan-page .sozoku-card-icon {
+  color: var(--sozoku-green-dark);
+}
+
+.sozoku-fudosan-page .sozoku-card-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.sozoku-fudosan-page .sozoku-card-icon svg * {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ========================================
+   Sozoku Hero
+======================================== */
+
+.sozoku-fudosan-page .sozoku-hero .service-hero__lead {
+  color: var(--sozoku-text);
+  font-weight: 700;
+}
+
+.sozoku-fudosan-page .sozoku-hero .service-hero__buttons {
+  margin-top: 28px;
+}
+
+@media (min-width: 1024px) {
+  .sozoku-fudosan-page .sozoku-hero .service-hero__inner {
+    min-height: 455px;
+    padding-top: 50px;
+  }
+
+  .sozoku-fudosan-page .sozoku-hero .service-hero__text {
+    width: 460px;
+  }
+
+  .sozoku-fudosan-page .sozoku-hero h1 {
+    font-size: 42px;
+    line-height: 1.45;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  .sozoku-fudosan-page .sozoku-hero .service-hero__lead {
+    margin-top: 26px;
+    font-size: 16px;
+    line-height: 2;
+  }
+
+  .sozoku-fudosan-page .sozoku-hero .service-hero__image {
+    width: 790px;
+  }
+
+  .sozoku-fudosan-page .sozoku-hero .service-hero__image::before {
+    width: 50%;
+  }
+
+  .sozoku-fudosan-page .sozoku-hero .service-hero__image img {
+    object-position: center right;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1099px) {
+  .sozoku-fudosan-page .sozoku-hero .service-hero__text {
+    width: 430px;
+  }
+
+  .sozoku-fudosan-page .sozoku-hero h1 {
+    font-size: 38px;
+  }
+
+  .sozoku-fudosan-page .sozoku-hero .service-hero__image {
+    width: 700px;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .sozoku-fudosan-page .sozoku-hero .service-hero__text {
+    width: 390px;
+  }
+
+  .sozoku-fudosan-page .sozoku-hero h1 {
+    font-size: 35px;
+    line-height: 1.42;
+    font-weight: 700;
+  }
+
+  .sozoku-fudosan-page .sozoku-hero .service-hero__lead {
+    margin-top: 24px;
+    font-size: 14.5px;
+    line-height: 1.9;
+  }
+}
+
+@media (max-width: 750px) {
+  .sozoku-fudosan-page .sozoku-hero h1 {
+    font-size: 40px;
+    line-height: 1.36;
+    font-weight: 700;
+  }
+
+  .sozoku-fudosan-page .sozoku-hero .service-hero__lead {
+    margin-top: 26px;
+  }
+}
+
+@media (max-width: 420px) {
+  .sozoku-fudosan-page .sozoku-hero h1 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 374px) {
+  .sozoku-fudosan-page .sozoku-hero h1 {
+    font-size: 31px;
+  }
+}
+
+/* ========================================
+   Sozoku Worry
+======================================== */
+
+.sozoku-worry,
+.sozoku-organize,
+.sozoku-support,
+.sozoku-expert,
+.sozoku-case,
+.sozoku-faq-cta {
+  background: var(--color-bg);
+}
+
+.sozoku-worry {
+  padding: 34px 0 42px;
+}
+
+.sozoku-worry-list {
+  display: grid;
+}
+
+.sozoku-worry-card {
+  min-width: 0;
+  padding: 18px 10px 16px;
+  border-radius: 10px;
+  background: var(--color-white);
+  box-shadow: 0 10px 26px rgba(74, 55, 32, 0.07);
+  text-align: center;
+}
+
+.sozoku-worry-card .sozoku-card-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 6px;
+}
+
+.sozoku-worry-card p {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+@media (min-width: 1024px) {
+  .sozoku-worry-list {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .sozoku-worry-card {
+    min-height: 140px;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .sozoku-worry-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .sozoku-worry-card {
+    min-height: 142px;
+  }
+}
+
+@media (max-width: 750px) {
+  .sozoku-worry {
+    padding: 42px 0 48px;
+  }
+
+  .sozoku-worry-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .sozoku-worry-card {
+    min-height: 138px;
+    padding: 16px 8px 14px;
+    border-radius: 14px;
+  }
+
+  .sozoku-worry-card .sozoku-card-icon {
+    width: clamp(58px, 18vw, 82px);
+    height: clamp(58px, 18vw, 82px);
+  }
+
+  .sozoku-worry-card p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 374px) {
+  .sozoku-worry-card p {
+    font-size: 11px;
+  }
+}
+
+/* ========================================
+   Sozoku Organize
+======================================== */
+
+.sozoku-organize {
+  padding: 34px 0 48px;
+}
+
+.sozoku-organize__inner {
+  display: grid;
+  align-items: center;
+}
+
+.sozoku-organize__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 10px 24px rgba(74, 55, 32, 0.08);
+}
+
+.sozoku-organize__content h2 {
+  margin: 0 0 18px;
+  color: var(--color-text);
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 1.55;
+  letter-spacing: 0.04em;
+}
+
+.sozoku-organize__content h2 span {
+  color: var(--sozoku-green-dark);
+}
+
+.sozoku-organize__content p {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.95;
+  letter-spacing: 0.02em;
+}
+
+.sozoku-flow-mini {
+  display: grid;
+  align-items: start;
+  margin-top: 22px;
+}
+
+.sozoku-flow-mini li {
+  position: relative;
+  min-width: 0;
+  text-align: center;
+}
+
+.sozoku-flow-mini li:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  top: 29px;
+  right: -14px;
+  color: var(--color-green);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.sozoku-flow-mini .sozoku-card-icon {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 2px;
+}
+
+.sozoku-flow-mini span {
+  display: block;
+  color: var(--color-text);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+@media (min-width: 1024px) {
+  .sozoku-organize__inner {
+    grid-template-columns: 430px 1fr;
+    gap: 52px;
+  }
+
+  .sozoku-flow-mini {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 22px;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .sozoku-organize__inner {
+    grid-template-columns: 40vw 1fr;
+    gap: 30px;
+  }
+
+  .sozoku-organize__content h2 {
+    font-size: 25px;
+  }
+
+  .sozoku-flow-mini {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .sozoku-flow-mini li:not(:last-child)::after {
+    right: -12px;
+  }
+
+  .sozoku-flow-mini .sozoku-card-icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .sozoku-flow-mini span {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 750px) {
+  .sozoku-organize {
+    padding: 36px 0 48px;
+  }
+
+  .sozoku-organize__inner {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .sozoku-organize__image {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .sozoku-organize__content {
+    text-align: center;
+  }
+
+  .sozoku-organize__content h2 {
+    font-size: 24px;
+  }
+
+  .sozoku-organize__content p {
+    font-size: 14px;
+  }
+
+  .sozoku-flow-mini {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .sozoku-flow-mini li:not(:last-child)::after {
+    display: none;
+  }
+
+  .sozoku-flow-mini .sozoku-card-icon {
+    width: clamp(48px, 14vw, 64px);
+    height: clamp(48px, 14vw, 64px);
+  }
+
+  .sozoku-flow-mini span {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .sozoku-flow-mini {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px 10px;
+  }
+
+  .sozoku-flow-mini .sozoku-card-icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .sozoku-flow-mini span {
+    font-size: 11px;
+  }
+}
+
+/* ========================================
+   Sozoku Support
+======================================== */
+
+.sozoku-support {
+  padding: 38px 0 46px;
+}
+
+.sozoku-support-grid {
+  display: grid;
+}
+
+.sozoku-support-card {
+  min-width: 0;
+  padding: 20px 16px 18px;
+  border-radius: 10px;
+  background: var(--color-white);
+  box-shadow: 0 10px 26px rgba(74, 55, 32, 0.07);
+  text-align: center;
+}
+
+.sozoku-support-card .sozoku-card-icon {
+  width: 66px;
+  height: 66px;
+  margin: 0 auto 4px;
+}
+
+.sozoku-support-card h3 {
+  margin: 0 0 8px;
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.sozoku-support-card p {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+@media (min-width: 1024px) {
+  .sozoku-support-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .sozoku-support-card {
+    min-height: 164px;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .sozoku-support-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+
+@media (max-width: 750px) {
+  .sozoku-support-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .sozoku-support-card {
+    padding: 18px 10px 16px;
+    border-radius: 14px;
+  }
+
+  .sozoku-support-card .sozoku-card-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .sozoku-support-card h3 {
+    font-size: 13px;
+  }
+
+  .sozoku-support-card p {
+    font-size: 11px;
+  }
+}
+
+/* ========================================
+   Sozoku Expert
+======================================== */
+
+.sozoku-expert {
+  padding: 36px 0 48px;
+}
+
+.sozoku-expert__heading {
+  margin-bottom: 22px;
+}
+
+.sozoku-expert-grid {
+  display: grid;
+}
+
+.sozoku-expert-card {
+  min-width: 0;
+  padding: 20px 22px 18px;
+  border: 1px solid rgba(234, 223, 206, 0.95);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.sozoku-expert-card h3 {
+  position: relative;
+  margin: 0 0 12px;
+  padding-left: 28px;
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.sozoku-expert-card h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.3em;
+  width: 18px;
+  height: 18px;
+  border: 2px solid currentColor;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.sozoku-expert-card--green h3 {
+  color: var(--sozoku-green-dark);
+}
+
+.sozoku-expert-card--orange h3 {
+  color: var(--sozoku-orange);
+}
+
+.sozoku-expert-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sozoku-expert-card li {
+  position: relative;
+  padding-left: 14px;
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.sozoku-expert-card li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+}
+
+.sozoku-expert-note {
+  margin: 18px 0 0;
+  color: var(--color-subtext);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.7;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .sozoku-expert-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .sozoku-expert-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 750px) {
+  .sozoku-expert-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .sozoku-expert-card {
+    padding: 18px 20px 16px;
+  }
+}
+
+/* ========================================
+   Sozoku Case
+======================================== */
+
+.sozoku-fudosan-page .sozoku-case {
+  padding: 40px 0 50px;
+}
+
+.sozoku-fudosan-page .sozoku-case .service-case__head {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.sozoku-fudosan-page .sozoku-case .service-case__heading {
+  margin-bottom: 0;
+  padding-right: 0;
+}
+
+.sozoku-fudosan-page .sozoku-case .service-case__more {
+  min-width: 116px;
+  color: var(--sozoku-green-dark);
+  border-color: var(--color-green);
+}
+
+.sozoku-fudosan-page .sozoku-case .case-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.sozoku-fudosan-page .sozoku-case .case-card {
+  background: #fff;
+}
+
+.sozoku-fudosan-page .sozoku-case .case-card__image {
+  aspect-ratio: 16 / 8.8;
+}
+
+.sozoku-fudosan-page .sozoku-case .case-card__label {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  padding: 4px 10px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.3;
+  background: var(--color-green);
+  border-radius: 6px;
+}
+
+.sozoku-fudosan-page .sozoku-case .case-card h3 {
+  color: var(--color-text);
+  font-size: 15px;
+}
+
+.sozoku-fudosan-page .sozoku-case .case-card p {
+  font-size: 12px;
+}
+
+.sozoku-fudosan-page .sozoku-case .case-card .case-card__meta {
+  width: auto;
+  max-width: 100%;
+  margin-top: 12px;
+  color: #6b5b46;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+@media (min-width: 1024px) {
+  .sozoku-fudosan-page .sozoku-case .service-case__more {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .sozoku-fudosan-page .sozoku-case .case-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .sozoku-fudosan-page .sozoku-case .case-card h3 {
+    font-size: 13px;
+  }
+
+  .sozoku-fudosan-page .sozoku-case .case-card p {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 750px) {
+  .sozoku-fudosan-page .sozoku-case .service-case__more {
+    position: static;
+    width: fit-content;
+    margin: 12px 0 0 auto;
+    transform: none;
+  }
+
+  .sozoku-fudosan-page .sozoku-case .case-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .sozoku-fudosan-page .sozoku-case .case-card {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+
+/* ========================================
+   Sozoku FAQ + Compact CTA
+======================================== */
+
+.sozoku-faq-cta {
+  padding: 36px 0 48px;
+}
+
+.sozoku-faq-cta__inner {
+  display: grid;
+  align-items: stretch;
+  gap: 18px;
+}
+
+.sozoku-faq-box,
+.sozoku-bottom-cta .service-bottom-cta__inner {
+  background: linear-gradient(135deg, #fff7e8 0%, #fffdf8 100%);
+  border: 1px solid rgba(234, 223, 206, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 10px 26px rgba(74, 55, 32, 0.06);
+}
+
+.sozoku-faq-box {
+  padding: 26px 28px 24px;
+}
+
+.sozoku-faq-box__head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.sozoku-faq-box__head h2 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.sozoku-faq-box__head a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 106px;
+  min-height: 30px;
+  color: var(--sozoku-green-dark);
+  font-size: 11px;
+  font-weight: 800;
+  text-decoration: none;
+  border: 1.5px solid var(--color-green);
+  border-radius: 999px;
+  background: #fff;
+}
+
+.sozoku-faq-box__head a::after {
+  content: "›";
+  margin-left: 6px;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.sozoku-faq-list details {
+  border-bottom: 1px solid rgba(234, 223, 206, 0.95);
+}
+
+.sozoku-faq-list summary {
+  position: relative;
+  display: block;
+  padding: 14px 34px 14px 0;
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.6;
+  cursor: pointer;
+  list-style: none;
+}
+
+.sozoku-faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.sozoku-faq-list summary::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  color: var(--color-text);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+
+.sozoku-faq-list details[open] summary::after {
+  content: "−";
+}
+
+.sozoku-faq-list p {
+  margin: -4px 0 14px;
+  padding-right: 30px;
+  color: var(--color-subtext);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.sozoku-bottom-cta {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.sozoku-bottom-cta .service-bottom-cta__inner {
+  width: 100%;
+  max-width: none;
+  min-height: 100%;
+  margin: 0;
+  overflow: hidden;
+  text-align: left;
+}
+
+.sozoku-bottom-cta .service-bottom-cta__text h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.sozoku-bottom-cta .service-bottom-cta__text p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.sozoku-bottom-cta .service-bottom-cta__buttons {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .sozoku-faq-cta__inner {
+    grid-template-columns: 1fr 1.18fr;
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__inner {
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    gap: 10px;
+    padding: 28px 150px 26px 30px;
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__content {
+    align-self: center;
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__buttons {
+    justify-content: flex-start;
+    gap: 8px;
+    width: 100%;
+    max-width: none;
+    margin-top: 20px;
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__buttons a.btn {
+    flex: 0 0 132px;
+    width: 132px;
+    max-width: 132px;
+    min-height: 48px;
+    padding: 0 8px;
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__buttons .btn-icon {
+    width: 16px;
+    height: 16px;
+    flex-basis: 16px;
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__buttons .btn-cta__main {
+    font-size: 10.8px;
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__buttons .btn-cta__sub {
+    font-size: 8px;
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__buttons .btn-phone__number {
+    font-size: 11.2px;
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__buttons .btn-phone__time {
+    font-size: 7.4px;
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__visual {
+    position: absolute;
+    right: 16px;
+    bottom: -1px;
+    z-index: 2;
+    width: auto;
+    height: auto;
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__visual img {
+    height: 220px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .sozoku-faq-cta__inner {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__inner {
+    width: 100%;
+    max-width: none;
+    min-height: 240px;
+    padding: 28px 140px 28px 28px;
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__buttons {
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__buttons a.btn {
+    flex: 0 0 160px;
+    width: 160px;
+    max-width: 160px;
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__visual {
+    position: absolute;
+    right: 14px;
+    bottom: 0;
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__visual img {
+    height: 210px;
+  }
+}
+
+@media (max-width: 750px) {
+  .sozoku-faq-cta__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .sozoku-faq-box {
+    padding: 24px 20px 22px;
+  }
+
+  .sozoku-faq-box__head h2 {
+    font-size: 20px;
+  }
+
+  .sozoku-bottom-cta {
+    padding-top: var(--sp-cta-section-top);
+    padding-bottom: 0;
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__inner {
+    position: relative;
+    width: min(calc(100% - var(--sp-cta-side-space)), var(--sp-cta-card-max));
+    max-width: var(--sp-cta-card-max);
+    min-height: auto;
+    padding: var(--sp-cta-card-top) var(--sp-cta-card-x) var(--sp-cta-card-bottom);
+    text-align: center;
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__text h2 {
+    font-size: var(--sp-cta-title-size);
+    text-align: center;
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__text p {
+    font-size: var(--sp-cta-lead-size);
+    text-align: center;
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-cta-button-gap);
+    margin-top: var(--sp-cta-button-top);
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__buttons a.btn {
+    width: min(100%, var(--sp-cta-button-width));
+    max-width: var(--sp-cta-button-width);
+    min-height: var(--sp-cta-button-height);
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__visual {
+    position: absolute;
+    left: 50%;
+    top: calc(-1 * var(--sp-cta-image-overlap));
+    right: auto;
+    bottom: auto;
+    z-index: 3;
+    width: var(--sp-cta-image-width);
+    max-width: 92%;
+    transform: translateX(-50%);
+  }
+
+  .sozoku-bottom-cta .service-bottom-cta__visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}
+
+@media (min-width: 551px) and (max-width: 750px) {
+  .sozoku-bottom-cta {
+    --sp-cta-section-top: 150px;
+    --sp-cta-side-space: 0px;
+    --sp-cta-card-max: 620px;
+    --sp-cta-image-overlap: 144px;
+    --sp-cta-image-width: 360px;
+    --sp-cta-card-top: 142px;
+    --sp-cta-card-x: 28px;
+    --sp-cta-card-bottom: 44px;
+    --sp-cta-title-size: 24px;
+    --sp-cta-lead-size: 13px;
+    --sp-cta-button-top: 20px;
+    --sp-cta-button-width: 292px;
+    --sp-cta-button-height: 52px;
+    --sp-cta-button-gap: 10px;
+  }
+}
+
+@media (min-width: 421px) and (max-width: 550px) {
+  .sozoku-bottom-cta {
+    --sp-cta-section-top: 132px;
+    --sp-cta-side-space: 0px;
+    --sp-cta-card-max: 520px;
+    --sp-cta-image-overlap: 126px;
+    --sp-cta-image-width: 320px;
+    --sp-cta-card-top: 124px;
+    --sp-cta-card-x: 22px;
+    --sp-cta-card-bottom: 42px;
+    --sp-cta-title-size: 22px;
+    --sp-cta-lead-size: 12.5px;
+    --sp-cta-button-top: 18px;
+    --sp-cta-button-width: 292px;
+    --sp-cta-button-height: 52px;
+    --sp-cta-button-gap: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .sozoku-fudosan-page .service-section-heading h2 {
+    padding: 0 26px;
+    font-size: 20px;
+  }
+
+  .sozoku-bottom-cta {
+    --sp-cta-section-top: 112px;
+    --sp-cta-side-space: 0px;
+    --sp-cta-card-max: 420px;
+    --sp-cta-image-overlap: 108px;
+    --sp-cta-image-width: 292px;
+    --sp-cta-card-top: 110px;
+    --sp-cta-card-x: 18px;
+    --sp-cta-card-bottom: 40px;
+    --sp-cta-title-size: 21px;
+    --sp-cta-lead-size: 12.2px;
+    --sp-cta-button-top: 18px;
+    --sp-cta-button-width: 282px;
+    --sp-cta-button-height: 51px;
+    --sp-cta-button-gap: 9px;
+  }
+}
+
+@media (max-width: 320px) {
+  .sozoku-bottom-cta {
+    --sp-cta-section-top: 100px;
+    --sp-cta-image-overlap: 96px;
+    --sp-cta-image-width: 270px;
+    --sp-cta-card-top: 98px;
+    --sp-cta-button-width: 254px;
+  }
+}
+
