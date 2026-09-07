@@ -6838,7 +6838,7 @@
 @media (min-width: 1024px) {
   .sozoku-fudosan-page .sozoku-hero .service-hero__inner {
     min-height: 455px;
-    padding-top: 50px;
+    /*padding-top: 50px;*/
   }
 
   .sozoku-fudosan-page .sozoku-hero .service-hero__text {
@@ -6892,8 +6892,8 @@
 
   .sozoku-fudosan-page .sozoku-hero h1 {
     font-size: 35px;
-    line-height: 1.42;
-    font-weight: 700;
+    /*line-height: 1.42;*/line-height: 1.34;
+    /*font-weight: 700;*/font-weight: 600;
   }
 
   .sozoku-fudosan-page .sozoku-hero .service-hero__lead {
@@ -6905,8 +6905,8 @@
 
 @media (max-width: 750px) {
   .sozoku-fudosan-page .sozoku-hero h1 {
-    font-size: 40px;
-    line-height: 1.36;
+    /*font-size: 40px;*/font-size: 46px;
+    /*line-height: 1.36;*/line-height: 1.32;
     font-weight: 700;
   }
 
@@ -6915,15 +6915,23 @@
   }
 }
 
+@media (max-width: 550px) {
+  .sozoku-fudosan-page .sozoku-hero h1 {
+    font-size: 40px;
+	  line-height: 1.34;
+  }
+}
+
 @media (max-width: 420px) {
   .sozoku-fudosan-page .sozoku-hero h1 {
-    font-size: 34px;
+    /*font-size: 34px;*/font-size: 36px;
+	  line-height: 1.36;
   }
 }
 
 @media (max-width: 374px) {
   .sozoku-fudosan-page .sozoku-hero h1 {
-    font-size: 31px;
+    /*font-size: 31px;*/font-size: 33px;
   }
 }
 
