@@ -6898,7 +6898,7 @@
 
   .sozoku-fudosan-page .sozoku-hero .service-hero__lead {
     margin-top: 24px;
-    font-size: 14.5px;
+    /*font-size: 14.5px;*/font-size: 13.5px;
     line-height: 1.9;
   }
 }
