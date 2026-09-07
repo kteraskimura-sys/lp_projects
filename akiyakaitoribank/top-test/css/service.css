@@ -4,9 +4,55 @@
   color: var(--color-text);
 }
 
-.service-inner {
+/* ========================================
+service-inner
+======================================== */
+
+/*.service-inner {
   width: min(calc(100% - 48px), 1040px);
   margin: 0 auto;
+}*/
+.service-inner {
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .service-inner {
+    width: 1040px;
+    max-width: 1040px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .service-inner {
+    width: calc(100% - 40px);
+    max-width: 880px;
+  }
+}
+
+@media (max-width: 750px) {
+  .service-inner {
+    width: calc(100% - 28px);
+    max-width: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .service-inner {
+    width: calc(100% - 24px);
+  }
+}
+
+@media (max-width: 374px) {
+  .service-inner {
+    width: calc(100% - 20px);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1099px) {
+  .service-inner {
+    width: min(calc(100% - 48px), 1040px);
+  }
 }
 
 .service-label {
