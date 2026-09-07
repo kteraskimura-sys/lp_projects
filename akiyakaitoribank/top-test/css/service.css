@@ -6832,7 +6832,7 @@
 }
 
 .sozoku-fudosan-page .sozoku-hero .service-hero__buttons {
-  margin-top: 28px;
+  /*margin-top: 28px;*/margin-top: 30px;
 }
 
 @media (min-width: 1024px) {
@@ -6853,9 +6853,9 @@
   }
 
   .sozoku-fudosan-page .sozoku-hero .service-hero__lead {
-    margin-top: 28px;
-    font-size: 16px;
-    line-height: 2;
+    /*margin-top: 28px;*/margin-top: 24px;
+    /*font-size: 16px;*/font-size: 15px;
+    /*line-height: 2;*/line-height: 1.9;
   }
 
   .sozoku-fudosan-page .sozoku-hero .service-hero__image {
@@ -6901,6 +6901,10 @@
     /*font-size: 14.5px;*/font-size: 13.5px;
     line-height: 1.9;
   }
+
+	.sozoku-fudosan-page .sozoku-hero .service-hero__buttons {
+		margin-top: 28px;
+	}
 }
 
 @media (max-width: 750px) {
