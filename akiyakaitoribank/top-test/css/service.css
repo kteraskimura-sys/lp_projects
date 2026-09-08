@@ -6989,6 +6989,60 @@ service-inner
   }
 }
 
+
+/* ========================================
+   Service Hero / CTA下端揃え
+   751px以上：空き家売却ページ・相続不動産ページ共通
+   ※750px以下のスマホCTAは既存仕様を維持
+======================================== */
+
+@media (min-width: 1024px) {
+  .service-page .service-hero__text {
+    display: flex;
+    flex-direction: column;
+    min-height: 383px;
+  }
+
+  .service-page .service-hero .service-hero__buttons {
+    margin-top: auto;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1099px) {
+  .service-page .service-hero__text {
+    min-height: 382px;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1023px) {
+  .service-page .service-hero__text {
+    display: flex;
+    flex-direction: column;
+    min-height: 414px;
+  }
+
+  .service-page .service-hero .service-hero__buttons {
+    margin-top: auto;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 850px) {
+  .service-page .service-hero__text {
+    min-height: 420px;
+  }
+}
+
+/* ========================================
+   Sozoku Hero / 751px〜850px 画像位置調整
+   相続不動産ページのみ
+======================================== */
+
+@media (min-width: 751px) and (max-width: 850px) {
+  .sozoku-fudosan-page .sozoku-hero .service-hero__image img {
+    object-position: 100% center;
+  }
+}
+
 /* ========================================
    Sozoku Worry / お悩み
    TOPページ problem セクション寄せ
