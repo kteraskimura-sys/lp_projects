@@ -6378,3 +6378,82 @@
     left: var(--top-fw-side);
   }
 }
+
+/* ========================================
+   TOP Hero Visual / 1100px以上 画像右寄せ調整
+   2026-09-09
+   ※左余白調整コードより後ろ、top.cssの一番最後に追加
+   ※1099px以下のPC版ヒーローには影響させない
+======================================== */
+
+@media (min-width: 1100px) {
+  .hero__visual {
+    right: clamp(-72px, -4vw, -34px);
+    width: min(76vw, 1240px);
+  }
+
+  .hero__visual img {
+    transform: translateX(clamp(18px, 2.4vw, 46px)) scale(1.025);
+    transform-origin: center right;
+  }
+
+  .hero__visual::before {
+    width: 50%;
+  }
+}
+
+/* MacBookフルスクリーン付近：1158px前後 */
+@media (min-width: 1100px) and (max-width: 1279px) {
+  .hero__visual {
+    right: -34px;
+    width: min(74vw, 940px);
+  }
+
+  .hero__visual img {
+    transform: translateX(24px) scale(1.025);
+  }
+
+  .hero__visual::before {
+    width: 54%;
+  }
+}
+
+/* 1280px〜1399px */
+@media (min-width: 1280px) and (max-width: 1399px) {
+  .hero__visual {
+    right: -46px;
+    width: min(75vw, 1120px);
+  }
+
+  .hero__visual img {
+    transform: translateX(32px) scale(1.025);
+  }
+}
+
+/* 1400px〜1599px */
+@media (min-width: 1400px) and (max-width: 1599px) {
+  .hero__visual {
+    right: -58px;
+    width: min(76vw, 1280px);
+  }
+
+  .hero__visual img {
+    transform: translateX(40px) scale(1.03);
+  }
+}
+
+/* 1600px以上 */
+@media (min-width: 1600px) {
+  .hero__visual {
+    right: -72px;
+    width: min(77vw, 1400px);
+  }
+
+  .hero__visual img {
+    transform: translateX(52px) scale(1.035);
+  }
+
+  .hero__visual::before {
+    width: 48%;
+  }
+}
