@@ -6532,3 +6532,27 @@
     /*width: 48%;*/width: 39%;
   }
 }
+
+/* ========================================
+   TOP Sections / ヒーロー見出し左余白とセクション左右余白を揃える
+   2026-09-09
+   ※1280px以上のみ調整
+   ※1100px〜1279pxは現状OKのため維持
+======================================== */
+
+@media (min-width: 1280px) {
+  .problem__inner,
+  .strength__inner,
+  .remaining-items__inner,
+  .service__inner,
+  .case-study__inner,
+  .column-news__inner,
+  .faq__inner,
+  .closing__inner {
+    width: calc(100% - (var(--top-fw-side) * 2));
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+}
