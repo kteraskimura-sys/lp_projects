@@ -5977,3 +5977,279 @@
     max-width: 1240px;
   }
 }
+
+/* ========================================
+   TOP PC Full Wide Hero / ワケガイ寄せ最終調整
+   2026-09-09
+   1280px以上のみ適用
+   ※既存のPC Wide指定より後ろに置いて上書きする
+======================================== */
+
+@media (min-width: 1280px) {
+  :root {
+    --top-fullwide-side: clamp(48px, 4.2vw, 76px);
+    --top-fullwide-header-side: clamp(48px, 5vw, 96px);
+    --top-fullwide-hero-height: clamp(590px, 41vw, 680px);
+  }
+
+  /* Header：中央固定感を弱め、画面幅を広く使う */
+  .site-header__inner {
+    width: calc(100vw - (var(--top-fullwide-header-side) * 2));
+    max-width: 1680px;
+    min-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: clamp(18px, 1.4vw, 28px);
+    box-sizing: border-box;
+  }
+
+  .site-header__logo {
+    width: clamp(230px, 16vw, 260px);
+    right: 0;
+  }
+
+  .site-header__nav {
+    left: 0;
+    margin: 0 auto;
+  }
+
+  .site-header__nav ul {
+    gap: clamp(12px, 1.15vw, 22px);
+  }
+
+  .site-header__nav a {
+    font-size: clamp(14px, 0.95vw, 16px);
+    letter-spacing: 0.11em;
+  }
+
+  .site-header__contact {
+    left: 0;
+    gap: clamp(14px, 1.2vw, 20px);
+  }
+
+  .site-header__phone-number {
+    font-size: clamp(19px, 1.35vw, 24px);
+  }
+
+  .site-header__phone-time {
+    font-size: clamp(10px, 0.72vw, 12px);
+  }
+
+  .site-header__button {
+    width: clamp(156px, 10.5vw, 180px);
+    min-width: clamp(156px, 10.5vw, 180px);
+    height: clamp(62px, 4.4vw, 72px);
+    border-radius: 12px;
+    font-size: clamp(14px, 1vw, 16px);
+  }
+
+  .site-header__button-icon {
+    width: 23px;
+    height: 23px;
+  }
+
+  /* Hero：innerの最大幅を外して、ファーストビューを横いっぱいに見せる */
+  .hero {
+    padding: 0;
+    overflow: hidden;
+    background-color: #fefefe;
+  }
+
+  .hero__canvas {
+    position: relative;
+    width: 100vw;
+    max-width: none;
+    min-height: var(--top-fullwide-hero-height);
+    margin-left: calc(50% - 50vw);
+    transform: none;
+    overflow: hidden;
+  }
+
+  .hero__inner {
+    position: relative;
+    width: 100vw;
+    max-width: none;
+    min-height: var(--top-fullwide-hero-height);
+    margin: 0;
+  }
+
+  .hero__content {
+    position: absolute;
+    left: var(--top-fullwide-side);
+    top: clamp(58px, 4.8vw, 82px);
+    width: min(55vw, 840px);
+    z-index: 3;
+  }
+
+  .hero__title {
+    font-size: clamp(54px, 4.15vw, 70px);
+    line-height: 1.34;
+    letter-spacing: 0.03em;
+  }
+
+  .hero__lead {
+    margin-top: clamp(28px, 2.3vw, 38px);
+    font-size: clamp(18px, 1.25vw, 21px);
+    line-height: 2.05;
+  }
+
+  .hero__buttons {
+    gap: clamp(12px, 1.1vw, 18px);
+    margin-top: clamp(34px, 2.8vw, 48px);
+  }
+
+  .hero__buttons .btn {
+    width: clamp(214px, 15.2vw, 250px);
+    min-width: clamp(214px, 15.2vw, 250px);
+    min-height: clamp(58px, 4.1vw, 68px);
+    padding: 0 18px;
+  }
+
+  .hero__buttons .btn-icon {
+    width: clamp(21px, 1.6vw, 26px);
+    height: clamp(21px, 1.6vw, 26px);
+  }
+
+  .hero__buttons .btn--line .btn-icon {
+    width: clamp(23px, 1.75vw, 28px);
+    height: clamp(23px, 1.75vw, 28px);
+  }
+
+  .btn-cta__main {
+    font-size: clamp(14px, 1vw, 16px);
+  }
+
+  .btn-cta__sub {
+    font-size: clamp(10px, 0.75vw, 12px);
+  }
+
+  .btn-phone__number {
+    font-size: clamp(17px, 1.25vw, 20px);
+  }
+
+  .btn-phone__time {
+    font-size: clamp(9px, 0.72vw, 11px);
+  }
+
+  .hero__visual {
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: min(72vw, 1220px);
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .hero__visual::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 46%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      #fefefe 0%,
+      rgba(254, 254, 254, 0.98) 18%,
+      rgba(254, 254, 254, 0.82) 42%,
+      rgba(254, 254, 254, 0.42) 68%,
+      rgba(254, 254, 254, 0) 100%
+    );
+    pointer-events: none;
+  }
+
+  .hero__visual picture,
+  .hero__visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero__visual img {
+    max-width: none;
+    object-fit: cover;
+    object-position: center right;
+  }
+
+  /* ヒーロー下：ワケガイのcontainer-xxlに近い1320px基準 */
+  .problem__inner,
+  .strength__inner,
+  .remaining-items__inner,
+  .service__inner,
+  .case-study__inner,
+  .column-news__inner,
+  .faq__inner,
+  .closing__inner {
+    width: min(calc(100vw - 96px), 1320px);
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+}
+
+/* 1400px以上：ワケガイのcontainer-xxl相当を保ちながら、ヒーローだけさらに広く */
+@media (min-width: 1400px) {
+  :root {
+    --top-fullwide-side: clamp(48px, 4vw, 82px);
+    --top-fullwide-header-side: clamp(48px, 4.6vw, 88px);
+    --top-fullwide-hero-height: clamp(610px, 41vw, 700px);
+  }
+
+  .hero__content {
+    width: min(53vw, 880px);
+  }
+
+  .hero__visual {
+    width: min(73vw, 1280px);
+  }
+}
+
+/* 1600px以上：大きいモニターで右側画像をより画面端まで見せる */
+@media (min-width: 1600px) {
+  :root {
+    --top-fullwide-side: clamp(56px, 4.2vw, 96px);
+    --top-fullwide-header-side: clamp(64px, 5vw, 120px);
+    --top-fullwide-hero-height: clamp(650px, 39vw, 730px);
+  }
+
+  .site-header__inner {
+    max-width: 1760px;
+  }
+
+  .hero__title {
+    font-size: clamp(64px, 3.9vw, 74px);
+  }
+
+  .hero__visual {
+    width: min(74vw, 1360px);
+  }
+}
+
+/* 1280px〜1399px：小さめPCで文字と画像の重なりを少し抑える */
+@media (min-width: 1280px) and (max-width: 1399px) {
+  .hero__content {
+    width: min(56vw, 760px);
+  }
+
+  .hero__title {
+    font-size: clamp(52px, 4.1vw, 58px);
+  }
+
+  .hero__visual {
+    width: min(70vw, 980px);
+  }
+
+  .hero__visual::before {
+    width: 50%;
+  }
+
+  .hero__buttons .btn {
+    width: 214px;
+    min-width: 214px;
+  }
+}
