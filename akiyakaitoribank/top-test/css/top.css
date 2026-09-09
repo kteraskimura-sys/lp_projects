@@ -6532,3 +6532,84 @@
     /*width: 48%;*/width: 39%;
   }
 }
+
+/* ========================================
+   TOP Problem / PC版カード拡大調整
+   2026-09-09
+   ※1024px以上のみ適用
+   ※スマホ版・タブレット版の見た目は変更しない
+======================================== */
+
+@media (min-width: 1024px) {
+  .problem {
+    padding: 64px 0 88px;
+  }
+
+  .problem__heading {
+    margin-bottom: 36px;
+  }
+
+  .problem__heading h2 {
+    font-size: clamp(28px, 2vw, 30px);
+    line-height: 1.55;
+    letter-spacing: 0.04em;
+  }
+
+  .problem__heading h2::before,
+  .problem__heading h2::after {
+    width: 22px;
+  }
+
+  .problem-card-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: min(100%, 1220px);
+    margin: 0 auto;
+    gap: 24px;
+  }
+
+  .problem-card {
+    min-height: 210px;
+    padding: 30px 20px 26px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(74, 55, 32, 0.08);
+  }
+
+  .problem-card__icon {
+    width: clamp(100px, 8vw, 112px);
+    height: clamp(100px, 8vw, 112px);
+    margin: 0 auto 12px;
+  }
+
+  .problem-card p {
+    font-size: 15px;
+    line-height: 1.75;
+    font-weight: 700;
+  }
+}
+
+/* 1024px〜1099px：横幅が狭めのPCだけ少し控えめにする */
+@media (min-width: 1024px) and (max-width: 1099px) {
+  .problem {
+    padding: 58px 0 80px;
+  }
+
+  .problem-card-list {
+    gap: 20px;
+  }
+
+  .problem-card {
+    min-height: 198px;
+    padding: 26px 16px 24px;
+  }
+
+  .problem-card__icon {
+    width: 98px;
+    height: 98px;
+    margin-bottom: 10px;
+  }
+
+  .problem-card p {
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
+}
