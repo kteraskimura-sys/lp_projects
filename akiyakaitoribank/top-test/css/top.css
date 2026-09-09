@@ -6468,7 +6468,7 @@
 /* 1100px〜1279px：さらに右へ */
 @media (min-width: 1100px) and (max-width: 1279px) {
   .hero__visual {
-    right: -52px;
+    /*right: -52px;*/right: -234px;
     width: min(76vw, 960px);
   }
 
@@ -6478,14 +6478,14 @@
   }
 
   .hero__visual::before {
-    width: 54%;
+    /*width: 54%;*/width: 30%;
   }
 }
 
 /* 1280px〜1399px：さらに右へ */
 @media (min-width: 1280px) and (max-width: 1399px) {
   .hero__visual {
-    right: -64px;
+    /*right: -64px;*/right: -234px;
     width: min(77vw, 1140px);
   }
 
@@ -6495,14 +6495,14 @@
   }
 
   .hero__visual::before {
-    width: 51%;
+    /*width: 51%;*/width: 30%;
   }
 }
 
 /* 1400px〜1599px：さらに右へ */
 @media (min-width: 1400px) and (max-width: 1599px) {
   .hero__visual {
-    right: -76px;
+    /*right: -76px;*/right: -200px;
     width: min(78vw, 1300px);
   }
 
@@ -6512,14 +6512,14 @@
   }
 
   .hero__visual::before {
-    width: 49%;
+    /*width: 49%;*/width: 37%;
   }
 }
 
 /* 1600px以上：動かしすぎず、少しだけ右へ */
 @media (min-width: 1600px) {
   .hero__visual {
-    right: -84px;
+    /*right: -84px;*/right: -190px;
     width: min(77vw, 1400px);
   }
 
@@ -6529,6 +6529,6 @@
   }
 
   .hero__visual::before {
-    width: 48%;
+    /*width: 48%;*/width: 39%;
   }
 }
