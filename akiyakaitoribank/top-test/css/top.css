@@ -6073,7 +6073,7 @@
     position: relative;
     width: 100vw;
     max-width: none;
-    min-height: var(--top-fw-hero-height);
+    /*min-height: var(--top-fw-hero-height);*/min-height: 651px;
     margin: 0;
   }
 
@@ -6237,7 +6237,7 @@
   }
 
   .hero__title {
-    /*font-size: clamp(44px, 4vw, 52px);*/font-size: clamp(44px, 8.5vw, 67px);
+    /*font-size: clamp(44px, 4vw, 52px);*/font-size: clamp(44px, 8.5vw, 64px);
   }
 
   .hero__lead {
