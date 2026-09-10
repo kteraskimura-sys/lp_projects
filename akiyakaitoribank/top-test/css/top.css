@@ -5431,7 +5431,7 @@
 
   .hero__visual {
     position: absolute;
-    left: 325px;
+    /*left: 325px;*/left: 370px;
     width: 940px;
     z-index: 1;
   }
@@ -6080,7 +6080,7 @@
   .hero__content {
     position: absolute;
     left: var(--top-fw-side);
-    top: clamp(48px, 4.5vw, 68px);
+    /*top: clamp(48px, 4.5vw, 68px);*/top: clamp(48px, 7.5vw, 100px);
     width: min(59vw, 760px);
     z-index: 3;
   }
@@ -6237,7 +6237,7 @@
   }
 
   .hero__title {
-    /*font-size: clamp(44px, 4vw, 52px);*/font-size: clamp(44px, 8.5vw, 60px);
+    /*font-size: clamp(44px, 4vw, 52px);*/font-size: clamp(44px, 8.5vw, 67px);
   }
 
   .hero__lead {
@@ -6268,7 +6268,7 @@
   }
 
   .hero__content {
-    top: clamp(58px, 4.8vw, 82px);
+    /*top: clamp(58px, 4.8vw, 82px);*/top: clamp(58px, 6.8vw, 100px);
     width: min(55vw, 840px);
   }
 
