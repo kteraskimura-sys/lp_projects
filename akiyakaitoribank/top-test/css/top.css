@@ -6268,7 +6268,7 @@
   }
 
   .hero__content {
-    /*top: clamp(58px, 4.8vw, 82px);*/top: clamp(58px, 6.8vw, 100px);
+    /*top: clamp(58px, 4.8vw, 82px);*//*top: clamp(58px, 6.8vw, 100px);*/top: 6.8vw;
     width: min(55vw, 840px);
   }
 
@@ -6308,7 +6308,7 @@
   :root {
     --top-fw-side: clamp(64px, 4.6vw, 110px);
     --top-fw-header-side: clamp(64px, 5vw, 120px);
-    --top-fw-hero-height: clamp(650px, 39vw, 730px);
+    /*--top-fw-hero-height: clamp(650px, 39vw, 730px);*/--top-fw-hero-height: clamp(650px, 39vw, 730px);
   }
 
   .hero__title {
