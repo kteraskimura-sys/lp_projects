@@ -6613,3 +6613,46 @@
     line-height: 1.7;
   }
 }
+
+/* ========================================
+   TOP Problem About / カード群幅に合わせる
+   2026-09-10
+   ※お悩みカード群と「空き家買取バンクとは」の外枠幅を揃える
+   ※PC版のみ適用。スマホ・タブレットは既存仕様を維持
+======================================== */
+
+@media (min-width: 1024px) {
+  .problem-about {
+    width: min(100%, 1220px);
+    margin: 58px auto 0;
+    grid-template-columns: minmax(420px, 500px) 1fr;
+    gap: clamp(48px, 5vw, 72px);
+  }
+
+  .problem-about__image {
+    width: 100%;
+  }
+
+  .problem-about__image img {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .problem-about__content {
+    min-width: 0;
+  }
+}
+
+/* 1024px〜1099px：横幅が狭めのPCでは少し控えめにする */
+@media (min-width: 1024px) and (max-width: 1099px) {
+  .problem-about {
+    width: 100%;
+    margin-top: 52px;
+    grid-template-columns: 410px 1fr;
+    gap: 42px;
+  }
+
+  .problem-about__image img {
+    max-width: 410px;
+  }
+}
