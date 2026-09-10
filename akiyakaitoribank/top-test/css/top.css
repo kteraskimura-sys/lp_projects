@@ -6660,3 +6660,102 @@
     max-width: 410px;
   }
 }
+
+/* ========================================
+   TOP Service / PC版カード 2行3列化
+   2026-09-10
+   ※サービス一覧を1行6列から2行3列へ変更
+   ※750px以下のスマホ表示は既存仕様を維持
+======================================== */
+
+/* 900px以上：2行 × 3列 */
+@media (min-width: 900px) {
+  .service {
+    padding: 64px 0 88px;
+  }
+
+  .service__heading {
+    margin-bottom: 36px;
+  }
+
+  .service__heading h2 {
+    font-size: clamp(28px, 2vw, 30px);
+    line-height: 1.55;
+    letter-spacing: 0.04em;
+  }
+
+  .service__heading h2::before,
+  .service__heading h2::after {
+    width: 22px;
+  }
+
+  .service-card-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: min(100%, 1220px);
+    margin: 0 auto;
+    gap: 24px;
+  }
+
+  .service-card {
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(74, 55, 32, 0.08);
+  }
+
+  .service-card__image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .service-card__body {
+    padding: 24px 22px 26px;
+  }
+
+  .service-card__body h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .service-card__body p {
+    min-height: 48px;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .service-card__button {
+    min-width: 128px;
+    min-height: 40px;
+    margin-top: 16px;
+    font-size: 13px;
+  }
+}
+
+/* 900px〜1099px：横幅が狭めのPC・タブレット寄りは少し控えめ */
+@media (min-width: 900px) and (max-width: 1099px) {
+  .service {
+    padding: 58px 0 80px;
+  }
+
+  .service-card-list {
+    gap: 20px;
+  }
+
+  .service-card__body {
+    padding: 20px 16px 22px;
+  }
+
+  .service-card__body h3 {
+    font-size: 18px;
+  }
+
+  .service-card__body p {
+    min-height: 46px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .service-card__button {
+    min-width: 116px;
+    min-height: 38px;
+    font-size: 12px;
+  }
+}
