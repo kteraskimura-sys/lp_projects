@@ -6073,7 +6073,7 @@
     position: relative;
     width: 100vw;
     max-width: none;
-    /*min-height: var(--top-fw-hero-height);*/min-height: 651px;
+    min-height: var(--top-fw-hero-height);
     margin: 0;
   }
 
