@@ -7200,3 +7200,23 @@
     width: min(100%, 1220px);
   }
 }
+
+/* ========================================
+   Remaining Items / 特徴カード専用改行
+   2026-09-19
+   550px以下：改行
+   551px〜750px：改行しない
+   751px〜1023px：改行
+   1024px以上：改行しない
+======================================== */
+
+.br-remaining-feature {
+  display: none;
+}
+
+@media (max-width: 550px),
+       (min-width: 751px) and (max-width: 1023px) {
+  .br-remaining-feature {
+    display: block;
+  }
+}
