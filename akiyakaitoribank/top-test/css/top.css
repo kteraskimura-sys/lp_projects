@@ -7215,7 +7215,7 @@
 }
 
 @media (max-width: 550px),
-       (min-width: 751px) and (max-width: 1023px) {
+       (min-width: 751px) and (max-width: 880px) {
   .br-remaining-feature {
     display: block;
   }
