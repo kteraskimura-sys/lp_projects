@@ -7165,6 +7165,38 @@
   }
 }
 
-.remaining-items__main
-.remaining-items__bottom
-.remaining-items-cta
+/* ========================================
+   TOP Remaining Items / 下段・CTA幅をmainと統一
+   2026-09-19
+   ※751px以上のみ適用
+   ※750px以下のスマホ版は現状維持
+======================================== */
+
+@media (min-width: 751px) {
+  .remaining-items__bottom,
+  .remaining-items-cta {
+    width: min(100%, 1220px);
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+}
+
+/* 751px〜1023px：親幅いっぱいを維持 */
+@media (min-width: 751px) and (max-width: 1023px) {
+  .remaining-items__bottom,
+  .remaining-items-cta {
+    width: 100%;
+  }
+}
+
+/* 1024px以上：mainと同じ最大幅に揃える */
+@media (min-width: 1024px) {
+  .remaining-items__bottom {
+    width: min(100%, 1220px);
+  }
+
+  .remaining-items-cta {
+    width: min(100%, 1220px);
+  }
+}
