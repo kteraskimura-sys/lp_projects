@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>空き家買取バンク｜空き家・相続不動産の買取相談</title>
 <meta name="description" content="空き家買取バンクは、空き家・相続不動産・再建築不可物件・共有持分・事故物件など、売却が難しい不動産のご相談を承ります。">
-<!-- deploy-test 2026-09-25 -->
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/common.css">
 <link rel="stylesheet" href="css/top.css">
@@ -15,19 +14,19 @@
 	<header class="site-header">
 		<div class="site-header__inner">
 			<h1 class="site-header__logo">
-				<a href="index.html">
+				<a href="./">
 					<img src="img/common/logo.png" alt="空き家買取バンク">
 				</a>
 			</h1>
 
-			<nav class="site-header__nav" aria-label="グローバルナビゲーション">
+			<nav class="site-header__nav" id="global-nav" aria-label="グローバルナビゲーション">
 				<ul>
-					<li><a href="index.html">ホーム</a></li>
-					<li><a href="#service"><span class="head-menu_ls_a">サービス</span>一覧</a></li>
-					<li><a href="#case">解決事例</a></li>
-					<li><a href="columns/index.html">コラム</a></li>
-					<li><a href="#faq"><span class="head-menu_ls_a">よくある</span>ご質問</a></li>
-					<li><a href="#company">会社情報</a></li>
+					<li><a href="./">ホーム</a></li>
+					<li><a href="./#service"><span class="head-menu_ls_a">サービス</span>一覧</a></li>
+					<li><a href="case/">解決事例</a></li>
+					<li><a href="columns/">コラム</a></li>
+					<li><a href="faq/"><span class="head-menu_ls_a">よくある</span>ご質問</a></li>
+					<li><a href="company/">会社情報</a></li>
 				</ul>
 			</nav>
 
@@ -40,22 +39,16 @@
 					</span>
 				</a>
 
-				<a href="/top-test/contact/" class="site-header__button">
+				<a href="contact/" class="site-header__button">
 					<img src="img/top/hero_cta_icon_01a.svg" alt="" class="site-header__button-icon">
 					<span>無料相談はこちら</span>
 				</a>
 			</div>
 
-			<button class="site-header__menu-button" type="button" aria-label="メニューを開く" aria-expanded="false">
+			<button class="site-header__menu-button" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-nav">
 				<span></span>
 				<span></span>
 				<span></span>
-				<!--<span>ホーム</span>
-				<span>サービス一覧</span>
-				<span>解決事例</span>
-				<span>コラム</span>
-				<span>よくあるご質問</span>
-				<span>会社情報</span>-->
 			</button>
 		</div>
 	</header>
@@ -85,7 +78,7 @@
 						</p>
 
 						<div class="hero__buttons">
-							<a href="/top-test/contact/" class="btn btn--orange">
+							<a href="contact/" class="btn btn--orange">
 								<img src="img/top/hero_cta_icon_01a.svg" alt="" class="btn-icon">
 								<span class="btn-cta__text">
 									<span class="btn-cta__main">無料相談フォーム</span>
@@ -101,7 +94,7 @@
 								</span>
 							</a>
 
-							<a href="#" class="btn btn--green btn--line">
+							<a href="https://lin.ee/CtLONst" class="btn btn--green btn--line" target="_blank" rel="noopener">
 								<img src="img/top/hero_cta_icon_03a.svg" alt="" class="btn-icon">
 								<span class="btn-cta__text">
 									<span class="btn-cta__main">LINEで相談する</span>
@@ -113,12 +106,10 @@
 
 					<div class="hero__visual">
 						<picture>
-							<source media="(max-width: 750px)" srcset="img/top/hero-sp-01a.jpg">
 							<img src="img/top/hero-pc-02c_test.webp" alt="空き家の相談をイメージした住まいと相談員">
 						</picture>
 					</div><!-- hero__visual END -->
-					<!-- 本番画像 webp に差し替える場合 <source> を下記に修正 -->
-					<!-- <source media="(max-width: 750px)" srcset="img/top/hero-sp-01a.webp" type="image/webp">-->
+					<!-- スマホ用画像ができたら <picture> 内に追加：<source media="(max-width: 750px)" srcset="img/top/hero-sp-01a.webp" type="image/webp"> -->
 				</div><!-- hero__inner END -->
 			</div><!-- hero__canvas END -->
 		</section><!-- hero END -->
@@ -372,7 +363,7 @@
 					<div class="remaining-items__bottom">
 						<div class="remaining-items-license">
 							<div class="remaining-items-license__image">
-								<img src="img/top/remaining-items-license_01b.webp" alt="古物商許可証のイメージ">
+								<img src="img/top/remaining-items-license_01a.webp" alt="古物商許可証のイメージ">
 							</div>
 
 							<div class="remaining-items-license__text">
@@ -454,7 +445,7 @@
 						</div>
 
 						<div class="remaining-items-cta__buttons">
-							<a href="/top-test/contact/" class="btn btn--orange">
+							<a href="contact/" class="btn btn--orange">
 								<img src="img/top/hero_cta_icon_01a.svg" alt="" class="btn-icon">
 								<span class="btn-cta__text">
 									<span class="btn-cta__main">無料相談フォーム</span>
@@ -470,7 +461,7 @@
 								</span>
 							</a>
 
-							<a href="#" class="btn btn--green btn--line">
+							<a href="https://lin.ee/CtLONst" class="btn btn--green btn--line" target="_blank" rel="noopener">
 								<img src="img/top/hero_cta_icon_03a.svg" alt="" class="btn-icon">
 								<span class="btn-cta__text">
 									<span class="btn-cta__main">LINEで相談する</span>
@@ -483,7 +474,7 @@
 			</div>
 		</section>
 
-		<section class="service">
+		<section class="service" id="service">
 			<div class="service__canvas">
 				<div class="service__inner">
 
@@ -499,7 +490,7 @@
 							<div class="service-card__body">
 								<h3>空き家売却</h3>
 								<p>空き家を早く・安心して売却したい方へ。</p>
-								<a href="#" class="service-card__button">詳しく見る</a>
+								<a href="akiya-baikyaku/" class="service-card__button">詳しく見る</a>
 							</div>
 						</article>
 
@@ -510,7 +501,7 @@
 							<div class="service-card__body">
 								<h3>相続不動産</h3>
 								<p>相続した不動産のお悩みを解決します。</p>
-								<a href="#" class="service-card__button">詳しく見る</a>
+								<a href="sozoku-fudosan/" class="service-card__button">詳しく見る</a>
 							</div>
 						</article>
 
@@ -521,7 +512,7 @@
 							<div class="service-card__body">
 								<h3>再建築不可物件</h3>
 								<p>再建築不可の物件も適切に対応します。</p>
-								<a href="#" class="service-card__button">詳しく見る</a>
+								<a href="saikenchiku-fuka/" class="service-card__button">詳しく見る</a>
 							</div>
 						</article>
 
@@ -532,7 +523,7 @@
 							<div class="service-card__body">
 								<h3>共有持分</h3>
 								<p>共有名義のトラブルをスムーズに解決します。</p>
-								<a href="#" class="service-card__button">詳しく見る</a>
+								<a href="kyoyu-mochibun/" class="service-card__button">詳しく見る</a>
 							</div>
 						</article>
 
@@ -543,7 +534,7 @@
 							<div class="service-card__body">
 								<h3>事故物件</h3>
 								<p>告知事項のある物件もご相談可能です。</p>
-								<a href="#" class="service-card__button">詳しく見る</a>
+								<a href="jiko-bukken/" class="service-card__button">詳しく見る</a>
 							</div>
 						</article>
 
@@ -554,7 +545,7 @@
 							<div class="service-card__body">
 								<h3>空き家相談</h3>
 								<p>管理や売却にお悩みの方をサポートします。</p>
-								<a href="#" class="service-card__button">詳しく見る</a>
+								<a href="akiya-soudan/" class="service-card__button">詳しく見る</a>
 							</div>
 						</article>
 					</div>
@@ -562,13 +553,13 @@
 			</div>
 		</section>
 
-		<section class="case-study">
+		<section class="case-study" id="case">
 			<div class="case-study__canvas">
 				<div class="case-study__inner">
 
 					<div class="case-study__heading">
 						<h2>解決事例</h2>
-						<a href="#" class="case-study__more">一覧を見る</a>
+						<a href="case/" class="case-study__more">一覧を見る</a>
 					</div>
 
 					<div class="case-study-card-list">
@@ -585,7 +576,7 @@
 								</h3>
 								<div class="case-study-card__bottom">
 									<p>神奈川県 / 築45年 / 木造</p>
-									<a href="#">詳細を見る</a>
+									<a href="case/#case-top-01">詳細を見る</a>
 								</div>
 							</div>
 						</article>
@@ -603,7 +594,7 @@
 								</h3>
 								<div class="case-study-card__bottom">
 									<p>東京都 / 築38年 / 木造</p>
-									<a href="#">詳細を見る</a>
+									<a href="case/#case-top-02">詳細を見る</a>
 								</div>
 							</div>
 						</article>
@@ -621,7 +612,7 @@
 								</h3>
 								<div class="case-study-card__bottom">
 									<p>埼玉県 / 築50年 / 木造</p>
-									<a href="#">詳細を見る</a>
+									<a href="case/#case-top-03">詳細を見る</a>
 								</div>
 							</div>
 						</article>
@@ -639,7 +630,7 @@
 								</h3>
 								<div class="case-study-card__bottom">
 									<p>千葉県 / 築60年 / 木造</p>
-									<a href="#">詳細を見る</a>
+									<a href="case/#case-top-04">詳細を見る</a>
 								</div>
 							</div>
 						</article>
@@ -648,91 +639,31 @@
 			</div>
 		</section>
 
-		<section class="column-news">
+		<section class="column-news" id="column">
 			<div class="column-news__canvas">
 				<div class="column-news__inner">
 
 					<div class="column-news__heading">
 						<h2>コラム（新着記事）</h2>
-						<a href="#" class="column-news__more">一覧を見る</a>
+						<a href="columns/" class="column-news__more">一覧を見る</a>
 					</div>
 
 					<div class="column-news-card-list">
 						<article class="column-news-card">
-							<a href="#" class="column-news-card__link">
+							<a href="columns/enpou-akiya-baikyaku/" class="column-news-card__link">
 								<div class="column-news-card__image">
-									<img src="img/columns/case-01.webp" alt="相続した空き家の判断ポイント">
+									<img src="img/columns/column-no01-enpou-akiya-baikyaku.webp" alt="遠方にある空き家の売却をイメージした古い一戸建てと旅行バッグ">
 								</div>
 
 								<div class="column-news-card__body">
 									<div class="column-news-card__meta">
-										<time datetime="2024-05-10">2024.05.10</time>
-										<span class="column-news-card__label">相続</span>
+										<time datetime="2026-10-01">2026.10.01</time>
+										<span class="column-news-card__label">空き家</span>
 									</div>
 
 									<h3>
-										相続した空き家はいつ売るべき？<br>
-										判断のポイントを解説
-									</h3>
-								</div>
-							</a>
-						</article>
-
-						<article class="column-news-card">
-							<a href="#" class="column-news-card__link">
-								<div class="column-news-card__image">
-									<img src="img/columns/case-02.webp" alt="空き家の固定資産税と税金の基礎知識">
-								</div>
-
-								<div class="column-news-card__body">
-									<div class="column-news-card__meta">
-										<time datetime="2024-05-02">2024.05.02</time>
-										<span class="column-news-card__label">税金</span>
-									</div>
-
-									<h3>
-										空き家の固定資産税はいくら？<br>
-										税金の基礎知識
-									</h3>
-								</div>
-							</a>
-						</article>
-
-						<article class="column-news-card">
-							<a href="#" class="column-news-card__link">
-								<div class="column-news-card__image">
-									<img src="img/columns/case-03.webp" alt="共有持分のトラブル事例と解決方法">
-								</div>
-
-								<div class="column-news-card__body">
-									<div class="column-news-card__meta">
-										<time datetime="2024-04-25">2024.04.25</time>
-										<span class="column-news-card__label">共有持分</span>
-									</div>
-
-									<h3>
-										共有持分とは？トラブル事例と<br>
-										解決方法をわかりやすく解説
-									</h3>
-								</div>
-							</a>
-						</article>
-
-						<article class="column-news-card">
-							<a href="#" class="column-news-card__link">
-								<div class="column-news-card__image">
-									<img src="img/columns/case-04.webp" alt="空き家の管理方法と放置リスク">
-								</div>
-
-								<div class="column-news-card__body">
-									<div class="column-news-card__meta">
-										<time datetime="2024-04-18">2024.04.18</time>
-										<span class="column-news-card__label">管理</span>
-									</div>
-
-									<h3>
-										空き家の管理方法と放置リスクを<br>
-										解説します
+										遠方にある空き家は売却できる？<br>
+										管理・売却のポイントを解説
 									</h3>
 								</div>
 							</a>
@@ -743,13 +674,13 @@
 			</div>
 		</section>
 
-		<section class="faq">
+		<section class="faq" id="faq">
 			<div class="faq__canvas">
 				<div class="faq__inner">
 
 					<div class="faq__heading">
 						<h2>よくあるご質問</h2>
-						<a href="#" class="faq__more">一覧を見る</a>
+						<a href="faq/" class="faq__more">一覧を見る</a>
 					</div>
 
 					<div class="faq__content">
@@ -794,7 +725,7 @@
 							<details class="faq-item">
 								<summary>どのエリアまで対応していますか？</summary>
 								<div class="faq-item__answer">
-									<p>対応エリアは物件の所在地や状況により異なります。まずはお気軽にご相談ください。</p>
+									<p>東京・埼玉・千葉・神奈川・群馬・栃木・茨城は即日対応が可能です。その他のエリアも全国対応していますので、まずはお気軽にご相談ください。</p>
 								</div>
 							</details>
 						</div>
@@ -861,8 +792,8 @@
 							</div>
 
 							<p class="closing-message__name">
-								<span>代表取締役</span>
-								山田 太郎
+								<span>KTERAS株式会社</span>
+								空き家買取バンク
 							</p>
 						</div>
 					</div>
@@ -874,7 +805,7 @@
 						</p>
 
 						<div class="closing-cta__buttons">
-							<a href="/top-test/contact/" class="btn btn--orange">
+							<a href="contact/" class="btn btn--orange">
 								<img src="img/top/hero_cta_icon_01a.svg" alt="" class="btn-icon">
 								<span class="btn-cta__text">
 									<span class="btn-cta__main">無料相談フォーム</span>
@@ -890,7 +821,7 @@
 								</span>
 							</a>
 
-							<a href="#" class="btn btn--green btn--line">
+							<a href="https://lin.ee/CtLONst" class="btn btn--green btn--line" target="_blank" rel="noopener">
 								<img src="img/top/hero_cta_icon_03a.svg" alt="" class="btn-icon">
 								<span class="btn-cta__text">
 									<span class="btn-cta__main">LINEで相談する</span>
@@ -904,84 +835,85 @@
 			</div>
 		</section>
 
-		<footer class="site-footer">
-			<div class="site-footer__canvas">
-				<div class="site-footer__inner">
+	</main>
 
-					<div class="site-footer__brand">
-						<a href="/" class="site-footer__logo">
-							<img src="img/common/logo.png" alt="空き家買取バンク">
-						</a>
+	<footer class="site-footer">
+		<div class="site-footer__canvas">
+			<div class="site-footer__inner">
 
-						<p class="site-footer__company">
-							KTERAS株式会社
-						</p>
+				<div class="site-footer__brand">
+					<a href="./" class="site-footer__logo">
+						<img src="img/common/logo.png" alt="空き家買取バンク">
+					</a>
 
-						<p class="site-footer__address">
-							〒000-0000<br>
-							東京都〇〇区〇〇 0-0-0
-						</p>
+					<p class="site-footer__company">
+						KTERAS株式会社
+					</p>
 
-						<a href="tel:0120949017" class="site-footer__phone">
-							0120-949-017
-						</a>
+					<p class="site-footer__address">
+						〒164-0012<br>
+						東京都中野区本町2丁目51番10号 OKビル10階
+					</p>
 
-						<p class="site-footer__time">
-							受付時間 10:00〜19:00（平日）
-						</p>
-					</div>
+					<a href="tel:0120949017" class="site-footer__phone">
+						0120-949-017
+					</a>
 
-					<nav class="site-footer__nav" aria-label="フッターナビゲーション">
-						<div class="site-footer__group">
-							<h2>サイトメニュー</h2>
-							<ul>
-								<li><a href="/">ホーム</a></li>
-								<li><a href="#service">サービス一覧</a></li>
-								<li><a href="#case-study">解決事例</a></li>
-								<li><a href="#column">コラム</a></li>
-								<li><a href="#faq">よくあるご質問</a></li>
-								<li><a href="#company">会社情報</a></li>
-							</ul>
-						</div>
-
-						<div class="site-footer__group">
-							<h2>サービス</h2>
-							<ul>
-								<li><a href="#">空き家売却</a></li>
-								<li><a href="#">相続不動産</a></li>
-								<li><a href="#">再建築不可物件</a></li>
-								<li><a href="#">共有持分</a></li>
-								<li><a href="#">事故物件</a></li>
-								<li><a href="#">空き家相談</a></li>
-							</ul>
-						</div>
-
-						<div class="site-footer__group">
-							<h2>お問い合わせ</h2>
-							<ul>
-								<li><a href="/top-test/contact/">無料相談フォーム</a></li>
-								<li><a href="tel:0120949017">電話で相談する</a></li>
-								<li><a href="#">LINEで相談する</a></li>
-							</ul>
-						</div>
-					</nav>
-
-				</div>
-
-				<div class="site-footer__bottom">
-					<ul class="site-footer__legal">
-						<li><a href="#">プライバシーポリシー</a></li>
-						<li><a href="#">特定商取引法に基づく表記</a></li>
-						<li><a href="#">サイトマップ</a></li>
-					</ul>
-
-					<p class="site-footer__copyright">
-						© 2024 Akiya Kaitori Bank. All Rights Reserved.
+					<p class="site-footer__time">
+						受付時間 10:00〜19:00（平日）
 					</p>
 				</div>
+
+				<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+					<div class="site-footer__group">
+						<h2>サイトメニュー</h2>
+						<ul>
+							<li><a href="./">ホーム</a></li>
+							<li><a href="./#service">サービス一覧</a></li>
+							<li><a href="case/">解決事例</a></li>
+							<li><a href="columns/">コラム</a></li>
+							<li><a href="faq/">よくあるご質問</a></li>
+							<li><a href="company/">会社情報</a></li>
+						</ul>
+					</div>
+
+					<div class="site-footer__group">
+						<h2>サービス</h2>
+						<ul>
+							<li><a href="akiya-baikyaku/">空き家売却</a></li>
+							<li><a href="sozoku-fudosan/">相続不動産</a></li>
+							<li><a href="saikenchiku-fuka/">再建築不可物件</a></li>
+							<li><a href="kyoyu-mochibun/">共有持分</a></li>
+							<li><a href="jiko-bukken/">事故物件</a></li>
+							<li><a href="akiya-soudan/">空き家相談</a></li>
+						</ul>
+					</div>
+
+					<div class="site-footer__group">
+						<h2>お問い合わせ</h2>
+						<ul>
+							<li><a href="contact/">無料相談フォーム</a></li>
+							<li><a href="tel:0120949017">電話で相談する</a></li>
+							<li><a href="https://lin.ee/CtLONst" target="_blank" rel="noopener">LINEで相談する</a></li>
+						</ul>
+					</div>
+				</nav>
+
 			</div>
-		</footer>
-	</main>
+
+			<div class="site-footer__bottom">
+				<ul class="site-footer__legal">
+					<li><a href="company/">会社情報</a></li>
+					<li><a href="privacy-policy/">プライバシーポリシー</a></li>
+					<li><a href="sitemap/">サイトマップ</a></li>
+				</ul>
+
+				<p class="site-footer__copyright">
+					© 2026 Akiya Kaitori Bank. All Rights Reserved.
+				</p>
+			</div>
+		</div>
+	</footer>
 
 <script src="js/main.js"></script>
 </body>

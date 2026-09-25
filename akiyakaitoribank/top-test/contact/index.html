@@ -22,20 +22,20 @@ URL: /top-test/contact/
 <body>
 	<header class="site-header">
 		<div class="site-header__inner">
-			<h1 class="site-header__logo">
-				<a href="index.html">
+			<div class="site-header__logo">
+				<a href="../">
 					<img src="../img/common/logo.png" alt="空き家買取バンク">
 				</a>
-			</h1>
+			</div>
 
-			<nav class="site-header__nav" aria-label="グローバルナビゲーション">
+			<nav class="site-header__nav" id="global-nav" aria-label="グローバルナビゲーション">
 				<ul>
-					<li><a href="index.html">ホーム</a></li>
-					<li><a href="#service"><span class="head-menu_ls_a">サービス</span>一覧</a></li>
-					<li><a href="#case">解決事例</a></li>
-					<li><a href="columns/index.html">コラム</a></li>
-					<li><a href="#faq"><span class="head-menu_ls_a">よくある</span>ご質問</a></li>
-					<li><a href="#company">会社情報</a></li>
+					<li><a href="../">ホーム</a></li>
+					<li><a href="../#service"><span class="head-menu_ls_a">サービス</span>一覧</a></li>
+					<li><a href="../case/">解決事例</a></li>
+					<li><a href="../columns/">コラム</a></li>
+					<li><a href="../faq/"><span class="head-menu_ls_a">よくある</span>ご質問</a></li>
+					<li><a href="../company/">会社情報</a></li>
 				</ul>
 			</nav>
 
@@ -48,22 +48,16 @@ URL: /top-test/contact/
 					</span>
 				</a>
 
-				<a href="#contact" class="site-header__button">
+				<a href="../contact/" class="site-header__button">
 					<img src="../img/top/hero_cta_icon_01a.svg" alt="" class="site-header__button-icon">
 					<span>無料相談はこちら</span>
 				</a>
 			</div>
 
-			<button class="site-header__menu-button" type="button" aria-label="メニューを開く" aria-expanded="false">
+			<button class="site-header__menu-button" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-nav">
 				<span></span>
 				<span></span>
 				<span></span>
-				<!--<span>ホーム</span>
-				<span>サービス一覧</span>
-				<span>解決事例</span>
-				<span>コラム</span>
-				<span>よくあるご質問</span>
-				<span>会社情報</span>-->
 			</button>
 		</div>
 	</header>
@@ -271,7 +265,7 @@ URL: /top-test/contact/
 				</div>
 
 				<div class="contact-support__buttons">
-					<a href="./" class="support-button support-button--mail">
+					<a href="#contactForm" class="support-button support-button--mail">
 						<img src="../img/top/hero_cta_icon_01a.svg" alt="" class="btn-icon">
 						<span class="support-button__text">
 							<span class="support-button__main">無料相談フォーム</span>
@@ -287,7 +281,7 @@ URL: /top-test/contact/
 						</span>
 					</a>
 
-					<a href="#" class="support-button support-button--line">
+					<a href="https://lin.ee/CtLONst" class="support-button support-button--line" target="_blank" rel="noopener">
 						<img src="../img/top/hero_cta_icon_03a.svg" alt="" class="btn-icon">
 						<span class="support-button__text">
 							<span class="support-button__main">LINEで相談する</span>
@@ -298,84 +292,85 @@ URL: /top-test/contact/
 			</div>
 		</section>
 
-		<footer class="site-footer">
-			<div class="site-footer__canvas">
-				<div class="site-footer__inner">
+	</main>
 
-					<div class="site-footer__brand">
-						<a href="/" class="site-footer__logo">
-							<img src="../img/common/logo.png" alt="空き家買取バンク">
-						</a>
+	<footer class="site-footer">
+		<div class="site-footer__canvas">
+			<div class="site-footer__inner">
 
-						<p class="site-footer__company">
-							KTERAS株式会社
-						</p>
+				<div class="site-footer__brand">
+					<a href="../" class="site-footer__logo">
+						<img src="../img/common/logo.png" alt="空き家買取バンク">
+					</a>
 
-						<p class="site-footer__address">
-							〒000-0000<br>
-							東京都〇〇区〇〇 0-0-0
-						</p>
+					<p class="site-footer__company">
+						KTERAS株式会社
+					</p>
 
-						<a href="tel:0120949017" class="site-footer__phone">
-							0120-949-017
-						</a>
+					<p class="site-footer__address">
+						〒164-0012<br>
+						東京都中野区本町2丁目51番10号 OKビル10階
+					</p>
 
-						<p class="site-footer__time">
-							受付時間 10:00〜19:00（平日）
-						</p>
-					</div>
+					<a href="tel:0120949017" class="site-footer__phone">
+						0120-949-017
+					</a>
 
-					<nav class="site-footer__nav" aria-label="フッターナビゲーション">
-						<div class="site-footer__group">
-							<h2>サイトメニュー</h2>
-							<ul>
-								<li><a href="/">ホーム</a></li>
-								<li><a href="#service">サービス一覧</a></li>
-								<li><a href="#case-study">解決事例</a></li>
-								<li><a href="#column">コラム</a></li>
-								<li><a href="#faq">よくあるご質問</a></li>
-								<li><a href="#company">会社情報</a></li>
-							</ul>
-						</div>
-
-						<div class="site-footer__group">
-							<h2>サービス</h2>
-							<ul>
-								<li><a href="#">空き家売却</a></li>
-								<li><a href="#">相続不動産</a></li>
-								<li><a href="#">再建築不可物件</a></li>
-								<li><a href="#">共有持分</a></li>
-								<li><a href="#">事故物件</a></li>
-								<li><a href="#">空き家相談</a></li>
-							</ul>
-						</div>
-
-						<div class="site-footer__group">
-							<h2>お問い合わせ</h2>
-							<ul>
-								<li><a href="#contact">無料相談フォーム</a></li>
-								<li><a href="tel:0120949017">電話で相談する</a></li>
-								<li><a href="#">LINEで相談する</a></li>
-							</ul>
-						</div>
-					</nav>
-
-				</div>
-
-				<div class="site-footer__bottom">
-					<ul class="site-footer__legal">
-						<li><a href="#">プライバシーポリシー</a></li>
-						<li><a href="#">特定商取引法に基づく表記</a></li>
-						<li><a href="#">サイトマップ</a></li>
-					</ul>
-
-					<p class="site-footer__copyright">
-						© 2024 Akiya Kaitori Bank. All Rights Reserved.
+					<p class="site-footer__time">
+						受付時間 10:00〜19:00（平日）
 					</p>
 				</div>
+
+				<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+					<div class="site-footer__group">
+						<h2>サイトメニュー</h2>
+						<ul>
+							<li><a href="../">ホーム</a></li>
+							<li><a href="../#service">サービス一覧</a></li>
+							<li><a href="../case/">解決事例</a></li>
+							<li><a href="../columns/">コラム</a></li>
+							<li><a href="../faq/">よくあるご質問</a></li>
+							<li><a href="../company/">会社情報</a></li>
+						</ul>
+					</div>
+
+					<div class="site-footer__group">
+						<h2>サービス</h2>
+						<ul>
+							<li><a href="../akiya-baikyaku/">空き家売却</a></li>
+							<li><a href="../sozoku-fudosan/">相続不動産</a></li>
+							<li><a href="../saikenchiku-fuka/">再建築不可物件</a></li>
+							<li><a href="../kyoyu-mochibun/">共有持分</a></li>
+							<li><a href="../jiko-bukken/">事故物件</a></li>
+							<li><a href="../akiya-soudan/">空き家相談</a></li>
+						</ul>
+					</div>
+
+					<div class="site-footer__group">
+						<h2>お問い合わせ</h2>
+						<ul>
+							<li><a href="../contact/">無料相談フォーム</a></li>
+							<li><a href="tel:0120949017">電話で相談する</a></li>
+							<li><a href="https://lin.ee/CtLONst" target="_blank" rel="noopener">LINEで相談する</a></li>
+						</ul>
+					</div>
+				</nav>
+
 			</div>
-		</footer>
-	</main>
+
+			<div class="site-footer__bottom">
+				<ul class="site-footer__legal">
+					<li><a href="../company/">会社情報</a></li>
+					<li><a href="../privacy-policy/">プライバシーポリシー</a></li>
+					<li><a href="../sitemap/">サイトマップ</a></li>
+				</ul>
+
+				<p class="site-footer__copyright">
+					© 2026 Akiya Kaitori Bank. All Rights Reserved.
+				</p>
+			</div>
+		</div>
+	</footer>
 
 
 

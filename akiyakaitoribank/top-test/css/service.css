@@ -8230,3 +8230,13 @@ service-inner
   }
 }
 
+
+/* ========================================
+   解決事例が2〜3件のページ（再建築不可・共有持分・事故物件・空き家相談）
+======================================== */
+@media (min-width: 751px) {
+  .akiya-sale-page .service-case .case-grid.case-grid--few {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
