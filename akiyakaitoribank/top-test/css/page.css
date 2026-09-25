@@ -691,6 +691,30 @@
   margin-top: 0.4em;
 }
 
+/* 箇条書き・注記（コラム追加分 2026-09-25） */
+.article-body ul {
+  margin: 1.2em 0;
+  padding: 16px 20px 16px 2.4em;
+  border-radius: 12px;
+  background: #f7f3ec;
+  list-style: disc;
+}
+
+.article-body ul li + li {
+  margin-top: 0.3em;
+}
+
+.article-body ul + p {
+  margin-top: 1.2em;
+}
+
+.article-body .article-note {
+  margin-top: 40px;
+  color: #6b6258;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
 .article-body a:not(.page-button) {
   color: var(--page-green-dark);
   font-weight: 700;
